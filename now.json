@@ -8,9 +8,6 @@
     }
   ],
   "alias": ["uhcougarcs.now.sh"],
-  "github": {
-    "autoAlias": true
-  },
   "routes": [
     {
       "src": "^/static/(.*)",
