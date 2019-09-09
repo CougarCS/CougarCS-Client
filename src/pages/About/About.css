@@ -1,0 +1,78 @@
+body {
+  font-family: 'Raleway', 'Roboto Mono', monospace;
+}
+
+.officerImages {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 1em;
+  row-gap: 2em;
+}
+
+/* .officerImages img {
+  border-radius: 50%;
+} */
+.test {
+  max-height: 86.6vh;
+}
+.about-us {
+  padding: 2em;
+}
+
+.col > img {
+  height: 40rem;
+  width: auto;
+  z-index: -99;
+}
+
+#officerName {
+  text-align: center;
+}
+
+.officerCard {
+  padding: 0 3rem 0;
+}
+
+@media only screen and (max-width: 1296px) {
+  .officerImages {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 5em;
+    row-gap: 2em;
+  }
+}
+
+/* @media only screen and (max-width: 1296px) {
+  .officerImages {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 5em;
+    row-gap: 2em;
+  }
+} */
+@media only screen and (max-width: 1109px) {
+  .officerImages {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 5em;
+    row-gap: 2em;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .officerImages {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 5em;
+    row-gap: 2em;
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  .officerImages {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 5em;
+    row-gap: 2em;
+  }
+}

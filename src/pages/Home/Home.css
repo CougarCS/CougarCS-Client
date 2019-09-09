@@ -1,0 +1,70 @@
+body {
+  font-family: 'Raleway', 'Roboto Mono', monospace;
+}
+/* 
+.carousel-control-prev {
+  display: none !important;
+}
+.carousel-control-next {
+  display: none !important;
+}
+.carousel-indicators {
+  display: none;
+} */
+/* .firstImg {
+  width: 100vw;
+
+  height: 91.5vh;
+  z-index: -99;
+  background-size: cover;
+} */
+.bgDark {
+  height: 86.6vh;
+  /* position: absolute; */
+  /* top: 0%;
+  left: 0%; */
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  width: 100vw;
+}
+.firstP {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 3.5rem;
+  width: 100%;
+}
+
+.ani {
+  background: url('../../assets/cougarcs_background11.jpg');
+  margin: 0;
+  width: 100vw;
+  height: 85.7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.learnMoreBtn {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.main-text {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
