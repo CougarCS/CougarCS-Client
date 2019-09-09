@@ -5,31 +5,31 @@ import logo from '../../assets/logo.png';
 
 function NavBar() {
   return (
-    <Navbar fluid="true" collapseOnSelect expand="lg">
-      <LinkContainer to="/">
+    <Navbar fluid='true' collapseOnSelect expand='lg'>
+      <LinkContainer to='/'>
         <Navbar.Brand>
           <img
             src={logo}
             style={{ width: '175px' }}
-            className="App-logo"
-            alt="logo"
+            className='App-logo'
+            alt='logo'
           />
         </Navbar.Brand>
       </LinkContainer>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ml-auto">
-          <LinkContainer to="/about">
-            <Nav.Link>About</Nav.Link>
+      <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+      <Navbar.Collapse id='responsive-navbar-nav'>
+        <Nav className='ml-auto'>
+          <LinkContainer to='/about'>
+            <Nav.Link>About Test</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/membership">
+          <LinkContainer to='/membership'>
             <Nav.Link>Membership</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/events">
+          <LinkContainer to='/events'>
             <Nav.Link>Events</Nav.Link>
           </LinkContainer>
 
-          <Nav.Link href="https://www.uh.edu/nsm/computer-science/news-events/career-fair/">
+          <Nav.Link href='https://www.uh.edu/nsm/computer-science/news-events/career-fair/'>
             Career Fair
           </Nav.Link>
         </Nav>
