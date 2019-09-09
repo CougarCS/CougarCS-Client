@@ -20,7 +20,7 @@ function NavBar() {
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='ml-auto'>
           <LinkContainer to='/about'>
-            <Nav.Link>About Test</Nav.Link>
+            <Nav.Link>About</Nav.Link>
           </LinkContainer>
           <LinkContainer to='/membership'>
             <Nav.Link>Membership</Nav.Link>
