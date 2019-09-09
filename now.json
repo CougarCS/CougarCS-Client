@@ -7,7 +7,7 @@
       "config": { "distDir": "build" }
     }
   ],
-  "alias": ["uhcougarcs.now.uh"],
+  "alias": ["uhcougarcs.now.sh"],
   "github": {
     "autoAlias": false
   },
