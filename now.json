@@ -9,7 +9,7 @@
   ],
   "alias": ["uhcougarcs.now.sh"],
   "github": {
-    "autoAlias": false
+    "autoAlias": true
   },
   "routes": [
     {
