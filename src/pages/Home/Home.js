@@ -12,7 +12,7 @@ function Main() {
         <p className="firstP">
           WE ARE COUGARCS
           <br></br>
-          WE COMPUTE STUDENT SUCCESS
+          WE COMPUTE STUDENT YOUR MOM
         </p>
         <LinkContainer to="/about">
           <ButtonToolbar>
