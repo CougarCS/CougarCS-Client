@@ -21,6 +21,7 @@ class About extends React.Component {
                   provide support and assistance to members who struggle
                   academically or who need career guidance.
                 </p>
+                <button class="btn" id="getInvolvedBtn">Get Involved</button>
               </div>
             </Col>
             <Col>

@@ -1,78 +1,101 @@
 body {
-  font-family: 'Raleway', 'Roboto Mono', monospace;
+   font-family: 'Raleway', 'Roboto Mono', monospace;
 }
 
 .officerImages {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-column-gap: 1em;
-  row-gap: 2em;
+   display: grid;
+   grid-template-columns: auto auto auto auto auto;
+   grid-column-gap: 1em;
+   row-gap: 2em;
 }
 
 /* .officerImages img {
-  border-radius: 50%;
+   border-radius: 50%;
 } */
 .test {
-  max-height: 86.6vh;
+   max-height: 86.6vh;
 }
 .about-us {
-  padding: 2em;
+   padding: 2em;
+   line-height: 200%;
+}
+
+.about-us h1 {
+   font-weight: 200;
+   margin-bottom: 2rem;
+}
+
+#getInvolvedBtn {
+   display: block;
+   margin: auto;
+   border: 0.5px solid red;
+   background-color: red;
+   color: white;
+   padding: 15px;
+   text-transform: uppercase;
+}
+
+#getInvolvedBtn:hover {
+   transition-duration: 0.3s;
+   background-color: white;
+   color: red;
 }
 
 .col > img {
-  height: 40rem;
-  width: auto;
-  z-index: -99;
+   height: auto;
+   width: 80%;
+   z-index: -99;
 }
 
 #officerName {
-  text-align: center;
+   text-align: center;
 }
 
 .officerCard {
-  padding: 0 3rem 0;
+   padding: 0 3rem 0;
 }
 
 @media only screen and (max-width: 1296px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+   .officerImages {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-column-gap: 5em;
+      row-gap: 2em;
+   }
 }
 
 /* @media only screen and (max-width: 1296px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+.officerImages {
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   grid-column-gap: 5em;
+   row-gap: 2em;
+}
+
 } */
 @media only screen and (max-width: 1109px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+   .officerImages {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-column-gap: 5em;
+      row-gap: 2em;
+   }
 }
 
 @media only screen and (max-width: 830px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+   .officerImages {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 5em;
+      row-gap: 2em;
+   }
 }
 
 @media only screen and (max-width: 555px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+   .officerImages {
+      display: grid;
+      grid-template-columns: auto;
+      grid-column-gap: 5em;
+      row-gap: 2em;
+   }
 }
