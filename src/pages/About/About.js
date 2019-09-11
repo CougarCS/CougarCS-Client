@@ -19,7 +19,7 @@ class About extends React.Component {
                   mission is to smoothly transition our inexperienced members
                   into young professionals by the end of their degree, and to
                   provide support and assistance to members who struggle
-                  academically or who need career guidance.
+                  academically or who need career guidance. 
                 </p>
               </div>
             </Col>
