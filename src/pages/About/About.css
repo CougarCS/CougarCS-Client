@@ -4,7 +4,7 @@ body {
 
 .officerImages {
    display: grid;
-   grid-template-columns: auto auto auto auto auto;
+   grid-template-columns: auto auto auto;
    grid-column-gap: 1em;
    row-gap: 2em;
 }
@@ -15,6 +15,20 @@ body {
 .test {
    max-height: 86.6vh;
 }
+
+.about-us-container {
+   display: flex;
+   width: 80%;
+   margin: auto;
+   justify-content: space-between;
+}
+
+.about-us-container img {
+   height: auto;
+   width: 50%;
+   z-index: -99;
+}
+
 .about-us {
    padding: 2em;
    line-height: 200%;
@@ -42,6 +56,7 @@ body {
 }
 
 .col > img {
+   width: 60%;
    height: auto;
    width: 80%;
    z-index: -99;
@@ -61,6 +76,11 @@ body {
       grid-template-columns: auto auto auto auto;
       grid-column-gap: 5em;
       row-gap: 2em;
+   }
+
+   .about-us-container {
+      flex-wrap: wrap;
+      justify-content: center;
    }
 }
 
