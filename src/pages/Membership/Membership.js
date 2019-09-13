@@ -5,7 +5,7 @@ import collectingSVG from '../../assets/collecting.svg';
 import gif from '../../assets/member.svg';
 import memorySVG from '../../assets/memory.svg';
 import teachingSVG from '../../assets/teaching.svg';
-import "./membership.css";
+import "./Membership.css";
 class Membership extends React.Component {
    render() {
    return (
@@ -42,23 +42,6 @@ class Membership extends React.Component {
                   PGH (Philip Guthrie Hoffman Hall) or email{' '}
                   <a href="mailto:Info@CougarCS.com">Info@CougarCS.com</a>.
                </p>
-               <p>
-                  Whats that? You want to get more involved with CougarCS?
-                  Interested in joining our webdev team? Please reach out to
-                  Vyas Ramankulangara at{' '}
-                  <a href="mailto:Vyas.R@CougarCS.com">Vyas.R@CougarCS.com</a>
-                  . And for helping out at a hackathon or capture the flag
-                  event? Lets get you in contact with our Director of
-                  Hackathons, Athmar Ouda at{' '}
-                  <a href="mailto:Athmar.Ouda@CougarCS.com">
-                     Athmar.Ouda@CougarCS.com
-                  </a>
-                  . What about becoming a tutor? For that you can contact{' '}
-                  <a href="mailto:Tutoring@CougarCS.com">
-                     Tutoring@cougarcs.com
-                  </a>
-                  .
-               </p>
             </div>
          <Row>
             <div>
@@ -66,6 +49,7 @@ class Membership extends React.Component {
             </div>
          </Row>
          </Container>
+
          <Container fluid style={{ textAlign: 'center' }}>
             <h3>What Are The Benefits</h3>
             <Row style={{ padding: '3em' }} md={12} xs={12}>
@@ -83,75 +67,125 @@ class Membership extends React.Component {
                         </div>
                         <Card.Title style={{ textAlign: 'center' }}>
                         Technical workshops
-                      </Card.Title>
-                      <p style={{ textAlign: 'center' }}>
-                        Learn industry standards and refine your skills in teams{' '}
-                      </p>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card style={{ textAlign: 'center', border: 'none' }}>
-                    <Card.Body>
-                      <div>
-                        <img
-                          src={collectingSVG}
-                          alt="undraw"
-                          style={{ height: '10em', width: '9em', color: 'red' }}
-                        />
-                      </div>
-                      <Card.Title>Information Sessions</Card.Title>
-                      <p>
-                        Connect with companies from all over the world hiring at
-                        UH
-                      </p>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Card style={{ textAlign: 'center', border: 'none' }}>
-                    <Card.Body>
-                      <div>
-                        <img
-                          src={memorySVG}
-                          alt="undraw"
-                          style={{ height: '10em', width: '9em', color: 'red' }}
-                        />
-                      </div>
-                      <Card.Title>Career Fair Preparation</Card.Title>
-                      <p>Practice with mock interviews and resume building</p>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card style={{ textAlign: 'center', border: 'none' }}>
-                    <Card.Body>
-                      <div>
-                        <img
-                          src={teachingSVG}
-                          alt="undraw"
-                          style={{ height: '10em', width: '9em', color: 'red' }}
-                        />
-                      </div>
-                      <Card.Title style={{ textAlign: 'center' }}>
-                        Tutoring and Academic Support
-                      </Card.Title>
-                      <p style={{ textAlign: 'center' }}>
-                        Work through problems with intelligent and approachable
-                        tutors who are focused on member success lmk what you
-                        think
-                      </p>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
-            </div>
-          </Row>
-        </Container>
-      </div>
-    );
-  }
+                        </Card.Title>
+                        <p style={{ textAlign: 'center' }}>
+                           Learn industry standards and refine your skills in teams{' '}
+                        </p>
+                     </Card.Body>
+                     </Card>
+                  </Col>
+                  <Col>
+                     <Card style={{ textAlign: 'center', border: 'none' }}>
+                     <Card.Body>
+                        <div>
+                           <img
+                           src={collectingSVG}
+                           alt="undraw"
+                           style={{ height: '10em', width: '9em', color: 'red' }}
+                           />
+                        </div>
+                        <Card.Title>Information Sessions</Card.Title>
+                        <p>
+                           Connect with companies from all over the world hiring at
+                           UH
+                        </p>
+                     </Card.Body>
+                     </Card>
+                  </Col>
+               </Row>
+               <Row>
+                  <Col>
+                     <Card style={{ textAlign: 'center', border: 'none' }}>
+                     <Card.Body>
+                        <div>
+                           <img
+                           src={memorySVG}
+                           alt="undraw"
+                           style={{ height: '10em', width: '9em', color: 'red' }}
+                           />
+                        </div>
+                        <Card.Title>Career Fair Preparation</Card.Title>
+                        <p>Practice with mock interviews and resume building</p>
+                     </Card.Body>
+                     </Card>
+                  </Col>
+                  <Col>
+                     <Card style={{ textAlign: 'center', border: 'none' }}>
+                     <Card.Body>
+                        <div>
+                           <img
+                           src={teachingSVG}
+                           alt="undraw"
+                           style={{ height: '10em', width: '9em', color: 'red' }}
+                           />
+                        </div>
+                        <Card.Title style={{ textAlign: 'center' }}>
+                           Tutoring and Academic Support
+                        </Card.Title>
+                        <p style={{ textAlign: 'center' }}>
+                           Work through problems with intelligent and approachable
+                           tutors who are focused on member success lmk what you
+                           think
+                        </p>
+                     </Card.Body>
+                     </Card>
+                  </Col>
+               </Row>
+               </div>
+            </Row>
+         </Container>
+
+         <Container className="opportunities">
+            <h3>Some Opportunities</h3>
+            <Container className="webDevTeam">
+               <Row>
+                  <Col>
+                     
+                  </Col>
+                  <Col>
+                     <p>
+                        Whats that? You want to get more involved with CougarCS?
+                        Interested in joining our webdev team? Please reach out to
+                        Vyas Ramankulangara at{' '}
+                        <a href="mailto:Vyas.R@CougarCS.com">Vyas.R@CougarCS.com</a>.
+                     </p>
+                  </Col>
+               </Row>
+            </Container>
+
+            <Container className="hackathon">
+               <Row>
+                  <Col>
+                     <p>
+                        And for helping out at a hackathon or capture the flag
+                        event? Lets get you in contact with our Director of
+                        Hackathons, Athmar Ouda at{' '}
+                        <a href="mailto:Athmar.Ouda@CougarCS.com">Athmar.Ouda@CougarCS.com</a>. 
+                     </p>
+                  </Col>
+                  <Col>
+
+                  </Col>
+               </Row>
+            </Container>
+
+            <Container className="tutoring">
+               <Row>
+                  <Col>
+
+                  </Col>
+                  <Col>
+                     <p>
+                        What about becoming a tutor? If you are strong in any subject or you
+                        have a passion for teaching, you can contact{' '}
+                        <a href="mailto:Tutoring@CougarCS.com">Tutoring@cougarcs.com</a>.
+                     </p>
+                  </Col>
+               </Row>
+            </Container>
+         </Container>
+         </div>
+      );
+   }
 }
 export default Membership;

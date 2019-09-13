@@ -42,8 +42,8 @@ body {
 #getInvolvedBtn {
    display: block;
    margin: auto;
-   border: 0.5px solid red;
-   background-color: red;
+   border: 0.5px solid #C8102E;
+   background-color: #C8102E;
    color: white;
    padding: 15px;
    text-transform: uppercase;
@@ -52,7 +52,7 @@ body {
 #getInvolvedBtn:hover {
    transition-duration: 0.3s;
    background-color: white;
-   color: red;
+   color: #C8102E;
 }
 
 .col > img {
@@ -84,15 +84,6 @@ body {
    }
 }
 
-/* @media only screen and (max-width: 1296px) {
-.officerImages {
-   display: grid;
-   grid-template-columns: auto auto auto auto;
-   grid-column-gap: 5em;
-   row-gap: 2em;
-}
-
-} */
 @media only screen and (max-width: 1109px) {
    .officerImages {
       display: grid;
