@@ -39,7 +39,7 @@ body {
   background: url('../../assets/cougarcs_background11.jpg');
   margin: 0;
   width: 100vw;
-  height: 85.7vh;
+  height: calc(100vh - 107.75px);
   display: flex;
   flex-direction: column;
   align-items: center;
