@@ -56,7 +56,6 @@ const events = [
     description: '',
     location: 'PGH 232'
   },
-  ,
   {
     title: 'Intro to Interview 101',
     date: '2019-09-19',
