@@ -3,7 +3,14 @@ body {
 }
 
 .bgDark {
+<<<<<<< HEAD
   height: 86.6vh;
+=======
+  height: 100%;
+  position: absolute;
+  /* top: 0%;
+  left: 0%; */
+>>>>>>> 4d9ffa5ef97ddc1aaa134bc8cf8772023737976c
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
   width: 100vw;
@@ -27,6 +34,7 @@ body {
   justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .learnMoreBtn {
@@ -42,10 +50,35 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 999;
+}
+
+@media only screen and (min-width: 551px) {
+  .main-text {
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .ani {
+    min-height: calc(100vh - 107.75px);
+    height: fit-content;
+  }
+
+  .bgDark {
+    height: 100%;
+    position: relative;
+    display: flex;
+    min-height: calc(100vh - 107.75px);
+  }
+
+  .main-text {
+    position: relative;
+    padding: 20px 0 40px;
+    top: 5%;
+  }
 }
