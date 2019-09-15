@@ -6,7 +6,7 @@ import './Home.css';
 
 const animateText = () => (
   new Typed('#typed', {
-    strings: ["ARE COUGARCS", "COMPUTE <br>STUDENT SUCCESS"],
+    strings: ["ARE <span style='color:red'>COUGARCS</span>", "COMPUTE <br>STUDENT <span style='color:#FFD700'>SUCCESS</span>"],
     typeSpeed: 70,
     backSpeed: 75,
     loop: true,
@@ -22,22 +22,20 @@ export default class AboutMe extends Component {
 
   render() {
     return (
-        <div className="ani">
-          <div className="bgDark"> </div>
-          {/* <img className="firstImg" src={bgImg} alt="First slide" /> */}
-          <div className="main-text">
-            <p className="firstP">
-              WE <span id="typed" />
-            </p>
-            <LinkContainer to="/about">
-              <ButtonToolbar>
-                <Button className="learnMoreBtn" variant="success">
-                  Learn More
-                </Button>
-              </ButtonToolbar>
-            </LinkContainer>
-          </div>
+      <div className="ani">
+        <div className="main-text">
+          <p className="firstP">
+            WE <span id="typed" />
+          </p>
+          <LinkContainer to="/about">
+            <ButtonToolbar>
+              <Button className="learnMoreBtn" variant="success">
+                Learn More
+              </Button>
+            </ButtonToolbar>
+          </LinkContainer>
         </div>
-      );
-    }
+      </div>
+    );
+  }
 }
