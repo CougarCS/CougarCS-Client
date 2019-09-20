@@ -55,6 +55,13 @@ const events = [
     time: '5:30 – 8:00pm',
     description: '',
     location: 'PGH 232'
+  },
+  {
+    title: 'Intro to Interview 101',
+    date: '2019-09-19',
+    time: '5:30 – 7:00pm',
+    description: 'TBD',
+    location: 'PGH 563'
   }
 ];
 
