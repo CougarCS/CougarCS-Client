@@ -16,7 +16,11 @@ body {
   max-height: 86.6vh;
 }
 .about-us {
-  padding: 2em;
+  padding: 4em 0em;
+  font-size: 25px
+}
+p {
+  font-size: 20px;
 }
 
 .col > img {
