@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonToolbar, Carousel, CarouselItem } from 'react-bootstrap';
+import { Button, Carousel, CarouselItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './Home.css';
 

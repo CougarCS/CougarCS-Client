@@ -1,22 +1,14 @@
 .membership {
    width: 60%;
    margin: auto;
-   line-height: 175%;
+   line-height: 200%;
 }
 
 h3 { font-weight: 300; }
 
-.membership h1 {
-   position: absolute;
-   font-size: 4rem;
+.header {
    font-weight: 100;
-   color: black;
-   bottom: 5%;
-}
-
-.membership img {
-   margin-bottom: 2rem;
-   border-radius: 10px;
+   margin: 0 0 1em 0;
 }
 
 .benefits {
@@ -34,17 +26,20 @@ h3 { font-weight: 300; }
 }
 
 @media only screen and (max-width: 1296px) {
-
+   
 }
 
 @media only screen and (max-width: 1109px) {
-
+   
 }
 
 @media only screen and (max-width: 830px) {
-
+   
 }
 
 @media only screen and (max-width: 555px) {
-
+   .membership { 
+      width: 90%; 
+      line-height: 175%;
+   }
 }

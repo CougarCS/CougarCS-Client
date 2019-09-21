@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import analyticsSVG from '../../assets/analytics.svg';
 import collectingSVG from '../../assets/collecting.svg';
-import gif from '../../assets/member.svg';
 import memorySVG from '../../assets/memory.svg';
 import teachingSVG from '../../assets/teaching.svg';
 import "./Membership.css";
@@ -12,8 +11,8 @@ class Membership extends React.Component {
       <div>
          <Container fluid style={{ padding: '2em' }}>
             <div className="membership">
-               <h1>Membership</h1>
-               <img src={gif} alt="undraw svg" style={{ width: '100%' }}></img>
+               <h1 className="header">Membership</h1>
+               
                <p>
                   CougarCS offers students exclusive access to a variety of
                   events and resources aimed at career preparedness.
@@ -31,6 +30,7 @@ class Membership extends React.Component {
                   professionals and are always looking to connect with current
                   members!
                </p>
+               
                <p>
                   Memberships are priced at{' '}
                   <strong>$50.00 for a full year </strong> or{' '}

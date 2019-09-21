@@ -1,12 +1,12 @@
 import React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Container, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
 import officers from '../../officers';
 import './About.css';
 
 class About extends React.Component {
-  render() {
-    return (
+   render() {
+      return (
       <div className='test'>
          <div className="about-us-container">
             {/* networking svg image */}
@@ -22,7 +22,7 @@ class About extends React.Component {
                provide support and assistance to members who struggle
                academically or who need career guidance.
                </p>
-               <button class="btn" id="getInvolvedBtn">Get Involved</button>
+               <button id="getInvolvedBtn">Get Involved</button>
             </div>
          </div>
          {/* list of officers */}
@@ -40,8 +40,8 @@ class About extends React.Component {
                      <br></br>
                      <Card.Body>
                      <Card.Title id='officerName'>{officer.name}</Card.Title>
-                     <h5 style={{ textAlign: 'center' }}>{officer.title}</h5>
-                     <p style={{ textAlign: 'center' }}>{officer.email}</p>
+                     <h5 id="officerTitle" style={{ textAlign: 'center' }}>{officer.title}</h5>
+                     <p id="officerEmail" style={{ textAlign: 'center' }}>{officer.email}</p>
                      </Card.Body>
                   </Card>
                ))}

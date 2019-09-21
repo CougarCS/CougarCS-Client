@@ -18,9 +18,9 @@ body {
 
 .about-us-container {
    display: flex;
-   width: 80%;
+   width: 70%;
    margin: auto;
-   justify-content: space-between;
+   justify-content: center;
 }
 
 .about-us-container img {
@@ -43,9 +43,10 @@ body {
    display: block;
    margin: auto;
    border: 0.5px solid #C8102E;
+   border-radius: 0.5rem;
    background-color: #C8102E;
    color: white;
-   padding: 15px;
+   padding: 0.8em;
    text-transform: uppercase;
 }
 
@@ -68,6 +69,7 @@ body {
 
 .officerCard {
    padding: 0 3rem 0;
+   width: 70%;
 }
 
 @media only screen and (max-width: 1296px) {
@@ -103,10 +105,28 @@ body {
 }
 
 @media only screen and (max-width: 555px) {
+   .about-us-container, .officerCard  { width: 80%; }
+
+   .about-us h1 {
+      font-size: 1.6rem;
+   }
+
+   .about-us {
+      font-size: 0.8rem;
+      line-height: 175%;
+   }
+
    .officerImages {
       display: grid;
       grid-template-columns: auto;
       grid-column-gap: 5em;
       row-gap: 2em;
    }
+
+   .officerCard h1 {
+      font-size: 1.5rem;
+   }
+
+   #officerName, #officerTitle { font-size: 1.1rem; }
+   #officerEmail { font-size: 0.8rem; }
 }
