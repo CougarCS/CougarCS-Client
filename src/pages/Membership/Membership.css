@@ -1,0 +1,45 @@
+.membership {
+   width: 60%;
+   margin: auto;
+   line-height: 200%;
+}
+
+h3 { font-weight: 300; }
+
+.header {
+   font-weight: 100;
+   margin: 0 0 1em 0;
+}
+
+.benefits {
+   width: 70%;
+   margin: auto;
+}
+
+.opportunities {
+   text-align: center;
+}
+
+.webDevTeam, .hackathon, .tutoring {
+   padding: 5em;
+   line-height: 175%;
+}
+
+@media only screen and (max-width: 1296px) {
+   
+}
+
+@media only screen and (max-width: 1109px) {
+   
+}
+
+@media only screen and (max-width: 830px) {
+   
+}
+
+@media only screen and (max-width: 555px) {
+   .membership { 
+      width: 90%; 
+      line-height: 175%;
+   }
+}

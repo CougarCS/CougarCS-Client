@@ -1,78 +1,132 @@
 body {
-  font-family: 'Raleway', 'Roboto Mono', monospace;
+   font-family: 'Raleway', 'Roboto Mono', monospace;
 }
 
 .officerImages {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-column-gap: 1em;
-  row-gap: 2em;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-column-gap: 1em;
+   row-gap: 2em;
 }
 
 /* .officerImages img {
-  border-radius: 50%;
+   border-radius: 50%;
 } */
 .test {
-  max-height: 86.6vh;
+   max-height: 86.6vh;
 }
+
+.about-us-container {
+   display: flex;
+   width: 70%;
+   margin: auto;
+   justify-content: center;
+}
+
+.about-us-container img {
+   height: auto;
+   width: 50%;
+   z-index: -99;
+}
+
 .about-us {
-  padding: 2em;
+   padding: 2em;
+   line-height: 200%;
+}
+
+.about-us h1 {
+   font-weight: 200;
+   margin-bottom: 2rem;
+}
+
+#getInvolvedBtn {
+   display: block;
+   margin: auto;
+   border: 0.5px solid #C8102E;
+   border-radius: 0.5rem;
+   background-color: #C8102E;
+   color: white;
+   padding: 0.8em;
+   text-transform: uppercase;
+}
+
+#getInvolvedBtn:hover {
+   transition-duration: 0.3s;
+   background-color: white;
+   color: #C8102E;
 }
 
 .col > img {
-  height: 40rem;
-  width: auto;
-  z-index: -99;
+   width: 60%;
+   height: auto;
+   width: 80%;
+   z-index: -99;
 }
 
 #officerName {
-  text-align: center;
+   text-align: center;
 }
 
 .officerCard {
-  padding: 0 3rem 0;
+   padding: 0 3rem 0;
+   width: 70%;
 }
 
 @media only screen and (max-width: 1296px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+   .officerImages {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-column-gap: 5em;
+      row-gap: 2em;
+   }
+
+   .about-us-container {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
 }
 
-/* @media only screen and (max-width: 1296px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
-} */
 @media only screen and (max-width: 1109px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+   .officerImages {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-column-gap: 5em;
+      row-gap: 2em;
+   }
 }
 
 @media only screen and (max-width: 830px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+   .officerImages {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 5em;
+      row-gap: 2em;
+   }
 }
 
 @media only screen and (max-width: 555px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+   .about-us-container, .officerCard  { width: 80%; }
+
+   .about-us h1 {
+      font-size: 1.6rem;
+   }
+
+   .about-us {
+      font-size: 0.8rem;
+      line-height: 175%;
+   }
+
+   .officerImages {
+      display: grid;
+      grid-template-columns: auto;
+      grid-column-gap: 5em;
+      row-gap: 2em;
+   }
+
+   .officerCard h1 {
+      font-size: 1.5rem;
+   }
+
+   #officerName, #officerTitle { font-size: 1.1rem; }
+   #officerEmail { font-size: 0.8rem; }
 }
