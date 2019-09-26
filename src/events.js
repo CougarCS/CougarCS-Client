@@ -55,7 +55,26 @@ const events = [
     time: '5:30 – 8:00pm',
     description: '',
     location: 'PGH 232'
-  }
+  },
+  {
+    title: 'Intro to Interview 101',
+    date: '2019-09-19',
+    time: '5:30 – 7:00pm',
+    description: 'TBD',
+    location: 'PGH 563'
+  },
+  {
+    title: 'ExxonMobile Info Session',
+    date: '2019-09-25',
+    time: '5:30 – 7:00pm',
+    description: `Come and join Chris White from Exxon Mobile as he tells us about the kind of opportunities available at Exxon. This is a great opportunity for students looking to enter the O&G industry full-time, part-time or is looking for internships.
+
+
+    Please bring your updated resume. There will be drinks and refreshments available for the first 20-30 people.
+    
+    For more information please contact us at info@cougarcs.com`,
+    location: 'PGH 232'
+  },
 ];
 
 export default events;
