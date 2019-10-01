@@ -4,6 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import './Home.css';
 
 function Main() {
+<<<<<<< HEAD
    return (
       <div className="home">
          {/* <div className="bgDark"> </div> */}
@@ -25,6 +26,26 @@ function Main() {
                </Button>
             </LinkContainer>
          </div>
+=======
+  return (
+    <div className="ani">
+      <div className="bgDark">
+        {/* <img className="firstImg" src={bgImg} alt="First slide" /> */}
+        <div className="main-text">
+          <p className="firstP">
+            WE ARE COUGARCS
+            <br></br>
+            WE COMPUTE STUDENT SUCCESS
+          </p>
+          <LinkContainer to="/about">
+            <ButtonToolbar>
+              <Button className="learnMoreBtn" variant="success">
+                Learn More
+              </Button>
+            </ButtonToolbar>
+          </LinkContainer>
+        </div>
+>>>>>>> af7363bef6dbc745fc88f6d33763d2cb2fc5b759
       </div>
    );
 }
