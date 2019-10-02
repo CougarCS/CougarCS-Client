@@ -10,16 +10,16 @@ import Home from './pages/Home/Home';
 import Membership from './pages/Membership/Membership';
 
 function App() {
-   return (
-      <Router>
-         <NavBar />
-         <Route path="/" exact component={Home} />
-         <Route path="/about/" component={About} />
-         <Route path="/membership/" component={Membership} />
-         <Route path="/events/" component={Events} />
-         <Route path="/careerfair/" component={Careerfair} />
-      </Router>
-   );
+  return (
+    <Router>
+      <NavBar />
+      <Route path="/" exact component={Home} />
+      <Route path="/about/" component={About} />
+      <Route path="/membership/" component={Membership} />
+      <Route path="/events/" component={Events} />
+      <Route path="/careerfair/" component={Careerfair} />
+    </Router>
+  );
 }
 
 export default App;
