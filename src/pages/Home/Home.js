@@ -6,8 +6,6 @@ import './Home.css';
 function Main() {
   return (
     <div className="home">
-        {/* <div className="bgDark"> </div> */}
-        {/* <img className="firstImg" src={bgImg} alt="First slide" /> */}
         <div className="home-contents">
           <h1 className="home-header">
               We are cougarcs

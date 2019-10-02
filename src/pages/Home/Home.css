@@ -3,10 +3,10 @@ body {
 }
 
 .home {
-  position: relative;
+  position: absolute;
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/cougarcs_background11.jpg');
-  background-size: cover;
+  background-size: 100% 100%;
   width: 100%;
   height: 100vh;
 }
