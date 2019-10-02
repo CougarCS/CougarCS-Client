@@ -1,101 +1,58 @@
 body {
-   font-family: 'Raleway', 'Roboto Mono', monospace;
+  font-family: 'Raleway', 'Roboto Mono', monospace;
 }
 
 .home {
-   position: relative;
-   color: white;
-   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/cougarcs_background11.jpg');
-   background-size: cover;
-   width: 100%;
-   height: 100vh;
+  position: relative;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/cougarcs_background11.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
 
 .home-contents {
-   position: relative;
-   font-size: 3rem;
-   font-weight: 200;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+  position: relative;
+  font-size: 3rem;
+  font-weight: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .home-header {
-   font-size: 4rem;
-   font-weight: 300;
-   text-transform: uppercase;
-   text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .home-text {
-   text-transform: uppercase;
-   text-align: center;
-   position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
 }
 
 .carousel-control-prev,
 .carousel-control-next, 
 .carousel-indicators li {
-   visibility: hidden;
+  visibility: hidden;
 }
 
 .carousel {
-   width: 50%;
-   left: 25vw;
+  width: 50%;
+  left: 25vw;
 }
 
 .learnMoreBtn {
-   position: relative;
-   margin-top: 2em;
-   left: 50%;
-   transform: translate(-50%, 50%);
-   text-transform: uppercase;
+  position: relative;
+  margin-top: 2em;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-transform: uppercase;
 }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 555px) {
-   .home-header { font-size: 2rem; }
-   .home-text { font-size: 1.5rem; }
+  .home-header { font-size: 2rem; }
+  .home-text { font-size: 1.5rem; }
 }
-=======
-.main-text {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-@media only screen and (min-width: 551px) {
-  .main-text {
-    height: 100px;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .ani {
-    min-height: calc(100vh - 107.75px);
-    height: fit-content;
-  }
-
-  .bgDark {
-    height: 100%;
-    position: relative;
-    display: flex;
-    min-height: calc(100vh - 107.75px);
-  }
-
-  .main-text {
-    position: relative;
-    padding: 20px 0 40px;
-    top: 5%;
-  }
-}
->>>>>>> af7363bef6dbc745fc88f6d33763d2cb2fc5b759
