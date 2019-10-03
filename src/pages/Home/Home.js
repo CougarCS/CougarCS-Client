@@ -1,32 +1,45 @@
-import React from 'react';
-import { Button, Carousel, CarouselItem } from 'react-bootstrap';
+
+import React, { Component } from 'react'
+import Typed from 'typed.js';
+import { Button, ButtonToolbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import './Home.css';
 
-function Main() {
-   return (
-      <div className="home">
-         {/* <div className="bgDark"> </div> */}
-         {/* <img className="firstImg" src={bgImg} alt="First slide" /> */}
-         <div className="home-contents">
-            <h1 className="home-header">
-               We are cougarcs
-            </h1>
-            <div className="home-text">
-               <Carousel id="home-carousel">
-                  <CarouselItem>We build</CarouselItem>
-                  <CarouselItem>We develop</CarouselItem>
-                  <CarouselItem>We succeed</CarouselItem>
-               </Carousel>
-            </div>
-            <LinkContainer to="/about">
-               <Button className="learnMoreBtn" variant="primary">
-                  Learn More
-               </Button>
-            </LinkContainer>
-         </div>
-      </div>
-   );
-}
+const animateText = () => (
+  new Typed('#typed', {
+    strings: [
+      "ARE <span style='color:red;'>COUGAR</span>CS",
+      "COMPUTE <br>STUDENT <span style='color:#FFD700'>SUCCESS</span>"
+    ],
+    typeSpeed: 60,
+    backSpeed: 60,
+    loop: true,
+  })
+);
 
-export default Main;
+// Class component so you can use `componentDidMount` lifecycle 
+export default class AboutMe extends Component {
+  componentDidMount() {
+    // Will be executed after first `render`
+    animateText();
+  }
+
+  render() {
+    return (
+      <div className="home">
+        <div className="home-contents">
+          <p className="home-text">
+            WE <span id="typed" />
+          </p>
+          <LinkContainer to="/about">
+            <ButtonToolbar>
+              <Button className="learnMoreBtn" variant="success">
+                Learn More
+              </Button>
+            </ButtonToolbar>
+          </LinkContainer>
+        </div>
+      </div>
+    );
+  }
+}
