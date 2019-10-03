@@ -28,7 +28,6 @@ function NavBar() {
           <LinkContainer to='/events'>
             <Nav.Link>Calendar</Nav.Link>
           </LinkContainer>
-
           <Nav.Link href='https://www.uh.edu/nsm/computer-science/news-events/career-fair/'>
             Career Fair
           </Nav.Link>
