@@ -1,11 +1,10 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import "./Event.css";
 
 class Events extends React.Component {
   render() {
     return (
-      <Container fluid style={{ padding: "2em" }}>
+      <div className="event-container">
         {/* <FullCalendar
           defaultView="dayGridMonth"
           plugins={[dayGridPlugin]}
@@ -18,13 +17,13 @@ class Events extends React.Component {
           }
           style={{
             border: 0,
-            width: 800,
-            height: 600,
+            width: '100%',
+            height: '100%',
             frameBorder: 0,
-            scrolling: "no"
+
           }}
         ></iframe>
-      </Container>
+      </div>
     );
   }
 }
