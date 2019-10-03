@@ -4,50 +4,19 @@ body {
 
 .home {
   position: relative;
-  color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/cougarcs_background11.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../assets/cougarcs_background11.jpg');
+  background-position: center top;
   background-size: cover;
-  background-position-x: center;
-  background-position-y: top;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
-}
-
-.firstP {
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  text-shadow:
-  -1pxx -1px 0 #000,
-  -1px 1px 0 #000, 
-  1px 1px 0 #000;
-  font-size: 3.5rem;
-  width: 100%;
-}
-
-.ani {
-  background: url('../../assets/cougarcs_background11.jpg');
-  margin: 0;
-  width: 100vw;
-  height: calc(100vh - 107.75px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
 }
 
-.learnMoreBtn {
-  position: relative;
-  margin-top: 2em;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  text-transform: uppercase;
-}
-
-.main-text {
+.home-contents {
   position: absolute;
   margin: auto;
   top: 0;
@@ -62,28 +31,23 @@ body {
   z-index: 999;
 }
 
-@media only screen and (min-width: 551px) {
-  .main-text {
-    height: 100px;
-  }
+.home-text {
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  font-size: 3.5rem;
+  width: 100%;
 }
 
-@media only screen and (max-width: 550px) {
-  .ani {
-    min-height: calc(100vh - 107.75px);
-    height: fit-content;
-  }
-
-  .bgDark {
-    height: 100%;
-    position: relative;
-    display: flex;
-    min-height: calc(100vh - 107.75px);
-  }
-
-  .main-text {
-    position: relative;
-    padding: 20px 0 40px;
-    top: 5%;
-  }
+.learnMoreBtn {
+  position: relative;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-transform: uppercase;
 }
+
+@media only screen and (max-width: 600px) {
+  .home-contents { width: 80%; }
+  .home-text { font-size: 3rem; }
+} 
