@@ -10,38 +10,31 @@ body {
    width: 100%;
    height: 100vh;
 }
-
-.home-contents {
-   position: relative;
-   font-size: 3rem;
-   font-weight: 200;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+.firstP {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-shadow:
+  -1px -1px 0 #000, 
+  1px -1px 0 #000,
+  -1px 1px 0 #000, 
+  1px 1px 0 #000;
+  font-size: 3.5rem;
+  width: 100%;
 }
 
-.home-header {
-   font-size: 4rem;
-   font-weight: 300;
-   text-transform: uppercase;
-   text-align: center;
-}
-
-.home-text {
-   text-transform: uppercase;
-   text-align: center;
-   position: relative;
-}
-
-.carousel-control-prev,
-.carousel-control-next, 
-.carousel-indicators li {
-   visibility: hidden;
-}
-
-.carousel {
-   width: 50%;
-   left: 25vw;
+.ani {
+  background: url('../../assets/cougarcs_background11.jpg');
+  margin: 0;
+  width: 100vw;
+  height: calc(100vh - 107.75px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .learnMoreBtn {
@@ -52,12 +45,6 @@ body {
    text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-@media only screen and (max-width: 555px) {
-   .home-header { font-size: 2rem; }
-   .home-text { font-size: 1.5rem; }
-}
-=======
 .main-text {
   position: absolute;
   margin: auto;
@@ -98,4 +85,3 @@ body {
     top: 5%;
   }
 }
->>>>>>> af7363bef6dbc745fc88f6d33763d2cb2fc5b759
