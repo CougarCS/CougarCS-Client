@@ -1,22 +1,24 @@
 body {
-   font-family: 'Raleway', 'Roboto Mono', monospace;
+  font-family: 'Raleway', 'Roboto Mono', monospace;
 }
 
 .home {
-   position: relative;
-   color: white;
-   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/cougarcs_background11.jpg');
-   background-size: cover;
-   width: 100%;
-   height: 100vh;
+  position: relative;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/cougarcs_background11.jpg');
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+  width: 100%;
+  height: 100vh;
 }
+
 .firstP {
   text-align: center;
   color: white;
   font-weight: bold;
   text-shadow:
-  -1px -1px 0 #000, 
-  1px -1px 0 #000,
+  -1pxx -1px 0 #000,
   -1px 1px 0 #000, 
   1px 1px 0 #000;
   font-size: 3.5rem;
@@ -38,11 +40,11 @@ body {
 }
 
 .learnMoreBtn {
-   position: relative;
-   margin-top: 2em;
-   left: 50%;
-   transform: translate(-50%, 50%);
-   text-transform: uppercase;
+  position: relative;
+  margin-top: 2em;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-transform: uppercase;
 }
 
 .main-text {
