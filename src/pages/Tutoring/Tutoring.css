@@ -1,0 +1,21 @@
+.container {
+  width: 90%;
+}
+.banner {
+  height: 300px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  background-image: url("../../assets/tutorbanner.jpg");
+}
+.summary {
+  float: left;
+  width: 33.3%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.calendar {
+  float: right;
+  width: 65%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
