@@ -1,22 +1,29 @@
-import dayGridPlugin from '@fullcalendar/daygrid';
-import FullCalendar from '@fullcalendar/react';
-import React from 'react';
-import { Container } from 'react-bootstrap';
-import events from '../../events';
-import './Event.css';
+import React from "react";
+import "./Event.css";
 
 class Events extends React.Component {
   render() {
     return (
-      <Container fluid style={{ padding: '2em' }}>
-        <FullCalendar
+      <div className="event-container">
+        {/* <FullCalendar
           defaultView="dayGridMonth"
           plugins={[dayGridPlugin]}
           events={events}
           fixedWeekCount={false}
-          
-        />
-      </Container>
+        /> */}
+        <iframe
+          src={
+            "https://calendar.google.com/calendar/embed?src=aeu0ag4i5a7aag0hkvco4goung%40group.calendar.google.com&ctz=America%2FChicago"
+          }
+          style={{
+            border: 0,
+            width: '100%',
+            height: '100%',
+            frameBorder: 0,
+
+          }}
+        ></iframe>
+      </div>
     );
   }
 }

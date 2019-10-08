@@ -1,5 +1,5 @@
 # CougarCS Website
-CougarCS class of 2019 website.
+CougarCS Class of 2019 website.
 
 # Todos
 All todos and tasked are on Trello.
