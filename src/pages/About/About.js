@@ -10,7 +10,10 @@ class About extends React.Component {
       <div className='test'>
         <Container fluid>
           <Row>
-            <Col>
+            <Col md="6" className="order-md-2">
+              <img src={gif} alt='undraw svg' className='img-fluid'></img>
+            </Col>
+            <Col md="6" className="order-md-0">
               <div className='about-us'>
                 <h1>About Us</h1>
                 <p>
@@ -22,9 +25,6 @@ class About extends React.Component {
                   academically or who need career guidance.
                 </p>
               </div>
-            </Col>
-            <Col>
-              <img src={gif} alt='undraw svg'></img>
             </Col>
           </Row>
         </Container>

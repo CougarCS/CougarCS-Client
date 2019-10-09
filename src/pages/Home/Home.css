@@ -36,6 +36,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  background-position: center;
 }
 
 .learnMoreBtn {
