@@ -1,5 +1,5 @@
 body {
-  font-family: 'Raleway', 'Roboto Mono', monospace;
+  font-family: "Raleway", "Roboto Mono", monospace;
 }
 
 .officerImages {
@@ -9,9 +9,6 @@ body {
   row-gap: 2em;
 }
 
-/* .officerImages img {
-  border-radius: 50%;
-} */
 .test {
   max-height: 86.6vh;
 }
@@ -42,14 +39,6 @@ body {
   }
 }
 
-/* @media only screen and (max-width: 1296px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
-} */
 @media only screen and (max-width: 1109px) {
   .officerImages {
     display: grid;
