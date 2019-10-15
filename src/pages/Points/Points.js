@@ -6,16 +6,16 @@ const Points = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     Tabletop.init({
-      key: '1DiYoA305OzfBbiE2WBx7RqP3wcV7UjgcddSvs4sGF1g',
+      key: '1LefsSTpCuHzpWZOp-sVYmL8QRpYO1ilMh_FMHNIhyTc',
       callback: (googleData) => {
         googleData.sort((a, b) =>
           parseInt(a.Points) < parseInt(b.Points)
             ? 1
             : parseInt(a.Points) === parseInt(b.Points)
-            ? parseInt(a.Points) < parseInt(b.Points)
-              ? 1
+              ? parseInt(a.Points) < parseInt(b.Points)
+                ? 1
+                : -1
               : -1
-            : -1
         );
         setData(googleData);
       },
