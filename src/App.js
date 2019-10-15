@@ -8,7 +8,6 @@ import Careerfair from "./pages/CareerFair/Careerfair";
 import Events from "./pages/Events/Events";
 import Home from "./pages/Home/Home";
 import Membership from "./pages/Membership/Membership";
-import Points from "./pages/Points/Points";
 const App = () => {
   return (
     <Router>
@@ -18,7 +17,7 @@ const App = () => {
       <Route path='/membership/' component={Membership} />
       <Route path='/events/' component={Events} />
       <Route path='/careerfair/' component={Careerfair} />
-      <Route path='/points/' component={Points} />
+      {/* <Route path='/points/' component={Points} /> */}
     </Router>
   );
 };
