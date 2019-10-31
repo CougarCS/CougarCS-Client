@@ -29,7 +29,7 @@ function NavBar() {
             <Nav.Link>Events</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/tutoring">
-            <Nav.Link>Tutotring</Nav.Link>
+            <Nav.Link>Tutoring</Nav.Link>
           </LinkContainer>
 
           <Nav.Link href="https://www.uh.edu/nsm/computer-science/news-events/career-fair/">
