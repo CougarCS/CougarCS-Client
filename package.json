@@ -7,12 +7,14 @@
     "@fullcalendar/daygrid": "^4.3.0",
     "@fullcalendar/react": "^4.3.0",
     "bootstrap": "^4.3.1",
+    "mdbreact": "^4.21.1",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
     "react-router-bootstrap": "^0.25.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
+    "tabletop": "^1.6.2",
     "typed.js": "^2.0.11"
   },
   "scripts": {
