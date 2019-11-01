@@ -19,7 +19,7 @@ const animateText = () =>
 const Home = () => {
   useEffect(() => {
     animateText();
-  });
+  }, []);
   return (
     <div className='ani'>
       <div className='bgDark'>
