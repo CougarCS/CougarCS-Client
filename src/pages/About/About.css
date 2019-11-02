@@ -4,7 +4,7 @@ body {
 
 .officerImages {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-column-gap: 1em;
   row-gap: 2em;
 }
