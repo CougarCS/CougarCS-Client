@@ -11,8 +11,8 @@ import Home from "./pages/Home/Home";
 import Membership from "./pages/Membership/Membership";
 
 function initializeReactGA() {
-  ReactGA.initialize("G-9HFJT96TWP");
-  ReactGA.pageview("/");
+  ReactGA.initialize("UA-152061658-1");
+  ReactGA.pageview(window.location.pathname + window.location.search);
 }
 const App = () => {
   initializeReactGA();
