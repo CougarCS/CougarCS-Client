@@ -1,5 +1,5 @@
 body {
-  font-family: 'Raleway', 'Roboto Mono', monospace;
+  font-family: "Raleway", "Roboto Mono", monospace;
 }
 
 .officerImages {
@@ -9,9 +9,6 @@ body {
   row-gap: 2em;
 }
 
-/* .officerImages img {
-  border-radius: 50%;
-} */
 .test {
   max-height: 86.6vh;
 }
