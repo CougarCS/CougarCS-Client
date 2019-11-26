@@ -65,3 +65,14 @@ body {
     row-gap: 2em;
   }
 }
+
+#linkedinLogo{
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+#officerInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
