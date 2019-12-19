@@ -1,5 +1,6 @@
 import React from "react";
 import ReactGA from "react-ga";
+// import bodyImage from '../assets/'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/Navbar/Navbar";
@@ -23,7 +24,7 @@ const App = () => {
       <Route path="/" exact component={Home} />
       <Route path="/about/" component={About} />
       <Route path="/membership/" component={Membership} />
-      <Route path="/calendar/" component={Events} />
+      <Route path="/events/" component={Events} />
       <Route path="/careerfair/" component={Careerfair} />
       {/* <Route path="/points/" component={Points} /> */}
       <Route path="/contactus/" component={ContactUs} />
