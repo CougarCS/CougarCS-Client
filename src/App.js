@@ -25,7 +25,7 @@ const App = () => {
       <Route path="/membership/" component={Membership} />
       <Route path="/calendar/" component={Events} />
       <Route path="/careerfair/" component={Careerfair} />
-      <Route path="/points/" component={Points} />
+      {/* <Route path="/points/" component={Points} /> */}
       <Route path="/contactus/" component={ContactUs} />
     </Router >
   );
