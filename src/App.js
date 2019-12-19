@@ -5,6 +5,7 @@ import './App.css';
 import NavBar from './components/Navbar/Navbar';
 import About from './pages/About/About';
 import Careerfair from './pages/CareerFair/Careerfair';
+import ContactUs from './pages/ContactUs/ContactUs';
 import Events from './pages/Events/Events';
 import Home from './pages/Home/Home';
 import Membership from './pages/Membership/Membership';
@@ -20,6 +21,7 @@ const App = () => {
       <Route path="/events/" component={Events} />
       <Route path="/careerfair/" component={Careerfair} />
       <Route path="/points/" component={Points} />
+      <Route path="/contactus/" component={ContactUs} />
     </Router >
   );
 }
