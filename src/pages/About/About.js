@@ -49,7 +49,7 @@ class About extends React.Component {
                       {
                         officer.email.length > 0 ?
                           <Nav.Link href={`mailto:${officer.email}`}>
-                            <i className="fas fa-envelope fa-2x"></i>
+                            <i className="fa fa-envelope fa-2x"></i>
                           </Nav.Link> : null
                       }
                       {
