@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Nav, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
+import linkedinLogo from '../../assets/linkedinLogo.png';
 import officers from '../../officers';
 import './About.css';
-
 class About extends React.Component {
   render() {
     return (
@@ -44,14 +44,30 @@ class About extends React.Component {
                   <Card.Body>
                     <Card.Title id='officerName'>{officer.name}</Card.Title>
                     <h5 style={{ textAlign: 'center' }}>{officer.title}</h5>
-                    <p style={{ textAlign: 'center' }}>{officer.email}</p>
+                    {/* <p style={{ textAlign: 'center' }}>{officer.email}</p> */}
+                    <div id="officerInfo">
+                      {
+                        officer.email.length > 0 ?
+                          <Nav.Link href={`mailto:${officer.email}`}>
+                            <i class="fas fa-envelope fa-2x"></i>
+                          </Nav.Link> : null
+                      }
+                      {
+                        officer.linkedin.length > 0 ?
+                          <Nav.Link href={officer.linkedin}>
+                            <img id="linkedinLogo" src={linkedinLogo} alt='linkedinLogo'></img>
+                          </Nav.Link> : null
+                      }
+                    </div>
+
+
                   </Card.Body>
                 </Card>
               ))}
             </div>
           </Row>
         </Container>
-      </div>
+      </div >
     );
   }
 }
