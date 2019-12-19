@@ -9,9 +9,12 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import Events from "./pages/Events/Events";
 import Home from "./pages/Home/Home";
 import Membership from "./pages/Membership/Membership";
+
+function initializeReactGA() {
   ReactGA.initialize("UA-152061658-1");
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
+
 const App = () => {
   initializeReactGA();
   return (
