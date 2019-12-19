@@ -1,0 +1,84 @@
+.container {
+    font-family: 'Poppins', sans-serif;
+}
+
+form button{
+    border: none !important;
+    background: #ff4d73 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+#getInTouch {
+    text-align: center;
+    color: #ff4d73;
+}
+
+#getInTouch::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: .1rem;
+    width: 10rem;
+    margin: 20px auto 50px;
+}
+
+a {
+    text-decoration: none !important;
+}
+a h5{
+    display: inline !important;
+    text-decoration: none !important;
+    color: black;
+    font-size: 16px;
+}
+
+h6 a{
+    display: inline !important;
+    text-decoration: none !important;
+    color: black;
+    font-size: 16px;
+}
+
+h6 a:hover{
+    text-decoration: none !important;
+    color: black;
+}
+
+.container {
+    background: #ffeff3;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+.contact-info{
+    padding-top: 1.5em;
+}
+.contact-info .follow{
+    background-color: #fff;
+    padding: .7em;
+    margin: 1.6em;
+}
+
+.contact-info .fa {
+    margin: .6em;
+    font-size: 20px !important;
+    color: #ff4d73 !important;
+    font-weight: bold;
+    padding-right: .4rem;
+}
+.contact-info span {
+    font-size: 14px;
+}
+
+.socials{
+    text-align: center;
+}
+
+h6 {
+    display: inline;
+}
+@media only screen and (max-width: 996px) {
+    .map{
+       display: none;   
+    }
+}
