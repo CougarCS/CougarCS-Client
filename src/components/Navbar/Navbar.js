@@ -25,7 +25,7 @@ function NavBar() {
           <LinkContainer to='/membership'>
             <Nav.Link>Membership</Nav.Link>
           </LinkContainer>
-          <LinkContainer to='/events'>
+          <LinkContainer to='/calendar'>
             <Nav.Link>Calendar</Nav.Link>
           </LinkContainer>
           <LinkContainer to='/contactus'>
