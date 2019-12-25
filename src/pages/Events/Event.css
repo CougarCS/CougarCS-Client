@@ -1,16 +1,16 @@
 /* @import '~@fullcalendar/core/main.css';
 @import '~@fullcalendar/daygrid/main.css'; */
 
-.event-container {
-  margin: 0;
-  padding: 0 2em 2em;
-  height: 85.5vh;
+.event-container{
+    margin: 0;
+    padding: 0 2em 2em;
+    height: 85.5vh;
 }
 @media only screen and (max-width: 414px) {
-  .event-container {
-    margin: 0;
-    padding: 0 2em;
-    width: 100vw;
-    height: 85.5vh;
+    .event-container{
+        margin: 0;
+        padding: 0 2em; 
+        width: 100vw;
+        height: 85.5vh;
+    }
   }
-}
