@@ -4,7 +4,7 @@ body {
 
 .officerImages {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-column-gap: 1em;
   row-gap: 2em;
 }
@@ -42,14 +42,6 @@ body {
   }
 }
 
-/* @media only screen and (max-width: 1296px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
-} */
 @media only screen and (max-width: 1109px) {
   .officerImages {
     display: grid;
@@ -75,4 +67,15 @@ body {
     grid-column-gap: 5em;
     row-gap: 2em;
   }
+}
+
+#linkedinLogo{
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+#officerInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
