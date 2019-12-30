@@ -7,7 +7,7 @@ import './ContactForm.css';
 const ContactForm = () => {
     const [emailSend, setEmailSend] = useState(false);
     const [emailSendError, setEmailSendError] = useState(false);
-    const [submitBtn, setsubmitBtn] = useState(false);
+    const [submitBtn, setSubmitBtn] = useState(false);
 
     const formik = useFormik({
         initialValues: {
@@ -17,7 +17,7 @@ const ContactForm = () => {
             body: '',
         },
         onSubmit: values => {
-            setsubmitBtn(true)
+            setSubmitBtn(true)
             axios.post('https://cougarcs-backend.herokuapp.com/api/send', values).then((res) => {
                 formik.values.firstName = "";
                 formik.values.lastName = "";
@@ -30,7 +30,7 @@ const ContactForm = () => {
                 if (res.status !== 200) {
                     setEmailSendError(true)
                 }
-                setsubmitBtn(false)
+                setSubmitBtn(false)
             })
         },
     });
