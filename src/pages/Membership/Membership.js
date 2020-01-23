@@ -44,22 +44,16 @@ class Membership extends Component {
                   Treasurer, Conrad Parker, will be incontact with you shortly.
                   You can also find an Officer on the 5th floor of PGH (Philip
                   Guthrie Hoffman Hall) or email{' '}
-                  <a href='mailto:Info@CougarCS.com'>Info@CougarCS.com</a>.
+                  <a href='mailto:info@cougar.com'>info@cougarcs.com</a>.
                 </p>
                 <p>
                   Whats that? You want to get more envolved with CougarCS?
                   Interested in joining our webdev team? Please reach out to
                   Vyas Ramankulangara at{' '}
-                  <a href='mailto:Vyas.R@CougarCS.com'>Vyas.R@CougarCS.com</a>.
-                  And for helping out at a hackathon or capture the flag event?
-                  Lets get you in contact with our Director of Hackathons,
-                  Athmar Ouda at{' '}
-                  <a href='mailto:Athmar.Ouda@CougarCS.com'>
-                    Athmar.Ouda@CougarCS.com
-                  </a>
+                  <a href='mailto:vyas.r@cougarcs.com'>vyas.r@Cougarcs.com</a>
                   . What about becoming a tutor? For that you can contact{' '}
-                  <a href='mailto:Tutoring@CougarCS.com'>
-                    Tutoring@cougarcs.com
+                  <a href='mailto:tutoring@cougarcs.com'>
+                    tutoring@cougarcs.com
                   </a>
                   .
                 </p>
