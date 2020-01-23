@@ -50,7 +50,7 @@ class Membership extends Component {
                   Whats that? You want to get more envolved with CougarCS?
                   Interested in joining our webdev team? Please reach out to
                   Vyas Ramankulangara at{' '}
-                  <a href='mailto:vyas.r@cougarcs.com'>vyas.r@Cougarcs.com</a>
+                  <a href='mailto:vyas.r@cougarcs.com'>vyas.r@cougarcs.com</a>
                   . What about becoming a tutor? For that you can contact{' '}
                   <a href='mailto:tutoring@cougarcs.com'>
                     tutoring@cougarcs.com
