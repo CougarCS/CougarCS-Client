@@ -44,7 +44,7 @@ class Membership extends Component {
                   Treasurer, Conrad Parker, will be incontact with you shortly.
                   You can also find an Officer on the 5th floor of PGH (Philip
                   Guthrie Hoffman Hall) or email{' '}
-                  <a href='mailto:info@cougar.com'>info@cougarcs.com</a>.
+                  <a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
                 </p>
                 <p>
                   Whats that? You want to get more envolved with CougarCS?
