@@ -34,7 +34,7 @@ class About extends React.Component {
           <Row className="cnt">
             <div className='officerImages'>
               {officers.map((officer) => (
-                <Officer officer={officer}></Officer>
+                <Officer officer={officer} key={officer.id}></Officer>
               ))}
             </div>
           </Row>

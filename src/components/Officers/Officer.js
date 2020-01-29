@@ -7,15 +7,15 @@ function Officer({ officer }) {
         <>
             <Row >
                 <Col >
-                    <div class="our-team">
-                        <div class="picture">
+                    <div className="our-team">
+                        <div className="picture">
                             <Image src={officer.image} />
                         </div>
-                        <div class="team-content">
-                            <h5 class="name">{officer.name}</h5>
-                            <h6 class="title">{officer.title}</h6>
+                        <div className="team-content">
+                            <h5 className="name">{officer.name}</h5>
+                            <h6 className="title">{officer.title}</h6>
                         </div>
-                        <ul class="social">
+                        <ul className="social">
                             {
                                 officer.email.length > 0 &&
                                 <li>
@@ -27,7 +27,7 @@ function Officer({ officer }) {
                             {
                                 officer.linkedin.length > 0 &&
                                 <li >
-                                    <a href={officer.linkedin}>
+                                    <a href={officer.linkedin} target="_blank" rel="noopener nofollow">
                                         <i className="fa fa-linkedin fa"></i>
                                     </a>
                                 </li>
