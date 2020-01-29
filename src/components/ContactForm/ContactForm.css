@@ -1,5 +1,6 @@
 .container {
     font-family: 'Poppins', sans-serif;
+    padding-top: 1.5em;
 }
 
 form button{
@@ -46,9 +47,7 @@ h6 a:hover{
 }
 
 .container {
-    background: #ffeff3;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    background: #ffeff3 !important;
 }
 .contact-info{
     padding-top: 1.5em;

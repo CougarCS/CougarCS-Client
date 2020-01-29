@@ -1,10 +1,13 @@
-import conrad from './assets/conrad_p-2.jpeg';
-import mare from './assets/fs_mare.jpg';
-import ibrahim from './assets/ibrahim_k.jpeg';
-import jesus from './assets/jesus.png';
+import chantha from './assets/chantha.JPG';
+import conrad from './assets/conrad.JPG';
+import fahad from './assets/fahad.JPG';
+import ibrahim from './assets/ibes.JPG';
+import jerry from './assets/jerry.JPG';
+import jesus from './assets/jesus.JPG';
+import mare from './assets/mariana.JPG';
+import mubashir from './assets/mubashir.JPG';
 import naveed from './assets/naveed.JPG';
-import user from './assets/users-01.png';
-import vyas from './assets/vyas_r-1.jpeg';
+import vyas from './assets/vyas.JPG';
 
 const officers = [
   {
@@ -58,7 +61,7 @@ const officers = [
   {
     id: 7,
     name: 'Chantha Mak',
-    image: user,
+    image: chantha,
     linkedin: 'https://www.linkedin.com/in/chantha-mak-830706177/',
     email: 'chantha.mak@cougarcs.com',
     title: 'Director of Operations',
@@ -66,7 +69,7 @@ const officers = [
   {
     id: 8,
     name: 'Mubashir Khan',
-    image: user,
+    image: mubashir,
     linkedin: 'https://www.linkedin.com/in/mubashir-khan-20808917a/',
     email: 'mubashir.khan@cougarcs.com',
     title: 'Co-Director Of Activities',
@@ -74,7 +77,7 @@ const officers = [
   {
     id: 9,
     name: 'Jerry Lopez',
-    image: user,
+    image: jerry,
     linkedin: 'https://www.linkedin.com/in/gerardo-lopez-374853181/',
     email: 'gerardo.lopez@cougarcs.com',
     title: 'Co-Director Of Activities',
@@ -82,7 +85,7 @@ const officers = [
   {
     id: 10,
     name: 'Fahad Siddiqi',
-    image: user,
+    image: fahad,
     linkedin: 'https://www.linkedin.com/in/fasiddiqi/',
     email: 'fahad.siddiqi@cougarcs.com',
     title: 'Director of Tutoring',
