@@ -1,6 +1,7 @@
 .container {
     font-family: 'Poppins', sans-serif;
     padding-top: 1.5em;
+    padding-bottom: .7rem;
 }
 
 form button{
@@ -45,7 +46,10 @@ h6 a:hover{
     text-decoration: none !important;
     color: black;
 }
-
+.fas {
+    margin-right: .6em;
+    color: #ff4d73 !important;
+}
 .container {
     background: #ffeff3 !important;
 }
@@ -58,13 +62,14 @@ h6 a:hover{
     margin: 1.6em;
 }
 
-.contact-info .fa {
+.contact-info .fab{
     margin: .6em;
-    font-size: 20px !important;
+    font-size: 1.3rem !important;
     color: #ff4d73 !important;
     font-weight: bold;
     padding-right: .4rem;
 }
+
 .contact-info span {
     font-size: 14px;
 }
