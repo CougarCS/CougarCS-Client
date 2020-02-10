@@ -4,3 +4,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.container-fluid {
+  min-height: calc(100vh - 107.75px);
+}

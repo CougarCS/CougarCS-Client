@@ -2,12 +2,12 @@ import React from 'react';
 import { Col, Image, Row } from 'react-bootstrap';
 import './Officer.css';
 
-function Officer({ officer }) {
+const Officer = ({ officer }) => {
     return (
         <>
             <Row >
                 <Col >
-                    <div className="our-team">
+                    <div className="officers">
                         <div className="picture">
                             <Image src={officer.image} />
                         </div>
@@ -20,7 +20,7 @@ function Officer({ officer }) {
                                 officer.email.length > 0 &&
                                 <li>
                                     <a href={`mailto:${officer.email}`}>
-                                        <i className="fa fa-envelope fa"></i>
+                                        <i className="far fa-envelope fa"></i>
                                     </a>
                                 </li>
                             }
@@ -28,7 +28,7 @@ function Officer({ officer }) {
                                 officer.linkedin.length > 0 &&
                                 <li >
                                     <a href={officer.linkedin} target="_blank" rel="noopener nofollow">
-                                        <i className="fa fa-linkedin fa"></i>
+                                        <i className="fab fa-linkedin"></i>
                                     </a>
                                 </li>
                             }
@@ -40,29 +40,5 @@ function Officer({ officer }) {
         </>
     )
 }
-
-
-// <Card key={officer.id}>
-//     <Card.Img variant='top' src={officer.image} />
-//     <br></br>
-//     <Card.Body>
-//         <Card.Title id='officerName'>{officer.name}</Card.Title>
-//         <h5 style={{ textAlign: 'center' }}>{officer.title}</h5>
-//         <div id="officerInfo">
-//             {
-//                 officer.email.length > 0 &&
-//                 <Nav.Link href={`mailto:${officer.email}`}>
-//                     <i className="fa fa-envelope fa"></i>
-//                 </Nav.Link>
-//             }
-//             {
-//                 officer.linkedin.length > 0 &&
-//                 <Nav.Link href={officer.linkedin}>
-//                     <i className="fa fa-linkedin fa"></i>
-//                 </Nav.Link>
-//             }
-//         </div>
-//     </Card.Body>
-// </Card>
 
 export default Officer

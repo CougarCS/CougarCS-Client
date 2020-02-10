@@ -93,7 +93,7 @@ const ContactForm = () => {
                 </Col>
                 <Col className="contact-info">
                     <div className="follow">
-                        <i className="fa fa-map-marker"></i>
+                        <i className="fas fa-map-marker"></i>
                         <span>
                             <a href="https://goo.gl/maps/pC4D4XR5Ejr1ebmW9">
                                 <h5>
@@ -111,16 +111,17 @@ const ContactForm = () => {
                         </span>
                     </div>
                     <div className="follow">
-                        <i className="fa fa-envelope-o"></i>
+                        <i className="fas fa-envelope"></i>
                         <span>
                             <h6><a href="mailto:info@cougarcs.com">info@cougarcs.com</a></h6>
                         </span>
                     </div>
                     <div className="follow socials">
-                        <a href="https://www.facebook.com/cougarcs/" target="_blank" rel="noopener nofollow"><i className="fa fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/uhcougarcs/?hl=en" target="_blank" rel="noopener nofollow"><i className="fa fa-instagram"></i></a>
-                        <a href="https://twitter.com/uhcougarcs" target="_blank" rel="noopener nofollow"><i className="fa fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/cougarcs/" target="_blank" rel="noopener nofollow"><i className="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/cougarcs/" target="_blank" rel="noopener nofollow"><i className="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/uhcougarcs/?hl=en" target="_blank" rel="noopener nofollow"><i className="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/uhcougarcs" target="_blank" rel="noopener nofollow"><i className="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/cougarcs/" target="_blank" rel="noopener nofollow"><i className="fab fa-linkedin"></i></a>
+                        <a href="https://discordapp.com/invite/aKUzPFY" target="_blank" rel="noopener nofollow"><i className="fab fa-discord"></i></a>
                     </div>
                 </Col>
             </Row >
