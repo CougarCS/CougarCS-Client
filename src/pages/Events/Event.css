@@ -8,6 +8,10 @@
     padding: 0 2em 2em;
     height: calc(100vh - 107.75px)
 }
+
+.loader {
+    
+}
 @media only screen and (max-width: 414px) {
     .event-container{
         margin: 0;
