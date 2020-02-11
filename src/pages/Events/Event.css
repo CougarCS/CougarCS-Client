@@ -1,16 +1,18 @@
 /* @import '~@fullcalendar/core/main.css';
 @import '~@fullcalendar/daygrid/main.css'; */
 
+ /* @import 'react-big-calendar/lib/sass/styles'; */
+ 
 .event-container{
     margin: 0;
     padding: 0 2em 2em;
-    height: 85.5vh;
+    height: calc(100vh - 107.75px)
 }
 @media only screen and (max-width: 414px) {
     .event-container{
         margin: 0;
         padding: 0 2em; 
         width: 100vw;
-        height: 85.5vh;
+        height: calc(100vh - 107.75px);
     }
   }
