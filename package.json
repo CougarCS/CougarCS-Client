@@ -9,6 +9,7 @@
     "http-proxy-middleware": "^0.20.0",
     "moment": "^2.24.0",
     "react": "^16.10.2",
+    "react-add-to-calendar": "^0.1.5",
     "react-big-calendar": "^0.23.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
