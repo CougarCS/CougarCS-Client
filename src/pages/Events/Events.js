@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import Loading from '../../components/Loading/Loading';
 import './Event.css';
-
 const localizer = momentLocalizer(moment)
 const url = `https://cougarcs-backend.herokuapp.com/api/events`;
 
@@ -41,25 +40,25 @@ const Events = () => {
       })
   }, [])
   return (
-    <div>
-      {loading ? <Loading className="loader" /> :
-        < div className='event-container' >
-          <Calendar
-            localizer={localizer}
-            events={events}
-            startAccessor="start"
-            endAccessor="end"
-            style={{ height: "100%" }}
-            views={{
-              month: true,
-              agenda: true
-            }}
-            popup={true}
-            drilldownView="agenda"
-            popupOffset={{ x: 30, y: 20 }}
-          />
 
-          {/* <iframe
+    loading ? <div className="load"> <Loading className="loader" /> </div > :
+      < div className='event-container' >
+        <Calendar
+          localizer={localizer}
+          events={events}
+          startAccessor="start"
+          endAccessor="end"
+          style={{ height: "100%" }}
+          views={{
+            month: true,
+            agenda: true
+          }}
+          popup={true}
+          drilldownView="agenda"
+          popupOffset={{ x: 30, y: 20 }}
+        />
+
+        {/* <iframe
         title='CougarCS Calendar'
         src={'https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&mode=MONTH&wkst=1&bgcolor=%23FFFFFF&src=aeu0ag4i5a7aag0hkvco4goung%40group.calendar.google.com&color=%23711616&ctz=America%2FChicago'}
         style={{
@@ -69,9 +68,8 @@ const Events = () => {
           frameBorder: 0
         }}
       ></iframe> */}
-        </div >
-      }
-    </div>
+      </div >
+
   )
 }
 export default Events;
