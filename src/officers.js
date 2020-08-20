@@ -92,7 +92,7 @@ const officers = [
 		image: jerry,
 		linkedin: 'https://www.linkedin.com/in/gerardo-lopez-374853181/',
 		email: 'gerardo.lopez@cougarcs.com',
-		title: 'Co-Director Of Activities',
+		title: 'Acting Co-Director Of Activities',
 		open: false,
 		show: true,
 	},
