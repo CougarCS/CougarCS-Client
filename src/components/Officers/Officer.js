@@ -9,7 +9,7 @@ const Officer = ({ officer }) => {
 				<Col>
 					<div className='officers'>
 						<div className='picture'>
-							<Image src={officer.image} />
+							<Image src={officer.image} roundedCircle />
 						</div>
 						<div className='team-content'>
 							<h5 className='name'>

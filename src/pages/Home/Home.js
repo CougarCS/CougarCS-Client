@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Button, ButtonToolbar, Nav } from 'react-bootstrap';
+import { Button, ButtonToolbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Typed from 'typed.js';
 import './Home.css';
@@ -22,8 +22,8 @@ const Home = () => {
 	}, []);
 	return (
 		<div style={{ overflow: 'hidden' }}>
-			<div
-				class='alert alert-warning'
+			{/* <div
+				className='alert alert-warning'
 				role='alert'
 				style={{ textAlign: 'center' }}>
 				WE ARE LOOKING FOR OFFICERS!{' '}
@@ -34,20 +34,29 @@ const Home = () => {
 					rel='noopener nofollow'>
 					CLICK HERE TO APPLY
 				</a>
-			</div>
+			</div> */}
 			<div className='ani'>
 				<div className='bgDark'>
 					<div className='main-text'>
 						<p className='firstP'>
 							WE <span id='typed' />
 						</p>
-						<LinkContainer to='/about'>
-							<ButtonToolbar>
-								<Button className='learnMoreBtn' variant='success'>
-									Learn More
-								</Button>
-							</ButtonToolbar>
-						</LinkContainer>
+						<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+							<LinkContainer to='/about' style={{ marginRight: '2em' }}>
+								<ButtonToolbar>
+									<Button className='learnMoreBtn' variant='success'>
+										Learn More
+									</Button>
+								</ButtonToolbar>
+							</LinkContainer>
+							{/* <LinkContainer to='/register'>
+								<ButtonToolbar>
+									<Button className='learnMoreBtn' variant='primary'>
+										Become a member
+									</Button>
+								</ButtonToolbar>
+							</LinkContainer> */}
+						</div>
 					</div>
 				</div>
 			</div>

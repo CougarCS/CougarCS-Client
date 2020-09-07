@@ -1,88 +1,88 @@
 .container {
-    font-family: 'Poppins', sans-serif;
-    padding-top: 1.5em;
-    padding-bottom: .7rem;
+	font-family: 'Poppins', sans-serif;
+	padding-top: 1.5em;
+	padding-bottom: 0.7rem;
 }
 
-form button{
-    border: none !important;
-    background: #ff4d73 !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
+form .contactButton {
+	border: none !important;
+	background: #ff4d73 !important;
+	box-shadow: none !important;
+	border-radius: 0 !important;
 }
 
 #getInTouch {
-    text-align: center;
-    color: #ff4d73;
+	text-align: center;
+	color: #ff4d73;
 }
 
-#getInTouch::after{
-    content: '';
-    background: #ff4d73;
-    display: block;
-    height: .1rem;
-    width: 10rem;
-    margin: 20px auto 50px;
+#getInTouch::after {
+	content: '';
+	background: #ff4d73;
+	display: block;
+	height: 0.1rem;
+	width: 10rem;
+	margin: 20px auto 50px;
 }
 
 a {
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
-a h5{
-    display: inline !important;
-    text-decoration: none !important;
-    color: black;
-    font-size: 16px;
-}
-
-h6 a{
-    display: inline !important;
-    text-decoration: none !important;
-    color: black;
-    font-size: 16px;
+a h5 {
+	display: inline !important;
+	text-decoration: none !important;
+	color: black;
+	font-size: 16px;
 }
 
-h6 a:hover{
-    text-decoration: none !important;
-    color: black;
+h6 a {
+	display: inline !important;
+	text-decoration: none !important;
+	color: black;
+	font-size: 16px;
+}
+
+h6 a:hover {
+	text-decoration: none !important;
+	color: black;
 }
 .fas {
-    margin-right: .6em;
-    color: #ff4d73 !important;
+	margin-right: 0.6em;
+	color: #ff4d73 !important;
 }
-.container {
-    background: #ffeff3 !important;
+.contactForm {
+	background: #ffeff3 !important;
 }
-.contact-info{
-    padding-top: 1.5em;
+.contact-info {
+	padding-top: 1.5em;
 }
-.contact-info .follow{
-    background-color: #fff;
-    padding: .7em;
-    margin: 1.6em;
+.contact-info .follow {
+	background-color: #fff;
+	padding: 0.7em;
+	margin: 1.6em;
 }
 
-.contact-info .fab{
-    margin: .6em;
-    font-size: 1.3rem !important;
-    color: #ff4d73 !important;
-    font-weight: bold;
-    padding-right: .4rem;
+.contact-info .fab {
+	margin: 0.6em;
+	font-size: 1.3rem !important;
+	color: #ff4d73 !important;
+	font-weight: bold;
+	padding-right: 0.4rem;
 }
 
 .contact-info span {
-    font-size: 14px;
+	font-size: 14px;
 }
 
-.socials{
-    text-align: center;
+.socials {
+	text-align: center;
 }
 
 h6 {
-    display: inline;
+	display: inline;
 }
 @media only screen and (max-width: 996px) {
-    .map{
-       display: none;   
-    }
+	.map {
+		display: none;
+	}
 }
