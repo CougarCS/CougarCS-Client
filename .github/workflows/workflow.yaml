@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build project
-      run: npm i && npm run build
+      run: CI=false && npm i && npm run build
