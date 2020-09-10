@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { Form, Col, Button } from 'react-bootstrap';
+import axios from 'axios';
 export const Payment = () => {
+
+	// console.log(process.env);
+
+	// Stripe Init
 	const stripe = useStripe();
 	const elements = useElements();
+
+	// Fields
 	const [user, setUser] = useState({
 		email: '',
 		firstName: '',
@@ -14,16 +21,62 @@ export const Payment = () => {
 		phone: '',
 	});
 
+	// Card Element Styles
+	const cardOptions = {
+		style: {
+			base: {
+				backgroundColor: '#fff',
+				fontSize: '16px',
+				color: '#495057',
+				padding: '15px',
+				lineHeight: '52px',
+				'::placeholder': {
+					color: '#aab7c4',
+				},
+			},
+			invalid: {
+				color: '#495057',
+			},
+		},
+	};
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		// disable form
+		e.currentTarget.querySelector("button").disabled = true;
+
+		// return;
+
+		if (!stripe || !elements) {
+			return;
+		}
+
 		const { error, paymentMethod } = await stripe.createPaymentMethod({
 			type: 'card',
 			card: elements.getElement(CardElement),
 		});
 
-		console.log(paymentMethod);
-		if (error) {
-			console.log(error.message);
+		if (!error) {
+			const { id } = paymentMethod;
+
+			try {
+				const response = await axios
+					.post("https://cougarcs-backend.herokuapp.com/api/payment", {
+						token: id,
+						user
+					});
+
+				console.log(response);
+
+			} catch (e) {
+				console.error(e);
+			}
+
+
+		} else {
+			console.error('ERROR!');
+			console.error(error.message);
 		}
 	};
 
@@ -73,7 +126,7 @@ export const Payment = () => {
 					<Form.Label>Phone Number</Form.Label>
 					<Form.Control
 						type='tel'
-						pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
+						pattern='[0-9]{3}[0-9]{3}[0-9]{4}'
 						placeholder='xxx-xxx-xxxx'
 						required
 						onChange={(e) => handleChange(e)}
@@ -113,44 +166,37 @@ export const Payment = () => {
 				</Form.Group>
 			</Form.Row>
 
-			<Form.Group as={Col} controlId='formGridClassification'>
-				<Form.Label>Payment Type</Form.Label>
-				<Form.Control
-					as='select'
-					defaultValue='Choose...'
-					required
-					onChange={(e) => handleChange(e)}
-					name='paidUntil'>
-					<option value=''>Choose...</option>
-					<option value='semester'>Semester ($10)</option>
-					<option value='year'>Year ($18)</option>
-				</Form.Control>
-			</Form.Group>
-			<Form.Group as={Col} controlId='stripPayment'>
-				<CardElement
-					options={{
-						style: {
-							base: {
-								fontSize: '16px',
-								color: '#424770',
-								'::placeholder': {
-									color: '#aab7c4',
-								},
-							},
-							invalid: {
-								color: '#9e2146',
-							},
-						},
-					}}
-				/>
-			</Form.Group>
+			<Form.Row>
+				<Form.Group as={Col} controlId='formGridClassification'>
+					<Form.Label>Payment Type</Form.Label>
+					<Form.Control
+						as='select'
+						defaultValue='Choose...'
+						required
+						onChange={(e) => handleChange(e)}
+						name='paidUntil'>
+						<option value=''>Choose...</option>
+						<option value='semester'>Semester ($10)</option>
+						<option value='year'>Year ($18)</option>
+					</Form.Control>
+				</Form.Group>
+			</Form.Row>
+
+			<Form.Row>
+				<Form.Group as={Col} controlId='stripPayment'>
+					<CardElement
+						options={cardOptions}
+					/>
+				</Form.Group>
+			</Form.Row>
+
 			<Button
 				variant='primary'
 				type='submit'
 				size='lg'
 				block
 				className='mt-4 mb-4'>
-				Next
+				Submit
 			</Button>
 		</Form>
 	);
