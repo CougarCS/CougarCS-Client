@@ -14,3 +14,7 @@
 .formContainer form {
 	width: 100%;
 }
+
+.formContainer iframe {
+	border-radius: 5px;
+}
