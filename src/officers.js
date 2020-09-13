@@ -1,113 +1,122 @@
-import conrad from './assets/conrad_p-2.jpeg';
-import mare from './assets/fs_mare.jpg';
-import harrison from './assets/harrison.png';
-import ibrahim from './assets/ibrahim_k.jpeg';
-import jacob from './assets/jake_m.jpeg';
-import jesus from './assets/jesus.png';
-import madeleine from './assets/madeleine_w.jpg';
-import naveed from './assets/naveed.JPG';
-import nilanjan from './assets/nilanjan.jpeg';
-import rizwan from './assets/rizwan.png';
-import vyas from './assets/vyas_r-1.jpeg';
-import zach from './assets/zach.jpeg';
+import chantha from './assets/chantha.JPG';
+import ibrahim from './assets/ibes.JPG';
+import jerry from './assets/jerry.JPG';
+import mare from './assets/mariana.JPG';
+import vyas from './assets/vyas.JPG';
+import user from './assets/user.png';
+import dr_yun from './assets/dr_yun.jpg';
 
 const officers = [
-  {
-    id: 1,
-    name: 'Ibrahim Khatkhatay',
-    image: ibrahim,
-    linkedin: 'https://www.linkedin.com/in/ibrahim-khatkhatay/',
-    email: 'i.khatkhatay@cougarcs.com',
-    title: 'President',
-  },
-  {
-    id: 2,
-    name: 'Harrison Hayes',
-    image: harrison,
-    email: 'harrison.hayes@cougarcs.com',
-    linkedin: 'https://www.linkedin.com/in/harrisonhayes/',
-    title: 'Vice President',
-  },
-  {
-    id: 4,
-    name: 'Conrad Parker',
-    image: conrad,
-    linkedin: 'https://www.linkedin.com/in/conrad-parker/',
-    email: 'conrad.parker@cougarcs.com',
-    title: 'Treasure',
-  },
-  {
-    id: 3,
-    name: 'Naveed Panjwani',
-    image: naveed,
-    linkedin: 'https://www.linkedin.com/in/naveed-panjwani/',
-    email: 'n.panjwani@cougarcs.com',
-    title: 'Secretary',
-  },
-  {
-    id: 6,
-    name: 'Vyas Ramankulangara',
-    image: vyas,
-    linkedin: 'https://www.linkedin.com/in/vyas0189/',
-    email: 'vyas.r@cougarcs.com',
-    title: 'Webmaster',
-  },
-  {
-    id: 5,
-    name: 'Jacob Medel',
-    image: jacob,
-    linkedin: 'https://www.linkedin.com/in/jacobmedel/',
-    email: 'jacob.medel@cougarcs.com',
-    title: 'Director of Communications',
-  },
-  {
-    id: 7,
-    name: 'Jesus Del Riego',
-    image: jesus,
-    linkedin: 'https://www.linkedin.com/in/jesusdelr/',
-    email: 'jesus.delr@cougarcs.com',
-    title: 'Director of Operations',
-  },
-  {
-    id: 8,
-    name: 'Nilanjan Chowdhury',
-    image: nilanjan,
-    linkedin: 'https://www.linkedin.com/in/nilanjanc-cs21/',
-    email: 'nilanjan.chowdhury@cougarcs.com',
-    title: 'Designer',
-  },
-  {
-    id: 9,
-    name: 'Madeleine Wilson',
-    image: madeleine,
-    linkedin: 'https://www.linkedin.com/in/madeleine-faye-wilson/',
-    email: 'mfwilson@cougarcs.com',
-    title: 'Director of Tutoring',
-  },
-  {
-    id: 10,
-    name: 'Rizwan Khan',
-    image: rizwan,
-    linkedin: 'https://www.linkedin.com/in/rkhan01/',
-    email: 'rizwan.khan@cougarcs.com',
-    title: 'Director of Activities',
-  },
-  {
-    id: 11,
-    name: 'Mariana Villalobos',
-    image: mare,
-    linkedin: 'https://www.linkedin.com/in/mariana07/',
-    email: 'mariana.villalobos@cougarcs.com',
-    title: 'Historian',
-  },
-  {
-    id: 12,
-    name: 'Zachery Page',
-    image: zach,
-    linkedin: 'https://www.linkedin.com/in/pagezacharyc/',
-    email: 'zach.page@cougarcs.com',
-    title: 'Historian',
-  },
+	// {
+	// 	id: 0,
+	// 	name: 'Dr.Chang Yun',
+	// 	image: dr_yun,
+	// 	linkedin: 'https://www.linkedin.com/in/chang-yun-94340a14/',
+	// 	email: 'phys94@cougarcs.com',
+	// 	title: 'Faculty Advisor',
+	// 	open: false,
+	// 	show: true,
+	// },
+	{
+		id: 1,
+		name: 'Mariana Villalobos',
+		image: mare,
+		linkedin: 'https://www.linkedin.com/in/mariana07/',
+		email: 'president@cougarcs.com',
+		title: 'President',
+		open: false,
+		show: true,
+	},
+	{
+		id: 2,
+		name: 'Ibrahim Khatkhatay',
+		image: ibrahim,
+		linkedin: 'https://www.linkedin.com/in/ibrahim-khatkhatay/',
+		email: 'vicepresident@cougarcs.com',
+		title: 'Vice President',
+		open: false,
+		show: true,
+	},
+	{
+		id: 3,
+		name: 'Vyas Ramankulangara',
+		image: vyas,
+		linkedin: 'https://www.linkedin.com/in/vyas0189/',
+		email: 'secretary@cougarcs.com',
+		title: 'Secretary',
+		open: false,
+		show: true,
+	},
+	{
+		id: 4,
+		name: 'Chantha Mak',
+		image: chantha,
+		linkedin: 'https://www.linkedin.com/in/chantha-mak-830706177/',
+		email: 'treasurer@cougarcs.com',
+		title: 'Treasurer',
+		open: false,
+		show: true,
+	},
+	{
+		id: 5,
+		name: 'Shubh Sheth',
+		image: user,
+		linkedin: 'https://www.linkedin.com/in/sheth-shubh/',
+		email: 'webmaster@cougarcs.com',
+		title: 'Webmaster',
+		open: false,
+		show: true,
+	},
+	{
+		id: 6,
+		name: 'Sevilay Ozturk',
+		image: user,
+		linkedin: 'https://www.linkedin.com/in/sevilay-ozturkk/',
+		email: 'communications@cougarcs.com',
+		title: 'Director of Communications',
+		open: false,
+		show: true,
+	},
+	{
+		id: 7,
+		name: 'N/A',
+		image: user,
+		linkedin: 'N/A',
+		email: 'N/A',
+		title: 'Director of Operations',
+		open: true,
+		show: false,
+	},
+	{
+		id: 8,
+		name: 'Tooba Hashmi',
+		image: user,
+		linkedin: 'https://www.linkedin.com/in/tooba-hashmi-540a73156/',
+		email: 'activities@cougarcs.com',
+		title: 'Co-Director Of Activities',
+		open: false,
+		show: true,
+	},
+	{
+		id: 9,
+		name: 'Jerry Lopez',
+		image: jerry,
+		linkedin: 'https://www.linkedin.com/in/gerardo-lopez-374853181/',
+		email: 'activities@cougarcs.com',
+		title: 'Co-Director Of Activities',
+		open: false,
+		show: true,
+	},
+	{
+		id: 10,
+		name: 'Nykolas Farhangi',
+		image: user,
+		linkedin: 'https://www.linkedin.com/in/nykolasfarhangi/',
+		email: 'tutoring@cougarcs.com',
+		title: 'Director of Tutoring',
+		open: false,
+		show: true,
+	},
 ];
 
 export default officers;

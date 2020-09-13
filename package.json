@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fullcalendar/core": "^4.3.1",
-    "@fullcalendar/daygrid": "^4.3.0",
-    "@fullcalendar/react": "^4.3.0",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.9.0",
+    "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "formik": "^2.0.8",
+    "moment": "^2.24.0",
     "react": "^16.10.2",
+    "react-add-to-calendar": "^0.1.5",
+    "react-big-calendar": "^0.23.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
     "react-ga": "^2.7.0",
@@ -21,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "now-build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"

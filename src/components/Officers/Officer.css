@@ -1,0 +1,112 @@
+.officers {
+	padding: 1.3em;
+	margin-bottom: 30px;
+	background-color: #ffffff;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.officers:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.officers .picture {
+	display: inline-block;
+	height: 130px;
+	width: 130px;
+	margin-bottom: 50px;
+	z-index: 1;
+	position: relative;
+}
+
+.officers .picture::before {
+	content: '';
+	width: 100%;
+	height: 0;
+	border-radius: 50%;
+	background-color: #ce1313;
+	position: absolute;
+	bottom: 135%;
+	right: 0;
+	left: 0;
+	opacity: 0.9;
+	transform: scale(3);
+	transition: all 0.3s linear 0s;
+}
+
+.officers:hover .picture::before {
+	height: 100%;
+}
+
+.officers .picture::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #ce1313;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.officers .picture img {
+	width: 100%;
+	/* height: auto; */
+	/* border-radius: 50%; */
+	background-size: contain;
+	transform: scale(1);
+	transition: all 0.9s ease 0s;
+}
+
+.officers:hover .picture img {
+	box-shadow: 0 0 0 14px #f7f5ec;
+	transform: scale(0.7);
+}
+
+.officers .title {
+	display: block;
+	font-size: 15px;
+	color: #4e5052;
+	text-transform: capitalize;
+}
+
+.officers .social {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: #ce1313;
+	position: absolute;
+	bottom: -100px;
+	left: 0;
+	transition: all 0.5s ease 0s;
+}
+
+.officers:hover .social {
+	bottom: 0;
+}
+
+.officers .social li {
+	display: inline-block;
+}
+
+.officers .social li a {
+	display: block;
+	padding: 10px;
+	font-size: 17px;
+	color: white;
+	transition: all 0.3s ease 0s;
+	text-decoration: none;
+}
+
+.officers .social {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.officers .social li .fa {
+	color: #ffffff;
+}
