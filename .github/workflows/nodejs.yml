@@ -23,6 +23,6 @@ jobs:
         with:
           node-version: ${{matrix.node.version}}
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Build App
         run: CI=false && npm run build --if-present
