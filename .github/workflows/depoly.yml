@@ -3,7 +3,7 @@ name: Install, Build, Deploy
 on:
   push:
     branches:
-      - 'CougarCS/CougarCS-Client/master'
+      - CougarCS/CougarCS-Client/master
 jobs:
   install:
     runs-on: ubuntu-latest
