@@ -3,7 +3,7 @@ name: Install, Build, Deploy
 on:
   push:
     branches:
-      - CougarCS/CougarCS-Client/master
+      - prod
 jobs:
   install:
     runs-on: ubuntu-latest
@@ -19,4 +19,4 @@ jobs:
       - name: Build App
         run: CI=false && npm run build --if-present
       - name: Deploy
-        run: echo 'Deploying...'
+        run: echo 'Deploying to prod...'
