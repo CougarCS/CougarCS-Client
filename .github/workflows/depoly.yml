@@ -19,4 +19,9 @@ jobs:
       - name: Build App
         run: CI=false && npm run build --if-present
       - name: Deploy
-        run: echo 'Deploying to prod...'
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ${{secrets.FTP_URL}}
+          ftp-username: ${{secrets.FTP_USERNAME}}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: build
