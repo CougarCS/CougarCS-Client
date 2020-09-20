@@ -18,7 +18,7 @@ jobs:
         run: npm i
       - name: Build App
         run: CI=false && npm run build --if-present
-      - name: FTP-Deploy-Action
+      - name: Deploy
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
           ftp-server: ${{secrets.FTP_URL}}
