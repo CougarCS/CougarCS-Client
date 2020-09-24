@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { Form, Col, Button } from 'react-bootstrap';
+import { load } from 'recaptcha-v3'
 import SuccessModal from './../Modals/SuccessModal';
 import ErrorModal from './../Modals/ErrorModal';
 import axios from 'axios';
@@ -54,6 +55,12 @@ export const Payment = () => {
 		setButtonText('Loading...');
 		setLoading(true);
 
+		// Get recaptcha token
+		const recaptcha = await load(process.env.REACT_APP_RECAPTCHA_SITE_KEY, {
+			autoHideBadge: true
+		});
+		const recaptchaToken = await recaptcha.execute('paymentpage');
+
 		if (!stripe || !elements) {
 			resetForm();
 			setLoading(false);
@@ -74,7 +81,8 @@ export const Payment = () => {
 				const response = await axios
 					.post("https://cougarcs-backend.herokuapp.com/api/payment", {
 						token: id,
-						user
+						user,
+						recaptchaToken,
 					})
 					.then(() =>{
 						// Reset Form
