@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - env:
+          REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}} 
+          REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}} 
       - uses: actions/checkout@v2
       - name: Use Node.js 12
         uses: actions/setup-node@v2-beta
