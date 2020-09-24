@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { Form, Col, Button } from 'react-bootstrap';
+import { load } from 'recaptcha-v3'
+import SuccessModal from './../Modals/SuccessModal';
+import ErrorModal from './../Modals/ErrorModal';
 import axios from 'axios';
-export const Payment = () => {
 
-	// console.log(process.env);
+export const Payment = () => {
 
 	// Stripe Init
 	const stripe = useStripe();
@@ -20,6 +22,11 @@ export const Payment = () => {
 		paidUntil: '',
 		phone: '',
 	});
+	const [loading, setLoading] = useState(false);
+	const [buttonText, setButtonText] = useState('Submit');
+
+	const [successModal, setSuccessModal] = useState(false);
+	const [errorModal, setErrorModal] = useState(false);
 
 	// Card Element Styles
 	const cardOptions = {
@@ -29,7 +36,7 @@ export const Payment = () => {
 				fontSize: '16px',
 				color: '#495057',
 				padding: '15px',
-				lineHeight: '52px',
+				lineHeight: '36px',
 				'::placeholder': {
 					color: '#aab7c4',
 				},
@@ -43,12 +50,22 @@ export const Payment = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		// disable form
-		e.currentTarget.querySelector("button").disabled = true;
 
-		// return;
+		// Disable form
+		setButtonText('Loading...');
+		setLoading(true);
+
+		// Get recaptcha token
+		const recaptcha = await load(process.env.REACT_APP_RECAPTCHA_SITE_KEY, {
+			autoHideBadge: true
+		});
+		const recaptchaToken = await recaptcha.execute('paymentpage');
 
 		if (!stripe || !elements) {
+			resetForm();
+			setLoading(false);
+			setButtonText('Submit');
+			setErrorModal(true);
 			return;
 		}
 
@@ -64,28 +81,55 @@ export const Payment = () => {
 				const response = await axios
 					.post("https://cougarcs-backend.herokuapp.com/api/payment", {
 						token: id,
-						user
-					});
-
-				console.log(response);
+						user,
+						recaptchaToken,
+					})
+					.then(() =>{
+						// Reset Form
+						resetForm();
+						setLoading(false);
+						setButtonText('Success!');
+						setSuccessModal(true);
+						return;
+					})
 
 			} catch (e) {
-				console.error(e);
+				resetForm();
+				setLoading(false);
+				setErrorModal(true);
+				setButtonText('Submit');
 			}
-
-
 		} else {
-			console.error('ERROR!');
-			console.error(error.message);
+			resetForm();
+			setLoading(false);
+			setErrorModal(true);
+			setButtonText('Submit');
 		}
+
 	};
 
 	const handleChange = (e) => {
 		setUser({ ...user, [e.target.name]: e.target.value });
 	};
 
+	const resetForm = () => {
+		setUser({
+			email: '',
+			firstName: '',
+			lastName: '',
+			uhID: '',
+			classification: '',
+			paidUntil: '',
+			phone: '',
+		})
+
+		elements.getElement(CardElement).clear();
+	}
+
 	return (
 		<Form onSubmit={handleSubmit} className='child p-3'>
+			<SuccessModal show={successModal} handleClose={() => setSuccessModal(false)}></SuccessModal>
+			<ErrorModal show={errorModal} handleClose={() => setErrorModal(false)}></ErrorModal>
 			<Form.Row>
 				<Form.Group as={Col} controlId='formGridFirstName'>
 					<Form.Label>First Name</Form.Label>
@@ -95,6 +139,7 @@ export const Payment = () => {
 						required
 						onChange={(e) => handleChange(e)}
 						name='firstName'
+						value={user.firstName}
 					/>
 				</Form.Group>
 
@@ -106,6 +151,7 @@ export const Payment = () => {
 						required
 						onChange={(e) => handleChange(e)}
 						name='lastName'
+						value={user.lastName}
 					/>
 				</Form.Group>
 			</Form.Row>
@@ -119,6 +165,7 @@ export const Payment = () => {
 						required
 						onChange={(e) => handleChange(e)}
 						name='email'
+						value={user.email}
 					/>
 				</Form.Group>
 
@@ -126,11 +173,12 @@ export const Payment = () => {
 					<Form.Label>Phone Number</Form.Label>
 					<Form.Control
 						type='tel'
-						pattern='[0-9]{3}[0-9]{3}[0-9]{4}'
-						placeholder='xxx-xxx-xxxx'
+						pattern='^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
+						placeholder='Phone'
 						required
 						onChange={(e) => handleChange(e)}
 						name='phone'
+						value={user.phone}
 					/>
 				</Form.Group>
 			</Form.Row>
@@ -140,17 +188,17 @@ export const Payment = () => {
 					<Form.Label>Classification</Form.Label>
 					<Form.Control
 						as='select'
-						defaultValue='Choose...'
+						name='classification'
 						required
 						onChange={(e) => handleChange(e)}
-						name='classification'>
-						<option>Choose...</option>
-						<option>Freshman</option>
-						<option>Sophomore</option>
-						<option>Junior</option>
-						<option>Senior</option>
-						<option>Post-Bacc</option>
-						<option>Graduate PhD</option>
+						value={user.classification}>
+						<option value=''>Choose...</option>
+						<option value='Freshman'>Freshman</option>
+						<option value='Sophomore'>Sophomore</option>
+						<option value='Junior'>Junior</option>
+						<option value='Senior'>Senior</option>
+						<option value='Post-Bacc'>Post-Bacc</option>
+						<option value='Graduate PhD'>Graduate PhD</option>
 					</Form.Control>
 				</Form.Group>
 
@@ -158,20 +206,22 @@ export const Payment = () => {
 					<Form.Label>UHID</Form.Label>
 					<Form.Control
 						type='text'
+						pattern='^[0-9]{7,7}$'
 						placeholder='UHID'
 						required
 						onChange={(e) => handleChange(e)}
 						name='uhID'
+						value={user.uhID}
 					/>
 				</Form.Group>
 			</Form.Row>
 
 			<Form.Row>
 				<Form.Group as={Col} controlId='formGridClassification'>
-					<Form.Label>Payment Type</Form.Label>
+					<Form.Label>Payment For</Form.Label>
 					<Form.Control
 						as='select'
-						defaultValue='Choose...'
+						value={user.paidUntil}
 						required
 						onChange={(e) => handleChange(e)}
 						name='paidUntil'>
@@ -183,20 +233,19 @@ export const Payment = () => {
 			</Form.Row>
 
 			<Form.Row>
-				<Form.Group as={Col} controlId='stripPayment'>
-					<CardElement
-						options={cardOptions}
-					/>
+				<Form.Group as={Col} className='stripe-container' controlId='stripPayment'>
+					<CardElement options={cardOptions} />
 				</Form.Group>
 			</Form.Row>
 
 			<Button
+				disabled={loading}
 				variant='primary'
 				type='submit'
 				size='lg'
 				block
 				className='mt-4 mb-4'>
-				Submit
+				{buttonText}
 			</Button>
 		</Form>
 	);

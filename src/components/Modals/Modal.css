@@ -1,0 +1,23 @@
+.modal {
+    text-align: center;
+}
+
+.modal-header {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.modal-body {
+    padding-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-title {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.warning-image {
+    max-width: 150px;
+    margin-bottom: 1.75rem;
+}
