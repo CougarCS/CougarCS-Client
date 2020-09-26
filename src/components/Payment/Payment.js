@@ -78,7 +78,7 @@ export const Payment = () => {
 
 			try {
 				const response = await axios
-					.post("http://example.com/api/payment", {
+					.post("https://cougarcs-backend.herokuapp.com/api/payment", {
 						token: id,
 						user,
 						recaptchaToken,
