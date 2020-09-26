@@ -35,7 +35,6 @@ export const Payment = () => {
 				backgroundColor: '#fff',
 				fontSize: '16px',
 				color: '#495057',
-				padding: '15px',
 				lineHeight: '36px',
 				'::placeholder': {
 					color: '#aab7c4',
@@ -79,7 +78,7 @@ export const Payment = () => {
 
 			try {
 				const response = await axios
-					.post("https://cougarcs-backend.herokuapp.com/api/payment", {
+					.post("http://example.com/api/payment", {
 						token: id,
 						user,
 						recaptchaToken,
