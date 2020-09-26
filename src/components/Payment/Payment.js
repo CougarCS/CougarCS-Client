@@ -35,7 +35,6 @@ export const Payment = () => {
 				backgroundColor: '#fff',
 				fontSize: '16px',
 				color: '#495057',
-				padding: '15px',
 				lineHeight: '36px',
 				'::placeholder': {
 					color: '#aab7c4',
