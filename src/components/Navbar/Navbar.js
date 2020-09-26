@@ -24,8 +24,11 @@ const NavBar = () => (
 				<LinkContainer to='/membership'>
 					<Nav.Link>Membership</Nav.Link>
 				</LinkContainer>
+				<LinkContainer to='/register'>
+					<Nav.Link>Register</Nav.Link>
+				</LinkContainer>
 				<LinkContainer to='/calendar'>
-					<Nav.Link>Calendar</Nav.Link>
+					<Nav.Link>Events</Nav.Link>
 				</LinkContainer>
 				<LinkContainer to='/contactus'>
 					<Nav.Link>Contact Us</Nav.Link>
