@@ -4,13 +4,32 @@ import React, { useEffect, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import Loading from '../../components/Loading/Loading';
 import './Event.css';
+import { Modal, Button } from 'react-bootstrap';
 const localizer = momentLocalizer(moment);
 
-const url = 'https://cougarcs-backend.herokuapp.com/api/events';
+const url = 'https://backend.cougarcs.com/api/events';
 
 const Events = () => {
 	const [events, setEvents] = useState([]);
 	const [loading, setLoading] = useState(true);
+
+	const [show, setShow] = useState(false);
+
+	const handleClose = () => {
+		setShow(false);
+		setDesc({
+			title: '',
+			startDate: '',
+			endDate: '',
+			description: '',
+		});
+	};
+	const [desc, setDesc] = useState({
+		title: '',
+		startDate: '',
+		endDate: '',
+		description: '',
+	});
 
 	useEffect(() => {
 		axios
@@ -22,7 +41,7 @@ const Events = () => {
 						start: event.start.date,
 						end: event.end.date,
 						title: event.summary,
-						desc: event.description ? event.description : 'TBD',
+						desc: event?.description ? event.description : 'TBD',
 					});
 				});
 
@@ -31,7 +50,7 @@ const Events = () => {
 						start: event.start.date,
 						end: event.end.date,
 						title: event.summary,
-						desc: event.description ? event.description : 'TBD',
+						desc: event?.description ? event.description : 'TBD',
 					});
 				});
 				setEvents(events);
@@ -41,40 +60,65 @@ const Events = () => {
 				console.log(error);
 			});
 	}, []);
-	return loading ? (
-		<div className='load'>
-			{' '}
-			<Loading className='loader' />{' '}
-		</div>
-	) : (
-		<div className='event-container'>
-			<Calendar
-				localizer={localizer}
-				events={events}
-				startAccessor='start'
-				endAccessor='end'
-				style={{ height: '100%' }}
-				views={{
-					month: true,
-					agenda: true,
-				}}
-				popup={true}
-				drilldownView='agenda'
-				popupOffset={{ x: 30, y: 20 }}
-				// onSelectEvent={(event) => alert(event.desc)}
-			/>
 
-			{/* <iframe
-        title='CougarCS Calendar'
-        src={'https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&mode=MONTH&wkst=1&bgcolor=%23FFFFFF&src=aeu0ag4i5a7aag0hkvco4goung%40group.calendar.google.com&color=%23711616&ctz=America%2FChicago'}
-        style={{
-          border: 0,
-          width: '100%',
-          height: '100%',
-          frameBorder: 0
-        }}
-      ></iframe> */}
-		</div>
+	return (
+		<>
+			{loading ? (
+				<div className='load'>
+					<Loading className='loader' />
+				</div>
+			) : (
+				<div className='event-container'>
+					<Calendar
+						localizer={localizer}
+						events={events}
+						startAccessor='start'
+						endAccessor='end'
+						style={{ height: '100%' }}
+						views={{
+							month: true,
+							agenda: true,
+						}}
+						popup={true}
+						drilldownView='agenda'
+						popupOffset={{ x: 30, y: 20 }}
+						onSelectEvent={(e) => {
+							setDesc({
+								title: e.title,
+								startDate: e.start,
+								endDate: e.end,
+								description: e.desc,
+							});
+							setShow(true);
+						}}
+					/>
+				</div>
+			)}
+
+			<Modal
+				show={show}
+				size='lg'
+				onHide={handleClose}
+				backdrop='static'
+				keyboard={false}>
+				<Modal.Header closeButton>
+					<Modal.Title>{desc.title}</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>
+					Date: {moment(desc.startDate).format('dddd, MMMM Do YYYY, h:mm a')} -{' '}
+					{moment(desc.endDate).format('h:mm a')}
+					<br />
+					<hr />
+					Description:{' '}
+					{<div dangerouslySetInnerHTML={{ __html: desc.description }} />}
+				</Modal.Body>
+				<Modal.Footer>
+					<Button variant='secondary' onClick={handleClose}>
+						Close
+					</Button>
+				</Modal.Footer>
+			</Modal>
+		</>
 	);
 };
 export default Events;
