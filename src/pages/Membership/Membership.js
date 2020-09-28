@@ -4,8 +4,6 @@ import {
 	Col,
 	Container,
 	Row,
-	// ButtonToolbar,
-	// Button,
 } from 'react-bootstrap';
 import analyticsSVG from '../../assets/analytics.svg';
 import collectingSVG from '../../assets/collecting.svg';
@@ -13,7 +11,6 @@ import gif from '../../assets/member.svg';
 import memorySVG from '../../assets/memory.svg';
 import teachingSVG from '../../assets/teaching.svg';
 import './Membership.css';
-// import { LinkContainer } from 'react-router-bootstrap';
 
 class Membership extends Component {
 	render() {
@@ -51,7 +48,7 @@ class Membership extends Component {
 									Request to become a member on the get involved page and our
 									Treasurer,{' '}
 									{<a href='mailto:treasurer@cougarcs.com'>Chantha Mak</a>},
-									will be incontact with you shortly. You can also find an
+									will be in contact with you shortly. You can also find an
 									Officer on the 5th floor of PGH (Philip Guthrie Hoffman Hall)
 									or email{' '}
 									<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
