@@ -49,13 +49,13 @@ const Home = () => {
 									</Button>
 								</ButtonToolbar>
 							</LinkContainer>
-							{/* <LinkContainer to='/register'>
+							<LinkContainer to='/register'>
 								<ButtonToolbar>
 									<Button className='learnMoreBtn' variant='primary'>
 										Become a member
 									</Button>
 								</ButtonToolbar>
-							</LinkContainer> */}
+							</LinkContainer>
 						</div>
 					</div>
 				</div>
