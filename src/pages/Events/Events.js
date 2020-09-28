@@ -9,6 +9,17 @@ const localizer = momentLocalizer(moment);
 
 const url = 'https://backend.cougarcs.com/api/events';
 
+const addEvents = (eventType, events) => {
+	return eventType.map((event) => {
+		return events.push({
+			start: event.start.date,
+			end: event.end.date,
+			title: event.summary,
+			desc: event?.description ? event.description : 'TBD',
+		});
+	});
+};
+
 const Events = () => {
 	const [events, setEvents] = useState([]);
 	const [loading, setLoading] = useState(true);
@@ -36,23 +47,9 @@ const Events = () => {
 			.get(url)
 			.then((resp) => {
 				const events = [];
-				resp.data.futureEvents.map((event) => {
-					return events.push({
-						start: event.start.date,
-						end: event.end.date,
-						title: event.summary,
-						desc: event?.description ? event.description : 'TBD',
-					});
-				});
+				addEvents(resp.data.futureEvents, events);
+				addEvents(resp.data.pastEvents, events);
 
-				resp.data.pastEvents.map((event) => {
-					return events.push({
-						start: event.start.date,
-						end: event.end.date,
-						title: event.summary,
-						desc: event?.description ? event.description : 'TBD',
-					});
-				});
 				setEvents(events);
 				setLoading(false);
 			})

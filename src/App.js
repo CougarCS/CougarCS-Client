@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
 import NavBar from './components/Navbar/Navbar';
 import About from './pages/About/About';
 import Careerfair from './pages/CareerFair/Careerfair';
