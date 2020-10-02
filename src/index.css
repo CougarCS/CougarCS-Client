@@ -1,13 +1,96 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+:root {
+	--color-background: #fff;
+	--color-on-background: #2f2838;
+	--color-primary: #6200ee;
+	--color-on-primary: #fff;
+	--color-secondary: #03dac6;
+	--color-on-secondary: #000;
+	--color-error: #b00020;
+	--color-on-error: #fff;
+	--color-on-hover: #07f;
+	--color-on-labelAndHeaders: #ff4d73;
+}
+
+body[data-theme='dark'] {
+	--color-background: #2f2838;
+	--color-on-background: #fff;
+	--color-primary: #bb86fc;
+	--color-on-primary: #000;
+	--color-secondary: #03dac6;
+	--color-on-secondary: #000;
+	--color-error: #cf6679;
+	--color-on-error: #000;
+}
+
+body {
+	background: var(--color-background);
+	color: var(--color-on-background);
+}
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+	color: var(--color-on-background);
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link:hover {
+	color: var(--color-on-hover);
+}
+h1 {
+	text-align: center;
+	color: var(--color-on-labelAndHeaders);
+}
+label {
+	text-align: center;
+	color: var(--color-on-labelAndHeaders);
+}
+button {
+	background: var(--color-primary);
+	color: var(--color-background);
+}
+
+input {
+	background: var(--color-background);
+	color: var(--color-on-background);
+	padding: 0.25rem;
+}
+
+.contactForm .container {
+	background: var(--color-background);
+}
+
+.card-body {
+	background: var(--color-background);
+}
+
+.container .formContainer,
+.contactForm .container {
+	background: var(--color-background);
+}
+
+.officers {
+	background: var(--color-background);
+}
+
+.rbc-btn-group {
+	color: var(--color-background);
 }

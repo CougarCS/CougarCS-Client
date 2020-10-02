@@ -2,10 +2,11 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../../assets/logo.png';
+import DarkMode from '../DarkMode/DarkMode';
 import './Navbar.css';
 
-const NavBar = () => (
-	<Navbar fluid='true' collapseOnSelect expand='lg'>
+const NavBar = ({ themeToggler }) => (
+	<Navbar className="mainNav" fluid='true' collapseOnSelect expand='lg'>
 		<LinkContainer to='/'>
 			<Navbar.Brand>
 				<img src={logo} className='App-logo' alt='logo' />
@@ -14,6 +15,7 @@ const NavBar = () => (
 		<Navbar.Toggle aria-controls='responsive-navbar-nav' />
 		<Navbar.Collapse id='responsive-navbar-nav'>
 			<Nav className='ml-auto'>
+				<DarkMode />
 				<LinkContainer to='/about'>
 					<Nav.Link>About</Nav.Link>
 				</LinkContainer>
