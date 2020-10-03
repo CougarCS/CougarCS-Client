@@ -41,11 +41,15 @@ const DarkMode = () => {
 			<Helmet>
 				<body data-theme={theme} />
 			</Helmet>
-			<button
+			<div
 				className='toggle-theme'
 				onClick={() => setTheme((cur) => (cur === 'light' ? 'dark' : 'light'))}>
-				Test
-			</button>
+				{theme === 'light' ? (
+					<i id='light-dark' className='fas fa-sun fa-lg'></i>
+				) : (
+					<i id='light-dark' className='fas fa-moon fa-lg'></i>
+				)}
+			</div>
 		</HelmetProvider>
 	);
 };

@@ -107,7 +107,12 @@ const Events = () => {
 					<br />
 					<hr />
 					Description:{' '}
-					{<div className="eventModalDesc" dangerouslySetInnerHTML={{ __html: desc.description }} />}
+					{
+						<div
+							className='eventModalDesc'
+							dangerouslySetInnerHTML={{ __html: desc.description }}
+						/>
+					}
 				</Modal.Body>
 				<Modal.Footer>
 					<Button variant='secondary' onClick={handleClose}>

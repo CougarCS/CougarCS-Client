@@ -110,3 +110,7 @@
 .officers .social li .fa {
 	color: #ffffff;
 }
+
+h6 {
+	color: var(--color-on-background) !important;
+}

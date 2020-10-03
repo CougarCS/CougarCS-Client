@@ -21,8 +21,9 @@ code {
 	--color-on-secondary: #000;
 	--color-error: #b00020;
 	--color-on-error: #fff;
-	--color-on-hover: #07f;
+	--color-on-hover: rgb(152, 112, 122);
 	--color-on-labelAndHeaders: #ff4d73;
+	--on-active-color: #ffffff;
 }
 
 body[data-theme='dark'] {
@@ -34,27 +35,14 @@ body[data-theme='dark'] {
 	--color-on-secondary: #000;
 	--color-error: #cf6679;
 	--color-on-error: #000;
+	--on-active-color: #7694ec;
 }
 
 body {
 	background: var(--color-background);
 	color: var(--color-on-background);
 }
-.navbar-light .navbar-nav .nav-link,
-.navbar-light .navbar-nav .active > .nav-link,
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link {
-	color: var(--color-on-background);
-}
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .active > .nav-link,
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .nav-link.show,
-.navbar-light .navbar-nav .show > .nav-link:hover {
-	color: var(--color-on-hover);
-}
 h1 {
 	text-align: center;
 	color: var(--color-on-labelAndHeaders);
@@ -89,8 +77,4 @@ input {
 
 .officers {
 	background: var(--color-background);
-}
-
-.rbc-btn-group {
-	color: var(--color-background);
 }

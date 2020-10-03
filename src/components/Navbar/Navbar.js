@@ -6,16 +6,18 @@ import DarkMode from '../DarkMode/DarkMode';
 import './Navbar.css';
 
 const NavBar = ({ themeToggler }) => (
-	<Navbar className="mainNav" fluid='true' collapseOnSelect expand='lg'>
+	<Navbar className='mainNav' fluid='true' collapseOnSelect expand='lg'>
 		<LinkContainer to='/'>
 			<Navbar.Brand>
 				<img src={logo} className='App-logo' alt='logo' />
 			</Navbar.Brand>
 		</LinkContainer>
-		<Navbar.Toggle aria-controls='responsive-navbar-nav' />
+		<Navbar.Toggle aria-controls='responsive-navbar-nav'>
+			{' '}
+			<i class='fas fa-bars fa-lg'></i>
+		</Navbar.Toggle>
 		<Navbar.Collapse id='responsive-navbar-nav'>
 			<Nav className='ml-auto'>
-				<DarkMode />
 				<LinkContainer to='/about'>
 					<Nav.Link>About</Nav.Link>
 				</LinkContainer>
@@ -32,6 +34,7 @@ const NavBar = ({ themeToggler }) => (
 					<Nav.Link>Contact Us</Nav.Link>
 				</LinkContainer>
 				<Nav.Link href='https://uhcode.red/'>CodeRED</Nav.Link>
+				<DarkMode />
 			</Nav>
 		</Navbar.Collapse>
 	</Navbar>
