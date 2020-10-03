@@ -3,7 +3,6 @@ import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/Navbar/Navbar';
 import About from './pages/About/About';
-import Careerfair from './pages/CareerFair/Careerfair';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Events from './pages/Events/Events';
 import Home from './pages/Home/Home';
@@ -26,7 +25,6 @@ const App = () => {
 				<Route path='/about/' component={About} />
 				<Route path='/membership/' component={Membership} />
 				<Route path='/calendar/' component={Events} />
-				<Route path='/careerfair/' component={Careerfair} />
 				<Route path='/contactus/' component={ContactUs} />
 				<Route path='/register/' component={UserRegister} />
 				<Route component={NotFound} />

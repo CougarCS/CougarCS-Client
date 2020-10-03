@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {
-	Card,
-	Col,
-	Container,
-	Row,
-} from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import analyticsSVG from '../../assets/analytics.svg';
 import collectingSVG from '../../assets/collecting.svg';
 import gif from '../../assets/member.svg';
@@ -48,14 +43,16 @@ class Membership extends Component {
 									Request to become a member on the get involved page and our
 									Treasurer,{' '}
 									{<a href='mailto:treasurer@cougarcs.com'>Chantha Mak</a>},
-									will be in contact with you shortly. You can also find an
+									will be in contact with you shortly. You can also
+									{/* find an
 									Officer on the 5th floor of PGH (Philip Guthrie Hoffman Hall)
-									or email{' '}
+									or */}{' '}
+									email us at
 									<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
 								</p>
 								<p>
 									Whats that? You want to get more envolved with CougarCS?
-									Interested in joining our webdev team? Please reach out to
+									Interested in joining our Webdev team? Please reach out to
 									Shubh Sheth at{' '}
 									<a href='mailto:webmaster@cougarcs.com'>
 										webmaster@cougarcs.com

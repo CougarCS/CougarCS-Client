@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { Form, Col, Button } from 'react-bootstrap';
-import { load } from 'recaptcha-v3'
+import { load } from 'recaptcha-v3';
 import SuccessModal from './../Modals/SuccessModal';
 import ErrorModal from './../Modals/ErrorModal';
 import axios from 'axios';
 
 export const Payment = () => {
-
 	// Stripe Init
 	const stripe = useStripe();
 	const elements = useElements();
@@ -49,14 +48,13 @@ export const Payment = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-
 		// Disable form
 		setButtonText('Loading...');
 		setLoading(true);
 
 		// Get recaptcha token
 		const recaptcha = await load(process.env.REACT_APP_RECAPTCHA_SITE_KEY, {
-			autoHideBadge: true
+			autoHideBadge: true,
 		});
 		const recaptchaToken = await recaptcha.execute('paymentpage');
 
@@ -78,20 +76,19 @@ export const Payment = () => {
 
 			try {
 				const response = await axios
-					.post("https://cougarcs-backend.herokuapp.com/api/payment", {
+					.post('https://backend.cougarcs.com/api/payment', {
 						token: id,
 						user,
 						recaptchaToken,
 					})
-					.then(() =>{
+					.then(() => {
 						// Reset Form
 						resetForm();
 						setLoading(false);
 						setButtonText('Success!');
 						setSuccessModal(true);
 						return;
-					})
-
+					});
 			} catch (e) {
 				resetForm();
 				setLoading(false);
@@ -104,7 +101,6 @@ export const Payment = () => {
 			setErrorModal(true);
 			setButtonText('Submit');
 		}
-
 	};
 
 	const handleChange = (e) => {
@@ -120,15 +116,19 @@ export const Payment = () => {
 			classification: '',
 			paidUntil: '',
 			phone: '',
-		})
+		});
 
 		elements.getElement(CardElement).clear();
-	}
+	};
 
 	return (
 		<Form onSubmit={handleSubmit} className='child p-3'>
-			<SuccessModal show={successModal} handleClose={() => setSuccessModal(false)}></SuccessModal>
-			<ErrorModal show={errorModal} handleClose={() => setErrorModal(false)}></ErrorModal>
+			<SuccessModal
+				show={successModal}
+				handleClose={() => setSuccessModal(false)}></SuccessModal>
+			<ErrorModal
+				show={errorModal}
+				handleClose={() => setErrorModal(false)}></ErrorModal>
 			<Form.Row>
 				<Form.Group as={Col} controlId='formGridFirstName'>
 					<Form.Label>First Name</Form.Label>
@@ -232,7 +232,10 @@ export const Payment = () => {
 			</Form.Row>
 
 			<Form.Row>
-				<Form.Group as={Col} className='stripe-container' controlId='stripPayment'>
+				<Form.Group
+					as={Col}
+					className='stripe-container'
+					controlId='stripPayment'>
 					<CardElement options={cardOptions} />
 				</Form.Group>
 			</Form.Row>

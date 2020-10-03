@@ -19,7 +19,7 @@ const ContactForm = () => {
 		onSubmit: (values) => {
 			setSubmitBtn(true);
 			axios
-				.post('https://cougarcs-backend.herokuapp.com/api/send', values)
+				.post('https://backend.cougarcs.com/api/send', values)
 				.then((res) => {
 					formik.values.firstName = '';
 					formik.values.lastName = '';
