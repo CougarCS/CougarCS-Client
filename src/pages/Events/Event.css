@@ -44,3 +44,7 @@
 .modal-content {
 	background: var(--color-background);
 }
+
+.close {
+	color: var(--color-on-background);
+}
