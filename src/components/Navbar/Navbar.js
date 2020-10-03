@@ -2,17 +2,13 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../../assets/logo.png';
+import './Navbar.css';
 
 const NavBar = () => (
 	<Navbar fluid='true' collapseOnSelect expand='lg'>
 		<LinkContainer to='/'>
 			<Navbar.Brand>
-				<img
-					src={logo}
-					style={{ width: '175px' }}
-					className='App-logo'
-					alt='logo'
-				/>
+				<img src={logo} className='App-logo' alt='logo' />
 			</Navbar.Brand>
 		</LinkContainer>
 		<Navbar.Toggle aria-controls='responsive-navbar-nav' />

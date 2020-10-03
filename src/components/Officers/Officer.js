@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Image, Row } from 'react-bootstrap';
 import './Officer.css';
 const APPLICATION_LINK = 'https://forms.gle/wFiokVCgfc8Wqp1S7';
+
 const Officer = ({ officer }) => {
 	return (
 		<>
