@@ -40,3 +40,7 @@
 .rbc-toolbar button.rbc-active {
 	background: var(--on-active-color) !important;
 }
+
+.modal-content {
+	background: var(--color-background);
+}
