@@ -1,12 +1,23 @@
-import React from 'react'
-import loading from '../../assets/loading.gif'
+import React from 'react';
+import './Loading.css';
 
 const Loading = () => {
-    return (
-        <div>
-            <img src={loading} alt="Loading..." />
-        </div>
-    )
-}
+	return (
+		<div className='container spinner'>
+			<div className='row text-center'>
+				<div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	);
+};
 
-export default Loading
+export default Loading;
