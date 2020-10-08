@@ -92,12 +92,7 @@ const Events = () => {
 				</div>
 			)}
 
-			<Modal
-				show={show}
-				size='lg'
-				onHide={handleClose}
-				backdrop='static'
-				keyboard={false}>
+			<Modal show={show} size='lg' onHide={handleClose} keyboard={false}>
 				<Modal.Header closeButton>
 					<Modal.Title>{desc.title}</Modal.Title>
 				</Modal.Header>
