@@ -10,6 +10,7 @@ import Home from './pages/Home/Home';
 import Membership from './pages/Membership/Membership';
 import NotFound from './pages/NotFound/NotFound';
 import UserRegister from './components/UserRegister/UserRegister';
+import Gallery from './pages/Gallery/Gallery';
 
 function initializeReactGA() {
 	ReactGA.initialize('UA-155177558-1');
@@ -29,6 +30,7 @@ const App = () => {
 				<Route path='/careerfair/' component={Careerfair} />
 				<Route path='/contactus/' component={ContactUs} />
 				<Route path='/register/' component={UserRegister} />
+				<Route path='/Gallery/' component={Gallery} />
 				<Route component={NotFound} />
 			</Switch>
 		</Router>

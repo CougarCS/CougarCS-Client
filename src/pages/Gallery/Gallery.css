@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Raleway", "Roboto Mono", monospace;
+}
+
+.cats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.img-cat {
+  width: 200px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+/* .events_text {
+  font-size: 50px;
+  font-weight: 250;
+  margin-bottom: 30px;
+} */
+
+.Gallery {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.gallery_container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 10px 10px;
+}
