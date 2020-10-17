@@ -13,23 +13,29 @@ body {
 }
 
 .img-cat {
-  width: 200px;
-  margin-bottom: 20px;
+  width: 300px;
+  margin-bottom: 1px;
   object-fit: contain;
+  height: 230px;
 }
 
-/* .events_text {
-  font-size: 50px;
-  font-weight: 250;
+.events_text {
   margin-bottom: 30px;
-} */
+}
 
 .Gallery {
   margin-left: 30px;
   margin-right: 30px;
 }
+
 .gallery_container {
   display: flex;
   flex-direction: column;
   margin: 10px 10px 10px 10px;
+  width: 100%;
+}
+
+.contain {
+  width: 90%;
+  margin: 0 auto;
 }
