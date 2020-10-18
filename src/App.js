@@ -9,6 +9,7 @@ import Home from './pages/Home/Home';
 import Membership from './pages/Membership/Membership';
 import NotFound from './pages/NotFound/NotFound';
 import UserRegister from './components/UserRegister/UserRegister';
+import Insights from './pages/Insights/Insights';
 
 function initializeReactGA() {
 	ReactGA.initialize('UA-155177558-1');
@@ -27,6 +28,7 @@ const App = () => {
 				<Route path='/calendar/' component={Events} />
 				<Route path='/contactus/' component={ContactUs} />
 				<Route path='/register/' component={UserRegister} />
+				<Route path='/insights' component={Insights} />
 				<Route component={NotFound} />
 			</Switch>
 		</Router>
