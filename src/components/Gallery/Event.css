@@ -1,3 +1,13 @@
 h3 {
+  font-size: 40px;
+  line-height: 60px;
   margin-bottom: 20px;
+  font-family: "Poppins";
+  /* margin-bottom: 70px; */
+}
+
+.container-event {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
