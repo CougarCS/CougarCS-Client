@@ -10,6 +10,7 @@ import Home from './pages/Home/Home';
 import Membership from './pages/Membership/Membership';
 import NotFound from './pages/NotFound/NotFound';
 import UserRegister from './components/UserRegister/UserRegister';
+import Privacy from './pages/Policy/Privacy';
 
 function initializeReactGA() {
 	ReactGA.initialize('UA-155177558-1');
@@ -28,6 +29,7 @@ const App = () => {
 				<Route path='/calendar/' component={Events} />
 				<Route path='/contactus/' component={ContactUs} />
 				<Route path='/register/' component={UserRegister} />
+				<Route path='/privacy-policy/' component={Privacy} />
 				<Route component={NotFound} />
 			</Switch>
 			<Footer />
