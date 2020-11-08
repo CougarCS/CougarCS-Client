@@ -28,10 +28,8 @@ const Footer = () => {
                     </Nav.Item>
                 </Nav>
                 <Nav className="policy-links">
-                    {/* <Nav.Link href="/">Terms</Nav.Link>
-                    <span>|</span>
                     <Nav.Link href="/">Privacy Policy</Nav.Link>
-                    <span>|</span> */}
+                    <span>|</span>
                     &copy; Copyright {new Date().getFullYear()}
                 </Nav>
             </div>
