@@ -28,7 +28,7 @@ const Footer = () => {
                     </Nav.Item>
                 </Nav>
                 <Nav className="policy-links">
-                    <Nav.Link href="/">Privacy Policy</Nav.Link>
+                    <Nav.Link href="/privacy-policy/">Privacy Policy</Nav.Link>
                     <span>|</span>
                     &copy; Copyright {new Date().getFullYear()}
                 </Nav>
