@@ -92,12 +92,7 @@ const Events = () => {
 				</div>
 			)}
 
-			<Modal
-				show={show}
-				size='lg'
-				onHide={handleClose}
-				backdrop='static'
-				keyboard={false}>
+			<Modal show={show} size='lg' onHide={handleClose} keyboard={false}>
 				<Modal.Header closeButton>
 					<Modal.Title>{desc.title}</Modal.Title>
 				</Modal.Header>
@@ -107,7 +102,12 @@ const Events = () => {
 					<br />
 					<hr />
 					Description:{' '}
-					{<div className="eventModalDesc" dangerouslySetInnerHTML={{ __html: desc.description }} />}
+					{
+						<div
+							className='eventModalDesc'
+							dangerouslySetInnerHTML={{ __html: desc.description }}
+						/>
+					}
 				</Modal.Body>
 				<Modal.Footer>
 					<Button variant='secondary' onClick={handleClose}>

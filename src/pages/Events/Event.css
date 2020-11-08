@@ -31,3 +31,20 @@
 		height: calc(100vh - 107.75px);
 	}
 }
+
+.rbc-toolbar button {
+	color: var(--color-on-background) !important;
+}
+
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
+	background: var(--on-active-color) !important;
+}
+
+.modal-content {
+	background: var(--color-background);
+}
+
+.close {
+	color: var(--color-on-background);
+}

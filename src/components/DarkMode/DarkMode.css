@@ -1,0 +1,11 @@
+#light-dark {
+	border-radius: 33%;
+	border-color: var(--color-on-background);
+	border-style: solid;
+	padding: 0.5rem;
+}
+
+.toggle-theme {
+	margin-left: 0.3rem;
+	margin-top: 0.18rem;
+}

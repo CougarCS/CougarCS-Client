@@ -47,7 +47,7 @@ class Membership extends Component {
 									{/* find an
 									Officer on the 5th floor of PGH (Philip Guthrie Hoffman Hall)
 									or */}{' '}
-									email us at
+									email us at{' '}
 									<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
 								</p>
 								<p>
