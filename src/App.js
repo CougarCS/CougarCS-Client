@@ -2,6 +2,7 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import About from './pages/About/About';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Events from './pages/Events/Events';
@@ -29,6 +30,7 @@ const App = () => {
 				<Route path='/register/' component={UserRegister} />
 				<Route component={NotFound} />
 			</Switch>
+			<Footer />
 		</Router>
 	);
 };
