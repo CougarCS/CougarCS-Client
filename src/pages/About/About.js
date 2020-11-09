@@ -7,7 +7,7 @@ import './About.css';
 class About extends React.Component {
 	render() {
 		return (
-			<div className='test'>
+			<div>
 				<Container fluid>
 					<Row className='rowHeight'>
 						<Col md='6' className='order-md-2'>
