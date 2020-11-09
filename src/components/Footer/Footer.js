@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Footer.css';
-import { Nav } from 'react-bootstrap';
+import { Nav, } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap'
 import logo from '../../assets/logo.png';
 
 import fb from '../../assets/icons/facebook-f.png';
@@ -28,7 +29,9 @@ const Footer = () => {
                     </Nav.Item>
                 </Nav>
                 <Nav className="policy-links">
-                    <Nav.Link href="/privacy-policy/">Privacy Policy</Nav.Link>
+                    <LinkContainer to="/privacy-policy/">
+                        <Nav.Link>Privacy Policy</Nav.Link>
+                    </LinkContainer>
                     <span>|</span>
                     &copy; Copyright {new Date().getFullYear()}
                 </Nav>
