@@ -1,80 +1,86 @@
 body {
-    font-family: 'Raleway', 'Roboto Mono', monospace;
-  }
-  
-  .officerImages {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-    grid-column-gap: 1em;
-    row-gap: 2em;
-  }
-  .container {
-    background: #ffffff !important;
-  }
-  .test {
-    max-height: 90vh;
-  }
-  .about-us {
-    padding: 2em;
-  }
-  
-  .cnt {
-    display: flex;
-    justify-content: center;
-  }
-  .rowHeight {
-    min-height: 100vh;
-    display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  .col > img {
-    height: 40rem;
-    width: auto;
-    z-index: -99;
-  }
-  
-  #officerName {
-    text-align: center;
-  }
-  
-  .officerCard {
-    padding: 0 3rem 0;
-  }
-  
-  @media only screen and (max-width: 1296px) {
-    .officerImages {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      grid-column-gap: 5em;
-      row-gap: 2em;
-    }
-  }
-  
-  @media only screen and (max-width: 1109px) {
-    .officerImages {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      grid-column-gap: 5em;
-      row-gap: 2em;
-    }
-  }
-  
-  @media only screen and (max-width: 830px) {
-    .officerImages {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-column-gap: 5em;
-      row-gap: 2em;
-    }
-  }
-  
-  @media only screen and (max-width: 555px) {
-    .officerImages {
-      display: grid;
-      grid-template-columns: auto;
-      grid-column-gap: 5em;
-      row-gap: 2em;
-    }
-  }
-  
+  font-family: 'Raleway', 'Roboto Mono', monospace;
+}
+
+
+.main {
+  padding: 0 !important;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background-color: transparent !important;
+  flex: 2;
+}
+
+.hero {
+  background-color: #EC1C24 !important;
+  min-height: 215px;
+}
+
+.hero>h1 {
+  color: white;
+}
+
+.job-content {
+  margin-top: -110px;
+  background-color: transparent !important;
+}
+
+.search {
+  margin: auto;
+  max-width: 750px;
+}
+.search-input {
+  border-radius: 5px;
+  background-color: pink;
+  padding: 10px 20px;
+  box-sizing: content-box;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: inherit;
+  margin-bottom: 15px;
+}
+
+.search-input>input {
+  border-radius: 5px;
+  height: 40px;
+  margin: 5px 10px 5px 0;
+  border: none;
+  width: 80%;
+  padding: 5px 10px;
+}
+.search-input>input:hover,
+.search-input>input:focus,
+.search-input>input:active {
+  outline: none;
+}
+.search-input>button {
+  padding: 10px 20px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #EC1C24;
+  color: #fff;
+}
+
+.jobs {
+  margin-top: 15px;
+}
+
+.job-card {
+  height: 150px;
+  border-radius: 10px;
+  border: none;
+  background-color: #EFEFEF;
+}

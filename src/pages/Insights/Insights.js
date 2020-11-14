@@ -1,47 +1,72 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import gif from '../../assets/about.svg';
-import Officer from '../../components/Officers/Officer';
-import officers from '../../officers';
+import { Col, Container, Row, Jumbotron, Button, Card } from 'react-bootstrap';
 import './Insights.css';
 
 const Insights = () => {
-		return (
-			<div className='test'>
-				<Container fluid>
-					<Row className='rowHeight'>
-						<Col md='6' className='order-md-2'>
-							<img src={gif} alt='undraw svg' className='img-fluid'></img>
-						</Col>
-						<Col md='6' className='order-md-0'>
-							<div className='about-us'>
-								<h1>About Us</h1>
-								<p>
-									CougarCS is the largest student run Computer Science
-									organization at the University of Houston. At CougarCS, our
-									mission is to smoothly transition our inexperienced members
-									into young professionals by the end of their degree, and to
-									provide support and assistance to members who struggle
-									academically or who need career guidance.
-								</p>
-							</div>
-						</Col>
-					</Row>
-				</Container>
 
-				<Container className='officerCard' fluid>
-					<h1 style={{ marginTop: '1.8em' }}>Meet the Officers</h1>
-					<Row className='cnt'>
-						<div className='officerImages'>
-							{officers.map((officer) =>
-								officer.show ? (
-									<Officer officer={officer} key={officer.id} />
-								) : null
-							)}
+	/** Need some state to fetch and populate a list of jobs */
+	return (
+		<Container fluid className="main">
+			<Jumbotron fluid className="hero">
+				<h1>Cougar Insights</h1>
+			</Jumbotron>
+			<Container className="secondary container">
+				<Container className="job-content">
+					<div className="search">
+						<div className="search-input">
+							<input />
+							<button>
+								Search
+								</button>
 						</div>
-					</Row>
+						<h6>
+							1,352 jobs found
+						</h6>
+					</div>
 				</Container>
-			</div>
-		);
+				<Container>
+					<div className="jobs">
+						<Row>
+							<Col xs={12} md={4}>
+								<JobCard />
+							</Col>
+							<Col xs={12} md={4}>
+								<Card className="job-card">
+									Hello
+								</Card>
+							</Col>
+							<Col xs={12} md={4}>
+								<Card className="job-card">
+									Hello
+								</Card>
+							</Col>
+						</Row>
+					</div>
+				</Container>
+			</Container>
+		</Container>
+	);
 }
 export default Insights;
+
+const JobCard = (props) => {
+	return <Card className="job-card">
+		<Card.Body>
+			<Card.Title>
+				<div>
+
+				</div>
+				<div>
+					Apple
+				</div>
+			</Card.Title>
+			<Card.Subtitle className="mb-2 text-muted">
+				Software Engineer
+			</Card.Subtitle>
+			<Card.Text>
+				A very concise job description...
+			</Card.Text>
+			<Card.Link href="#"></Card.Link>
+		</Card.Body>
+	</Card>
+}
