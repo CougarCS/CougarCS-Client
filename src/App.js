@@ -2,6 +2,7 @@ import React from 'react';
 import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import About from './pages/About/About';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Events from './pages/Events/Events';
@@ -10,6 +11,7 @@ import Membership from './pages/Membership/Membership';
 import NotFound from './pages/NotFound/NotFound';
 import UserRegister from './components/UserRegister/UserRegister';
 import Insights from './pages/Insights/Insights';
+import Privacy from './pages/Policy/Privacy';
 
 function initializeReactGA() {
 	ReactGA.initialize('UA-155177558-1');
@@ -29,8 +31,10 @@ const App = () => {
 				<Route path='/contactus/' component={ContactUs} />
 				<Route path='/register/' component={UserRegister} />
 				<Route path='/insights' component={Insights} />
+				<Route path='/privacy-policy/' component={Privacy} />
 				<Route component={NotFound} />
 			</Switch>
+			<Footer />
 		</Router>
 	);
 };
