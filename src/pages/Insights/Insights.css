@@ -21,7 +21,7 @@ body {
 
 .hero {
   background-color: #EC1C24 !important;
-  margin: 0 !important;
+  min-height: 215px;
 }
 
 .hero>h1 {
@@ -29,7 +29,7 @@ body {
 }
 
 .job-content {
-  margin-top: -85px;
+  margin-top: -110px;
   background-color: transparent !important;
 }
 
@@ -40,14 +40,13 @@ body {
 .search-input {
   border-radius: 5px;
   background-color: pink;
-  height: 50px;
   padding: 10px 20px;
   box-sizing: content-box;
   display:flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  flex-wrap: wrap;
   max-width: inherit;
   margin-bottom: 15px;
 }
@@ -55,14 +54,18 @@ body {
 .search-input>input {
   border-radius: 5px;
   height: 40px;
-  margin-right: 10px;
+  margin: 5px 10px 5px 0;
   border: none;
   width: 80%;
   padding: 5px 10px;
 }
-
+.search-input>input:hover,
+.search-input>input:focus,
+.search-input>input:active {
+  outline: none;
+}
 .search-input>button {
-  width: 125px;
+  padding: 10px 20px;
   height: 40px;
   border-radius: 5px;
   outline: none;
@@ -77,5 +80,7 @@ body {
 
 .job-card {
   height: 150px;
-  width: 80%;
+  border-radius: 10px;
+  border: none;
+  background-color: #EFEFEF;
 }
