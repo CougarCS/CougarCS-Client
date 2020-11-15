@@ -31,18 +31,137 @@ const Insights = () => {
 								<JobCard />
 							</Col>
 							<Col xs={12} md={4}>
-								<Card className="job-card">
-									Hello
-								</Card>
+							<Card.Body>
+							<Card.Title>
+							<div>
+
+							</div>
+							<div>
+								Apple
+							</div>
+							</Card.Title>
+							<Card.Subtitle className="mb-2 text-muted">
+								Software Engineer
+							</Card.Subtitle>
+							<Card.Text>
+								A very concise job description...
+							</Card.Text>
+							<Card.Link href="#"></Card.Link>
+							</Card.Body>
 							</Col>
 							<Col xs={12} md={4}>
-								<Card className="job-card">
-									Hello
-								</Card>
+								<Card.Body>
+									<Card.Title>
+										<div>
+
+										</div>
+										<div>
+										Apple
+										</div>
+										</Card.Title>
+										<Card.Subtitle className="mb-2 text-muted">
+										Software Engineer
+										</Card.Subtitle>
+										<Card.Text>
+										A very concise job description...
+										</Card.Text>
+										<Card.Link href="#"></Card.Link>
+									</Card.Body>
+							</Col>
+						</Row>
+					</div>
+					<div className="jobs">
+						<Row>
+							<Col xs={12} md={4}>
+								<JobCard />
+							</Col>
+							<Col xs={12} md={4}>
+							<Card.Body>
+							<Card.Title>
+							<div>
+
+							</div>
+							<div>
+								Apple
+							</div>
+							</Card.Title>
+							<Card.Subtitle className="mb-2 text-muted">
+								Software Engineer
+							</Card.Subtitle>
+							<Card.Text>
+								A very concise job description...
+							</Card.Text>
+							<Card.Link href="#"></Card.Link>
+							</Card.Body>
+							</Col>
+							<Col xs={12} md={4}>
+								<Card.Body>
+									<Card.Title>
+										<div>
+
+										</div>
+										<div>
+										Apple
+										</div>
+										</Card.Title>
+										<Card.Subtitle className="mb-2 text-muted">
+										Software Engineer
+										</Card.Subtitle>
+										<Card.Text>
+										A very concise job description...
+										</Card.Text>
+										<Card.Link href="#"></Card.Link>
+									</Card.Body>
+							</Col>
+						</Row>
+					</div>
+					<div className="jobs">
+						<Row>
+							<Col xs={12} md={4}>
+								<JobCard />
+							</Col>
+							<Col xs={12} md={4}>
+							<Card.Body>
+							<Card.Title>
+							<div>
+
+							</div>
+							<div>
+								Apple
+							</div>
+							</Card.Title>
+							<Card.Subtitle className="mb-2 text-muted">
+								Software Engineer
+							</Card.Subtitle>
+							<Card.Text>
+								A very concise job description...
+							</Card.Text>
+							<Card.Link href="#"></Card.Link>
+							</Card.Body>
+							</Col>
+							<Col xs={12} md={4}>
+								<Card.Body>
+									<Card.Title>
+										<div>
+
+										</div>
+										<div>
+										Apple
+										</div>
+										</Card.Title>
+										<Card.Subtitle className="mb-2 text-muted">
+										Software Engineer
+										</Card.Subtitle>
+										<Card.Text>
+										A very concise job description...
+										</Card.Text>
+										<Card.Link href="#"></Card.Link>
+									</Card.Body>
 							</Col>
 						</Row>
 					</div>
 				</Container>
+				
 			</Container>
 		</Container>
 	);
@@ -68,5 +187,6 @@ const JobCard = (props) => {
 			</Card.Text>
 			<Card.Link href="#"></Card.Link>
 		</Card.Body>
+		
 	</Card>
 }
