@@ -11,3 +11,8 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.eventLink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
