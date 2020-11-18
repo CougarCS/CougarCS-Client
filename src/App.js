@@ -32,7 +32,7 @@ const App = () => {
 				<Route path='/contactus/' component={ContactUs} />
 				<Route path='/register/' component={UserRegister} />
 				<Route path='/gallery/' component={Gallery} exact={true}/>
-				<Route path='/gallery/:event' render={(props) => <EventInfo {...props} date={`10/11/2020`} place={`Houston, TX`} info={`info here`} /> } />
+				<Route path='/gallery/:event' render={(props) => <EventInfo {...props} /> } />
 				<Route component={NotFound} />
 
 			</Switch>

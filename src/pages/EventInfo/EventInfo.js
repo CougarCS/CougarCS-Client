@@ -6,6 +6,7 @@ import {
     // withLightgallery,
     // useLightgallery
   } from "react-lightgallery";
+  import { LinkContainer } from 'react-router-bootstrap';
 import calendarSVG from '../../assets/calendar.svg';
 import mapSVG from '../../assets/map.svg';
 
@@ -22,6 +23,27 @@ const pictures = [
     "https://images.unsplash.com/photo-1594818896744-57eca4d47b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
     "https://images.unsplash.com/photo-1594818897077-aec41f55241f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
   ];
+// location, date, place, info
+const data = [
+    {
+        name: "Really Cool Event",
+        location: "Houston, TX",
+        date: "11/21/200", 
+        info: "This event was really cool. One of the CS officers is in the picture."
+    },
+    {
+        name: "Coding Time",
+        location: "Houston, TX",
+        date: "10/20/200", 
+        info: "Just 3 guys coding"
+    },
+    {
+        name: "Meeting Event",
+        location: "Houston, TX",
+        date: "09/16/200", 
+        info: "Just had a meeting and decided to take a picture"
+    }
+];
 
 const PhotoItem = ({ image, thumb, group }) => (
     <div style={{ maxWidth: "500px", width: "350px", padding: "10px", margin: "0 2em" }}>
@@ -31,8 +53,18 @@ const PhotoItem = ({ image, thumb, group }) => (
     </div>
 );
 
-const EventInfo = ({match, location, date, place, info}) => {
+const EventInfo = ({match}) => {
     const {params: {event}} = match;
+
+    let currEvent;
+    let currIndex = -1;
+    
+    data.forEach((curr, index) => {
+        if(event === curr.name){
+            currEvent = curr;
+            currIndex = index;
+        }
+    });
 
     return (
         <Container fluid style={{ padding: '2em' }}>
@@ -40,10 +72,10 @@ const EventInfo = ({match, location, date, place, info}) => {
                 <a href='#'>Back to Gallery</a>
                 <h1 style={{ padding: '.5em 0 .5em' }}>{event}</h1>
                 <img className='icons' src={calendarSVG} alt='svg'></img>
-                <p className='eventDL' >{date}</p>
+                <p className='eventDL' >{currEvent.date}</p>
                 <img className='icons' src={mapSVG} alt='svg'></img>
-                <p className='eventDL'>{place}</p>
-                <p>{info}</p>
+                <p className='eventDL'>{currEvent.location}</p>
+                <p>{currEvent.info}</p>
             
                 <LightgalleryProvider>
                     <div className="imageGallery"
@@ -64,14 +96,14 @@ const EventInfo = ({match, location, date, place, info}) => {
             <div>
             <Row>
                 <Col md='6'>
-                    <Button variant="outline-secondary" size="lg" class="buttons" block>
-                        Previous
-                    </Button>
+                        <Button variant="outline-secondary" size="lg" class="buttons" block>
+                            Previous
+                        </Button>
                 </Col>
                 <Col md='6'>
-                    <Button variant="outline-secondary" size="lg" class="buttons" block>
-                        Next
-                    </Button>
+                        <Button variant="outline-secondary" size="lg" class="buttons" block>
+                            Next
+                        </Button>
                 </Col>
             </Row>
             
