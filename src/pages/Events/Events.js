@@ -5,7 +5,10 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import Loading from '../../components/Loading/Loading';
 import './Event.css';
 import { Modal, Button } from 'react-bootstrap';
+import { sanitize } from 'dompurify';
+
 const localizer = momentLocalizer(moment);
+
 
 const url = 'https://backend.cougarcs.com/api/events';
 
@@ -65,32 +68,32 @@ const Events = () => {
 					<Loading className='loader' />
 				</div>
 			) : (
-				<div className='event-container'>
-					<Calendar
-						localizer={localizer}
-						events={events}
-						startAccessor='start'
-						endAccessor='end'
-						style={{ height: '100%' }}
-						views={{
-							month: true,
-							agenda: true,
-						}}
-						popup={true}
-						drilldownView='agenda'
-						popupOffset={{ x: 30, y: 20 }}
-						onSelectEvent={(e) => {
-							setDesc({
-								title: e.title,
-								startDate: e.start,
-								endDate: e.end,
-								description: e.desc,
-							});
-							setShow(true);
-						}}
-					/>
-				</div>
-			)}
+					<div className='event-container'>
+						<Calendar
+							localizer={localizer}
+							events={events}
+							startAccessor='start'
+							endAccessor='end'
+							style={{ height: '100%' }}
+							views={{
+								month: true,
+								agenda: true,
+							}}
+							popup={true}
+							drilldownView='agenda'
+							popupOffset={{ x: 30, y: 20 }}
+							onSelectEvent={(e) => {
+								setDesc({
+									title: e.title,
+									startDate: e.start,
+									endDate: e.end,
+									description: e.desc,
+								});
+								setShow(true);
+							}}
+						/>
+					</div>
+				)}
 
 			<Modal show={show} size='lg' onHide={handleClose} keyboard={false}>
 				<Modal.Header closeButton>
@@ -105,7 +108,7 @@ const Events = () => {
 					{
 						<div
 							className='eventModalDesc'
-							dangerouslySetInnerHTML={{ __html: desc.description }}
+							dangerouslySetInnerHTML={{ __html: sanitize(desc.description) }}
 						/>
 					}
 				</Modal.Body>
