@@ -2,11 +2,12 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap'
 import './ContactForm.css';
 
 const ContactForm = () => {
-	const [emailSend, setEmailSend] = useState(false);
-	const [emailSendError, setEmailSendError] = useState(false);
+	// const [emailSend, setEmailSend] = useState(false);
+	// const [emailSendError, setEmailSendError] = useState(false);
 	const [submitBtn, setSubmitBtn] = useState(false);
 
 	const formik = useFormik({
@@ -26,12 +27,12 @@ const ContactForm = () => {
 					formik.values.email = '';
 					formik.values.body = '';
 
-					if (res.status === 200) {
-						setEmailSend(true);
-					}
-					if (res.status !== 200) {
-						setEmailSendError(true);
-					}
+					// if (res.status === 200) {
+					// 	setEmailSend(true);
+					// }
+					// if (res.status !== 200) {
+					// 	setEmailSendError(true);
+					// }
 					setSubmitBtn(false);
 				});
 		},
@@ -125,36 +126,36 @@ const ContactForm = () => {
 						</span>
 					</div>
 					<div className='follow socials'>
-						<a
+						<Nav.Link
 							href='https://www.facebook.com/cougarcs/'
 							target='_blank'
 							rel='noopener nofollow'>
 							<i className='fab fa-facebook'></i>
-						</a>
-						<a
+						</Nav.Link>
+						<Nav.Link
 							href='https://www.instagram.com/uhcougarcs/?hl=en'
 							target='_blank'
 							rel='noopener nofollow'>
 							<i className='fab fa-instagram'></i>
-						</a>
-						<a
+						</Nav.Link>
+						<Nav.Link
 							href='https://twitter.com/uhcougarcs'
 							target='_blank'
 							rel='noopener nofollow'>
 							<i className='fab fa-twitter'></i>
-						</a>
-						<a
+						</Nav.Link>
+						<Nav.Link
 							href='https://www.linkedin.com/in/cougarcs/'
 							target='_blank'
 							rel='noopener nofollow'>
 							<i className='fab fa-linkedin'></i>
-						</a>
-						<a
+						</Nav.Link>
+						<Nav.Link
 							href='https://discordapp.com/invite/aKUzPFY'
 							target='_blank'
 							rel='noopener nofollow'>
 							<i className='fab fa-discord'></i>
-						</a>
+						</Nav.Link>
 					</div>
 				</Col>
 			</Row>
