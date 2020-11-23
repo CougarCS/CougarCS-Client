@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../../assets/logo.png';
-import DarkMode from '../DarkMode/DarkMode';
+// import DarkMode from '../DarkMode/DarkMode';
 import './Navbar.css';
 
 const NavBar = ({ themeToggler }) => (

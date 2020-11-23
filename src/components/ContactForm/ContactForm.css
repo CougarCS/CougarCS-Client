@@ -75,7 +75,11 @@ h6 a:hover {
 }
 
 .socials {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+.socials a {
+	padding: 0;
 }
 
 h6 {

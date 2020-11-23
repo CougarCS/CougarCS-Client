@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Image, Row } from 'react-bootstrap';
+import { Col, Image, Nav, Row } from 'react-bootstrap';
 import './Officer.css';
 const APPLICATION_LINK = 'https://forms.gle/wFiokVCgfc8Wqp1S7';
 
@@ -15,15 +15,15 @@ const Officer = ({ officer }) => {
 						<div className='team-content'>
 							<h5 className='name'>
 								{officer.open ? (
-									<a
+									<Nav.Link
 										href={APPLICATION_LINK}
 										target='_blank'
-										rel='noopener nofollow'>
+										rel="nofollow noopener">
 										Apply Here
-									</a>
+									</Nav.Link>
 								) : (
-									officer.name
-								)}
+										officer.name
+									)}
 							</h5>
 							<h6 className='title'>{officer.title}</h6>
 						</div>
@@ -38,12 +38,12 @@ const Officer = ({ officer }) => {
 								)}
 								{officer.linkedin.length > 0 && (
 									<li>
-										<a
+										<Nav.Link
 											href={officer.linkedin}
 											target='_blank'
 											rel='noopener nofollow'>
 											<i className='fab fa-linkedin'></i>
-										</a>
+										</Nav.Link>
 									</li>
 								)}
 							</ul>
