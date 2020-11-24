@@ -6,44 +6,51 @@ import {
     // withLightgallery,
     // useLightgallery
   } from "react-lightgallery";
-  import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 import calendarSVG from '../../assets/calendar.svg';
 import mapSVG from '../../assets/map.svg';
 
 import './EventInfo.css';
 import 'lightgallery.js/dist/css/lightgallery.css';
 
-const pictures = [
-    "https://images.unsplash.com/photo-1594818898109-44704fb548f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-    "https://images.unsplash.com/photo-1594818896795-35ad7bcf3c6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-    "https://images.unsplash.com/photo-1594818896744-57eca4d47b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-    "https://images.unsplash.com/photo-1594818897077-aec41f55241f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80",
-    "https://images.unsplash.com/photo-1594818898109-44704fb548f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-    "https://images.unsplash.com/photo-1594818896795-35ad7bcf3c6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-    "https://images.unsplash.com/photo-1594818896744-57eca4d47b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-    "https://images.unsplash.com/photo-1594818897077-aec41f55241f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
-  ];
 // location, date, place, info
 const data = [
     {
         name: "Really Cool Event",
         location: "Houston, TX",
-        date: "11/21/200", 
-        info: "This event was really cool. One of the CS officers is in the picture."
+        date: "11/21/2020", 
+        info: "This event was really cool. One of the CS officers is in the picture.",
+        pictures: ["https://images.unsplash.com/photo-1594818898109-44704fb548f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+        "https://images.unsplash.com/photo-1594818896795-35ad7bcf3c6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+        "https://images.unsplash.com/photo-1594818896744-57eca4d47b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"]
     },
     {
         name: "Coding Time",
         location: "Houston, TX",
-        date: "10/20/200", 
-        info: "Just 3 guys coding"
+        date: "10/20/2020", 
+        info: "Just 3 guys coding",
+        pictures: ["https://images.unsplash.com/photo-1594818898109-44704fb548f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"]
     },
     {
         name: "Meeting Event",
         location: "Houston, TX",
-        date: "09/16/200", 
-        info: "Just had a meeting and decided to take a picture"
+        date: "09/16/2020", 
+        info: "Just had a meeting and decided to take a picture",
+        pictures: ["https://images.unsplash.com/photo-1594818898109-44704fb548f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+        "https://images.unsplash.com/photo-1594818896795-35ad7bcf3c6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"]
     }
 ];
+
+// this function is used for the buttons at bottom of page to get next or previous index in data
+const getNextIndex = (curr, forward) => {
+    if(forward){
+        curr = (curr + 1) % data.length;
+    } else { 
+        curr = (curr === 0) ? data.length - 1: curr - 1; 
+    }
+
+    return curr;
+};
 
 const PhotoItem = ({ image, thumb, group }) => (
     <div style={{ maxWidth: "500px", width: "350px", padding: "10px", margin: "0 2em" }}>
@@ -56,7 +63,7 @@ const PhotoItem = ({ image, thumb, group }) => (
 const EventInfo = ({match}) => {
     const {params: {event}} = match;
 
-    let currEvent;
+    let currEvent = '';
     let currIndex = -1;
     
     data.forEach((curr, index) => {
@@ -69,7 +76,7 @@ const EventInfo = ({match}) => {
     return (
         <Container fluid style={{ padding: '2em' }}>
             <div>
-                <a href='#'>Back to Gallery</a>
+                <Link to="/gallery">Back to Gallery</Link>
                 <h1 style={{ padding: '.5em 0 .5em' }}>{event}</h1>
                 <img className='icons' src={calendarSVG} alt='svg'></img>
                 <p className='eventDL' >{currEvent.date}</p>
@@ -86,7 +93,7 @@ const EventInfo = ({match}) => {
                         justifyContent: "center"
                         }}
                     >
-                        {pictures.map((p, idx) => (
+                        {currEvent.pictures.map((p, idx) => (
                             <PhotoItem key={idx} image={p} group="pictures" />
                         ))}
                     </div>
@@ -96,14 +103,18 @@ const EventInfo = ({match}) => {
             <div>
             <Row>
                 <Col md='6'>
+                    <Link to={`/gallery/${data[getNextIndex(currIndex, false)].name}`}>
                         <Button variant="outline-secondary" size="lg" class="buttons" block>
                             Previous
                         </Button>
+                    </Link>
                 </Col>
                 <Col md='6'>
+                    <Link to={`/gallery/${data[getNextIndex(currIndex, true)].name}`}>
                         <Button variant="outline-secondary" size="lg" class="buttons" block>
                             Next
                         </Button>
+                    </Link>
                 </Col>
             </Row>
             
