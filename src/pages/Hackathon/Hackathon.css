@@ -1,6 +1,6 @@
 
 .hackathonCard {
-    padding: 0 15rem 0;
+    padding: 0 15em 0;
 }
 
 .each {
@@ -10,13 +10,26 @@
 .hackathonLogos {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
-    grid-column-gap: 5em;
+    grid-column-gap: 3.5em;
     row-gap: 2em;
 }
 h1 {
     padding-bottom: 1.8em;
 }
-@media only screen and (max-width: 1296px) {
+@media only screen and (max-width: 1700px) {
+  .hackathonLogos {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 2em;
+    row-gap: 2em;
+  }
+  .hackathonCard {
+    padding: 0 10rem 0;
+  }
+}
+
+
+@media only screen and (max-width: 1450px) {
     .hackathonLogos {
       display: grid;
       grid-template-columns: auto auto auto;
@@ -24,23 +37,11 @@ h1 {
       row-gap: 2em;
     }
     .hackathonCard{
-        padding: 0 2rem 0;
+        padding: 0 2em 0;
     }
   }
   
-  /* @media only screen and (max-width: 1109px) {
-    .hackathonLogos {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      grid-column-gap: 2em;
-      row-gap: 2em;
-    }
-    .hackathonCard{
-        padding: 0 2rem 0;
-    }
-  } */
-  
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 1150px) {
     .hackathonLogos {
       display: grid;
       grid-template-columns: auto auto;
@@ -48,11 +49,11 @@ h1 {
       row-gap: 2em;
     }
     .hackathonCard{
-        padding: 0 1.5rem 0;
+        padding: 0 1.5em 0;
     }
   }
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 700px) {
     .hackathonLogos {
       display: grid;
       grid-template-columns: auto;
@@ -60,6 +61,6 @@ h1 {
       row-gap: 2em;
     }
     .hackathonCard{
-        padding: 0 2rem 0;
+        padding: 0 2em 0;
     }
   }

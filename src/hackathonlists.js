@@ -1,4 +1,5 @@
 import default_img from './assets/default_logo.jpg' //can be changed if desired. used if hackathon does not have a logo
+//is there a way to dynamically alter the JS file to delete the object after the date?
 let hackathons = [
     {
         id: 0,
@@ -63,7 +64,7 @@ let hackathons = [
     {
         id: 5,
         title: "BrickHack 7",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat non ex at pellentesque. Integer dolor erat, egestas eget viverra at.",
+        description: "RIT's Premiere Hackathon. Feb 20-21 | Rochester Institute of Technology",
         link: "https://brickhack.io/",
         img: "https://s3.amazonaws.com/assets.mlh.io/events/splashes/000/003/324/thumb/MLH-Cover-05_%281%29.png?1595444507",
         startDate: "02-20",
