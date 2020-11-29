@@ -12,15 +12,16 @@ import EventInfo from '../EventInfo/EventInfo'
 function Gallery() {
   const images = [""]
   return (
-      <div className = "contain">
-        <div className = "gallery_container">
-          <h1 className= "events_text"> Events Gallery </h1>
-          <div className = "cats">
-            <Event imgSrc="https://uh.edu/nsm/_images/cosc/news/2020/20200207-code-for-good.jpg" eventName = "Really Cool Event" />
-            <Event imgSrc="https://www.uh.edu/nsm/_images/nsm/spiffs/2020/nsm-spiff-20200205-fulbright-specialist.jpg" eventName = "Coding Time" />
-            <Event imgSrc="https://uh.edu/nsm/_images/cosc/news/20150204-homeland-security-2.jpg" eventName = "Meeting Event" />          </div>
-        </div> 
-      </div>
+    <Container fluid style={{ padding: '2em' }}>
+          <div>
+            <h1> Events Gallery </h1>
+            <div className = "events">
+              <Event imgSrc="https://uh.edu/nsm/_images/cosc/news/2020/20200207-code-for-good.jpg" eventName = "Really Cool Event" />
+              <Event imgSrc="https://www.uh.edu/nsm/_images/nsm/spiffs/2020/nsm-spiff-20200205-fulbright-specialist.jpg" eventName = "Coding Time" />
+              <Event imgSrc="https://uh.edu/nsm/_images/cosc/news/20150204-homeland-security-2.jpg" eventName = "Meeting Event" />          
+            </div>
+          </div>
+    </Container>
   )
 }
 

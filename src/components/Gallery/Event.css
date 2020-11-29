@@ -6,13 +6,16 @@ h3 {
   /* margin-bottom: 70px; */
 }
 
-.container-event {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .eventLink:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.cardImage {
+  height: 15em;
+  object-fit: contain;
+}
+
+.container-event {
+  margin: auto;
 }

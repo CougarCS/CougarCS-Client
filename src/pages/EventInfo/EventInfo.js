@@ -76,7 +76,7 @@ const EventInfo = ({match}) => {
     return (
         <Container fluid style={{ padding: '2em' }}>
             <div>
-                <Link to="/gallery">Back to Gallery</Link>
+                <Link to="/gallery"><Button variant="outline-secondary">Back to Gallery</Button></Link>
                 <h1 style={{ padding: '.5em 0 .5em' }}>{event}</h1>
                 <img className='icons' src={calendarSVG} alt='svg'></img>
                 <p className='eventDL' >{currEvent.date}</p>
@@ -102,14 +102,14 @@ const EventInfo = ({match}) => {
 
             <div>
             <Row>
-                <Col md='6'>
+                <Col sm='6'>
                     <Link to={`/gallery/${data[getNextIndex(currIndex, false)].name}`}>
                         <Button variant="outline-secondary" size="lg" class="buttons" block>
                             Previous
                         </Button>
                     </Link>
                 </Col>
-                <Col md='6'>
+                <Col sm='6'>
                     <Link to={`/gallery/${data[getNextIndex(currIndex, true)].name}`}>
                         <Button variant="outline-secondary" size="lg" class="buttons" block>
                             Next
