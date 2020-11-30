@@ -11,7 +11,7 @@ const AddToCalendar = ({ event }) => {
         <Dropdown.Menu >
             <Dropdown.Item href={google({ ...event, start: moment(startDate).toISOString(), end: moment(endDate).toISOString() })} target='_blank'
                 rel='noopener nofollow'>Google</Dropdown.Item>
-            <Dropdown.Item href={outlook({ ...event, start: moment(startDate).add(2, "hours").format(), end: moment(endDate).add(2, "hours").format() })} target='_blank'
+            <Dropdown.Item href={outlook({ ...event, start: moment(startDate).format(), end: moment(endDate).format() })} target='_blank'
                 rel='noopener nofollow'>Outlook.com</Dropdown.Item>
         </Dropdown.Menu >
     )
