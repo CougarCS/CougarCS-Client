@@ -1,30 +1,17 @@
 import React from 'react'
 import { Dropdown } from 'react-bootstrap';
 import moment from 'moment';
+import { google, outlook } from "calendar-link";
 
 const AddToCalendar = ({ event }) => {
-    const { title, startDate, endDate, description } = event;
-
-    const formatTime = (date) => {
-        return moment.utc(date).format("YYYYMMDDTHHmmssZ");
-    }
-
-    const randomKey = () => {
-        const n = Math.floor(Math.random() * 999999999999).toString();
-        return new Date().getTime().toString() + "_" + n;
-    }
-
-    let googleURI = `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${formatTime(startDate)}/${formatTime(endDate)}}&text=${encodeURIComponent(title)}&details=${encodeURIComponent(description)}`;
-
-
-    let outlookURI = `https://outlook.live.com/owa/?rru=addevent&startdt=${formatTime(startDate)}&enddt=${formatTime(endDate)}&subject=${encodeURIComponent(title)}&body=${description}&allday=false&uid=${randomKey()}&path=/calendar/view/Month`
+    const { startDate, endDate, } = event;
 
     return (
 
         <Dropdown.Menu >
-            <Dropdown.Item href={googleURI} target='_blank'
+            <Dropdown.Item href={google({ ...event, start: moment(startDate).toISOString(), end: moment(endDate).toISOString() })} target='_blank'
                 rel='noopener nofollow'>Google</Dropdown.Item>
-            <Dropdown.Item href={outlookURI} target='_blank'
+            <Dropdown.Item href={outlook({ ...event, start: moment(startDate).add(2, "hours").format(), end: moment(endDate).add(2, "hours").format() })} target='_blank'
                 rel='noopener nofollow'>Outlook.com</Dropdown.Item>
         </Dropdown.Menu >
     )

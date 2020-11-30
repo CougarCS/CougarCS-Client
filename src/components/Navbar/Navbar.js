@@ -14,7 +14,7 @@ const NavBar = ({ themeToggler }) => (
 		</LinkContainer>
 		<Navbar.Toggle aria-controls='responsive-navbar-nav'>
 			{' '}
-			<i class='fas fa-bars fa-lg'></i>
+			<i className='fas fa-bars fa-lg'></i>
 		</Navbar.Toggle>
 		<Navbar.Collapse id='responsive-navbar-nav'>
 			<Nav className='ml-auto'>
