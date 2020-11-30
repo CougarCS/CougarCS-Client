@@ -12,7 +12,7 @@
     "moment": "^2.29.1",
     "react": "^16.14.0",
     "react-add-to-calendar": "^0.1.5",
-    "react-big-calendar": "^0.23.0",
+    "react-big-calendar": "^0.28.0",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.14.0",
     "react-ga": "^2.7.0",
