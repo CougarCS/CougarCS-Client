@@ -28,7 +28,7 @@ body {
   color: white;
 }
 
-.job-content {
+.search-content {
   margin-top: -110px;
   background-color: transparent !important;
 }
@@ -73,6 +73,9 @@ body {
   background-color: #EC1C24;
   color: #fff;
 }
+.search-input>button:hover {
+  background-color: #D11C22;
+}
 
 .jobs {
   margin-top: 15px;
@@ -83,4 +86,8 @@ body {
   border-radius: 10px;
   border: none;
   background-color: #EFEFEF;
+}
+
+.job-content {
+  background-color: transparent !important;
 }
