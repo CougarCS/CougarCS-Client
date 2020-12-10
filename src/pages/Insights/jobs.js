@@ -19,76 +19,112 @@ export const jobs = [
             name: 'Apple'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'https://uhouston-csm.symplicity.com/students/app/jobs/detail/8c180151b9f28632b75ddda121659a77'	//button	
     },
     {
         company: {
             name: 'Microsoft'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button				
     },
     {
         company: {
             name: 'Google'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button				
     },
     {
         company: {
             name: 'Netflix'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button			
     },
     {
         company: {
-            name: 'Apple'
+            name: 'Chevron'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button				
     },
     {
         company: {
-            name: 'Apple'
+            name: 'ExxonMobile'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button			
     },
     {
         company: {
-            name: 'Apple'
+            name: 'Shell'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button			
     },
     {
         company: {
-            name: 'Apple'
+            name: 'Fidelity'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button			
     },
     {
         company: {
-            name: 'Apple'
+            name: 'JP Morgan & Chase'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button			
     },
     {
         company: {
-            name: 'Apple'
+            name: 'Bank of America'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button		
     },
     {
         company: {
-            name: 'Apple'
+            name: 'Bank of America'
         },
         title: 'Software Engineer',
-        description: 'A very concise job description...'		
+        location: "",
+        description: 'A very concise job description...',//job board link???
+        ApplyNow: 'hyperLink'	//button			
     },
 ];
+
+// how to geta direct access link to cougar pathways from job link
+// export const jobs = [
+//     {
+//    company: {
+//        name: 'Bank of America'
+//    },
+//    title: 'Software Engineer',
+//    location: "",
+//    description: 'A very concise job description...',//job board link???
+//    ApplyNow: 'hyperLink'	//button
+// ];
+
+
