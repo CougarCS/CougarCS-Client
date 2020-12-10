@@ -115,7 +115,12 @@ export const jobs = [
     },
 ];
 
-// how to geta direct access link to cougar pathways from job link
+// How to geta direct access link to cougar pathways from job link?
+// Is the crm going to send the data? (How the CRM will work and store data for the jobs)
+// How is the lazy loading going to work? and or do we need the lazy loading?
+// How will job listing actually be loaded into the CRM? Will we need to hardcode the data for the jobs?
+// Will the job listing be provided to us for us to hard code or how will we have to update it ourselves?
+
 // export const jobs = [
 //     {
 //    company: {
