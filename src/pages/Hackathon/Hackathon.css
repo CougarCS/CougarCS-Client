@@ -2,6 +2,9 @@
 .hackathonCard {
     max-width: 1400px;   
 }
+.past .btn-danger {
+  display: none;
+}
 .each {
   display: flex; 
   justify-content: center;
@@ -12,8 +15,8 @@
     grid-column-gap: 30px;
     row-gap: 2em;
 }
-h1 {
-    padding-bottom: 1.8em;
+.hackathonCard h1 {
+    padding: 1.8em 0;
 }
 @media only screen and (max-width: 1700px) {
   .hackathonLogos {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Button, Card} from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import './hackathons.css';
 
 const HackathonsList = ({ hackathonlist }) => {

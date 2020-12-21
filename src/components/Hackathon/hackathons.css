@@ -20,18 +20,13 @@
     /* border-radius: .5rem; */
 }
 .dates {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
-}
-
-.start-end {
     font-size: .8em;
     font-weight: 600;
-}
-.deadline {
-    font-size: .8em;
-    font-weight: 600;
+    position: absolute;
+    bottom:.5rem;
 }
 .hackathonLogos .card-body{
     background-color: #f8f8f8;
@@ -39,3 +34,4 @@
 .hackathonLogos .card-text {
     margin-bottom: 25px;
 }
+

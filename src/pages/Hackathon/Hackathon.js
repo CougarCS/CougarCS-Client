@@ -1,12 +1,12 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import hackathons from '../../hackathonlists';
 import HackathonComp from '../../components/Hackathon/hackathonsComp';
 import './Hackathon.css';
 
 class Hackathon extends React.Component {
     state={
-        currTime : new Date().toISOString().split("T")[0],
+        currTime : new Date().toISOString().split("T")[0]
     }
     render(){
         return(
@@ -18,7 +18,16 @@ class Hackathon extends React.Component {
                                 hackathons.sort((a, b) => (a.year.concat(a.startDate) > b.year.concat(b.startDate)) ? 1:-1).map((hackathonlist) =>
                                     (hackathonlist.year.concat(hackathonlist.endDate) > this.state.currTime) ? (
                                             <HackathonComp hackathonlist = {hackathonlist} key = {hackathonlist.id}/> 
-                                    ) : null
+                                    ) : null     
+                            )}
+                        </div>
+                        <h1>Past Hackathons</h1>
+                        <div className="hackathonLogos past">
+                            {
+                                 hackathons.sort((a, b) => (a.year.concat(a.startDate) < b.year.concat(b.startDate)) ? 1:-1).map((hackathonlist) =>
+                                 (hackathonlist.year.concat(hackathonlist.endDate) < this.state.currTime) ? (
+                                         <HackathonComp hackathonlist = {hackathonlist} key = {hackathonlist.id}/> 
+                                 ) : null
                             )}
                         </div>
                     </Row>
