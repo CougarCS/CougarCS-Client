@@ -1,12 +1,10 @@
 import React from 'react';
-import { Col, Image, Row, Button, Card} from 'react-bootstrap';
+import { Col, Row, Button, Card} from 'react-bootstrap';
 import './hackathons.css';
 
 const HackathonsList = ({ hackathonlist }) => {
     return (
-        <Row>
-            <Col>
-                <Card className="d-flex h-100 shadow-sm">
+                <Card className="d-flex">
                     <div className="embed-responsive embed-responsive-16by9">
                         <Card.Img variant="top" className="embed-responsive-item" src={hackathonlist.img}/>
                     </div>
@@ -22,25 +20,26 @@ const HackathonsList = ({ hackathonlist }) => {
                         <p className="card-text text-secondary">
                             {hackathonlist.description}
                         </p>
-                        <div className="display-inline-block text-center">
+                        <div className="display-inline-block text-left">
                        
-                             <Button  variant="danger" href={hackathonlist.link} target="_blank">
-                                Apply Here
-                            </Button>
+                            <div>
+                                <Button  variant="danger" href={hackathonlist.link} target="_blank">
+                                    Apply Here
+                                </Button>
+                            </div>
                     
                         </div>
-                           
-                        <div className="start-end text-left">
-                            <span className="italicize">Date: </span>{hackathonlist.startDate.replace("-", "/")}-{hackathonlist.endDate.replace("-", "/")}
-                        </div>
-                        <div className="deadline text-right">
-                            <span className="italicize">Apply Deadline: </span>{hackathonlist.deadline}
+                        <div className="dates">
+                            <div className="start-end">
+                                <span className="italicize">Date: </span>{hackathonlist.startDate.replace("-", "/")}-{hackathonlist.endDate.replace("-", "/")}
+                            </div>
+                            <div className="deadline">
+                                <span style={{fontStyle: "italic", fontWeight: 600}}>Apply Deadline: </span>{hackathonlist.deadline}
+                            </div>
                         </div>
                     </div>
                     
                 </Card>
-            </Col>
-        </Row>
     );
 }
 export default HackathonsList;

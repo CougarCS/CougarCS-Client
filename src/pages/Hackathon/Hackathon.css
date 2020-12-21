@@ -1,8 +1,7 @@
 
 .hackathonCard {
-    padding: 0 15em 0;
+    max-width: 1400px;   
 }
-
 .each {
   display: flex; 
   justify-content: center;
@@ -10,7 +9,7 @@
 .hackathonLogos {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
-    grid-column-gap: 3.5em;
+    grid-column-gap: 30px;
     row-gap: 2em;
 }
 h1 {
@@ -62,5 +61,15 @@ h1 {
     }
     .hackathonCard{
         padding: 0 2em 0;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .dates{
+      flex-wrap: wrap;
+      text-align: left;
+      display: block;
+    }
+    .start-end{
+      margin-bottom: 8px;
     }
   }

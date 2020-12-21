@@ -17,9 +17,7 @@ class Hackathon extends React.Component {
                             {
                                 hackathons.sort((a, b) => (a.year.concat(a.startDate) > b.year.concat(b.startDate)) ? 1:-1).map((hackathonlist) =>
                                     (hackathonlist.year.concat(hackathonlist.endDate) > this.state.currTime) ? (
-                                        <Col l={3} className="mb-5 py-2">   
                                             <HackathonComp hackathonlist = {hackathonlist} key = {hackathonlist.id}/> 
-                                        </Col>
                                     ) : null
                             )}
                         </div>
