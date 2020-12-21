@@ -75,7 +75,7 @@ export const Payment = () => {
 			const { id } = paymentMethod;
 
 			try {
-				const response = await axios
+				await axios
 					.post('https://backend.cougarcs.com/api/payment', {
 						token: id,
 						user,

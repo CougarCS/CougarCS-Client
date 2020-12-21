@@ -3,7 +3,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
-import DarkMode from '../DarkMode/DarkMode';
+// import DarkMode from '../DarkMode/DarkMode';
 import './Navbar.css';
 
 const NavBar = ({ themeToggler }) => (
@@ -38,7 +38,7 @@ const NavBar = ({ themeToggler }) => (
 					<Nav.Link>Contact Us</Nav.Link>
 				</LinkContainer>
 				<Nav.Link href='https://uhcode.red/'>CodeRED</Nav.Link>
-				<DarkMode />
+				{/* <DarkMode /> */}
 			</Nav>
 		</Navbar.Collapse>
 	</Navbar>

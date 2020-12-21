@@ -7,16 +7,16 @@ import user from './assets/user.png';
 import dr_yun from './assets/dr_yun.jpg';
 
 const officers = [
-	// {
-	// 	id: 0,
-	// 	name: 'Dr.Chang Yun',
-	// 	image: dr_yun,
-	// 	linkedin: 'https://www.linkedin.com/in/chang-yun-94340a14/',
-	// 	email: 'phys94@cougarcs.com',
-	// 	title: 'Faculty Advisor',
-	// 	open: false,
-	// 	show: true,
-	// },
+	{
+		id: 0,
+		name: 'Dr.Chang Yun',
+		image: dr_yun,
+		linkedin: 'https://www.linkedin.com/in/chang-yun-94340a14/',
+		email: 'phys94@cougarcs.com',
+		title: 'Faculty Advisor',
+		open: false,
+		show: false,
+	},
 	{
 		id: 1,
 		name: 'Mariana Villalobos',
