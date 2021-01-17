@@ -1,75 +1,75 @@
-
 .hackathonCard {
-    max-width: 1400px;   
+	max-width: 1400px;
 }
 .past .btn-danger {
-  display: none;
+	display: none;
 }
 .each {
-  display: flex; 
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 .hackathonLogos {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-column-gap: 30px;
-    row-gap: 2em;
+	display: grid;
+	grid-template-columns: 2fr 2fr 2fr;
+	column-gap: 30px;
+	row-gap: 2em;
 }
 .hackathonCard h1 {
-    padding: 1.8em 0;
-}
-@media only screen and (max-width: 1700px) {
-  .hackathonLogos {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 2em;
-    row-gap: 2em;
-  }
+	padding: 1.8em 0;
 }
 
+@media only screen and (max-width: 1700px) {
+	.hackathonLogos {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		column-gap: 2em;
+		row-gap: 2em;
+	}
+}
 
 @media only screen and (max-width: 1450px) {
-    .hackathonLogos {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      grid-column-gap: 2em;
-      row-gap: 2em;
-    }
-    .hackathonCard{
-        padding: 0 2em 0;
-    }
-  }
-  
-  @media only screen and (max-width: 1150px) {
-    .hackathonLogos {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-column-gap: 2em;
-      row-gap: 2em;
-    }
-    .hackathonCard{
-        padding: 0 1.5em 0;
-    }
-  }
-  
-  @media only screen and (max-width: 700px) {
-    .hackathonLogos {
-      display: grid;
-      grid-template-columns: auto;
-      grid-column-gap: 5em;
-      row-gap: 2em;
-    }
-    .hackathonCard{
-        padding: 0 2em 0;
-    }
-  }
-  @media only screen and (max-width: 320px) {
-    .dates{
-      flex-wrap: wrap;
-      text-align: left;
-      display: block;
-    }
-    .start-end{
-      margin-bottom: 8px;
-    }
-  }
+	.hackathonLogos {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		column-gap: 2em;
+		row-gap: 2em;
+	}
+	.hackathonCard {
+		padding: 0 2em 0;
+	}
+}
+
+@media only screen and (max-width: 1150px) {
+	.hackathonLogos {
+		display: grid;
+		grid-template-columns: auto auto;
+		column-gap: 2em;
+		row-gap: 2em;
+	}
+	.hackathonCard {
+		padding: 0 1.5em 0;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.hackathonLogos {
+		display: grid;
+		grid-template-columns: auto;
+		column-gap: 5em;
+		row-gap: 2em;
+	}
+	.hackathonCard {
+		padding: 0 2em 0;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.dates {
+		flex-wrap: wrap;
+		text-align: left;
+		display: block;
+	}
+	.start-end {
+		margin-bottom: 8px;
+	}
+}
