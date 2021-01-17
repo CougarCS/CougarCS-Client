@@ -17,7 +17,7 @@
 }
 
 .eventModalDesc {
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .loader {
