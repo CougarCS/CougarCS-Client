@@ -1,19 +1,24 @@
 .hackathonCard {
 	max-width: 1400px;
+	padding: 0;
 }
+
 .past .btn-danger {
 	display: none;
 }
+
 .each {
 	display: flex;
 	justify-content: center;
 }
+
 .hackathonLogos {
 	display: grid;
 	grid-template-columns: 2fr 2fr 2fr;
 	column-gap: 30px;
 	row-gap: 2em;
 }
+
 .hackathonCard h1 {
 	padding: 1.8em 0;
 }

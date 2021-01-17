@@ -10,25 +10,16 @@ const HackathonsList = ({ hackathonlist }) => {
                     </div>
                     
                     <div className="card-body">
-                        <div className="d-flex mb-2 justify-content-left">
-
-                            <div className="card-title mb-0 font-weight-bold">
-                                {hackathonlist.title}
-                            </div>
-
+                        <div className="card-title">
+                            {hackathonlist.title}
                         </div>
+                        
                         <p className="card-text text-secondary">
                             {hackathonlist.description}
                         </p>
-                        <div className="display-inline-block text-left">
-                       
-                            <div>
-                                <Button  variant="danger" href={hackathonlist.link} target="_blank">
-                                    Apply Here
-                                </Button>
-                            </div>
-                    
-                        </div>
+
+                        <Button  variant="danger" href={hackathonlist.link} target="_blank">Apply Here</Button>
+
                         <div className="dates">
                             <div className="start-end">
                                 <span className="italicize">Date: </span>{hackathonlist.startDate.replace("-", "/")}-{hackathonlist.endDate.replace("-", "/")}
