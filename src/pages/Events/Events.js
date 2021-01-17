@@ -4,11 +4,11 @@ import React, { useEffect, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import Loading from '../../components/Loading/Loading';
 import './Event.css';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Dropdown } from 'react-bootstrap';
 import { sanitize } from 'dompurify';
+import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
 
 const localizer = momentLocalizer(moment);
-
 
 const url = 'https://backend.cougarcs.com/api/events';
 
@@ -113,7 +113,16 @@ const Events = () => {
 					}
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant='secondary' onClick={handleClose}>
+
+					<Dropdown>
+						<Dropdown.Toggle variant="success" id="dropdown-basic">
+							Add To Calendar
+						  </Dropdown.Toggle>
+
+						<AddToCalendar event={desc} />
+					</Dropdown>
+
+					<Button variant='danger' onClick={handleClose}>
 						Close
 					</Button>
 				</Modal.Footer>
