@@ -7,7 +7,7 @@
     "@stripe/stripe-js": "^1.11.0",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
-    "calendar-link": "^2.0.2",
+    "calendar-link": "^2.0.6",
     "dompurify": "^2.2.2",
     "formik": "^2.2.1",
     "moment": "^2.29.1",
