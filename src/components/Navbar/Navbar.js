@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 // import DarkMode from '../DarkMode/DarkMode';
 import './Navbar.css';
@@ -29,6 +30,9 @@ const NavBar = ({ themeToggler }) => (
 				</LinkContainer>
 				<LinkContainer to='/calendar'>
 					<Nav.Link>Events</Nav.Link>
+				</LinkContainer>
+				<LinkContainer to="/hackathons">
+					<Nav.Link>Hackathons</Nav.Link>
 				</LinkContainer>
 				<LinkContainer to='/contactus'>
 					<Nav.Link>Contact Us</Nav.Link>
