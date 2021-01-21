@@ -9,7 +9,7 @@
     "bootstrap": "^4.5.3",
     "calendar-link": "^2.0.2",
     "dompurify": "^2.2.3",
-    "formik": "^2.2.1",
+    "formik": "^2.2.6",
     "moment": "^2.29.1",
     "react": "^16.14.0",
     "react-add-to-calendar": "^0.1.5",
