@@ -1115,6 +1115,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.12.1":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/template@^7.10.4", "@babel/template@^7.4.0", "@babel/template@^7.8.6":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.10.4.tgz#3251996c4200ebc71d1a8fc405fba940f36ba278"
@@ -1364,6 +1371,11 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.5.3.tgz#4982b0b66b7a4cf949b86f5d25a8cf757d3cfd9d"
   integrity sha512-RFwCobxsvZ6j7twS7dHIZQZituMIDJJNHS/qY6iuthVebxS3zhRY+jaC2roEKiAYaVuTcGmX6Luc6YBcf6zJVg==
 
+"@popperjs/core@^2.5.3":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.6.0.tgz#f022195afdfc942e088ee2101285a1d31c7d727f"
+  integrity sha512-cPqjjzuFWNK3BSKLm0abspP0sp/IGOli4p5I5fKFAzdS8fvjdOwDCfZqAaIiXd9lPkOWi3SUUfZof3hEb7J/uw==
+
 "@restart/context@^2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@restart/context/-/context-2.1.4.tgz#a99d87c299a34c28bd85bb489cb07bfd23149c02"
@@ -1376,6 +1388,14 @@
   dependencies:
     lodash "^4.17.15"
     lodash-es "^4.17.15"
+
+"@restart/hooks@^0.3.25":
+  version "0.3.26"
+  resolved "https://registry.yarnpkg.com/@restart/hooks/-/hooks-0.3.26.tgz#ade155a7b0b014ef1073391dda46972c3a14a129"
+  integrity sha512-7Hwk2ZMYm+JLWcb7R9qIXk1OoUg1Z+saKWqZXlrvFwT3w6UArVNWgxYOzf+PJoK9zZejp8okPAKTctthhXLt5g==
+  dependencies:
+    lodash "^4.17.20"
+    lodash-es "^4.17.20"
 
 "@stripe/react-stripe-js@^1.1.2":
   version "1.1.2"
@@ -3796,7 +3816,7 @@ dom-converter@^0.2:
   dependencies:
     utila "~0.4"
 
-dom-helpers@^5.0.1, dom-helpers@^5.1.0, dom-helpers@^5.1.2:
+dom-helpers@^5.0.1, dom-helpers@^5.1.0, dom-helpers@^5.1.2, dom-helpers@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-5.2.0.tgz#57fd054c5f8f34c52a3eeffdb7e7e93cd357d95b"
   integrity sha512-Ru5o9+V8CpunKnz5LGgWXkmrH/20cGKwcHwS4m73zIvs54CN9epEmT/HLqFJW3kXpakAFkEdzgy1hzlJe3E4OQ==
@@ -6630,6 +6650,11 @@ lodash-es@^4.17.11, lodash-es@^4.17.14, lodash-es@^4.17.15:
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
   integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
 
+lodash-es@^4.17.20:
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.20.tgz#29f6332eefc60e849f869c264bc71126ad61e8f7"
+  integrity sha512-JD1COMZsq8maT6mnuz1UMV0jvYD0E0aUsSOdrr1/nAG3dhqQXwRRgeW0cSqH1U43INKcqxaiVIQNOUDld7gRDA==
+
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
@@ -6665,7 +6690,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.5:
+"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.5:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
@@ -7756,11 +7781,6 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popper.js@^1.15.0:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
-  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
-
 portfinder@^1.0.26:
   version "1.0.28"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.28.tgz#67c4622852bd5374dd1dd900f779f53462fac778"
@@ -8703,10 +8723,10 @@ react-async-script@^1.1.1:
     hoist-non-react-statics "^3.3.0"
     prop-types "^15.5.0"
 
-react-big-calendar@^0.28.0:
-  version "0.28.6"
-  resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-0.28.6.tgz#95a3107eb0d641767a9c3757e74f0115b0f2deeb"
-  integrity sha512-zNcccI4sWkohnGjF0I0cu8FP9riElYU0qqtJGmv56D14Cfz0ekwd7ah1ep4rIgiJqx3QBZkxZrEWGxqTXFW7Dw==
+react-big-calendar@^0.30.0:
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-0.30.0.tgz#58235e078978c9440f3de877035eea0510892d7f"
+  integrity sha512-YHrdEXa/Kas4gRvyo4q6Vadp8405nksGC3EcHdzLjNqzCSdpLZ1Gv5VgvTXWOfOwCmUtDZJf1rYiqpeF/jVVBA==
   dependencies:
     "@babel/runtime" "^7.1.5"
     clsx "^1.0.4"
@@ -8717,7 +8737,7 @@ react-big-calendar@^0.28.0:
     lodash-es "^4.17.11"
     memoize-one "^5.1.1"
     prop-types "^15.7.2"
-    react-overlays "^2.0.0-0"
+    react-overlays "^4.1.1"
     uncontrollable "^7.0.0"
 
 react-bootstrap@^1.4.0:
@@ -8848,19 +8868,6 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-overlays@^2.0.0-0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-2.1.1.tgz#ffe2090c4a10da6b8947a1c7b1a67d0457648a0d"
-  integrity sha512-gaQJwmb8Ij2IGVt4D1HmLtl4A0mDVYxlsv/8i0dHWK7Mw0kNat6ORelbbEWzaXTK1TqMeQtJw/jraL3WOADz3w==
-  dependencies:
-    "@babel/runtime" "^7.4.5"
-    "@restart/hooks" "^0.3.12"
-    dom-helpers "^5.1.0"
-    popper.js "^1.15.0"
-    prop-types "^15.7.2"
-    uncontrollable "^7.0.0"
-    warning "^4.0.3"
-
 react-overlays@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-4.1.0.tgz#755a890519b02e3904845172d5223ff2dfb1bb29"
@@ -8871,6 +8878,20 @@ react-overlays@^4.1.0:
     "@restart/hooks" "^0.3.12"
     "@types/warning" "^3.0.0"
     dom-helpers "^5.1.0"
+    prop-types "^15.7.2"
+    uncontrollable "^7.0.0"
+    warning "^4.0.3"
+
+react-overlays@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-4.1.1.tgz#0060107cbe1c5171a744ccda3fbf0556d064bc5f"
+  integrity sha512-WtJifh081e6M24KnvTQoNjQEpz7HoLxqt8TwZM7LOYIkYJ8i/Ly1Xi7RVte87ZVnmqQ4PFaFiNHZhSINPSpdBQ==
+  dependencies:
+    "@babel/runtime" "^7.12.1"
+    "@popperjs/core" "^2.5.3"
+    "@restart/hooks" "^0.3.25"
+    "@types/warning" "^3.0.0"
+    dom-helpers "^5.2.0"
     prop-types "^15.7.2"
     uncontrollable "^7.0.0"
     warning "^4.0.3"
