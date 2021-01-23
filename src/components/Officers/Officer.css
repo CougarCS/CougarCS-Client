@@ -55,9 +55,8 @@
 
 .officers .picture img {
 	width: 100%;
-	/* height: auto; */
-	/* border-radius: 50%; */
-	background-size: contain;
+	height: 100%;
+	object-fit: cover;
 	transform: scale(1);
 	transition: all 0.9s ease 0s;
 }
@@ -71,7 +70,7 @@
 	display: block;
 	font-size: 15px;
 	color: #4e5052;
-	text-transform: capitalize;
+	text-transform: none;
 }
 
 .officers .social {
