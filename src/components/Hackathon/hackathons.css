@@ -22,7 +22,7 @@
 }
 
 .hackathonLogos .card-body{
-    background-color: #f8f8f8;
+    background-color: var(--color-card-background);
     padding-bottom: 2.5rem;
 }
 

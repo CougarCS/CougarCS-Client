@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 const Privacy = () => {
     return (
         <Container>
-            <h1>Privacy</h1>
+            <h1>Privacy Policy</h1>
             <p>
                 CougarCS is committed to respecting the privacy of our website visitors in a manner that would be expected of a leading organization. We value our relationships with existing and prospective visitors, and recognize that an essential element of those relationships is the trust and confidence.
             </p>
