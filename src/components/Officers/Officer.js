@@ -31,7 +31,7 @@ const Officer = ({ officer }) => {
 							<ul className='social'>
 								{officer.email.length > 0 && (
 									<li>
-										<a href={`mailto:${officer.email}`}>
+										<a href={`mailto:${officer.email}`} target="_blank">
 											<i className='far fa-envelope fa'></i>
 										</a>
 									</li>
