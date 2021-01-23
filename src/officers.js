@@ -8,6 +8,7 @@ import Sevilay from './assets/officers/Sevilay.jpg';
 import Shubh from './assets/officers/Shubh.jpg';
 import Shubha from './assets/officers/Shubha.jpg';
 import Tooba from './assets/officers/Tooba.jpg';
+import Neriyah from './assets/officers/Neriyah.jpg';
 import Adil from './assets/officers/Adil.jpg';
 
 
@@ -95,7 +96,7 @@ const officers = [
 	{
 		id: 8,
 		name: 'Neriyah Butler',
-		image: Placeholder,
+		image: Neriyah,
 		linkedin: 'https://www.linkedin.com/in/neriyah-butler/',
 		email: 'activities@cougarcs.com',
 		title: 'Co-Director of Activities',
