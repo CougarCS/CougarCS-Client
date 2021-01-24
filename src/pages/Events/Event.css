@@ -23,7 +23,7 @@
 .loader {
 	text-align: center;
 }
-@media only screen and (max-width: 414px) {
+@media (max-width: 414px) {
 	.event-container {
 		margin: 0;
 		padding: 0 2em;

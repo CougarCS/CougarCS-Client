@@ -34,13 +34,13 @@
     background: none;
 }
 
-@media only screen and (max-width: 400px) {
+@media (max-width: 400px) {
     .fourOfour h1 {
         font-size: 5em;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media (max-width: 500px) {
     .fourOfour h1 {
         font-size: 7em;
     }

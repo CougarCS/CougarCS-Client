@@ -13,6 +13,8 @@ import UserRegister from './components/UserRegister/UserRegister';
 import Hackathon from './pages/Hackathon/Hackathon';
 import Privacy from './pages/Policy/Privacy';
 
+import ScrollTop from './components/ScrollTop/ScrollTop';
+
 function initializeReactGA() {
 	ReactGA.initialize('UA-155177558-1');
 	ReactGA.pageview(window.location.pathname + window.location.search);
@@ -22,6 +24,7 @@ const App = () => {
 	initializeReactGA();
 	return (
 		<Router>
+			<ScrollTop />
 			<NavBar />
 			<Switch>
 				<Route path='/' exact={true} component={Home} />
