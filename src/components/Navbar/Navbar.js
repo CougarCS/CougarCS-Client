@@ -37,7 +37,7 @@ const NavBar = ({ themeToggler }) => (
 				<LinkContainer to='/contactus'>
 					<Nav.Link>Contact Us</Nav.Link>
 				</LinkContainer>
-				<Nav.Link href='https://uhcode.red/'>CodeRED</Nav.Link>
+				<Nav.Link href='https://uhcode.red/' target="_blank">CodeRED</Nav.Link>
 				{/* <DarkMode /> */}
 			</Nav>
 		</Navbar.Collapse>

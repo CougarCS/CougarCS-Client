@@ -1,79 +1,69 @@
-body {
-  font-family: 'Raleway', 'Roboto Mono', monospace;
-}
-
 .officerImages {
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-  grid-column-gap: 1em;
-  row-gap: 2em;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
 }
 .container {
-  background: #ffffff !important;
+	background: #ffffff !important;
 }
 .test {
-  max-height: 90vh;
+	max-height: 90vh;
 }
 .about-us {
-  padding: 2em;
+	padding: 2em;
 }
 
-.cnt {
-  display: flex;
-  justify-content: center;
-}
 .rowHeight {
-  min-height: 100vh;
-  display: flex;
-    justify-content: center;
-    align-items: center;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .col > img {
-  height: 40rem;
-  width: auto;
-  z-index: -99;
+	height: 40rem;
+	width: auto;
+	z-index: -99;
 }
 
 #officerName {
-  text-align: center;
+	text-align: center;
 }
 
 .officerCard {
-  padding: 0 3rem 0;
+	max-width: 1400px;
+	padding: 0;
 }
 
-@media only screen and (max-width: 1296px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+@media (max-width: 1450px) {
+	.officerCard {
+		padding: 0 2em;
+	}
 }
 
-@media only screen and (max-width: 1109px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+@media (max-width: 1296px) {
+	.officerImages {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
-@media only screen and (max-width: 830px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+@media (max-width: 1109px) {
+	.officerImages {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
-@media only screen and (max-width: 555px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+@media (max-width: 767px) {
+	.officerImages {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 575px) {
+	.officerCard {
+		padding: 0 1em;
+	}
+
+	.officerImages {
+		gap: 1em;
+	}
 }

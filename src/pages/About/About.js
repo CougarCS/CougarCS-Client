@@ -7,7 +7,7 @@ import './About.css';
 class About extends React.Component {
 	render() {
 		return (
-			<div>
+			<>
 				<Container fluid>
 					<Row className='rowHeight'>
 						<Col md='6' className='order-md-2'>
@@ -29,19 +29,17 @@ class About extends React.Component {
 					</Row>
 				</Container>
 
-				<Container className='officerCard' fluid>
-					<h1 style={{ marginTop: '1.8em' }}>Meet the Officers</h1>
-					<Row className='cnt'>
-						<div className='officerImages'>
-							{officers.map((officer) =>
-								officer.show ? (
-									<Officer officer={officer} key={officer.id} />
-								) : null
-							)}
-						</div>
-					</Row>
+				<Container fluid className='officerCard'>
+					<h1 className='long-margin' style={{ marginTop: '1.8em' }}>Meet the Officers</h1>
+					<div className='officerImages'>
+						{officers.map((officer) =>
+							officer.show ? (
+								<Officer officer={officer} key={officer.id} />
+							) : null
+						)}
+					</div>
 				</Container>
-			</div>
+			</>
 		);
 	}
 }
