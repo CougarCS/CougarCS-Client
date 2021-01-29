@@ -15,7 +15,7 @@
     "react": "^16.14.0",
     "react-add-to-calendar": "^0.1.5",
     "react-big-calendar": "^0.28.0",
-    "react-bootstrap": "^1.4.0",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^16.14.0",
     "react-ga": "^2.7.0",
     "react-google-invisible-recaptcha": "^0.2.11",
