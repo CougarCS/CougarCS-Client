@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/react-stripe-js": "^1.2.0",
     "axios": "^0.21.1",
     "@stripe/stripe-js": "^1.11.0",
     "@types/dompurify": "^2.0.4",
