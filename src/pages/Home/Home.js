@@ -23,9 +23,9 @@ const Home = () => {
 	}, []);
 	return (
 		<div style={{ overflow: 'hidden' }}>
-			<Helmet>
+			{/* <Helmet>
 				<title>CougarCS - Home</title>
-			</Helmet>
+			</Helmet> */}
 			{/* <div
 				className='alert alert-warning'
 				role='alert'
