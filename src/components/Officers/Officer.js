@@ -5,61 +5,6 @@ const APPLICATION_LINK = 'https://forms.gle/wFiokVCgfc8Wqp1S7';
 
 const Officer = ({ officer }) => {
 	return (
-<<<<<<< HEAD
-		<>
-			<Row>
-				<Col>
-					<div className='officers'>
-						<div className='picture'>
-							<Image src={officer.image} roundedCircle />
-						</div>
-						<div className='team-content'>
-							<h5 className='name'>
-								{officer.open ? (
-									<Nav.Link
-										href={APPLICATION_LINK}
-										target='_blank'
-										rel="nofollow noopener"
-									>
-										Apply Here
-									</Nav.Link>
-								) : (
-										officer.name
-									)}
-							</h5>
-							<h6 className='title'>{officer.title}</h6>
-						</div>
-						{!officer.open ? (
-							<ul className='social'>
-								{officer.email.length > 0 && (
-									<li>
-										<a
-											href={`mailto:${officer.email}`}
-											target="_blank"
-											rel='noopener noreferrer '
-										>
-											<i className='far fa-envelope fa'></i>
-										</a>
-									</li>
-								)}
-								{officer.linkedin.length > 0 && (
-									<li>
-										<Nav.Link
-											href={officer.linkedin}
-											target='_blank'
-											rel='noopener nofollow'
-										>
-											<i className='fab fa-linkedin'></i>
-										</Nav.Link>
-									</li>
-								)}
-							</ul>
-						) : null}
-					</div>
-				</Col>
-			</Row>
-		</>
-=======
 		<div className='officers'>
 			<div className='picture'>
 				<Image src={officer.image} roundedCircle />
@@ -74,8 +19,8 @@ const Officer = ({ officer }) => {
 							Apply Here
 						</a>
 					) : (
-							officer.name
-						)}
+						officer.name
+					)}
 				</h5>
 				<h6 className='title'>{officer.title}</h6>
 			</div>
@@ -101,7 +46,6 @@ const Officer = ({ officer }) => {
 				</ul>
 			) : null}
 		</div>
->>>>>>> edaa389d3f18b44730632b9ea1822d09d8a37b38
 	);
 };
 
