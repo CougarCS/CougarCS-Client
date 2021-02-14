@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import './Hackathons.css';
+import './hackathons.css';
 
 const HackathonsList = ({ hackathonlist }) => {
     return (

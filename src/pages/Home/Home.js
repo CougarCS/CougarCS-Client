@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Typed from 'typed.js';
+import { Helmet } from 'react-helmet';
 import './Home.css';
 
 const animateText = () =>
@@ -22,6 +23,9 @@ const Home = () => {
 	}, []);
 	return (
 		<div style={{ overflow: 'hidden' }}>
+			<Helmet>
+				<title>CougarCS - Home</title>
+			</Helmet>
 			{/* <div
 				className='alert alert-warning'
 				role='alert'
