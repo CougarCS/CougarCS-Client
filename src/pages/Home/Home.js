@@ -24,22 +24,6 @@ const Home = () => {
 	return (
 		<div style={{ overflow: 'hidden' }}>
 			<Helmet>
-				<meta name="description"
-					content="CougarCS is the largest student run Computer Science organization at the University of Houston. At CougarCS, our mission is to smoothly transition our inexperienced members into young professionals by the end of their degree, and to provide support and assistance to members who struggle academically or who need career guidance." />
-
-				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://cougarcs.com/" />
-				<meta property="og:title" content="CougarCS" />
-				<meta property="og:description"
-					content="CougarCS is the largest student run Computer Science organization at the University of Houston. At CougarCS, our mission is to smoothly transition our inexperienced members into young professionals by the end of their degree, and to provide support and assistance to members who struggle academically or who need career guidance." />
-				<meta property="og:image" content="https://cougarcs.com/static/media/cougarcs_background11.08394609.jpg" />
-
-				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://cougarcs.com/" />
-				<meta property="twitter:title" content="CougarCS" />
-				<meta property="twitter:description"
-					content="CougarCS is the largest student run Computer Science organization at the University of Houston. At CougarCS, our mission is to smoothly transition our inexperienced members into young professionals by the end of their degree, and to provide support and assistance to members who struggle academically or who need career guidance." />
-				<meta property="twitter:image" content="https://cougarcs.com/static/media/cougarcs_background11.08394609.jpg" />
 				<title>CougarCS - Home</title>
 			</Helmet>
 			{/* <div
