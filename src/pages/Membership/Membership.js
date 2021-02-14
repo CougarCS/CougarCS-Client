@@ -150,8 +150,7 @@ class Membership extends Component {
 											</Card.Title>
 											<p style={{ textAlign: 'center' }}>
 												Work through problems with intelligent and approachable
-												tutors who are focused on member success lmk what you
-												think
+												tutors who are focused on member success 
 											</p>
 										</Card.Body>
 									</Card>
