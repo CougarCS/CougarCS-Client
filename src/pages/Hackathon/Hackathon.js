@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import hackathons from '../../hackathonlists';
 import HackathonComp from '../../components/Hackathon/HackathonsComp';
 import './Hackathon.css';
+import { Helmet } from 'react-helmet';
 
 const Hackathon = () => {
 
@@ -10,6 +11,9 @@ const Hackathon = () => {
 
     return (
         <Container className="hackathonCard" fluid>
+            <Helmet>
+                <title>CougarCS - Hackathon</title>
+            </Helmet>
             <h1 className="long-margin">Upcoming Hackthons</h1>
             <div className="hackathonLogos">
                 {

@@ -1,9 +1,13 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 const Privacy = () => {
     return (
         <Container>
+            <Helmet>
+                <title>CougarCS - Privacy Policy</title>
+            </Helmet>
             <h1>Privacy Policy</h1>
             <p>
                 CougarCS is committed to respecting the privacy of our website visitors in a manner that would be expected of a leading organization. We value our relationships with existing and prospective visitors, and recognize that an essential element of those relationships is the trust and confidence.

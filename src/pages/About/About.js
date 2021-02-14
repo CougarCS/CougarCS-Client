@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import gif from '../../assets/about.svg';
 import Officer from '../../components/Officers/Officer';
 import officers from '../../officers';
@@ -8,6 +9,9 @@ class About extends React.Component {
 	render() {
 		return (
 			<>
+				<Helmet>
+					<title>CougarCS - About</title>
+				</Helmet>
 				<Container fluid>
 					<Row className='rowHeight'>
 						<Col md='6' className='order-md-2'>

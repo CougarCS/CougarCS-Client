@@ -7,6 +7,7 @@ import './Event.css';
 import { Modal, Button, Dropdown } from 'react-bootstrap';
 import { sanitize } from 'dompurify';
 import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
+import { Helmet } from 'react-helmet';
 
 const localizer = momentLocalizer(moment);
 
@@ -63,37 +64,40 @@ const Events = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>CougarCS - Calendar</title>
+			</Helmet>
 			{loading ? (
 				<div className='load'>
 					<Loading className='loader' />
 				</div>
 			) : (
-					<div className='event-container'>
-						<Calendar
-							localizer={localizer}
-							events={events}
-							startAccessor='start'
-							endAccessor='end'
-							style={{ height: '100%' }}
-							views={{
-								month: true,
-								agenda: true,
-							}}
-							popup={true}
-							drilldownView='agenda'
-							popupOffset={{ x: 30, y: 20 }}
-							onSelectEvent={(e) => {
-								setDesc({
-									title: e.title,
-									startDate: e.start,
-									endDate: e.end,
-									description: e.desc,
-								});
-								setShow(true);
-							}}
-						/>
-					</div>
-				)}
+				<div className='event-container'>
+					<Calendar
+						localizer={localizer}
+						events={events}
+						startAccessor='start'
+						endAccessor='end'
+						style={{ height: '100%' }}
+						views={{
+							month: true,
+							agenda: true,
+						}}
+						popup={true}
+						drilldownView='agenda'
+						popupOffset={{ x: 30, y: 20 }}
+						onSelectEvent={(e) => {
+							setDesc({
+								title: e.title,
+								startDate: e.start,
+								endDate: e.end,
+								description: e.desc,
+							});
+							setShow(true);
+						}}
+					/>
+				</div>
+			)}
 
 			<Modal show={show} size='lg' onHide={handleClose} keyboard={false}>
 				<Modal.Header closeButton>
