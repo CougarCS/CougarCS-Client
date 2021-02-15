@@ -2723,10 +2723,10 @@ cache-base@^1.0.1:
     union-value "^1.0.0"
     unset-value "^1.0.0"
 
-calendar-link@^2.0.2:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/calendar-link/-/calendar-link-2.0.9.tgz#5f2e50a13377332c1821dc6dc6d7cf0ada21cbf2"
-  integrity sha512-CWsEDQdPjVVYvpEO0tkoy8oFUxf0nuFJm9qXhw3b5wpsbPmioJIVrWJtrUVSxxLVCZMGzpJy+UqEnrVp9HWUhg==
+calendar-link@^2.0.10:
+  version "2.0.13"
+  resolved "https://registry.yarnpkg.com/calendar-link/-/calendar-link-2.0.13.tgz#7cfac631d12c23ed9a87d2df1299b544f199a0e9"
+  integrity sha512-AwfzFnrg673A+BI/64OG/dS8G99vZRnXNkKO+ZSvrBMR0Le4Tm2ui+KdJugrKU9+1dfXmRTE3ITRgqC6tYFh9Q==
   dependencies:
     dayjs "^1.9.3"
     query-string "^6.13.6"
