@@ -1,20 +1,26 @@
 import React, {useState} from 'react';
 import { Container } from 'react-bootstrap';
-import hackathons from '../../hackathonlists';
+import hackathons from '../../hackathons';
 import HackathonComp from '../../components/Hackathon/hackathonsComp';
+import cron from "node-cron"
+import shell from "shelljs"
 import './Hackathon.css';
 
 const Hackathon = () => {
-
-    const [currTime, updateCurrTime] = useState(new Date().toISOString().split("T")[0]);
-
+    const currTime = useState(new Date().toISOString().split("T")[0]);
+    /* cron.schedule("30 54 23 * * *", () => { ``` implementation doesn't work on client side ```
+        console.log("fetching latest hackathons...")
+        if(shell.exec("cd src/ && npx web_scraper_cougarcs").code !== 0){
+            console.log("Failed to fetch latest hackathons. Will attempt to fetch at midnight, everyday.")
+        }
+    }); */
     return (
         <Container className="hackathonCard" fluid>
             <h1 className="long-margin">Upcoming Hackthons</h1>
             <div className="hackathonLogos">
                 {
-                hackathons.sort((a, b) => (a.year.concat(a.startDate) > b.year.concat(b.startDate)) ? 1:-1).map((hackathonlist) =>
-                    (hackathonlist.year.concat(hackathonlist.endDate) > currTime) ? (
+                hackathons.sort((a, b) => (a.startDate > b.startDate) ? 1:-1).map((hackathonlist) =>
+                    (hackathonlist.endDate > currTime) ? (
                         <HackathonComp hackathonlist = {hackathonlist} key = {hackathonlist.id}/> 
                     ) : null     
                 )
@@ -23,8 +29,8 @@ const Hackathon = () => {
             <h1 className="long-margin">Past Hackathons</h1>
             <div className="hackathonLogos past">
                 {
-                hackathons.sort((a, b) => (a.year.concat(a.startDate) < b.year.concat(b.startDate)) ? 1:-1).map((hackathonlist) =>
-                    (hackathonlist.year.concat(hackathonlist.endDate) < currTime) ? (
+                hackathons.sort((a, b) => (a.startDate <b.startDate) ? 1:-1).map((hackathonlist) =>
+                    (hackathonlist.endDate < currTime) ? (
                         <HackathonComp hackathonlist = {hackathonlist} key = {hackathonlist.id}/> 
                     ) : null
                 )
