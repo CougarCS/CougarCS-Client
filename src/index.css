@@ -2,7 +2,7 @@
 	--color-background: #fff;
 	--color-on-background: #2f2838;
 	--color-card-background: #f5f5f5;
-	--color-primary: #6200ee;
+	--color-primary: #ce1313;
 	--color-on-primary: #fff;
 	--color-secondary: #03dac6;
 	--color-on-secondary: #000;
@@ -82,6 +82,10 @@ input {
 }
 
 /** Container Styles **/
+.contained {
+	max-width: 1400px;
+}
+
 .container-left {
 	padding-left: 15px;
 	padding-right: 15px;
