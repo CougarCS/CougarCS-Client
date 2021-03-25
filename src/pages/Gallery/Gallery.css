@@ -1,0 +1,21 @@
+.events {
+  /*
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  grid-auto-rows: minmax(366px, auto);
+  grid-row-gap: 60px;
+  */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.events_text {
+  /* margin-bottom: 102px; */
+  font-family: "Poppins";
+  line-height: 96px;
+  font-size: 64px;
+}
+
+
