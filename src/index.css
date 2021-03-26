@@ -40,15 +40,17 @@ code {
 }
 
 h1 {
-	text-align: center;
+	text-align: left;
 	color: var(--color-on-labelAndHeaders);
 	margin-bottom: 1em;
 }
 
 h2 {
-	color: #000;
+	color: var(--color-on-labelAndHeaders);
 	font-size: 40px;
 	font-weight: 600;
+	margin-bottom: 3rem;
+	text-align: center;
 }
 
 h6 {
@@ -101,6 +103,15 @@ input {
 }
 
 /** Hero Styles **/
+.hero {
+	padding-top: 100px;
+	padding-bottom: 250px;
+}
+
+.hero.hero-small {
+	padding-bottom: 40px;
+}
+
 .hero h1 {
 	color: #000;
 	font-size: 50px;
@@ -110,4 +121,10 @@ input {
 .hero .lead-text {
 	font-size: 18px;
 	line-height: 1.8;
+}
+
+@media (max-width: 767px) {
+	.hero {
+		padding-bottom: 100px;
+	}
 }

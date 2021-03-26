@@ -8,9 +8,11 @@ import events from '../../data/gallery';
 function Gallery() {
 	const images = [""]
 	return (
-		<Container fluid className='contained'>
-			<div>
-				<h1> Event Gallery </h1>
+		<>
+			<Container fluid className='contained hero hero-gallery hero-small'>
+				<h1>Events Gallery</h1>
+			</Container>
+			<Container fluid className='contained'>
 				<div className="events">
 					{events.map((event) =>
 						event.show ? (
@@ -24,8 +26,8 @@ function Gallery() {
 						) : null
 					)}
 				</div>
-			</div>
-		</Container>
+			</Container>
+		</>
 	)
 }
 
