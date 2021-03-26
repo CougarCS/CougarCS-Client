@@ -8,6 +8,8 @@ import './About.css';
 // Partners
 import chevronLogo from '../../assets/partner-logos/chevron.png';
 import uhspeLogo from '../../assets/partner-logos/uhspe.png';
+import ripplematchLogo from '../../assets/partner-logos/ripplematch.svg';
+import promazoLogo from '../../assets/partner-logos/promazo.jpg';
 
 class About extends React.Component {
 	render() {
@@ -21,7 +23,7 @@ class About extends React.Component {
 						<Col md='6' className='order-md-0'>
 							<div className='about-us'>
 								<h1>About Us</h1>
-								<p>
+								<p className='lead-text'>
 									CougarCS is the largest student run Computer Science
 									organization at the University of Houston. At CougarCS, our
 									mission is to smoothly transition our inexperienced members
@@ -57,6 +59,13 @@ class About extends React.Component {
 							<h2 className='heading'>Partner Clubs</h2>
 							<div className="partner-logos">
 								<img src={uhspeLogo} className="partner-logo" />
+							</div>
+						</Col>
+						<Col md='12'>
+							<h2 className='heading'>Partner Companies</h2>
+							<div className="partner-logos">
+								<img src={ripplematchLogo} className="partner-logo" />
+								<img src={promazoLogo} className="partner-logo" />
 							</div>
 						</Col>
 					</Row>

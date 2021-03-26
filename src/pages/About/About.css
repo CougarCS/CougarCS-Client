@@ -17,6 +17,9 @@
 
 .hero-about h1 {
 	text-align: left;
+	font-size: 50px;
+	font-weight: 600;
+	margin-bottom: 2rem;
 }
 
 .hero-about .row {
@@ -41,16 +44,20 @@
 	margin-bottom: 100px;
 }
 
+.partners-wrapper div[class^='col-md'] {
+	margin-bottom: 50px;
+}
+
 .partner-logos {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
+	display: flex;
+	flex-wrap: wrap;
 	grid-gap: 50px;
 	justify-content: center;
 	justify-items: center;
 }
 
 .partner-logo {
-	max-width: 150px;
+	max-width: 180px;
 	max-height: 120px;
 	height: auto;
 	object-fit: contain;
@@ -61,7 +68,7 @@
 
 .team-wrapper .heading,
 .partners-wrapper .heading {
-	margin-bottom: 1.8em;
+	margin-bottom: 3rem;
 	color: var(--color-on-labelAndHeaders);
 	text-align: center;
 }
