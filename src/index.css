@@ -72,10 +72,6 @@ input {
 	background: var(--color-background);
 }
 
-.card-body {
-	background: var(--color-background);
-}
-
 .container .formContainer,
 .contactForm .container {
 	background: var(--color-background);

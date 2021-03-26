@@ -13,7 +13,7 @@ import UserRegister from './components/UserRegister/UserRegister';
 import Hackathon from './pages/Hackathon/Hackathon';
 import Privacy from './pages/Policy/Privacy';
 import Gallery from './pages/Gallery/Gallery';
-import EventInfo from './pages/EventInfo/EventInfo';
+import GalleryEvent from './pages/Gallery/GalleryEvent';
 
 import ScrollTop from './components/ScrollTop/ScrollTop';
 
@@ -38,7 +38,7 @@ const App = () => {
 				<Route path='/hackathons/' component={Hackathon}></Route>
 				<Route path='/privacy-policy/' component={Privacy} />
 				<Route path='/gallery/' component={Gallery} exact={true}/>
-				<Route path='/gallery/:event' render={(props) => <EventInfo {...props} /> } />
+				<Route path='/gallery/:event' render={(props) => <GalleryEvent {...props} /> } />
 				<Route component={NotFound} />
 
 			</Switch>
