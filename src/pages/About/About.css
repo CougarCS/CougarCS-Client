@@ -1,69 +1,114 @@
-.officerImages {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-gap: 30px;
-}
+
 .container {
 	background: #ffffff !important;
 }
-.test {
-	max-height: 90vh;
-}
-.about-us {
-	padding: 2em;
-}
 
-.rowHeight {
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 .col > img {
 	height: 40rem;
 	width: auto;
 	z-index: -99;
 }
 
-#officerName {
+/** Hero **/
+.hero-about h1 {
+	text-align: left;
+	font-size: 50px;
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+
+.hero-about .row {
+	align-items: center;
+}
+
+
+/** Team **/
+.team-wrapper {
+	margin-bottom: 150px;
+}
+
+.officers-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
+}
+
+
+/** Partners **/
+.partners-wrapper {
+	margin-bottom: 100px;
+}
+
+.partners-wrapper div[class^='col-md'] {
+	margin-bottom: 50px;
+}
+
+.partner-logos {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 50px;
+	justify-content: center;
+	justify-items: center;
+}
+
+.partner-logo {
+	max-width: 180px;
+	max-height: 120px;
+	height: auto;
+	object-fit: contain;
+	object-position: center;
+	filter: grayscale(1) opacity(0.9);
 	text-align: center;
 }
 
-.officerCard {
-	max-width: 1400px;
-	padding: 0;
-}
-
-@media (max-width: 1450px) {
-	.officerCard {
-		padding: 0 2em;
-	}
-}
 
 @media (max-width: 1296px) {
-	.officerImages {
+	.officers-grid {
 		grid-template-columns: repeat(4, 1fr);
 	}
 }
 
 @media (max-width: 1109px) {
-	.officerImages {
+	.officers-grid {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
 @media (max-width: 767px) {
-	.officerImages {
+	.hero-about {
+		text-align: center;
+		padding-bottom: 100px;
+	}
+	
+	.hero-about h1 {
+		text-align: center;
+	}
+
+	.hero-about .col-md-6:nth-child(1) {
+		margin-bottom: 75px;
+	}
+
+	.hero-about img {
+		max-width: 500px;
+		width: 100%;
+	}
+
+	.team-wrapper {
+		margin-bottom: 130px;
+	}
+
+	.officers-grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.partners-wrapper,
+	.partners-wrapper .col-md-6 {
+		margin-bottom: 50px;
 	}
 }
 
 @media (max-width: 575px) {
-	.officerCard {
-		padding: 0 1em;
-	}
-
-	.officerImages {
+	.officers-grid {
 		gap: 1em;
 	}
 }

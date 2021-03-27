@@ -15,6 +15,7 @@ const Hackathon = () => {
                 <title>CougarCS - Hackathon</title>
             </Helmet>
             <h1 className="long-margin">Upcoming Hackthons</h1>
+            <h2>Upcoming Hackthons</h2>
             <div className="hackathonLogos">
                 {
                     hackathons.sort((a, b) => (a.year.concat(a.startDate) > b.year.concat(b.startDate)) ? 1 : -1).map((hackathonlist) =>
@@ -24,7 +25,7 @@ const Hackathon = () => {
                     )
                 }
             </div>
-            <h1 className="long-margin">Past Hackathons</h1>
+            <h2>Past Hackathons</h2>
             <div className="hackathonLogos past">
                 {
                     hackathons.sort((a, b) => (a.year.concat(a.startDate) < b.year.concat(b.startDate)) ? 1 : -1).map((hackathonlist) =>
