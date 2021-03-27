@@ -10,13 +10,11 @@
 }
 
 /** Hero **/
-.hero-about {
-	padding-top: 100px;
-	padding-bottom: 250px;
-}
-
 .hero-about h1 {
 	text-align: left;
+	font-size: 50px;
+	font-weight: 600;
+	margin-bottom: 2rem;
 }
 
 .hero-about .row {
@@ -41,28 +39,25 @@
 	margin-bottom: 100px;
 }
 
+.partners-wrapper div[class^='col-md'] {
+	margin-bottom: 50px;
+}
+
 .partner-logos {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
+	display: flex;
+	flex-wrap: wrap;
 	grid-gap: 50px;
 	justify-content: center;
 	justify-items: center;
 }
 
 .partner-logo {
-	max-width: 150px;
+	max-width: 180px;
 	max-height: 120px;
 	height: auto;
 	object-fit: contain;
 	object-position: center;
 	filter: grayscale(1) opacity(0.9);
-	text-align: center;
-}
-
-.team-wrapper .heading,
-.partners-wrapper .heading {
-	margin-bottom: 1.8em;
-	color: var(--color-on-labelAndHeaders);
 	text-align: center;
 }
 
