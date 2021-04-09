@@ -17,7 +17,7 @@ class About extends React.Component {
 		return (
 			<>
 				<Helmet>
-					<title>CougarCS - About</title>
+					<title>About</title>
 				</Helmet>
 				<Container fluid>
 					<Row className='rowHeight'>

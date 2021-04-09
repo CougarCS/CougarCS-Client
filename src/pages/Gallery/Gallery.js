@@ -11,7 +11,7 @@ function Gallery() {
 	return (
 		<>
 			<Helmet>
-				<title>CougarCS - Gallery</title>
+				<title>Gallery</title>
 			</Helmet>
 			<Container fluid className='contained hero hero-gallery hero-small'>
 				<h1>Events Gallery</h1>

@@ -29,7 +29,7 @@ const Hackathon = () => {
     return (
         <Container className="hackathonCard" fluid>
             <Helmet>
-                <title>CougarCS - Hackathon</title>
+                <title>Hackathon</title>
             </Helmet>
             <h2>Upcoming Hackthons</h2>
             <div className="hackathonLogos">

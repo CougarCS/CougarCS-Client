@@ -13,7 +13,7 @@ class Membership extends Component {
 		return (
 			<div>
 				<Helmet>
-					<title>CougarCS - Membership</title>
+					<title>Membership</title>
 				</Helmet>
 				<Container fluid style={{ padding: '2em' }}>
 					<Row>

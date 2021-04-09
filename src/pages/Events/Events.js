@@ -65,7 +65,7 @@ const Events = () => {
 	return (
 		<>
 			<Helmet>
-				<title>CougarCS - Calendar</title>
+				<title>Calendar</title>
 			</Helmet>
 			{loading ? (
 				<div className='load'>
