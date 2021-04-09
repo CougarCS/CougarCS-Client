@@ -31,14 +31,14 @@ const Hackathon = () => {
             <Helmet>
                 <title>CougarCS - Hackathon</title>
             </Helmet>
-            <h1 className="long-margin">Upcoming Hackthons</h1>
-            <div className={upcoming.length ? "hackathonLogos" : ""}>
+            <h2>Upcoming Hackthons</h2>
+            <div className="hackathonLogos">
                 {
                     upcoming.length ? upcoming : <h3 className="no-upcoming">No Upcoming Hackathon...</h3>
                 }
             </div>
-            <h1 className="long-margin">Past Hackathons</h1>
-            <div className={pastHackathon.length ? "hackathonLogos past" : ""}>
+            <h2>Past Hackathons</h2>
+            <div className="hackathonLogos past">
                 {
                     pastHackathon.length ? pastHackathon : <h3 className="no-upcoming">No Past Hackathon...</h3>
                 }
