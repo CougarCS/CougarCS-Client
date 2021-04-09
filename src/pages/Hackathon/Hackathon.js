@@ -9,29 +9,38 @@ const Hackathon = () => {
 
     const [currTime, updateCurrTime] = useState(new Date().toISOString().split("T")[0]);
 
+    const sortedHackathon = hackathons
+        .sort((a, b) => (a.year.concat(a.startDate) > b.year.concat(b.startDate)) ? 1 : -1);
+
+    const [upcoming, setUpcomming] = useState(
+        sortedHackathon
+            .filter((hackathonlist) => (hackathonlist.year.concat(hackathonlist.endDate) > currTime))
+            .map(hackathonlist => <HackathonComp hackathonlist={hackathonlist} key={hackathonlist.id} />)
+    );
+
+    const [pastHackathon, setPast] = useState(
+        sortedHackathon
+            .filter((hackathonlist) => (hackathonlist.year.concat(hackathonlist.endDate) < currTime))
+            .map(hackathonlist => <HackathonComp hackathonlist={hackathonlist} key={hackathonlist.id} />)
+            .reverse()
+    );
+
+
     return (
         <Container className="hackathonCard" fluid>
             <Helmet>
                 <title>CougarCS - Hackathon</title>
             </Helmet>
             <h1 className="long-margin">Upcoming Hackthons</h1>
-            <div className="hackathonLogos">
+            <div className={upcoming.length ? "hackathonLogos" : ""}>
                 {
-                    hackathons.sort((a, b) => (a.year.concat(a.startDate) > b.year.concat(b.startDate)) ? 1 : -1).map((hackathonlist) =>
-                        (hackathonlist.year.concat(hackathonlist.endDate) > currTime) ? (
-                            <HackathonComp hackathonlist={hackathonlist} key={hackathonlist.id} />
-                        ) : null
-                    )
+                    upcoming.length ? upcoming : <h3 className="no-upcoming">No Upcoming Hackathon...</h3>
                 }
             </div>
             <h1 className="long-margin">Past Hackathons</h1>
-            <div className="hackathonLogos past">
+            <div className={pastHackathon.length ? "hackathonLogos past" : ""}>
                 {
-                    hackathons.sort((a, b) => (a.year.concat(a.startDate) < b.year.concat(b.startDate)) ? 1 : -1).map((hackathonlist) =>
-                        (hackathonlist.year.concat(hackathonlist.endDate) < currTime) ? (
-                            <HackathonComp hackathonlist={hackathonlist} key={hackathonlist.id} />
-                        ) : null
-                    )
+                    pastHackathon.length ? pastHackathon : <h3 className="no-upcoming">No Past Hackathon...</h3>
                 }
             </div>
         </Container>
