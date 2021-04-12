@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
 
 import { Redirect } from 'react-router-dom';
@@ -15,12 +15,12 @@ const GalleryEvent = ({ match }) => {
     let currentEvent = {};
 
     events.forEach((e, i) => {
-        if (e.link == match.params.event) {
+        if (e.link === match.params.event) {
             currentEvent = e;
         }
     });
 
-    if (Object.keys(currentEvent).length == 0) {
+    if (Object.keys(currentEvent).length === 0) {
         return (
             <Redirect from='*' to='/404' />
         );
@@ -50,7 +50,7 @@ const GalleryEvent = ({ match }) => {
                         <div className="gallery-grid">
                             {currentEvent.pictures.map((picture, i) => (
                                 <LightgalleryItem group={currentEvent.link} src={picture} key={i}>
-                                    <img src={picture} />
+                                    <img src={picture} alt={currentEvent.name} />
                                 </LightgalleryItem>
                             ))}
                         </div>

@@ -7,7 +7,7 @@ import './Gallery.css';
 import events from '../../data/gallery';
 
 function Gallery() {
-	const images = [""];
+
 	return (
 		<>
 			<Helmet>

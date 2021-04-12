@@ -56,20 +56,20 @@ class About extends React.Component {
 						<Col md='6'>
 							<h2 className='heading'>Official Sponsors</h2>
 							<div className="partner-logos">
-								<img src={chevronLogo} className="partner-logo" />
+								<img src={chevronLogo} className="partner-logo" alt="chevron logo" />
 							</div>
 						</Col>
 						<Col md='6'>
 							<h2 className='heading'>Partner Clubs</h2>
 							<div className="partner-logos">
-								<img src={uhspeLogo} className="partner-logo" />
+								<img src={uhspeLogo} className="partner-logo" alt="uh shep logo" />
 							</div>
 						</Col>
 						<Col md='12'>
 							<h2 className='heading'>Partner Companies</h2>
 							<div className="partner-logos">
-								<img src={ripplematchLogo} className="partner-logo" />
-								<img src={promazoLogo} className="partner-logo" />
+								<img src={ripplematchLogo} className="partner-logo" alt="ripple match logo" />
+								<img src={promazoLogo} className="partner-logo" alt="promazo logo" />
 							</div>
 						</Col>
 					</Row>

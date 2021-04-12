@@ -50,6 +50,7 @@
 .gallery-grid img {
     border-radius: 7px;
     width: 100%;
-    height:30em;
-    object-fit: cover ;
+    height: 100%;
+    object-fit: contain;
+    object-position: top left;
 }
