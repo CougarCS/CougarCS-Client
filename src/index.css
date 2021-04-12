@@ -2,7 +2,7 @@
 	--color-background: #fff;
 	--color-on-background: #2f2838;
 	--color-card-background: #f5f5f5;
-	--color-primary: #6200ee;
+	--color-primary: #ce1313;
 	--color-on-primary: #fff;
 	--color-secondary: #03dac6;
 	--color-on-secondary: #000;
@@ -40,9 +40,17 @@ code {
 }
 
 h1 {
-	text-align: center;
+	text-align: left;
 	color: var(--color-on-labelAndHeaders);
 	margin-bottom: 1em;
+}
+
+h2 {
+	color: var(--color-on-labelAndHeaders);
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: 3rem;
+	text-align: center;
 }
 
 h6 {
@@ -72,16 +80,16 @@ input {
 	background: var(--color-background);
 }
 
-.card-body {
-	background: var(--color-background);
-}
-
 .container .formContainer,
 .contactForm .container {
 	background: var(--color-background);
 }
 
 /** Container Styles **/
+.contained {
+	max-width: 1400px;
+}
+
 .container-left {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -91,5 +99,32 @@ input {
 @media (max-width: 1430px) {
 	.container-left {
 		margin-left: 0;
+	}
+}
+
+/** Hero Styles **/
+.hero {
+	padding-top: 100px;
+	padding-bottom: 250px;
+}
+
+.hero.hero-small {
+	padding-bottom: 40px;
+}
+
+.hero h1 {
+	color: #000;
+	font-size: 50px;
+	font-weight: 600;
+}
+
+.hero .lead-text {
+	font-size: 18px;
+	line-height: 1.8;
+}
+
+@media (max-width: 767px) {
+	.hero {
+		padding-bottom: 100px;
 	}
 }
