@@ -1,9 +1,9 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
 import gif from '../../assets/about.svg';
 import Officer from '../../components/Officers/Officer';
 import officers from '../../officers';
+import { Helmet } from "react-helmet";
 import './About.css';
 
 // Partners
@@ -19,8 +19,8 @@ class About extends React.Component {
 				<Helmet>
 					<title>About</title>
 				</Helmet>
-				<Container fluid>
-					<Row className='rowHeight'>
+				<Container fluid className='contained hero hero-about'>
+					<Row>
 						<Col md='6' className='order-md-2'>
 							<img src={gif} alt='undraw svg' className='img-fluid'></img>
 						</Col>
@@ -56,20 +56,20 @@ class About extends React.Component {
 						<Col md='6'>
 							<h2 className='heading'>Official Sponsors</h2>
 							<div className="partner-logos">
-								<img src={chevronLogo} className="partner-logo" alt="chevron logo" />
+								<img src={chevronLogo} className="partner-logo" />
 							</div>
 						</Col>
 						<Col md='6'>
 							<h2 className='heading'>Partner Clubs</h2>
 							<div className="partner-logos">
-								<img src={uhspeLogo} className="partner-logo" alt="uh shep logo" />
+								<img src={uhspeLogo} className="partner-logo" />
 							</div>
 						</Col>
 						<Col md='12'>
 							<h2 className='heading'>Partner Companies</h2>
 							<div className="partner-logos">
-								<img src={ripplematchLogo} className="partner-logo" alt="ripple match logo" />
-								<img src={promazoLogo} className="partner-logo" alt="promazo logo" />
+								<img src={ripplematchLogo} className="partner-logo" />
+								<img src={promazoLogo} className="partner-logo" />
 							</div>
 						</Col>
 					</Row>
