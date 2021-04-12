@@ -15,7 +15,7 @@ class Membership extends Component {
 				<Helmet>
 					<title>Membership</title>
 				</Helmet>
-				<Container fluid style={{ padding: '2em' }}>
+				<Container fluid className='contained hero hero-membership'>
 					<Row>
 						<Col md='6' className='order-md-2'>
 							<img src={gif} alt='undraw svg' style={{ width: '100%' }}></img>
