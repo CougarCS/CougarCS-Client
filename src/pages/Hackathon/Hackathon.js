@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
-import hackathons from '../../hackathonList';
+import hackathons from '../../hackathonsList';
 import HackathonComp from '../../components/Hackathon/HackathonsComp';
 import './Hackathon.css';
 import { Helmet } from 'react-helmet';
