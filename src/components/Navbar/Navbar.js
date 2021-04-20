@@ -7,7 +7,7 @@ import logo from '../../assets/logo.png';
 import './Navbar.css';
 
 const NavBar = ({ themeToggler }) => (
-	<Navbar className='mainNav' fluid='true' collapseOnSelect expand='lg'>
+	<Navbar className='main-nav' fluid='true' collapseOnSelect expand='lg'>
 		<LinkContainer to='/'>
 			<Navbar.Brand>
 				<img src={logo} className='App-logo' alt='logo' />
@@ -22,17 +22,14 @@ const NavBar = ({ themeToggler }) => (
 				<LinkContainer to='/about'>
 					<Nav.Link>About</Nav.Link>
 				</LinkContainer>
-				<LinkContainer to='/membership'>
-					<Nav.Link>Membership</Nav.Link>
+				<LinkContainer to='/calendar'>
+					<Nav.Link>Events</Nav.Link>
 				</LinkContainer>
 				<LinkContainer to='/gallery'>
 					<Nav.Link>Gallery</Nav.Link>
 				</LinkContainer>
-				<LinkContainer to='/register'>
-					<Nav.Link>Register</Nav.Link>
-				</LinkContainer>
-				<LinkContainer to='/calendar'>
-					<Nav.Link>Events</Nav.Link>
+				<LinkContainer to='/membership'>
+					<Nav.Link>Membership</Nav.Link>
 				</LinkContainer>
 				<LinkContainer to="/hackathons">
 					<Nav.Link>Hackathons</Nav.Link>
@@ -40,7 +37,10 @@ const NavBar = ({ themeToggler }) => (
 				<LinkContainer to='/contactus'>
 					<Nav.Link>Contact Us</Nav.Link>
 				</LinkContainer>
-				<Nav.Link href='https://uhcode.red/' target="_blank">CodeRED</Nav.Link>
+				<Nav.Link href='https://uhcode.red/' target="_blank">CodeRED <i class="fas fa-external-link-alt"></i></Nav.Link>
+				<LinkContainer to='/register'>
+					<Nav.Link><button class = "button">Register</button></Nav.Link>
+				</LinkContainer>
 				{/* <DarkMode /> */}
 			</Nav>
 		</Navbar.Collapse>
