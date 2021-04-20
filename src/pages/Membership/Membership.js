@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import analyticsSVG from '../../assets/analytics.svg';
 import collectingSVG from '../../assets/collecting.svg';
 import gif from '../../assets/member.svg';
@@ -11,6 +12,9 @@ class Membership extends Component {
 	render() {
 		return (
 			<div>
+				<Helmet>
+					<title>Membership</title>
+				</Helmet>
 				<Container fluid className='contained hero hero-membership'>
 					<Row>
 						<Col md='6' className='order-md-2'>
@@ -152,7 +156,7 @@ class Membership extends Component {
 											</Card.Title>
 											<p style={{ textAlign: 'center' }}>
 												Work through problems with intelligent and approachable
-												tutors who are focused on member success 
+												tutors who are focused on member success
 											</p>
 										</Card.Body>
 									</Card>
