@@ -15,8 +15,6 @@ const animateText = () =>
 		backSpeed: 75,
 		loop: true,
 	});
-
-// Class component so you can use `componentDidMount` lifecycle
 const Home = () => {
 	useEffect(() => {
 		animateText();

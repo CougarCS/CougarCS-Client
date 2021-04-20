@@ -6,7 +6,7 @@ import { Container, Card } from 'react-bootstrap';
 import './Gallery.css';
 import events from '../../data/gallery';
 
-function Gallery() {
+const Gallery = () => {
 
 	return (
 		<>
@@ -33,6 +33,6 @@ function Gallery() {
 			</Container>
 		</>
 	);
-}
+};
 
 export default Gallery;

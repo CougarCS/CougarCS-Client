@@ -16,6 +16,9 @@ import Gallery from './pages/Gallery/Gallery';
 import GalleryEvent from './pages/Gallery/GalleryEvent';
 
 import ScrollTop from './components/ScrollTop/ScrollTop';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 function initializeReactGA() {
 	ReactGA.initialize('UA-155177558-1');
@@ -25,24 +28,27 @@ function initializeReactGA() {
 const App = () => {
 	initializeReactGA();
 	return (
-		<Router>
-			<ScrollTop />
-			<NavBar />
-			<Switch>
-				<Route path='/' exact={true} component={Home} />
-				<Route path='/about/' component={About} />
-				<Route path='/membership/' component={Membership} />
-				<Route path='/calendar/' component={Events} />
-				<Route path='/contactus/' component={ContactUs} />
-				<Route path='/register/' component={UserRegister} />
-				<Route path='/hackathons/' component={Hackathon}></Route>
-				<Route path='/privacy-policy/' component={Privacy} />
-				<Route path='/gallery/' component={Gallery} exact={true}/>
-				<Route path='/gallery/:event' render={(props) => <GalleryEvent {...props} /> } />
-				<Route component={NotFound} />
 
-			</Switch>
-			<Footer />
+		<Router>
+			<QueryClientProvider client={queryClient}>
+				<ScrollTop />
+				<NavBar />
+				<Switch>
+					<Route path='/' exact={true} component={Home} />
+					<Route path='/about/' component={About} />
+					<Route path='/membership/' component={Membership} />
+					<Route path='/calendar/' component={Events} />
+					<Route path='/contactus/' component={ContactUs} />
+					<Route path='/register/' component={UserRegister} />
+					<Route path='/hackathons/' component={Hackathon}></Route>
+					<Route path='/privacy-policy/' component={Privacy} />
+					<Route path='/gallery/' component={Gallery} exact={true} />
+					<Route path='/gallery/:event' render={(props) => <GalleryEvent {...props} />} />
+					<Route component={NotFound} />
+
+				</Switch>
+				<Footer />
+			</QueryClientProvider>
 		</Router>
 	);
 };
