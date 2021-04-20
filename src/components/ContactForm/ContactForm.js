@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Button, Col, Container, Form, Image, Modal, Row, Nav } from 'react-bootstrap';
+import { Button, Col, Container, Form, Image, Modal, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import CustomModal from '../Modals/CustomModal';
 import check from '../../assets/check.png';

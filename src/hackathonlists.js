@@ -1,4 +1,4 @@
-const hackathons = [
+const hackathonsList = [
     {
         id: 0,
         title: "Def Hacks Global 2.0",
@@ -218,4 +218,4 @@ const hackathons = [
 
 ];
 
-export default hackathons;
+export default hackathonsList;
