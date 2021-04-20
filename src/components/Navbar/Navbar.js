@@ -7,7 +7,7 @@ import logo from '../../assets/logo.png';
 import './Navbar.css';
 
 const NavBar = ({ themeToggler }) => (
-	<Navbar className='mainNav' fluid='true' collapseOnSelect expand='lg'>
+	<Navbar className='main-nav' fluid='true' collapseOnSelect expand='lg'>
 		<LinkContainer to='/'>
 			<Navbar.Brand>
 				<img src={logo} className='App-logo' alt='logo' />
