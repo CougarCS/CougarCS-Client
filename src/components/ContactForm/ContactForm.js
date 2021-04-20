@@ -1,79 +1,91 @@
 import axios from 'axios';
-import { useFormik } from 'formik';
 import React, { useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap'
+import { Button, Col, Container, Form, Image, Modal, Row, Nav } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
+import CustomModal from '../Modals/CustomModal';
+import check from '../../assets/check.png';
+import warn from '../../assets/warn.png';
 import './ContactForm.css';
+import { Socials } from '../Socials/Socials';
 
 const ContactForm = () => {
-	// const [emailSend, setEmailSend] = useState(false);
-	// const [emailSendError, setEmailSendError] = useState(false);
-	const [submitBtn, setSubmitBtn] = useState(false);
 
-	const formik = useFormik({
-		initialValues: {
-			firstName: '',
-			lastName: '',
-			email: '',
-			body: '',
-		},
-		onSubmit: (values) => {
-			setSubmitBtn(true);
-			axios
-				.post('https://backend.cougarcs.com/api/send', values)
-				.then((res) => {
-					formik.values.firstName = '';
-					formik.values.lastName = '';
-					formik.values.email = '';
-					formik.values.body = '';
+	const [successModal, setSuccessModal] = useState(false);
+	const [errorModal, setErrorModal] = useState(false);
+	const { register, formState: { isSubmitting }, handleSubmit, reset } = useForm();
 
-					// if (res.status === 200) {
-					// 	setEmailSend(true);
-					// }
-					// if (res.status !== 200) {
-					// 	setEmailSendError(true);
-					// }
-					setSubmitBtn(false);
-				});
-		},
-	});
+	const formReset = () => {
+		reset({
+			firstName: "",
+			lastName: "",
+			email: "",
+			body: ""
+		});
+	};
+
+	const onError = (data) => {
+		setErrorModal(true);
+		formReset();
+	};
+
+	const onSubmit = async (data) => {
+		await axios
+			.post('https://backend.cougarcs.com/api/send', data);
+		setSuccessModal(true);
+		formReset();
+	};
+
+	const socialLinks = [
+		{ href: 'https://www.facebook.com/cougarcs/', html: <i className='fab fa-facebook'></i> },
+		{ href: 'https://www.instagram.com/uhcougarcs/?hl=en', html: <i className='fab fa-instagram'></i> },
+		{ href: 'https://twitter.com/uhcougarcs', html: <i className='fab fa-twitter'></i> },
+		{ href: 'https://www.linkedin.com/in/cougarcs/', html: <i className='fab fa-linkedin'></i> },
+		{ href: 'https://discordapp.com/invite/aKUzPFY', html: <i className='fab fa-discord'></i> },
+	];
+
 	return (
 		<Container className='contactForm'>
-			{/* {emailSend && <div>Email has been sent!</div>}
-            {emailSendError && <div>Unable to send Email!</div>} */}
+			<CustomModal
+				show={successModal}
+				handleClose={() => setSuccessModal(false)}>
+				<Image className="warning-image" src={check} />
+				<Modal.Title>Success!</Modal.Title>
+				<p>
+					Message has been sent!
+				</p>
+			</CustomModal>
+			<CustomModal
+				show={errorModal}
+				handleClose={() => setErrorModal(false)}>
+				<Image className='warning-image' src={warn} />
+				<Modal.Title>Error!</Modal.Title>
+				<p>
+					Unable to send message!
+				</p>
+			</CustomModal>
 			<h1 id='getInTouch'>Get In Touch</h1>
 			<Row>
 				<Col xs={12} md={6} lg={6}>
-					<Form onSubmit={formik.handleSubmit}>
+					<Form onSubmit={handleSubmit(onSubmit, onError)}>
 						<Form.Group>
 							<Form.Label htmlFor='firstName'>First Name*</Form.Label>
 							<Form.Control
-								name='firstName'
 								type='text'
-								onChange={formik.handleChange}
-								value={formik.values.firstName}
-								required={true}
+								{...register("firstName", { required: true, maxLength: 20 })}
 							/>
 						</Form.Group>
 						<Form.Group>
 							<Form.Label htmlFor='lastName'>Last Name*</Form.Label>
 							<Form.Control
-								name='lastName'
 								type='text'
-								onChange={formik.handleChange}
-								value={formik.values.lastName}
-								required={true}
+								{...register("lastName", { required: true, maxLength: 20 })}
 							/>
 						</Form.Group>
 						<Form.Group>
 							<Form.Label htmlFor='email'>Email Address*</Form.Label>
 							<Form.Control
-								id='email'
-								name='email'
 								type='email'
-								onChange={formik.handleChange}
-								value={formik.values.email}
-								required={true}
+								{...register("email", { required: true })}
 							/>
 						</Form.Group>
 						<Form.Group>
@@ -81,17 +93,16 @@ const ContactForm = () => {
 							<Form.Control
 								name='body'
 								as='textarea'
-								onChange={formik.handleChange}
-								value={formik.values.body}
-								required={true}
-								rows='4'></Form.Control>
+								{...register("body", { required: true })}
+								rows='4'
+							/>
 						</Form.Group>
 						<Button
 							className='contactButton'
 							variant='primary'
 							type='submit'
-							disabled={submitBtn}>
-							{submitBtn ? 'Sending...' : 'Send Message'}
+							disabled={isSubmitting}>
+							{isSubmitting ? 'Sending...' : 'Send Message'}
 						</Button>
 					</Form>
 				</Col>
@@ -126,36 +137,13 @@ const ContactForm = () => {
 						</span>
 					</div>
 					<div className='follow socials'>
-						<Nav.Link
-							href='https://www.facebook.com/cougarcs/'
-							target='_blank'
-							rel='noopener nofollow'>
-							<i className='fab fa-facebook'></i>
-						</Nav.Link>
-						<Nav.Link
-							href='https://www.instagram.com/uhcougarcs/?hl=en'
-							target='_blank'
-							rel='noopener nofollow'>
-							<i className='fab fa-instagram'></i>
-						</Nav.Link>
-						<Nav.Link
-							href='https://twitter.com/uhcougarcs'
-							target='_blank'
-							rel='noopener nofollow'>
-							<i className='fab fa-twitter'></i>
-						</Nav.Link>
-						<Nav.Link
-							href='https://www.linkedin.com/in/cougarcs/'
-							target='_blank'
-							rel='noopener nofollow'>
-							<i className='fab fa-linkedin'></i>
-						</Nav.Link>
-						<Nav.Link
-							href='https://discordapp.com/invite/aKUzPFY'
-							target='_blank'
-							rel='noopener nofollow'>
-							<i className='fab fa-discord'></i>
-						</Nav.Link>
+						{
+							socialLinks.map(socialLink =>
+								<Socials key={socialLink.href} href={socialLink.href}>
+									{socialLink.html}
+								</Socials>
+							)
+						}
 					</div>
 				</Col>
 			</Row>

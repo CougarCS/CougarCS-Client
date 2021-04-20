@@ -1,6 +1,4 @@
-import default_img from './assets/default_logo.jpg' //can be changed if desired. used if hackathon does not have a logo
-//is there a way to dynamically alter the JS file to delete the object after the date?
-let hackathons = [
+const hackathons = [
     {
         id: 0,
         title: "Def Hacks Global 2.0",
