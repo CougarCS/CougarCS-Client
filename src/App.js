@@ -9,7 +9,6 @@ import Events from './pages/Events/Events';
 import Home from './pages/Home/Home';
 import Membership from './pages/Membership/Membership';
 import NotFound from './pages/NotFound/NotFound';
-import UserRegister from './components/UserRegister/UserRegister';
 import Hackathon from './pages/Hackathon/Hackathon';
 import Privacy from './pages/Policy/Privacy';
 import Gallery from './pages/Gallery/Gallery';
@@ -34,7 +33,6 @@ const App = () => {
 				<Route path='/membership/' component={Membership} />
 				<Route path='/calendar/' component={Events} />
 				<Route path='/contactus/' component={ContactUs} />
-				<Route path='/register/' component={UserRegister} />
 				<Route path='/hackathons/' component={Hackathon}></Route>
 				<Route path='/privacy-policy/' component={Privacy} />
 				<Route path='/gallery/' component={Gallery} exact={true}/>

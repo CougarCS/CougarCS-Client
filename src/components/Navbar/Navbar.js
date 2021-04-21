@@ -27,9 +27,6 @@ const NavBar = ({ themeToggler }) => (
 				<LinkContainer to='/gallery'>
 					<Nav.Link>Gallery</Nav.Link>
 				</LinkContainer>
-				<LinkContainer to='/membership'>
-					<Nav.Link>Membership</Nav.Link>
-				</LinkContainer>
 				<LinkContainer to="/hackathons">
 					<Nav.Link>Hackathons</Nav.Link>
 				</LinkContainer>
@@ -37,7 +34,7 @@ const NavBar = ({ themeToggler }) => (
 					<Nav.Link>Contact Us</Nav.Link>
 				</LinkContainer>
 				<Nav.Link href='https://uhcode.red/' target="_blank">CodeRED <i class="fas fa-external-link-alt"></i></Nav.Link>
-				<LinkContainer to='/register'>
+				<LinkContainer to='/membership'>
 					<Nav.Link><button class = "button">Register</button></Nav.Link>
 				</LinkContainer>
 				{/* <DarkMode /> */}

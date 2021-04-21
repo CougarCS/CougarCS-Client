@@ -6,8 +6,13 @@ import collectingSVG from '../../assets/collecting.svg';
 import gif from '../../assets/member.svg';
 import memorySVG from '../../assets/memory.svg';
 import teachingSVG from '../../assets/teaching.svg';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import { Payment } from '../../components/Payment/Payment';
 import './Membership.css';
 
+const PUBLIC_KEY = process.env.REACT_APP_STRIPE_KEY;
+const stripePromise = loadStripe(PUBLIC_KEY);
 class Membership extends Component {
 	render() {
 		return (
@@ -165,6 +170,15 @@ class Membership extends Component {
 						</div>
 					</Row>
 				</Container>
+				<div className='container formContainer mt-4'>
+					<Helmet>
+						<title>Register</title>
+					</Helmet>
+					<h1 className='formHeader'>Register</h1>
+					<Elements stripe={stripePromise}>
+						<Payment />
+					</Elements>
+				</div>
 			</div>
 		);
 	}

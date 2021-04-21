@@ -4,3 +4,29 @@
   align-items: center;
   justify-content: center;
 }
+
+.formContainer {
+	background: #ebe0e0 !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.formHeader {
+	text-align: center;
+	margin-bottom: 0.7em;
+}
+
+.formContainer form {
+	width: 100%;
+}
+
+.formContainer .stripe-container {
+	margin: 0 5px;
+	background: #fff;
+	border: 1px solid #ced4da;
+	border-radius: 5px;
+	color: #495057;
+	padding: 6px;
+}
