@@ -24,8 +24,6 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
-    permissions:
-      security-events: write
 
     strategy:
       fail-fast: false
@@ -45,3 +43,11 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+      
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v2.0.9
+      with:
+        # Artifact name
+        name: CodeQL
+        # Destination path
+        path: /home/runner/work/CougarCS-Client/results/javascript-builtin.sarif
