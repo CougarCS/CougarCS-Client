@@ -28,9 +28,8 @@ function initializeReactGA() {
 const App = () => {
 	initializeReactGA();
 	return (
-
-		<Router>
-			<QueryClientProvider client={queryClient}>
+		<QueryClientProvider client={queryClient}>
+			<Router>
 				<ScrollTop />
 				<NavBar />
 				<Switch>
@@ -48,8 +47,8 @@ const App = () => {
 
 				</Switch>
 				<Footer />
-			</QueryClientProvider>
-		</Router>
+			</Router>
+		</QueryClientProvider>
 	);
 };
 
