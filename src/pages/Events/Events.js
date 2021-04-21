@@ -32,6 +32,10 @@ const fetchEvents = async () => {
 
 	return events;
 };
+
+const momentDateFromat = (date) => {
+	return moment(date).format('dddd, MMMM Do YYYY, h:mm a');
+};
 const Events = () => {
 
 	const queryClient = useQueryClient();
@@ -99,8 +103,8 @@ const Events = () => {
 					<Modal.Title>{desc.title}</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					Date: {moment(desc.startDate).format('dddd, MMMM Do YYYY, h:mm a')} -{' '}
-					{moment(desc.endDate).format('h:mm a')}
+					Date: {momentDateFromat(desc.startDate)} -{' '}
+					{momentDateFromat(desc.endDate)}
 					<br />
 					<hr />
 					Description:{' '}
