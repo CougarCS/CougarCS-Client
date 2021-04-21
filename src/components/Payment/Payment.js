@@ -52,7 +52,7 @@ export const Payment = () => {
 		elements.getElement(CardElement).clear();
 	};
 
-	const onSubmit = async (data) => {
+	const onSubmit = async (user) => {
 
 		setButtonText('Loading...');
 		const recaptcha = await load(process.env.REACT_APP_RECAPTCHA_SITE_KEY, {
@@ -79,7 +79,7 @@ export const Payment = () => {
 				await axios
 					.post('https://backend.cougarcs.com/api/payment', {
 						token: id,
-						data,
+						user,
 						recaptchaToken,
 					})
 					.then(() => {
@@ -88,6 +88,7 @@ export const Payment = () => {
 						setSuccessModal(true);
 					});
 			} catch (e) {
+				console.log(e);
 				resetForm();
 				setErrorModal(true);
 				setButtonText('Submit');
