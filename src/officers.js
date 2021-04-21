@@ -1,5 +1,4 @@
 import Dr_Yun from './assets/officers/Dr_Yun.jpg';
-import Placeholder from './assets/officers/Placeholder.jpg';
 
 import Mariana from './assets/officers/Mariana.jpg';
 import Nykolas from './assets/officers/Nykolas.jpg';

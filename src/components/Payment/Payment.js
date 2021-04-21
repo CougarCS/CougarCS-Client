@@ -15,9 +15,7 @@ export const Payment = () => {
 
 	const [buttonText, setButtonText] = useState('Submit');
 
-	const { register, formState: { isSubmitting }, handleSubmit, reset, watch } = useForm();
-
-	console.table(watch());
+	const { register, formState: { isSubmitting }, handleSubmit, reset } = useForm();
 
 	const [successModal, setSuccessModal] = useState(false);
 	const [errorModal, setErrorModal] = useState(false);
