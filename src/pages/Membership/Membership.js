@@ -49,19 +49,10 @@ class Membership extends Component {
 										Memberships are priced at{' '}
 										<strong>$18.00 for a full year </strong> or{' '}
 										<strong>$10.00 a semester</strong>. If you are interested in
-										becoming a member there are a few ways you can let us know.
-										Request to become a member on the get involved page and our
-										Treasurer,{' '}
-										{<a href='mailto:treasurer@cougarcs.com'>Chantha Mak</a>},
-										will be in contact with you shortly. You can also
-										{/* find an
-										Officer on the 5th floor of PGH (Philip Guthrie Hoffman Hall)
-										or */}{' '}
-										email us at{' '}
-										<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
+										becoming a member, fill out the registration form below!
 									</p>
 									<p>
-										Whats that? You want to get more envolved with CougarCS?
+										What's that? You want to get more involved with CougarCS?
 										Interested in joining our Webdev team? Please reach out to
 										Shubh Sheth at{' '}
 										<a href='mailto:webmaster@cougarcs.com'>
