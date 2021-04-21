@@ -44,6 +44,15 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
       
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.3
+      with:
+        # Artifact name
+        name: CodeQL-Upload
+        # A file, directory or wildcard pattern that describes what to upload
+        path: /home/runner/work/CougarCS-Client/results/javascript-builtin.sarif
+        retention-days: 1
+
     - name: Download a Build Artifact
       uses: actions/download-artifact@v2.0.9
       with:
