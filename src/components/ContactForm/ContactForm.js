@@ -23,7 +23,7 @@ const ContactForm = () => {
 		});
 	};
 
-	const onError = (data) => {
+	const onError = () => {
 		setErrorModal(true);
 		formReset();
 	};
