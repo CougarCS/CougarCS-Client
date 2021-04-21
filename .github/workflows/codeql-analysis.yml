@@ -57,6 +57,6 @@ jobs:
       uses: actions/download-artifact@v2.0.9
       with:
         # Artifact name
-        name: CodeQL
+        name: CodeQL-Upload
         # Destination path
         path: /home/runner/work/CougarCS-Client/results/javascript-builtin.sarif
