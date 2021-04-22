@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
 import Officer from '../../components/Officers/Officer';
-import officers from '../../officers';
+import officers from '../../data/officers';
 import { Helmet } from "react-helmet";
 import './About.css';
 
