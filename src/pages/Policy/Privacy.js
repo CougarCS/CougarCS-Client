@@ -159,16 +159,16 @@ const Privacy = () => {
 			</p>
 			<h2>Your California privacy rights</h2>
 			<p>
-				Under California's “Shine the Light” law, California residents who
+				Under California&apos;s “Shine the Light” law, California residents who
 				provide personal information in connection with purchasing services from
 				us may make a request concerning personal information, if any, that we
 				have shared with others for their own direct marketing purposes. Such a
 				request may be made by sending an email message to info@cougarcs.com
-				with "Request for California Privacy Information" in the subject line of
-				the message. In response to such a request, we will provide information
-				as required by the California law for the previous calendar year
-				concerning such other businesses and the categories of personal
-				information, if any, that we have shared with them.
+				with &quot;Request for California Privacy Information&quot; in the
+				subject line of the message. In response to such a request, we will
+				provide information as required by the California law for the previous
+				calendar year concerning such other businesses and the categories of
+				personal information, if any, that we have shared with them.
 			</p>
 			<h2>Notification of changes to policy</h2>
 			<p>

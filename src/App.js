@@ -14,7 +14,6 @@ import Hackathon from './pages/Hackathon/Hackathon';
 import Privacy from './pages/Policy/Privacy';
 import Gallery from './pages/Gallery/Gallery';
 import GalleryEvent from './pages/Gallery/GalleryEvent';
-
 import ScrollTop from './components/ScrollTop/ScrollTop';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
