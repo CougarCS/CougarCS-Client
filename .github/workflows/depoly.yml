@@ -44,7 +44,7 @@ jobs:
         if: ${{github.repository_owner == 'CougarCS' && github.ref == 'refs/heads/prod'}}
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          ftp-server: ${{secrets.FTP_URL}}
-          ftp-username: ${{secrets.FTP_USERNAME}}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{secrets.FTP_URL}}
+          username: ${{secrets.FTP_USERNAME}}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build
