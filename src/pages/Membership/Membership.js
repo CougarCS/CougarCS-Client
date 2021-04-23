@@ -161,15 +161,19 @@ class Membership extends Component {
 						</div>
 					</Row>
 				</Container>
-				<div className='container formContainer mt-4'>
-					<Helmet>
-						<title>Register</title>
-					</Helmet>
-					<h1 className='formHeader'>Register</h1>
-					<Elements stripe={stripePromise}>
-						<Payment />
-					</Elements>
-				</div>
+				<Container>
+					<Row>
+						<div className='container formContainer mt-4'>
+							<Helmet>
+								<title>Register</title>
+							</Helmet>
+							<h1 className='formHeader'>Register</h1>
+							<Elements stripe={stripePromise}>
+								<Payment />
+							</Elements>
+						</div>
+					</Row>
+				</Container>
 			</div>
 		);
 	}
