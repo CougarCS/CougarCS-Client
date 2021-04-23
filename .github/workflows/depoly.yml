@@ -37,7 +37,7 @@ jobs:
         run: yarn install --frozen-lockfile
       
       - name: Build App
-        run: yarn build
+        run: CI=false && yarn build
         env:
           REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}} 
           REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}} 
