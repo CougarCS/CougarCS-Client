@@ -44,7 +44,7 @@ jobs:
       
       - name: Deploy
         if: ${{github.repository_owner == 'CougarCS' && github.ref == 'refs/heads/prod'}}
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           ftp-server: ${{secrets.FTP_URL}}
           ftp-username: ${{secrets.FTP_USERNAME}}
