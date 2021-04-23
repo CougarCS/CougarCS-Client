@@ -42,9 +42,11 @@ const App = () => {
 					<Route path='/hackathons/' component={Hackathon}></Route>
 					<Route path='/privacy-policy/' component={Privacy} />
 					<Route path='/gallery/' component={Gallery} exact={true} />
-					<Route path='/gallery/:event' render={(props) => <GalleryEvent {...props} />} />
+					<Route
+						path='/gallery/:event'
+						render={(props) => <GalleryEvent {...props} />}
+					/>
 					<Route component={NotFound} />
-
 				</Switch>
 				<Footer />
 			</Router>

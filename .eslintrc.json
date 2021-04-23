@@ -1,0 +1,23 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true
+	},
+	"extends": ["eslint:recommended", "react-app", "prettier"],
+	"parserOptions": {
+		"ecmaVersion": 12
+	},
+	"plugins": ["react", "prettier"],
+	"rules": {
+		"linebreak-style": ["error", "unix"],
+		"prettier/prettier": [
+			"error",
+			{
+				"useTabs": true,
+				"semi": true,
+				"jsxSingleQuote": true,
+				"singleQuote": true
+			}
+		]
+	}
+}

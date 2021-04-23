@@ -9,7 +9,6 @@ import teachingSVG from '../../assets/teaching.svg';
 import './Membership.css';
 
 const Membership = () => {
-
 	return (
 		<div>
 			<Helmet>
@@ -39,35 +38,35 @@ const Membership = () => {
 									academic support. CougarCS also has a far reaching network of
 									alumni who are industry professionals and are always looking
 									to connect with current members!
-									</p>
+								</p>
 								<p>
 									Memberships are priced at{' '}
 									<strong>$18.00 for a full year </strong> or{' '}
 									<strong>$10.00 a semester</strong>. If you are interested in
-										becoming a member there are a few ways you can let us know.
-										Request to become a member on the get involved page and our
-										Treasurer,{' '}
+									becoming a member there are a few ways you can let us know.
+									Request to become a member on the get involved page and our
+									Treasurer,{' '}
 									{<a href='mailto:treasurer@cougarcs.com'>Chantha Mak</a>},
-										will be in contact with you shortly. You can also
-										{/* find an
+									will be in contact with you shortly. You can also
+									{/* find an
 										Officer on the 5th floor of PGH (Philip Guthrie Hoffman Hall)
 										or */}{' '}
-										email us at{' '}
+									email us at{' '}
 									<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
-									</p>
+								</p>
 								<p>
 									Whats that? You want to get more envolved with CougarCS?
 									Interested in joining our Webdev team? Please reach out to
-										Shubh Sheth at{' '}
+									Shubh Sheth at{' '}
 									<a href='mailto:webmaster@cougarcs.com'>
 										webmaster@cougarcs.com
-										</a>
-										. What about becoming a tutor? For that you can contact{' '}
+									</a>
+									. What about becoming a tutor? For that you can contact{' '}
 									<a href='mailto:tutoring@cougarcs.com'>
 										tutoring@cougarcs.com
-										</a>
-										.
-									</p>
+									</a>
+									.
+								</p>
 							</div>
 							<div>
 								{/* <LinkContainer to='/register'>
@@ -99,7 +98,7 @@ const Membership = () => {
 										</div>
 										<Card.Title style={{ textAlign: 'center' }}>
 											Technical workshops
-											</Card.Title>
+										</Card.Title>
 										<p style={{ textAlign: 'center' }}>
 											Learn industry standards and refine your skills in teams{' '}
 										</p>
@@ -120,7 +119,7 @@ const Membership = () => {
 										<p>
 											Connect with companies from all over the world hiring at
 											UH
-											</p>
+										</p>
 									</Card.Body>
 								</Card>
 							</Col>
@@ -153,11 +152,11 @@ const Membership = () => {
 										</div>
 										<Card.Title style={{ textAlign: 'center' }}>
 											Tutoring and Academic Support
-											</Card.Title>
+										</Card.Title>
 										<p style={{ textAlign: 'center' }}>
 											Work through problems with intelligent and approachable
 											tutors who are focused on member success
-											</p>
+										</p>
 									</Card.Body>
 								</Card>
 							</Col>

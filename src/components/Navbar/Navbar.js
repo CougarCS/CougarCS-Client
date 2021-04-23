@@ -29,15 +29,19 @@ const NavBar = ({ themeToggler }) => (
 				<LinkContainer to='/membership'>
 					<Nav.Link>Membership</Nav.Link>
 				</LinkContainer>
-				<LinkContainer to="/hackathons">
+				<LinkContainer to='/hackathons'>
 					<Nav.Link>Hackathons</Nav.Link>
 				</LinkContainer>
 				<LinkContainer to='/contactus'>
 					<Nav.Link>Contact Us</Nav.Link>
 				</LinkContainer>
-				<Nav.Link href='https://uhcode.red/' target="_blank">CodeRED <i className="fas fa-external-link-alt"></i></Nav.Link>
+				<Nav.Link href='https://uhcode.red/' target='_blank'>
+					CodeRED <i className='fas fa-external-link-alt'></i>
+				</Nav.Link>
 				<LinkContainer to='/register'>
-					<Nav.Link><button className="button">Register</button></Nav.Link>
+					<Nav.Link>
+						<button className='button'>Register</button>
+					</Nav.Link>
 				</LinkContainer>
 			</Nav>
 		</Navbar.Collapse>
