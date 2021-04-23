@@ -2,7 +2,7 @@ name: Install, Build, Deploy
 
 on:
   push:
-    branches: [actions,master, prod]
+    branches: [master, prod]
   pull_request:
     branches: 
       - master
