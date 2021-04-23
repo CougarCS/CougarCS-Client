@@ -2,9 +2,9 @@ name: Install, Build, Deploy
 
 on:
   push:
-    branches:
-#       - prod
-        - master
+    branches: [master, prod]
+  pull_request:
+    branches: [master, prod]
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
           REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}} 
           REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}} 
       - name: Deploy
-        if: ${{github.repository_owner == 'CougarCS'}}
+        if: ${{github.repository_owner == 'CougarCS' && github.base_ref == 'refs/heads/prod'}}
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
           ftp-server: ${{secrets.FTP_URL}}
