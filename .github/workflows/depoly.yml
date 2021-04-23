@@ -27,7 +27,6 @@ jobs:
       
       - name: Load cache    
         uses: actions/cache@v2
-        name: Load Yarn cache
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
