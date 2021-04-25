@@ -1,5 +1,7 @@
+/// <reference types="cypress" />>
 it('shows title', () => {
     cy.visit('/');
     cy.contains("Learn More");
-    cy.contains("Test");
+    cy.get("#typed");
+    
 });
