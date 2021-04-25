@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Container, Card } from 'react-bootstrap'
+import { Helmet } from "react-helmet";
+import { Container, Card } from 'react-bootstrap';
 
 import './Gallery.css';
 import events from '../../data/gallery';
 
-function Gallery() {
-	const images = [""]
+const Gallery = () => {
+
 	return (
 		<>
+			<Helmet>
+				<title>Gallery</title>
+			</Helmet>
 			<Container fluid className='contained hero hero-gallery hero-small'>
 				<h1>Events Gallery</h1>
 			</Container>
@@ -28,7 +32,7 @@ function Gallery() {
 				</div>
 			</Container>
 		</>
-	)
-}
+	);
+};
 
-export default Gallery
+export default Gallery;

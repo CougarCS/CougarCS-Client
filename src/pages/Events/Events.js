@@ -1,6 +1,6 @@
 import axios from 'axios';
 import moment from 'moment';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import Loading from '../../components/Loading/Loading';
 import './Event.css';
@@ -8,6 +8,7 @@ import { Modal, Button, Dropdown } from 'react-bootstrap';
 import { sanitize } from 'dompurify';
 import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
 import { Helmet } from 'react-helmet';
+import { useQuery, useQueryClient } from 'react-query';
 
 const localizer = momentLocalizer(moment);
 
@@ -23,11 +24,25 @@ const addEvents = (eventType, events) => {
 		});
 	});
 };
+const fetchEvents = async () => {
+	const res = await axios.get(url);
+	const events = [];
+	addEvents(res.data.futureEvents, events);
+	addEvents(res.data.pastEvents, events);
 
+	return events;
+};
+
+const momentDateFromat = (date) => {
+	return moment(date).format('dddd, MMMM Do YYYY, h:mm a');
+};
 const Events = () => {
-	const [events, setEvents] = useState([]);
-	const [loading, setLoading] = useState(true);
 
+	const queryClient = useQueryClient();
+	const { data, isFetching } = useQuery('events', fetchEvents, {
+		initialData: () => queryClient.getQueryData('events'),
+		staleTime: 300000
+	});
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => {
@@ -46,28 +61,12 @@ const Events = () => {
 		description: '',
 	});
 
-	useEffect(() => {
-		axios
-			.get(url)
-			.then((resp) => {
-				const events = [];
-				addEvents(resp.data.futureEvents, events);
-				addEvents(resp.data.pastEvents, events);
-
-				setEvents(events);
-				setLoading(false);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}, []);
-
 	return (
 		<>
 			<Helmet>
-				<title>CougarCS - Calendar</title>
+				<title>Calendar</title>
 			</Helmet>
-			{loading ? (
+			{isFetching ? (
 				<div className='load'>
 					<Loading className='loader' />
 				</div>
@@ -75,7 +74,7 @@ const Events = () => {
 				<div className='event-container'>
 					<Calendar
 						localizer={localizer}
-						events={events}
+						events={data}
 						startAccessor='start'
 						endAccessor='end'
 						style={{ height: '100%' }}
@@ -104,8 +103,8 @@ const Events = () => {
 					<Modal.Title>{desc.title}</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					Date: {moment(desc.startDate).format('dddd, MMMM Do YYYY, h:mm a')} -{' '}
-					{moment(desc.endDate).format('h:mm a')}
+					Date: {momentDateFromat(desc.startDate)} -{' '}
+					{momentDateFromat(desc.endDate)}
 					<br />
 					<hr />
 					Description:{' '}

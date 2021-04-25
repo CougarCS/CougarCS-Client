@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Image, Nav, Row } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import './Officer.css';
 const APPLICATION_LINK = 'https://forms.gle/wFiokVCgfc8Wqp1S7';
 
@@ -14,8 +14,8 @@ const Officer = ({ officer }) => {
 					{officer.open ? (
 						<a
 							href={APPLICATION_LINK}
-							target='_blank'
-							rel="nofollow noopener">
+							target="_blank"
+							rel="nofollow noopener noreferrer">
 							Apply Here
 						</a>
 					) : (
@@ -28,7 +28,7 @@ const Officer = ({ officer }) => {
 				<ul className='social'>
 					{officer.email.length > 0 && (
 						<li>
-							<a href={`mailto:${officer.email}`} target="_blank">
+							<a href={`mailto:${officer.email}`} target="_blank" rel="nofollow noopener noreferrer">
 								<i className='far fa-envelope fa'></i>
 							</a>
 						</li>
@@ -38,7 +38,7 @@ const Officer = ({ officer }) => {
 							<a
 								href={officer.linkedin}
 								target='_blank'
-								rel='noopener nofollow'>
+								rel='nofollow noopener noreferrer'>
 								<i className='fab fa-linkedin'></i>
 							</a>
 						</li>

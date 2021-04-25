@@ -72,6 +72,9 @@
 	bottom: -100px;
 	left: 0;
 	transition: all 0.5s ease 0s;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .officers .social li {
@@ -87,11 +90,6 @@
 	text-decoration: none;
 }
 
-.officers .social {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-}
 .officers .social li .fa {
 	color: #ffffff;
 }

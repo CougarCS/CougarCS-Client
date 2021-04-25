@@ -6,7 +6,7 @@ const ContactUs = () => {
     return (
         <div>
             <Helmet>
-                <title>CougarCS - Contact Us</title>
+                <title>Contact Us</title>
             </Helmet>
             <ContactForm></ContactForm>
         </div>

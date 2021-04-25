@@ -6,7 +6,7 @@ const Privacy = () => {
     return (
         <Container>
             <Helmet>
-                <title>CougarCS - Privacy Policy</title>
+                <title>Privacy Policy</title>
             </Helmet>
             <h1>Privacy Policy</h1>
             <p>
