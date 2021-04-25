@@ -55,6 +55,12 @@
       "last 1 safari version"
     ]
   },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  },
   "devDependencies": {
     "react-snap": "^1.23.0"
   }
