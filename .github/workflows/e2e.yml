@@ -10,7 +10,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
           start: yarn start
+          wait-on: http://localhost:3000
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.3
+        with:
+          # Artifact name
+          name: Cypress-Upload
+          # A file, directory or wildcard pattern that describes what to upload
+          path: /home/runner/work/CougarCS-Client/CougarCS-Client/cypress/videos/home.spec.js.mp4
+          retention-days: 1
