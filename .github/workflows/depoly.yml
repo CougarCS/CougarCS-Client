@@ -2,7 +2,7 @@ name: Install, Build, Deploy
 
 on:
   push:
-    branches: [seo, master, prod]
+    branches: [master, prod]
   pull_request:
     branches: 
       - master
@@ -31,10 +31,3 @@ jobs:
           ftp-username: ${{secrets.FTP_USERNAME}}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build
-      
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v2.2.3
-        if: always()
-        with:
-          name: react-build
-          path: build
