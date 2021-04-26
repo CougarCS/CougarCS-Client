@@ -2,7 +2,7 @@ name: Install, Build, Deploy
 
 on:
   push:
-    branches: [eslint, master, prod]
+    branches: [cypress, master, prod]
   pull_request:
     branches:
       - master
