@@ -35,6 +35,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build App
+        if: ${{github.repository_owner == 'CougarCS' && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
         run: CI=false && yarn build
         env:
           REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}}
