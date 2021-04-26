@@ -16,6 +16,7 @@ This is the official CougarCS Frontend. This project is built with React using c
 - Forms : [React-hook-form](https://github.com/react-hook-form/react-hook-form)
 - Payment : [Stripe](https://stripe.com/docs)
 - Request : [Axios](https://github.com/axios/axios)
+- Linting: [ESLint](https://eslint.org/)
 
 # Getting Started
 
@@ -34,6 +35,11 @@ This is the official CougarCS Frontend. This project is built with React using c
   REACT_APP_STRIPE_KEY=<STRIPE_TEST_PUBLISHABLE_KEY>
   REACT_APP_RECAPTCHA_SITE_KEY=<KEY_ID>
   ```
+- ## Linting
+  - We use ESLint to fix styling and to enforce rules.
+  - Run `yarn run eslint-check` to check linting issuses in the code.
+  - Run `yarn run eslint-fix` to auto lint the code.
+  - ESLint runs on Github Action. ESLint must pass before pushing or during a pull request.
 - ## Project Structure
   - Static data is in `src/data/`
   - Images and other assets are in `src/assets/`

@@ -1,11 +1,11 @@
 import React from 'react';
-import { hydrate, render } from "react-dom";
+import { hydrate, render } from 'react-dom';
 import App from './App';
 import './index.css';
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
-    hydrate(<App />, rootElement);
+	hydrate(<App />, rootElement);
 } else {
-    render(<App />, rootElement);
+	render(<App />, rootElement);
 }

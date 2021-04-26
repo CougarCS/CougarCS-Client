@@ -22,7 +22,7 @@ const Home = () => {
 	return (
 		<div style={{ overflow: 'hidden' }}>
 			<Helmet>
-				<title>CougarCS - Home</title>
+				<title>Home</title>
 			</Helmet>
 			{/* <div
 				className='alert alert-warning'
