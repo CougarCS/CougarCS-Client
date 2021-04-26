@@ -36,8 +36,8 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Log out Event
-        run: echo ${{github.event}}
-        
+        run: echo ${{toJSON(github.event)}}
+
       - name: Build App
         if: ${{github.repository_owner == 'CougarCS' && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
         run: CI=false && yarn build
