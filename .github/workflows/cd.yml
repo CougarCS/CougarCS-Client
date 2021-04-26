@@ -1,11 +1,7 @@
 name: Install, Build, Deploy
 
-on:
-  push:
-    branches: [cypress, master, prod]
-  pull_request:
-    branches:
-      - master
+on: [push, pull_request]
+
 jobs:
   build-deploy:
     needs: lint
@@ -35,18 +31,15 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Log out Event
-        run: echo ${{contains(toJSON(github.event), 'pull_request')}}
-
       - name: Build App
-        if: ${{github.repository_owner == 'CougarCS' && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
+        if: ${{ success() && github.repository_owner == 'CougarCS' && !contains(toJSON(github.event), 'pull_request') && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
         run: CI=false && yarn build
         env:
           REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}}
           REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}}
 
       - name: Deploy
-        if: ${{github.repository_owner == 'CougarCS' && github.ref == 'refs/heads/prod'}}
+        if: ${{ success() && github.repository_owner == 'CougarCS' && github.ref == 'refs/heads/prod'}}
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{secrets.FTP_URL}}
