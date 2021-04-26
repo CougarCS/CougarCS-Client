@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 jobs:
   build-deploy:
-    needs: lint
     runs-on: ubuntu-latest
 
     steps:
