@@ -1,8 +1,10 @@
-name: With server
-on: 
+name: Testing with Cypress
+on:
   push:
+    branches: [cypress, master, prod]
+  pull_request:
     branches:
-      - "cypress"
+      - master
 
 jobs:
   cypress-run:
