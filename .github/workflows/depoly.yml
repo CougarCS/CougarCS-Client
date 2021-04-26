@@ -20,10 +20,11 @@ jobs:
         run: npm i
       - name: Build App
         run: CI=false && npm run build --if-present && git status
-        run: echo ${{secrets.REACT_APP_STRIPE_KEY}}
         env:
           REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}} 
           REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}} 
+      - name: ENV!!!!!!!!
+        run: echo ${{secrets.REACT_APP_STRIPE_KEY}}
       - name: Deploy
         if: ${{github.repository_owner == 'CougarCS' && github.ref == 'refs/heads/prod'}}
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
