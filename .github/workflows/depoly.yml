@@ -18,9 +18,8 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: npm i
-      - name: ENV!!!!!!!!
-        run: echo ${{secrets.REACT_APP_STRIPE_KEY}}
       - name: Build App
+        if: ${{github.repository_owner == 'CougarCS' && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
         run: CI=false && npm run build --if-present && git status
         env:
           REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}} 
