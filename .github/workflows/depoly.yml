@@ -35,11 +35,12 @@ jobs:
         run: yarn install --frozen-lockfile
       
       - name: Build App
-        run: CI=false && yarn build
+        if: ${{github.repository_owner == 'CougarCS' && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
+        run: CI=false && npm run build --if-present && git status
         env:
           REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}} 
           REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}} 
-      
+
       - name: Deploy
         if: ${{github.repository_owner == 'CougarCS' && github.ref == 'refs/heads/prod'}}
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
