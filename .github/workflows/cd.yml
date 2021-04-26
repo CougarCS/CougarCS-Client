@@ -8,6 +8,7 @@ on:
       - master
 jobs:
   build-deploy:
+    needs: lint
     runs-on: ubuntu-latest
 
     steps:
