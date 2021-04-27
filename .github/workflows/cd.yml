@@ -35,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Linting
+        run: yarn run eslint-check
+        
       - name: Build App
         if: ${{github.repository_owner == 'CougarCS' && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
         run: CI=false && yarn build
@@ -50,32 +53,3 @@ jobs:
           username: ${{secrets.FTP_USERNAME}}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - id: yarn-cache
-        name: Get Yarn cache path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@master
-        with:
-          node-version: 12.x
-
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Load cache
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Linting
-        run: yarn run eslint-check
