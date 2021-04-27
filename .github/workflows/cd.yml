@@ -1,9 +1,9 @@
-name: Install, Build, Deploy
+name: Test, Install, Build, Deploy
 
 on: [push, pull_request]
+
 jobs:
   build-deploy:
-    needs: 'cypress-run'
     runs-on: ubuntu-latest
 
     steps:
@@ -26,6 +26,26 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn start
+          wait-on: http://localhost:3000
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.3
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
