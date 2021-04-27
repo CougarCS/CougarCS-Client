@@ -1,14 +1,8 @@
 name: Install, Build, Deploy
 
-on:
-  push:
-    branches: [eslint, master, prod]
-  pull_request:
-    branches:
-      - master
+on: [push, pull_request]
 jobs:
   build-deploy:
-    needs: lint
     runs-on: ubuntu-latest
 
     steps:
@@ -37,7 +31,7 @@ jobs:
 
       - name: Linting
         run: yarn run eslint-check
-        
+
       - name: Build App
         if: ${{github.repository_owner == 'CougarCS' && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
         run: CI=false && yarn build
