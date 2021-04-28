@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - id: yarn-cache
+        name: Get Yarn cache path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+        
       - name: Checkout Repo
         uses: actions/checkout@v2
 
