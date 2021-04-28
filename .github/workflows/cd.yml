@@ -3,14 +3,11 @@ name: Test, Install, Build, Deploy
 on: [push, pull_request]
 
 jobs:
-  build-deploy:
+
+  install:
     runs-on: ubuntu-latest
 
     steps:
-      - id: yarn-cache
-        name: Get Yarn cache path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
       - name: Checkout Repo
         uses: actions/checkout@v2
 
@@ -27,6 +24,29 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Upload a Install Artifact
+        uses: actions/upload-artifact@v2.2.3
+        if: success()
+        with:
+          name: node-modules
+          path: node_modules/
+          retention-days: 1
+
+      - name: Upload a yarn.lock Artifact
+        uses: actions/upload-artifact@v2.2.3
+        if: success()
+        with:
+          name: yarn lock
+          path: yarn.lock
+          retention-days: 1
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
@@ -42,16 +62,60 @@ jobs:
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
-        if: always()
+        if: failure()
         with:
           name: cypress-videos
           path: cypress/videos
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+  lint:
+    needs: install
+    runs-on: ubuntu-latest
 
-      - name: Run ESLint
-        run: yarn run eslint-check
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+    
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@master
+      with:
+        node-version: 12.x
+
+    - name: Download node_modules
+      uses: actions/download-artifact@v2
+      with:
+        name: node-modules 
+    
+    - name: Download yarn.lock
+      uses: actions/download-artifact@v2
+      with:
+        name: yarn lock
+
+    - name: Run ESLint
+      run: yarn run eslint-check
+  
+
+  build-deploy:
+    needs: [test, lint]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Download node_modules
+        uses: actions/download-artifact@v2
+        with:
+          name: node-modules 
+      
+      - name: Download yarn.lock
+        uses: actions/download-artifact@v2
+        with:
+          name: yarn lock
+          
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.x
 
       - name: Build App
         if: ${{ success() && github.repository_owner == 'CougarCS' && !contains(toJSON(github.event), 'pull_request') && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
