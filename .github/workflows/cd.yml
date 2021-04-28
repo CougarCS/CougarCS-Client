@@ -4,50 +4,38 @@ on: [push, pull_request]
 
 jobs:
 
-  install:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
-      - id: yarn-cache
-        name: Get Yarn cache path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+    - id: yarn-cache
+      name: Get Yarn cache path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Checkout Repo
-        uses: actions/checkout@v2
+    - name: Checkout Repo
+      uses: actions/checkout@v2
 
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@master
-        with:
-          node-version: 12.x
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@master
+      with:
+        node-version: 12.x
 
-      - name: Load cache
-        uses: actions/cache@v2
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+    - name: Load cache
+      uses: actions/cache@v2
+      with:
+        path: ${{ steps.yarn-cache.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
 
-      - name: Upload a Install Artifact
-        uses: actions/upload-artifact@v2.2.3
-        if: success()
-        with:
-          name: node-modules
-          path: node_modules/
-          retention-days: 1
-
-      - name: Upload a yarn.lock Artifact
-        uses: actions/upload-artifact@v2.2.3
-        if: success()
-        with:
-          name: yarn lock
-          path: yarn.lock
-          retention-days: 1
-
+    - name: Run ESLint
+      run: yarn run eslint-check
+  
   test:
+    needs: lint
     runs-on: ubuntu-latest
 
     steps:
@@ -74,65 +62,41 @@ jobs:
           name: cypress-videos
           path: cypress/videos
 
-  lint:
-    needs: install
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v2
-    
-    - name: Use Node.js 12.x
-      uses: actions/setup-node@master
-      with:
-        node-version: 12.x
-
-    - name: Download node_modules
-      uses: actions/download-artifact@v2
-      with:
-        name: node-modules 
-    
-    - name: Download yarn.lock
-      uses: actions/download-artifact@v2
-      with:
-        name: yarn lock
-
-    - name: Run ESLint
-      run: yarn run eslint-check
-  
-
   build-deploy:
     needs: [test, lint]
+    if: ${{ github.repository_owner == 'CougarCS' && !contains(toJSON(github.event), 'pull_request') && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
     runs-on: ubuntu-latest
 
     steps:
+      - id: yarn-cache
+        name: Get Yarn cache path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
       - name: Checkout Repo
         uses: actions/checkout@v2
 
-      - name: Download node_modules
-        uses: actions/download-artifact@v2
-        with:
-          name: node-modules 
-      
-      - name: Download yarn.lock
-        uses: actions/download-artifact@v2
-        with:
-          name: yarn lock
-          
       - name: Use Node.js 12.x
         uses: actions/setup-node@master
         with:
           node-version: 12.x
 
+      - name: Load cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - name: Build App
-        if: ${{ success() && github.repository_owner == 'CougarCS' && !contains(toJSON(github.event), 'pull_request') && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
+        if:  success() 
         run: CI=false && yarn build
         env:
           REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}}
           REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}}
 
       - name: Deploy
-        if: ${{ success() && github.repository_owner == 'CougarCS' && github.ref == 'refs/heads/prod'}}
+        if: success()
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{secrets.FTP_URL}}
