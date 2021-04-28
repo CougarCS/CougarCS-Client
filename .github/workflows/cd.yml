@@ -62,9 +62,9 @@ jobs:
           name: cypress-videos
           path: cypress/videos
 
-  build-deploy:
+  build:
     needs: [test, lint]
-    if: ${{ github.repository_owner == 'CougarCS' && !contains(toJSON(github.event), 'pull_request') && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
+    if: ${{!contains(toJSON(github.event), 'pull_request')}}
     runs-on: ubuntu-latest
 
     steps:
@@ -94,6 +94,24 @@ jobs:
         env:
           REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}}
           REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}}
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.3
+        if: success()
+        with:
+          name: build-artifact
+          path: build/
+  
+  deploy:
+    needs: build
+    if: ${{ github.repository_owner == 'CougarCS' && !contains(toJSON(github.event), 'pull_request') && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download build folder
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifact
 
       - name: Deploy
         if: success()
