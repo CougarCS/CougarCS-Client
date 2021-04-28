@@ -6,7 +6,7 @@ import './NotFound.css';
 const NotFound = () => (
 	<div>
 		<Helmet>
-			<title>Not Found</title>
+			<title>404</title>
 		</Helmet>
 		<div className='fourOfour'>
 			<h1>
