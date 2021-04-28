@@ -7,6 +7,7 @@ const NotFound = () => (
 	<div>
 		<Helmet>
 			<title>404</title>
+			<meta name='prerender-status-code' content='404'></meta>
 		</Helmet>
 		<div className='fourOfour'>
 			<h1>
