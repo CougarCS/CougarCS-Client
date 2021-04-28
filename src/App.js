@@ -14,9 +14,9 @@ import Hackathon from './pages/Hackathon/Hackathon';
 import Privacy from './pages/Policy/Privacy';
 import Gallery from './pages/Gallery/Gallery';
 import GalleryEvent from './pages/Gallery/GalleryEvent';
-
 import ScrollTop from './components/ScrollTop/ScrollTop';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import FourOFour from './components/404/FourOFour';
 
 const queryClient = new QueryClient();
 
@@ -42,9 +42,12 @@ const App = () => {
 					<Route path='/hackathons/' component={Hackathon}></Route>
 					<Route path='/privacy-policy/' component={Privacy} />
 					<Route path='/gallery/' component={Gallery} exact={true} />
-					<Route path='/gallery/:event' render={(props) => <GalleryEvent {...props} />} />
-					<Route component={NotFound} />
-
+					<Route
+						path='/gallery/:event'
+						render={(props) => <GalleryEvent {...props} />}
+					/>
+					<Route path='/404/' component={NotFound} />
+					<Route component={FourOFour} />
 				</Switch>
 				<Footer />
 			</Router>
