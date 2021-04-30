@@ -107,7 +107,7 @@ jobs:
   
   deploy:
     needs: build
-    if: ${{ github.repository_owner == 'CougarCS' && !contains(toJSON(github.event), 'pull_request') && (github.ref == 'refs/heads/prod' || github.ref == 'refs/heads/master')}}
+    if: ${{ github.repository_owner == 'CougarCS' && !contains(toJSON(github.event), 'pull_request') && (github.ref == 'refs/heads/prod')}}
     runs-on: ubuntu-latest
 
     steps:
