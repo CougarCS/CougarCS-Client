@@ -10,7 +10,6 @@ import Tooba from '../assets/officers/Tooba.jpg';
 import Neriyah from '../assets/officers/Neriyah.jpg';
 import Adil from '../assets/officers/Adil.jpg';
 
-
 const officers = [
 	{
 		id: 0,

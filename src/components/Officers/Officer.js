@@ -14,8 +14,9 @@ const Officer = ({ officer }) => {
 					{officer.open ? (
 						<a
 							href={APPLICATION_LINK}
-							target="_blank"
-							rel="nofollow noopener noreferrer">
+							target='_blank'
+							rel='nofollow noopener noreferrer'
+						>
 							Apply Here
 						</a>
 					) : (
@@ -28,7 +29,11 @@ const Officer = ({ officer }) => {
 				<ul className='social'>
 					{officer.email.length > 0 && (
 						<li>
-							<a href={`mailto:${officer.email}`} target="_blank" rel="nofollow noopener noreferrer">
+							<a
+								href={`mailto:${officer.email}`}
+								target='_blank'
+								rel='nofollow noopener noreferrer'
+							>
 								<i className='far fa-envelope fa'></i>
 							</a>
 						</li>
@@ -38,7 +43,8 @@ const Officer = ({ officer }) => {
 							<a
 								href={officer.linkedin}
 								target='_blank'
-								rel='nofollow noopener noreferrer'>
+								rel='nofollow noopener noreferrer'
+							>
 								<i className='fab fa-linkedin'></i>
 							</a>
 						</li>

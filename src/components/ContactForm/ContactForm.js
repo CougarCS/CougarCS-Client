@@ -1,6 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Button, Col, Container, Form, Image, Modal, Row } from 'react-bootstrap';
+import {
+	Button,
+	Col,
+	Container,
+	Form,
+	Image,
+	Modal,
+	Row,
+} from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import CustomModal from '../Modals/CustomModal';
 import check from '../../assets/check.png';
@@ -9,17 +17,21 @@ import './ContactForm.css';
 import { Socials } from '../Socials/Socials';
 
 const ContactForm = () => {
-
 	const [successModal, setSuccessModal] = useState(false);
 	const [errorModal, setErrorModal] = useState(false);
-	const { register, formState: { isSubmitting }, handleSubmit, reset } = useForm();
+	const {
+		register,
+		formState: { isSubmitting },
+		handleSubmit,
+		reset,
+	} = useForm();
 
 	const formReset = () => {
 		reset({
-			firstName: "",
-			lastName: "",
-			email: "",
-			body: ""
+			firstName: '',
+			lastName: '',
+			email: '',
+			body: '',
 		});
 	};
 
@@ -29,39 +41,48 @@ const ContactForm = () => {
 	};
 
 	const onSubmit = async (data) => {
-		await axios
-			.post('https://backend.cougarcs.com/api/send', data);
+		await axios.post('https://backend.cougarcs.com/api/send', data);
 		setSuccessModal(true);
 		formReset();
 	};
 
 	const socialLinks = [
-		{ href: 'https://www.facebook.com/cougarcs/', html: <i className='fab fa-facebook'></i> },
-		{ href: 'https://www.instagram.com/uhcougarcs/?hl=en', html: <i className='fab fa-instagram'></i> },
-		{ href: 'https://twitter.com/uhcougarcs', html: <i className='fab fa-twitter'></i> },
-		{ href: 'https://www.linkedin.com/in/cougarcs/', html: <i className='fab fa-linkedin'></i> },
-		{ href: 'https://discordapp.com/invite/aKUzPFY', html: <i className='fab fa-discord'></i> },
+		{
+			href: 'https://www.facebook.com/cougarcs/',
+			html: <i className='fab fa-facebook'></i>,
+		},
+		{
+			href: 'https://www.instagram.com/uhcougarcs/?hl=en',
+			html: <i className='fab fa-instagram'></i>,
+		},
+		{
+			href: 'https://twitter.com/uhcougarcs',
+			html: <i className='fab fa-twitter'></i>,
+		},
+		{
+			href: 'https://www.linkedin.com/in/cougarcs/',
+			html: <i className='fab fa-linkedin'></i>,
+		},
+		{
+			href: 'https://discordapp.com/invite/aKUzPFY',
+			html: <i className='fab fa-discord'></i>,
+		},
 	];
 
 	return (
 		<Container className='contactForm'>
 			<CustomModal
 				show={successModal}
-				handleClose={() => setSuccessModal(false)}>
-				<Image className="warning-image" src={check} />
+				handleClose={() => setSuccessModal(false)}
+			>
+				<Image className='warning-image' src={check} />
 				<Modal.Title>Success!</Modal.Title>
-				<p>
-					Message has been sent!
-				</p>
+				<p>Message has been sent!</p>
 			</CustomModal>
-			<CustomModal
-				show={errorModal}
-				handleClose={() => setErrorModal(false)}>
+			<CustomModal show={errorModal} handleClose={() => setErrorModal(false)}>
 				<Image className='warning-image' src={warn} />
 				<Modal.Title>Error!</Modal.Title>
-				<p>
-					Unable to send message!
-				</p>
+				<p>Unable to send message!</p>
 			</CustomModal>
 			<h1 id='getInTouch'>Get In Touch</h1>
 			<Row>
@@ -71,21 +92,21 @@ const ContactForm = () => {
 							<Form.Label htmlFor='firstName'>First Name*</Form.Label>
 							<Form.Control
 								type='text'
-								{...register("firstName", { required: true, maxLength: 20 })}
+								{...register('firstName', { required: true, maxLength: 20 })}
 							/>
 						</Form.Group>
 						<Form.Group>
 							<Form.Label htmlFor='lastName'>Last Name*</Form.Label>
 							<Form.Control
 								type='text'
-								{...register("lastName", { required: true, maxLength: 20 })}
+								{...register('lastName', { required: true, maxLength: 20 })}
 							/>
 						</Form.Group>
 						<Form.Group>
 							<Form.Label htmlFor='email'>Email Address*</Form.Label>
 							<Form.Control
 								type='email'
-								{...register("email", { required: true })}
+								{...register('email', { required: true })}
 							/>
 						</Form.Group>
 						<Form.Group>
@@ -93,7 +114,7 @@ const ContactForm = () => {
 							<Form.Control
 								name='body'
 								as='textarea'
-								{...register("body", { required: true })}
+								{...register('body', { required: true })}
 								rows='4'
 							/>
 						</Form.Group>
@@ -101,7 +122,8 @@ const ContactForm = () => {
 							className='contactButton'
 							variant='primary'
 							type='submit'
-							disabled={isSubmitting}>
+							disabled={isSubmitting}
+						>
 							{isSubmitting ? 'Sending...' : 'Send Message'}
 						</Button>
 					</Form>
@@ -124,7 +146,8 @@ const ContactForm = () => {
 										border: 0,
 										allowFullscreen: '',
 										paddingTop: '15px',
-									}}></iframe>
+									}}
+								></iframe>
 							</div>
 						</span>
 					</div>
@@ -137,13 +160,11 @@ const ContactForm = () => {
 						</span>
 					</div>
 					<div className='follow socials'>
-						{
-							socialLinks.map(socialLink =>
-								<Socials key={socialLink.href} href={socialLink.href}>
-									{socialLink.html}
-								</Socials>
-							)
-						}
+						{socialLinks.map((socialLink) => (
+							<Socials key={socialLink.href} href={socialLink.href}>
+								{socialLink.html}
+							</Socials>
+						))}
 					</div>
 				</Col>
 			</Row>

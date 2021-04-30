@@ -37,11 +37,10 @@ const momentDateFromat = (date) => {
 	return moment(date).format('dddd, MMMM Do YYYY, h:mm a');
 };
 const Events = () => {
-
 	const queryClient = useQueryClient();
 	const { data, isFetching } = useQuery('events', fetchEvents, {
 		initialData: () => queryClient.getQueryData('events'),
-		staleTime: 300000
+		staleTime: 300000,
 	});
 	const [show, setShow] = useState(false);
 
@@ -116,11 +115,10 @@ const Events = () => {
 					}
 				</Modal.Body>
 				<Modal.Footer>
-
 					<Dropdown>
-						<Dropdown.Toggle variant="success" id="dropdown-basic">
+						<Dropdown.Toggle variant='success' id='dropdown-basic'>
 							Add To Calendar
-						  </Dropdown.Toggle>
+						</Dropdown.Toggle>
 
 						<AddToCalendar event={desc} />
 					</Dropdown>
