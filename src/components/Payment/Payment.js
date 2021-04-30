@@ -9,13 +9,17 @@ import warn from '../../assets/warn.png';
 import { useForm } from 'react-hook-form';
 
 export const Payment = () => {
-
 	const stripe = useStripe();
 	const elements = useElements();
 
 	const [buttonText, setButtonText] = useState('Submit');
 
-	const { register, formState: { isSubmitting }, handleSubmit, reset } = useForm();
+	const {
+		register,
+		formState: { isSubmitting },
+		handleSubmit,
+		reset,
+	} = useForm();
 
 	const [successModal, setSuccessModal] = useState(false);
 	const [errorModal, setErrorModal] = useState(false);
@@ -37,7 +41,6 @@ export const Payment = () => {
 		},
 	};
 
-
 	const resetForm = () => {
 		reset({
 			email: '',
@@ -53,7 +56,6 @@ export const Payment = () => {
 	};
 
 	const onSubmit = async (user) => {
-
 		setButtonText('Loading...');
 		const recaptcha = await load(process.env.REACT_APP_RECAPTCHA_SITE_KEY, {
 			autoHideBadge: true,
@@ -100,22 +102,19 @@ export const Payment = () => {
 		}
 	};
 
-
 	return (
 		<Form onSubmit={handleSubmit(onSubmit)} className='child p-3'>
 			<CustomModal
 				show={successModal}
-				handleClose={() => setSuccessModal(false)}>
-				<Image className="warning-image" src={check} />
+				handleClose={() => setSuccessModal(false)}
+			>
+				<Image className='warning-image' src={check} />
 				<Modal.Title>Success!</Modal.Title>
 				<p>
 					We received your payment. Please check your email for confirmation.
 				</p>
-
 			</CustomModal>
-			<CustomModal
-				show={errorModal}
-				handleClose={() => setErrorModal(false)}>
+			<CustomModal show={errorModal} handleClose={() => setErrorModal(false)}>
 				<Image className='warning-image' src={warn} />
 				<Modal.Title>Error!</Modal.Title>
 				<p>
@@ -130,7 +129,7 @@ export const Payment = () => {
 					<Form.Control
 						type='text'
 						placeholder='First Name'
-						{...register("firstName", { required: true, maxLength: 20 })}
+						{...register('firstName', { required: true, maxLength: 20 })}
 					/>
 				</Form.Group>
 
@@ -139,7 +138,7 @@ export const Payment = () => {
 					<Form.Control
 						type='text'
 						placeholder='Last Name'
-						{...register("lastName", { required: true, maxLength: 20 })}
+						{...register('lastName', { required: true, maxLength: 20 })}
 					/>
 				</Form.Group>
 			</Form.Row>
@@ -150,7 +149,7 @@ export const Payment = () => {
 					<Form.Control
 						type='email'
 						placeholder='Email'
-						{...register("email", { required: true })}
+						{...register('email', { required: true })}
 					/>
 				</Form.Group>
 
@@ -160,7 +159,11 @@ export const Payment = () => {
 						type='tel'
 						pattern='^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
 						placeholder='Phone'
-						{...register("phone", { required: true, minLength: 6, maxLength: 12 })}
+						{...register('phone', {
+							required: true,
+							minLength: 6,
+							maxLength: 12,
+						})}
 					/>
 				</Form.Group>
 			</Form.Row>
@@ -170,7 +173,7 @@ export const Payment = () => {
 					<Form.Label>Classification</Form.Label>
 					<Form.Control
 						as='select'
-						{...register("classification", { required: true })}
+						{...register('classification', { required: true })}
 					>
 						<option value=''>Choose...</option>
 						<option value='Freshman'>Freshman</option>
@@ -187,8 +190,7 @@ export const Payment = () => {
 					<Form.Control
 						type='text'
 						pattern='^[0-9]{7,7}$'
-						{...register("uhID", { required: true })}
-
+						{...register('uhID', { required: true })}
 					/>
 				</Form.Group>
 			</Form.Row>
@@ -198,7 +200,7 @@ export const Payment = () => {
 					<Form.Label>Payment For</Form.Label>
 					<Form.Control
 						as='select'
-						{...register("paidUntil", { required: true })}
+						{...register('paidUntil', { required: true })}
 					>
 						<option value=''>Choose...</option>
 						<option value='semester'>Semester ($10)</option>
@@ -211,7 +213,8 @@ export const Payment = () => {
 				<Form.Group
 					as={Col}
 					className='stripe-container'
-					controlId='stripPayment'>
+					controlId='stripPayment'
+				>
 					<CardElement options={cardOptions} />
 				</Form.Group>
 			</Form.Row>
@@ -222,7 +225,8 @@ export const Payment = () => {
 				type='submit'
 				size='lg'
 				block
-				className='mt-4 mb-4'>
+				className='mt-4 mb-4'
+			>
 				{buttonText}
 			</Button>
 		</Form>
