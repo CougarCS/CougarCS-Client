@@ -15,8 +15,6 @@ const animateText = () =>
 		backSpeed: 75,
 		loop: true,
 	});
-
-// Class component so you can use `componentDidMount` lifecycle
 const Home = () => {
 	useEffect(() => {
 		animateText();
@@ -24,7 +22,7 @@ const Home = () => {
 	return (
 		<div style={{ overflow: 'hidden' }}>
 			<Helmet>
-				<title>Home</title>
+				<title>CougarCS - Home</title>
 			</Helmet>
 			{/* <div
 				className='alert alert-warning'

@@ -2,7 +2,6 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../../assets/logo.png';
-// import DarkMode from '../DarkMode/DarkMode';
 import './Navbar.css';
 
 const NavBar = ({ themeToggler }) => (
@@ -36,11 +35,10 @@ const NavBar = ({ themeToggler }) => (
 				<LinkContainer to='/contactus'>
 					<Nav.Link>Contact Us</Nav.Link>
 				</LinkContainer>
-				<Nav.Link href='https://uhcode.red/' target="_blank">CodeRED <i class="fas fa-external-link-alt"></i></Nav.Link>
+				<Nav.Link href='https://uhcode.red/' target="_blank">CodeRED <i className="fas fa-external-link-alt"></i></Nav.Link>
 				<LinkContainer to='/register'>
-					<Nav.Link><button class = "button">Register</button></Nav.Link>
+					<Nav.Link><button className="button">Register</button></Nav.Link>
 				</LinkContainer>
-				{/* <DarkMode /> */}
 			</Nav>
 		</Navbar.Collapse>
 	</Navbar>

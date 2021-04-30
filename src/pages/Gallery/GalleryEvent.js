@@ -1,15 +1,12 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
-
-import { Redirect } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-
+import { Redirect, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import './GalleryEvent.css';
 import 'lightgallery.js/dist/css/lightgallery.css';
 
 import events from '../../data/gallery';
-import { Helmet } from 'react-helmet';
 
 const GalleryEvent = ({ match }) => {
     let currentEvent = {};
@@ -32,19 +29,9 @@ const GalleryEvent = ({ match }) => {
                 </Helmet>
                 <Container fluid className='contained gallery-event'>
                     <Link to="/gallery" className='event-back'>
-                        <i class="fas fa-chevron-left"></i> Back
+                        <i className="fas fa-chevron-left"></i> Back
                 </Link>
                     <h1 className='event-heading'>{currentEvent.name}</h1>
-                    {/* <div className='event-metas'>
-                    <div className='event-meta'>
-                        <i class="fas fa-calendar-alt"></i>
-                        <span>{currentEvent.date}</span>
-                    </div>
-                    <div className='event-meta'>
-                        <i class="fas fa-map-marked"></i>
-                        <span>{currentEvent.location}</span>
-                    </div>
-                </div> */}
 
                     <LightgalleryProvider>
                         <div className="gallery-grid">

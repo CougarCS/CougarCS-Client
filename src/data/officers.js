@@ -1,15 +1,14 @@
-import Dr_Yun from './assets/officers/Dr_Yun.jpg';
-import Placeholder from './assets/officers/Placeholder.jpg';
+import Dr_Yun from '../assets/officers/Dr_Yun.jpg';
 
-import Mariana from './assets/officers/Mariana.jpg';
-import Nykolas from './assets/officers/Nykolas.jpg';
-import Chantha from './assets/officers/Chantha.jpg';
-import Sevilay from './assets/officers/Sevilay.jpg';
-import Shubh from './assets/officers/Shubh.jpg';
-import Shubha from './assets/officers/Shubha.jpg';
-import Tooba from './assets/officers/Tooba.jpg';
-import Neriyah from './assets/officers/Neriyah.jpg';
-import Adil from './assets/officers/Adil.jpg';
+import Mariana from '../assets/officers/Mariana.jpg';
+import Nykolas from '../assets/officers/Nykolas.jpg';
+import Chantha from '../assets/officers/Chantha.jpg';
+import Sevilay from '../assets/officers/Sevilay.jpg';
+import Shubh from '../assets/officers/Shubh.jpg';
+import Shubha from '../assets/officers/Shubha.jpg';
+import Tooba from '../assets/officers/Tooba.jpg';
+import Neriyah from '../assets/officers/Neriyah.jpg';
+import Adil from '../assets/officers/Adil.jpg';
 
 
 const officers = [
