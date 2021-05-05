@@ -5,12 +5,13 @@ import HackathonComp from '../../components/Hackathon/HackathonsComp';
 import './Hackathon.css';
 import { MetaData } from '../../components/Meta/MetaData';
 
+const sortHackathon = (curr, prev) =>
+	curr.year.concat(curr.startDate) > prev.year.concat(prev.startDate) ? 1 : -1;
+
 const Hackathon = () => {
 	const [currTime] = useState(new Date().toISOString().split('T')[0]);
 
-	const sortedHackathon = hackathons.sort((a, b) =>
-		a.year.concat(a.startDate) > b.year.concat(b.startDate) ? 1 : -1
-	);
+	const sortedHackathon = hackathons.sort(sortHackathon);
 
 	const [upcoming] = useState(
 		sortedHackathon
