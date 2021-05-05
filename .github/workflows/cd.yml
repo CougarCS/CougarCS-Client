@@ -104,6 +104,7 @@ jobs:
         with:
           name: build-artifact
           path: build/
+          retention-days: 1
   
   deploy:
     needs: build
