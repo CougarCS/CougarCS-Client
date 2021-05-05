@@ -11,10 +11,10 @@ const sortHackathon = (curr, prev) =>
 const Hackathon = () => {
 	const [currTime] = useState(new Date().toISOString().split('T')[0]);
 
-	const sortedHackathon = hackathons.sort(sortHackathon);
+	hackathons.sort(sortHackathon);
 
 	const [upcoming] = useState(
-		sortedHackathon
+		hackathons
 			.filter(
 				(hackathonlist) =>
 					hackathonlist.year.concat(hackathonlist.endDate) > currTime
@@ -25,7 +25,7 @@ const Hackathon = () => {
 	);
 
 	const [pastHackathon] = useState(
-		sortedHackathon
+		hackathons
 			.filter(
 				(hackathonlist) =>
 					hackathonlist.year.concat(hackathonlist.endDate) < currTime
