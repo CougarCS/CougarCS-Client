@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import hackathons from '../../data/hackathonsList';
-import HackathonComp from '../../components/Hackathon/HackathonsComp';
+import HackathonComp from '../../components/Hackathon/HackathonsList';
 import './Hackathon.css';
 import { MetaData } from '../../components/Meta/MetaData';
 
