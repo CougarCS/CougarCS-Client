@@ -115,6 +115,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-artifact
+          path: ~/build
       - name: check folders
         run: ls -la
 #       - name: Deploy
