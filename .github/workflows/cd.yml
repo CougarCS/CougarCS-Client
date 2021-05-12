@@ -115,12 +115,13 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-artifact
-
-      - name: Deploy
-        if: success()
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: ${{secrets.FTP_URL}}
-          username: ${{secrets.FTP_USERNAME}}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: build/
+      - name: check folders
+        run: ls -la
+#       - name: Deploy
+#         if: success()
+#         uses: SamKirkland/FTP-Deploy-Action@4.0.0
+#         with:
+#           server: ${{secrets.FTP_URL}}
+#           username: ${{secrets.FTP_USERNAME}}
+#           password: ${{ secrets.FTP_PASSWORD }}
+#           local-dir: ./build-artifact/
