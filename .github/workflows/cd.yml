@@ -120,6 +120,9 @@ jobs:
         run: pwd
       - name: check folders
         run: ls -la
+      - name: build folder
+        run: ls -R
+        working-directory: ./build   
 #       - name: Deploy
 #         if: success()
 #         uses: SamKirkland/FTP-Deploy-Action@4.0.0
