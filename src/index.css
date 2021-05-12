@@ -85,7 +85,6 @@ input {
 	background: var(--color-background);
 }
 
-/** Container Styles **/
 .contained {
 	max-width: 1400px;
 }
@@ -93,7 +92,7 @@ input {
 .container-left {
 	padding-left: 15px;
 	padding-right: 15px;
-	margin-left: calc((100vw - 1400px - 30px)/2);
+	margin-left: calc((100vw - 1400px - 30px) / 2);
 }
 
 @media (max-width: 1430px) {
@@ -102,7 +101,6 @@ input {
 	}
 }
 
-/** Hero Styles **/
 .hero {
 	padding-top: 100px;
 	padding-bottom: 250px;

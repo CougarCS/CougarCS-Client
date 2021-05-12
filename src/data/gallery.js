@@ -18,113 +18,92 @@ import OrientationMeeting3 from '../assets/gallery/OrientationMeeting3.jpg';
 import Schlumberger1 from '../assets/gallery/Schlumberger1.jpg';
 
 const events = [
-    {
-        id: 0,
-        show: true,
-        name: 'AIG Info Session',
-        link: 'aig-info-sessiong',
-        image: AIG0,
-        location: "Houston, TX",
-        date: "11/21/2020",
-        pictures: [
-            AIG0,
-            AIG1
-        ]
-    },
-    {
-        id: 1,
-        show: true,
-        name: 'Spring Career Fair',
-        link: 'spring-career-fair',
-        image: CareerFairspring,
-        location: "Houston, TX",
-        date: "11/21/2020",
-        pictures: [
-            CareerFairspring,
-            CareerFairSpring
-        ]
-    },
-    {
-        id: 2,
-        show: true,
-        name: 'Gartner Info Session',
-        link: 'gartner-info-session',
-        image: Gartner,
-        location: "Houston, TX",
-        date: "11/21/2020",
-        pictures: [
-            Gartner
-        ]
-    },
-    {
-        id: 3,
-        show: true,
-        name: 'HCSS Info Session',
-        link: 'hcss-info-session',
-        image: HCSS0,
-        location: "Houston, TX",
-        date: "11/21/2020",
-        pictures: [
-            HCSS0,
-            HCSS2
-        ]
-    },
-    {
-        id: 4,
-        show: true,
-        name: 'Interview Workshop',
-        link: 'interview-workshop',
-        image: InterviewWS0,
-        location: "Houston, TX",
-        date: "11/21/2020",
-        pictures: [
-            InterviewWS0,
-            InterviewWS1,
-            InterviewWS1
-        ]
-    },
-    {
-        id: 5,
-        show: true,
-        name: 'Local Hack Day',
-        link: 'local-hack-day',
-        image: LocalHackDay0,
-        location: "Houston, TX",
-        date: "11/21/2020",
-        pictures: [
-            LocalHackDay0,
-            LocalHackDay1,
-            LocalHackDay2,
-            LocalHackDay3,
-            LocalHackDay4
-        ]
-    },
-    {
-        id: 6,
-        show: true,
-        name: 'Orientation Meeting',
-        link: 'orientation-meeting',
-        image: OrientationMeeting1,
-        location: "Houston, TX",
-        date: "11/21/2020",
-        pictures: [
-            OrientationMeeting1,
-            OrientationMeeting2,
-            OrientationMeeting3
-        ]
-    },
-    {
-        id: 7,
-        show: true,
-        name: 'Schlumberger Info Session',
-        link: 'schlumberger-info-session',
-        image: Schlumberger1,
-        location: "Houston, TX",
-        date: "11/21/2020",
-        pictures: [
-            Schlumberger1
-        ]
-    }
+	{
+		id: 0,
+		show: true,
+		name: 'AIG Info Session',
+		link: 'aig-info-sessiong',
+		image: AIG0,
+		location: 'Houston, TX',
+		date: '11/21/2020',
+		pictures: [AIG0, AIG1],
+	},
+	{
+		id: 1,
+		show: true,
+		name: 'Spring Career Fair',
+		link: 'spring-career-fair',
+		image: CareerFairspring,
+		location: 'Houston, TX',
+		date: '11/21/2020',
+		pictures: [CareerFairspring, CareerFairSpring],
+	},
+	{
+		id: 2,
+		show: true,
+		name: 'Gartner Info Session',
+		link: 'gartner-info-session',
+		image: Gartner,
+		location: 'Houston, TX',
+		date: '11/21/2020',
+		pictures: [Gartner],
+	},
+	{
+		id: 3,
+		show: true,
+		name: 'HCSS Info Session',
+		link: 'hcss-info-session',
+		image: HCSS0,
+		location: 'Houston, TX',
+		date: '11/21/2020',
+		pictures: [HCSS0, HCSS2],
+	},
+	{
+		id: 4,
+		show: true,
+		name: 'Interview Workshop',
+		link: 'interview-workshop',
+		image: InterviewWS0,
+		location: 'Houston, TX',
+		date: '11/21/2020',
+		pictures: [InterviewWS0, InterviewWS1, InterviewWS1],
+	},
+	{
+		id: 5,
+		show: true,
+		name: 'Local Hack Day',
+		link: 'local-hack-day',
+		image: LocalHackDay0,
+		location: 'Houston, TX',
+		date: '11/21/2020',
+		pictures: [
+			LocalHackDay0,
+			LocalHackDay1,
+			LocalHackDay2,
+			LocalHackDay3,
+			LocalHackDay4,
+		],
+	},
+	{
+		id: 6,
+		show: true,
+		name: 'Orientation Meeting',
+		link: 'orientation-meeting',
+		image: OrientationMeeting1,
+		location: 'Houston, TX',
+		date: '11/21/2020',
+		pictures: [OrientationMeeting1, OrientationMeeting2, OrientationMeeting3],
+	},
+	{
+		id: 7,
+		show: true,
+		name: 'Schlumberger Info Session',
+		link: 'schlumberger-info-session',
+		image: Schlumberger1,
+		location: 'Houston, TX',
+		date: '11/21/2020',
+		pictures: [Schlumberger1],
+	},
 ];
 
 export default events;
