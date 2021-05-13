@@ -1,13 +1,18 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import ContactForm from '../../components/ContactForm/ContactForm';
+import { MetaData } from '../../components/Meta/MetaData';
+
+const meta = {
+	title: 'Contact Us',
+	desc: 'Get in touch with us.',
+	url: 'https://cougarcs.com/contactus',
+	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+};
 
 const ContactUs = () => {
 	return (
 		<div>
-			<Helmet>
-				<title>Contact Us</title>
-			</Helmet>
+			<MetaData {...meta} />
 			<ContactForm></ContactForm>
 		</div>
 	);

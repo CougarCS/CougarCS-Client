@@ -32,6 +32,7 @@
 }
 
 .gallery-card .event-link {
+	cursor: pointer;
 	font-weight: 600;
 	color: #ec1c24;
 }

@@ -1,17 +1,22 @@
 import React from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Helmet } from 'react-helmet';
 import { Container, Card } from 'react-bootstrap';
 
 import './Gallery.css';
 import events from '../../data/gallery';
+import { MetaData } from '../../components/Meta/MetaData';
+
+const meta = {
+	title: 'Gallery',
+	desc: 'Pictures of events.',
+	url: 'https://cougarcs.com/gallery',
+	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+};
 
 const Gallery = () => {
 	return (
 		<>
-			<Helmet>
-				<title>Gallery</title>
-			</Helmet>
+			<MetaData {...meta} />
 			<Container fluid className='contained hero hero-gallery hero-small'>
 				<h1>Events Gallery</h1>
 			</Container>
@@ -27,7 +32,7 @@ const Gallery = () => {
 										to={`/gallery/${event.link}`}
 										className='event-link'
 									>
-										<a>View Event</a>
+										<p id='view-event'>View Event</p>
 									</LinkContainer>
 								</Card.Body>
 							</Card>
