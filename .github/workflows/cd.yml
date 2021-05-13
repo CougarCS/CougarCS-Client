@@ -116,7 +116,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build-artifact
-
+          path: ./build 
       - name: Deploy
         if: success()
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
