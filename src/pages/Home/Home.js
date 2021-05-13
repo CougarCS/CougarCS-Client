@@ -3,6 +3,7 @@ import { Button, ButtonToolbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Typed from 'typed.js';
 import './Home.css';
+import { MetaData } from '../../components/Meta/MetaData';
 
 const animateText = () =>
 	new Typed('#typed', {
@@ -15,14 +16,23 @@ const animateText = () =>
 		loop: true,
 	});
 
-// Class component so you can use `componentDidMount` lifecycle
 const Home = () => {
 	useEffect(() => {
 		animateText();
 	}, []);
+
+	const meta = {
+		title: 'Home',
+		desc: 'CougarCS is the largest student run Computer Science organization at the University of Houston.',
+		url: 'https://cougarcs.com/',
+		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+	};
+
 	return (
-		<div style={{ overflow: 'hidden' }}>
-			{/* <div
+		<>
+			<MetaData {...meta} />
+			<div style={{ overflow: 'hidden' }}>
+				{/* <div
 				className='alert alert-warning'
 				role='alert'
 				style={{ textAlign: 'center' }}>
@@ -35,32 +45,34 @@ const Home = () => {
 					CLICK HERE TO APPLY
 				</a>
 			</div> */}
-			<div className='ani'>
-				<div className='bgDark'>
-					<div className='main-text'>
-						<p className='firstP'>
-							WE <span id='typed' />
-						</p>
-						<div style={{ display: 'flex', justifyContent: 'space-between' }}>
-							<LinkContainer to='/about' style={{ marginRight: '2em' }}>
-								<ButtonToolbar>
-									<Button className='learnMoreBtn' variant='success'>
-										Learn More
-									</Button>
-								</ButtonToolbar>
-							</LinkContainer>
-							<LinkContainer to='/register'>
-								<ButtonToolbar>
-									<Button className='learnMoreBtn' variant='primary'>
-										Become a member
-									</Button>
-								</ButtonToolbar>
-							</LinkContainer>
+
+				<div className='ani'>
+					<div className='bgDark'>
+						<div className='main-text'>
+							<p className='firstP'>
+								WE <span id='typed' />
+							</p>
+							<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+								<LinkContainer to='/about' style={{ marginRight: '2em' }}>
+									<ButtonToolbar>
+										<Button className='learnMoreBtn' variant='success'>
+											Learn More
+										</Button>
+									</ButtonToolbar>
+								</LinkContainer>
+								<LinkContainer to='/register'>
+									<ButtonToolbar>
+										<Button className='learnMoreBtn' variant='primary'>
+											Become a member
+										</Button>
+									</ButtonToolbar>
+								</LinkContainer>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

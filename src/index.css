@@ -1,28 +1,15 @@
-body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
-}
-
 :root {
 	--color-background: #fff;
 	--color-on-background: #2f2838;
-	--color-primary: #6200ee;
+	--color-card-background: #f5f5f5;
+	--color-primary: #ce1313;
 	--color-on-primary: #fff;
 	--color-secondary: #03dac6;
 	--color-on-secondary: #000;
 	--color-error: #b00020;
 	--color-on-error: #fff;
 	--color-on-hover: rgb(152, 112, 122);
-	--color-on-labelAndHeaders: #ff4d73;
+	--color-on-labelAndHeaders: #ec1c24;
 	--on-active-color: #ffffff;
 }
 
@@ -39,14 +26,41 @@ body[data-theme='dark'] {
 }
 
 body {
+	font-family: 'Poppins', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
 	background: var(--color-background);
 	color: var(--color-on-background);
 }
 
-h1 {
-	text-align: center;
-	color: var(--color-on-labelAndHeaders);
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
+
+h1 {
+	text-align: left;
+	color: var(--color-on-labelAndHeaders);
+	margin-bottom: 1em;
+}
+
+h2 {
+	color: var(--color-on-labelAndHeaders);
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
+h6 {
+	color: var(--color-on-background) !important;
+}
+
+h1.long-margin {
+	margin-bottom: 1.8em;
+}
+
 label {
 	text-align: center;
 	color: var(--color-on-labelAndHeaders);
@@ -66,15 +80,49 @@ input {
 	background: var(--color-background);
 }
 
-.card-body {
-	background: var(--color-background);
-}
-
 .container .formContainer,
 .contactForm .container {
 	background: var(--color-background);
 }
 
-.officers {
-	background: var(--color-background);
+.contained {
+	max-width: 1400px;
+}
+
+.container-left {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: calc((100vw - 1400px - 30px) / 2);
+}
+
+@media (max-width: 1430px) {
+	.container-left {
+		margin-left: 0;
+	}
+}
+
+.hero {
+	padding-top: 100px;
+	padding-bottom: 250px;
+}
+
+.hero.hero-small {
+	padding-bottom: 40px;
+}
+
+.hero h1 {
+	color: #000;
+	font-size: 50px;
+	font-weight: 600;
+}
+
+.hero .lead-text {
+	font-size: 18px;
+	line-height: 1.8;
+}
+
+@media (max-width: 767px) {
+	.hero {
+		padding-bottom: 100px;
+	}
 }

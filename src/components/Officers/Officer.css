@@ -1,16 +1,15 @@
 .officers {
 	padding: 1.3em;
-	margin-bottom: 30px;
-	background-color: #ffffff;
+	background-color: var(--color-card-background);
 	text-align: center;
 	overflow: hidden;
 	position: relative;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	/* transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); */
 }
 
-.officers:hover {
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.officers .picture,
+.officers .team-content {
+	transition: all 0.5s ease;
 }
 
 .officers .picture {
@@ -34,11 +33,7 @@
 	left: 0;
 	opacity: 0.9;
 	transform: scale(3);
-	transition: all 0.3s linear 0s;
-}
-
-.officers:hover .picture::before {
-	height: 100%;
+	transition: all 0.5s ease;
 }
 
 .officers .picture::after {
@@ -55,23 +50,17 @@
 
 .officers .picture img {
 	width: 100%;
-	/* height: auto; */
-	/* border-radius: 50%; */
-	background-size: contain;
-	transform: scale(1);
-	transition: all 0.9s ease 0s;
-}
-
-.officers:hover .picture img {
-	box-shadow: 0 0 0 14px #f7f5ec;
-	transform: scale(0.7);
+	height: 100%;
+	object-fit: cover;
+	transform: scale(0.95);
+	transition: all 0.5s ease 0s;
 }
 
 .officers .title {
 	display: block;
-	font-size: 15px;
+	font-size: 14px;
 	color: #4e5052;
-	text-transform: capitalize;
+	text-transform: none;
 }
 
 .officers .social {
@@ -83,10 +72,9 @@
 	bottom: -100px;
 	left: 0;
 	transition: all 0.5s ease 0s;
-}
-
-.officers:hover .social {
-	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .officers .social li {
@@ -98,19 +86,38 @@
 	padding: 10px;
 	font-size: 17px;
 	color: white;
-	transition: all 0.3s ease 0s;
+	transition: all 0.5s ease 0s;
 	text-decoration: none;
 }
 
-.officers .social {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-}
 .officers .social li .fa {
 	color: #ffffff;
 }
 
-h6 {
-	color: var(--color-on-background) !important;
+.officers:hover .picture::before {
+	height: 100%;
+}
+
+.officers:hover .picture img {
+	box-shadow: 0 0 0 14px #f7f5ec;
+	transform: scale(0.7);
+}
+
+.officers:hover .social {
+	bottom: 0;
+}
+
+.officers:hover .picture {
+	margin-bottom: 15px;
+}
+
+.officers:hover .team-content {
+	margin-bottom: 43px;
+}
+
+@media (max-width: 575px) {
+	.officers .picture {
+		width: 100px;
+		height: 100px;
+	}
 }

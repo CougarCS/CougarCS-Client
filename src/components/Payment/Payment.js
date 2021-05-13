@@ -1,33 +1,29 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import { Form, Col, Button } from 'react-bootstrap';
+import { Form, Col, Button, Image, Modal } from 'react-bootstrap';
 import { load } from 'recaptcha-v3';
-import SuccessModal from './../Modals/SuccessModal';
-import ErrorModal from './../Modals/ErrorModal';
+import CustomModal from '../Modals/CustomModal';
 import axios from 'axios';
+import check from '../../assets/check.png';
+import warn from '../../assets/warn.png';
+import { useForm } from 'react-hook-form';
 
 export const Payment = () => {
-	// Stripe Init
 	const stripe = useStripe();
 	const elements = useElements();
 
-	// Fields
-	const [user, setUser] = useState({
-		email: '',
-		firstName: '',
-		lastName: '',
-		uhID: '',
-		classification: '',
-		paidUntil: '',
-		phone: '',
-	});
-	const [loading, setLoading] = useState(false);
 	const [buttonText, setButtonText] = useState('Submit');
+
+	const {
+		register,
+		formState: { isSubmitting },
+		handleSubmit,
+		reset,
+	} = useForm();
 
 	const [successModal, setSuccessModal] = useState(false);
 	const [errorModal, setErrorModal] = useState(false);
 
-	// Card Element Styles
 	const cardOptions = {
 		style: {
 			base: {
@@ -45,14 +41,22 @@ export const Payment = () => {
 		},
 	};
 
-	const handleSubmit = async (e) => {
-		e.preventDefault();
+	const resetForm = () => {
+		reset({
+			email: '',
+			firstName: '',
+			lastName: '',
+			uhID: '',
+			classification: '',
+			paidUntil: '',
+			phone: '',
+		});
 
-		// Disable form
+		elements.getElement(CardElement).clear();
+	};
+
+	const onSubmit = async (user) => {
 		setButtonText('Loading...');
-		setLoading(true);
-
-		// Get recaptcha token
 		const recaptcha = await load(process.env.REACT_APP_RECAPTCHA_SITE_KEY, {
 			autoHideBadge: true,
 		});
@@ -60,7 +64,6 @@ export const Payment = () => {
 
 		if (!stripe || !elements) {
 			resetForm();
-			setLoading(false);
 			setButtonText('Submit');
 			setErrorModal(true);
 			return;
@@ -75,70 +78,58 @@ export const Payment = () => {
 			const { id } = paymentMethod;
 
 			try {
-				const response = await axios
+				await axios
 					.post('https://backend.cougarcs.com/api/payment', {
 						token: id,
 						user,
 						recaptchaToken,
 					})
 					.then(() => {
-						// Reset Form
 						resetForm();
-						setLoading(false);
 						setButtonText('Success!');
 						setSuccessModal(true);
-						return;
 					});
 			} catch (e) {
+				console.log(e);
 				resetForm();
-				setLoading(false);
 				setErrorModal(true);
 				setButtonText('Submit');
 			}
 		} else {
 			resetForm();
-			setLoading(false);
 			setErrorModal(true);
 			setButtonText('Submit');
 		}
 	};
 
-	const handleChange = (e) => {
-		setUser({ ...user, [e.target.name]: e.target.value });
-	};
-
-	const resetForm = () => {
-		setUser({
-			email: '',
-			firstName: '',
-			lastName: '',
-			uhID: '',
-			classification: '',
-			paidUntil: '',
-			phone: '',
-		});
-
-		elements.getElement(CardElement).clear();
-	};
-
 	return (
-		<Form onSubmit={handleSubmit} className='child p-3'>
-			<SuccessModal
+		<Form onSubmit={handleSubmit(onSubmit)} className='child p-3'>
+			<CustomModal
 				show={successModal}
-				handleClose={() => setSuccessModal(false)}></SuccessModal>
-			<ErrorModal
-				show={errorModal}
-				handleClose={() => setErrorModal(false)}></ErrorModal>
+				handleClose={() => setSuccessModal(false)}
+			>
+				<Image className='warning-image' src={check} />
+				<Modal.Title>Success!</Modal.Title>
+				<p>
+					We received your payment. Please check your email for confirmation.
+				</p>
+			</CustomModal>
+			<CustomModal show={errorModal} handleClose={() => setErrorModal(false)}>
+				<Image className='warning-image' src={warn} />
+				<Modal.Title>Error!</Modal.Title>
+				<p>
+					Something went wrong. Please try again or contact{' '}
+					<a href='mailto:treasurer@cougarcs.com'>treasurer@cougarcs.com</a> to
+					pay with an alternative method.
+				</p>
+			</CustomModal>
 			<Form.Row>
 				<Form.Group as={Col} controlId='formGridFirstName'>
 					<Form.Label>First Name</Form.Label>
 					<Form.Control
 						type='text'
 						placeholder='First Name'
-						required
-						onChange={(e) => handleChange(e)}
-						name='firstName'
-						value={user.firstName}
+						{...register('firstName', { required: true, maxLength: 20 })}
 					/>
 				</Form.Group>
 
@@ -147,10 +138,7 @@ export const Payment = () => {
 					<Form.Control
 						type='text'
 						placeholder='Last Name'
-						required
-						onChange={(e) => handleChange(e)}
-						name='lastName'
-						value={user.lastName}
+						{...register('lastName', { required: true, maxLength: 20 })}
 					/>
 				</Form.Group>
 			</Form.Row>
@@ -159,12 +147,9 @@ export const Payment = () => {
 				<Form.Group as={Col} controlId='formGridEmail'>
 					<Form.Label>Email</Form.Label>
 					<Form.Control
-						type='text'
+						type='email'
 						placeholder='Email'
-						required
-						onChange={(e) => handleChange(e)}
-						name='email'
-						value={user.email}
+						{...register('email', { required: true })}
 					/>
 				</Form.Group>
 
@@ -174,10 +159,11 @@ export const Payment = () => {
 						type='tel'
 						pattern='^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'
 						placeholder='Phone'
-						required
-						onChange={(e) => handleChange(e)}
-						name='phone'
-						value={user.phone}
+						{...register('phone', {
+							required: true,
+							minLength: 6,
+							maxLength: 12,
+						})}
 					/>
 				</Form.Group>
 			</Form.Row>
@@ -187,10 +173,8 @@ export const Payment = () => {
 					<Form.Label>Classification</Form.Label>
 					<Form.Control
 						as='select'
-						name='classification'
-						required
-						onChange={(e) => handleChange(e)}
-						value={user.classification}>
+						{...register('classification', { required: true })}
+					>
 						<option value=''>Choose...</option>
 						<option value='Freshman'>Freshman</option>
 						<option value='Sophomore'>Sophomore</option>
@@ -206,11 +190,7 @@ export const Payment = () => {
 					<Form.Control
 						type='text'
 						pattern='^[0-9]{7,7}$'
-						placeholder='UHID'
-						required
-						onChange={(e) => handleChange(e)}
-						name='uhID'
-						value={user.uhID}
+						{...register('uhID', { required: true })}
 					/>
 				</Form.Group>
 			</Form.Row>
@@ -220,10 +200,8 @@ export const Payment = () => {
 					<Form.Label>Payment For</Form.Label>
 					<Form.Control
 						as='select'
-						value={user.paidUntil}
-						required
-						onChange={(e) => handleChange(e)}
-						name='paidUntil'>
+						{...register('paidUntil', { required: true })}
+					>
 						<option value=''>Choose...</option>
 						<option value='semester'>Semester ($10)</option>
 						<option value='year'>Year ($18)</option>
@@ -235,18 +213,20 @@ export const Payment = () => {
 				<Form.Group
 					as={Col}
 					className='stripe-container'
-					controlId='stripPayment'>
+					controlId='stripPayment'
+				>
 					<CardElement options={cardOptions} />
 				</Form.Group>
 			</Form.Row>
 
 			<Button
-				disabled={loading}
+				disabled={isSubmitting}
 				variant='primary'
 				type='submit'
 				size='lg'
 				block
-				className='mt-4 mb-4'>
+				className='mt-4 mb-4'
+			>
 				{buttonText}
 			</Button>
 		</Form>
