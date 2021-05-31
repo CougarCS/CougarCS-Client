@@ -203,8 +203,8 @@ export const Payment = () => {
 						{...register('paidUntil', { required: true })}
 					>
 						<option value=''>Choose...</option>
-						<option value='semester'>Semester ($10)</option>
-						<option value='year'>Year ($18)</option>
+						<option value='semester'>Semester ($25)</option>
+						<option value='year'>Year ($40)</option>
 					</Form.Control>
 				</Form.Group>
 			</Form.Row>
