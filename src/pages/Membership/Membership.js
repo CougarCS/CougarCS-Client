@@ -41,8 +41,8 @@ const Membership = () => {
 								</p>
 								<p>
 									Memberships are priced at{' '}
-									<strong>$18.00 for a full year </strong> or{' '}
-									<strong>$10.00 a semester</strong>. If you are interested in
+									<strong>$40.00 for a full year </strong> or{' '}
+									<strong>$25.00 a semester</strong>. If you are interested in
 									becoming a member there are a few ways you can let us know.
 									Request to become a member on the get involved page and our
 									Treasurer,{' '}
