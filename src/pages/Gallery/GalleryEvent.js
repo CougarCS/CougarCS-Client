@@ -2,11 +2,11 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { LightgalleryProvider, LightgalleryItem } from 'react-lightgallery';
 import { Redirect, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import './GalleryEvent.css';
 import 'lightgallery.js/dist/css/lightgallery.css';
 
 import events from '../../data/gallery';
+import { MetaData } from '../../components/Meta/MetaData';
 
 const GalleryEvent = ({ match }) => {
 	let currentEvent = {};
@@ -20,11 +20,15 @@ const GalleryEvent = ({ match }) => {
 	if (Object.keys(currentEvent).length === 0) {
 		return <Redirect from='*' to='/404' />;
 	} else {
+		const meta = {
+			title: currentEvent.name,
+			desc: `${currentEvent.name} event pictures`,
+			url: `https://cougarcs.com/${currentEvent.link}`,
+			img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+		};
 		return (
 			<>
-				<Helmet>
-					<title>{currentEvent.name}</title>
-				</Helmet>
+				<MetaData {...meta} />
 				<Container fluid className='contained gallery-event'>
 					<Link to='/gallery' className='event-back'>
 						<i className='fas fa-chevron-left'></i> Back

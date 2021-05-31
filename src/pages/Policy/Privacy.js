@@ -1,13 +1,18 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
+import { MetaData } from '../../components/Meta/MetaData';
 
 const Privacy = () => {
+	const meta = {
+		title: 'Privacy Policy',
+		desc: 'CougarCS privacy policy.',
+		url: 'https://cougarcs.com/privacy-policy/',
+		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+	};
+
 	return (
 		<Container>
-			<Helmet>
-				<title>Privacy Policy</title>
-			</Helmet>
+			<MetaData {...meta} />
 			<h1>Privacy Policy</h1>
 			<p>
 				CougarCS is committed to respecting the privacy of our website visitors

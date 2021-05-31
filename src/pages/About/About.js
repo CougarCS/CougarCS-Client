@@ -3,20 +3,25 @@ import { Col, Container, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
 import Officer from '../../components/Officers/Officer';
 import officers from '../../data/officers';
-import { Helmet } from 'react-helmet';
 import './About.css';
 
 import chevronLogo from '../../assets/partner-logos/chevron.png';
 import uhspeLogo from '../../assets/partner-logos/uhspe.png';
 import ripplematchLogo from '../../assets/partner-logos/ripplematch.svg';
 import promazoLogo from '../../assets/partner-logos/promazo.jpg';
+import { MetaData } from '../../components/Meta/MetaData';
+
+const meta = {
+	title: 'About',
+	desc: 'Learn more about CougarCS',
+	url: 'https://cougarcs.com/about',
+	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+};
 
 const About = () => {
 	return (
 		<>
-			<Helmet>
-				<title>About</title>
-			</Helmet>
+			<MetaData {...meta} />
 			<Container fluid className='contained hero hero-about'>
 				<Row>
 					<Col md='6' className='order-md-2'>

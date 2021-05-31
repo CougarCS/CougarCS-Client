@@ -7,8 +7,8 @@ import './Event.css';
 import { Modal, Button, Dropdown } from 'react-bootstrap';
 import { sanitize } from 'dompurify';
 import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
-import { Helmet } from 'react-helmet';
 import { useQuery, useQueryClient } from 'react-query';
+import { MetaData } from '../../components/Meta/MetaData';
 
 const localizer = momentLocalizer(moment);
 
@@ -60,11 +60,16 @@ const Events = () => {
 		description: '',
 	});
 
+	const meta = {
+		title: 'Calendar',
+		desc: 'Checkout our events.',
+		url: 'https://cougarcs.com/calendar',
+		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+	};
+
 	return (
 		<>
-			<Helmet>
-				<title>Calendar</title>
-			</Helmet>
+			<MetaData {...meta} />
 			{isFetching ? (
 				<div className='load'>
 					<Loading className='loader' />
