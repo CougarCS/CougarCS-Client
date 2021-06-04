@@ -43,7 +43,7 @@ const About = () => {
 				</Row>
 			</Container>
 
-			<Container fluid className='contained team-wrapper'>
+			<Container fluid className='contained sub-section'>
 				<h2 className='heading'>Meet the Officers</h2>
 				<div className='officers-grid'>
 					{officers.map((officer) =>
@@ -52,7 +52,7 @@ const About = () => {
 				</div>
 			</Container>
 
-			<Container fluid className='contained partners-wrapper'>
+			<Container fluid className='contained partners-wrapper sub-section'>
 				<Row>
 					<Col md='6'>
 						<h2 className='heading'>Official Sponsors</h2>

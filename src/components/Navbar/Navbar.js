@@ -26,6 +26,9 @@ const NavBar = ({ themeToggler }) => (
 				<LinkContainer to='/gallery'>
 					<Nav.Link>Gallery</Nav.Link>
 				</LinkContainer>
+				<LinkContainer to='/tutoring'>
+					<Nav.Link>Tutoring</Nav.Link>
+				</LinkContainer>
 				<LinkContainer to='/membership'>
 					<Nav.Link>Membership</Nav.Link>
 				</LinkContainer>
