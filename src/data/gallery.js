@@ -17,7 +17,7 @@ import OrientationMeeting2 from '../assets/gallery/OrientationMeeting2.jpg';
 import OrientationMeeting3 from '../assets/gallery/OrientationMeeting3.jpg';
 import Schlumberger1 from '../assets/gallery/Schlumberger1.jpg';
 
-const events = [
+const gallery = [
 	{
 		id: 0,
 		show: true,
@@ -106,4 +106,4 @@ const events = [
 	},
 ];
 
-export default events;
+export default gallery;
