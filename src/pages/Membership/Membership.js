@@ -1,19 +1,24 @@
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
 import analyticsSVG from '../../assets/analytics.svg';
 import collectingSVG from '../../assets/collecting.svg';
 import gif from '../../assets/member.svg';
 import memorySVG from '../../assets/memory.svg';
 import teachingSVG from '../../assets/teaching.svg';
+import { MetaData } from '../../components/Meta/MetaData';
 import './Membership.css';
 
 const Membership = () => {
+	const meta = {
+		title: 'Membership',
+		desc: 'Learn more about our membership.',
+		url: 'https://cougarcs.com/membership',
+		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+	};
+
 	return (
 		<div>
-			<Helmet>
-				<title>Membership</title>
-			</Helmet>
+			<MetaData {...meta} />
 			<Container fluid className='contained hero hero-membership'>
 				<Row>
 					<Col md='6' className='order-md-2'>
@@ -41,8 +46,8 @@ const Membership = () => {
 								</p>
 								<p>
 									Memberships are priced at{' '}
-									<strong>$18.00 for a full year </strong> or{' '}
-									<strong>$10.00 a semester</strong>. If you are interested in
+									<strong>$40.00 for a full year </strong> or{' '}
+									<strong>$25.00 a semester</strong>. If you are interested in
 									becoming a member there are a few ways you can let us know.
 									Request to become a member on the get involved page and our
 									Treasurer,{' '}
