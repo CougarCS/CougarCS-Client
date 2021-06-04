@@ -1,6 +1,4 @@
 import Dr_Yun from '../assets/officers/Dr_Yun.jpg';
-
-
 import Nykolas from '../assets/officers/Nykolas.jpg';
 import Shubh from '../assets/officers/Shubh.jpg';
 import Zuha from '../assets/officers/Zuha.jpg';
@@ -10,7 +8,6 @@ import Christian from '../assets/officers/Christian.jpg';
 import Erick from '../assets/officers/Erick.jpg';
 import Armando from '../assets/officers/Armando.jpg';
 import Matthew from '../assets/officers/Matthew.jpg';
-
 
 const officers = [
 	{
