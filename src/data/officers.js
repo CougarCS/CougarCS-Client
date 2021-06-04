@@ -1,13 +1,13 @@
 import Dr_Yun from '../assets/officers/Dr_Yun.jpg';
-import Nykolas from '../assets/officers/Nykolas.jpg';
-import Shubh from '../assets/officers/Shubh.jpg';
+import Nykolas from '../assets/officers/NykolasF.jpg';
+import Shubh from '../assets/officers/ShubhS.jpg';
 import Zuha from '../assets/officers/Zuha.jpg';
-import Kevin from '../assets/officers/Kevin.jpg';
+import Kevin from '../assets/officers/KevinF.jpg';
 import Ahmed from '../assets/officers/Ahmed.jpg';
-import Christian from '../assets/officers/Christian.jpg';
-import Erick from '../assets/officers/Erick.jpg';
-import Armando from '../assets/officers/Armando.jpg';
-import Matthew from '../assets/officers/Matthew.jpg';
+import Christian from '../assets/officers/ChristianA.jpg';
+import Erick from '../assets/officers/ErickP.jpg';
+import Armando from '../assets/officers/ArmandoM.jpg';
+import Matthew from '../assets/officers/MatthewP.jpg';
 
 const officers = [
 	{
