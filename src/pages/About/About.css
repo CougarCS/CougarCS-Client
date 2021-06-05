@@ -11,18 +11,11 @@
 
 .hero-about h1 {
 	text-align: left;
-	font-size: 50px;
-	font-weight: 600;
-	margin-bottom: 2rem;
+
 }
 
 .hero-about .row {
 	align-items: center;
-}
-
-
-.team-wrapper {
-	margin-bottom: 150px;
 }
 
 .officers-grid {
@@ -31,12 +24,8 @@
 	grid-gap: 30px;
 }
 
-.partners-wrapper {
-	margin-bottom: 100px;
-}
-
 .partners-wrapper div[class^='col-md'] {
-	margin-bottom: 50px;
+	margin-bottom: 70px;
 }
 
 .partner-logos {
@@ -89,15 +78,10 @@
 		width: 100%;
 	}
 
-	.team-wrapper {
-		margin-bottom: 130px;
-	}
-
 	.officers-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.partners-wrapper,
 	.partners-wrapper .col-md-6 {
 		margin-bottom: 50px;
 	}

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import About from './pages/About/About';
+import Tutoring from './pages/Tutoring/Tutoring';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Events from './pages/Events/Events';
 import Home from './pages/Home/Home';
@@ -42,6 +43,7 @@ const App = () => {
 					<Route path='/hackathons/' component={Hackathon}></Route>
 					<Route path='/privacy-policy/' component={Privacy} />
 					<Route path='/gallery/' component={Gallery} exact={true} />
+					<Route path='/tutoring/' component={Tutoring} />
 					<Route
 						path='/gallery/:event'
 						render={(props) => <GalleryEvent {...props} />}
