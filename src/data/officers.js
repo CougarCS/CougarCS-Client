@@ -3,7 +3,7 @@ import Nykolas from '../assets/officers/NykolasF.jpg';
 import Shubh from '../assets/officers/ShubhS.jpg';
 import Zuha from '../assets/officers/Zuha.jpg';
 import Kevin from '../assets/officers/KevinF.jpg';
-import Ahmed from '../assets/officers/Ahmed.jpg';
+import Ahmed from '../assets/officers/AhmedQ.jpg';
 import Christian from '../assets/officers/ChristianA.jpg';
 import Erick from '../assets/officers/ErickP.jpg';
 import Armando from '../assets/officers/ArmandoM.jpg';
