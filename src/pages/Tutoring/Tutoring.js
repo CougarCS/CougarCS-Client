@@ -41,7 +41,7 @@ const Tutoring = () => {
 										target='_blank'
 										rel='nofollow noopener'
 									>
-										<img src={discordIcon} />
+										<img src={discordIcon} alt='discord button logo' />
 										Join Discord
 									</Button>
 									<p>
@@ -78,7 +78,7 @@ const Tutoring = () => {
 					<div>
 						<a
 							href='https://www.linkedin.com/in/aiqbal-cs/'
-							rel='nofollow noopener'
+							rel='nofollow noopener noreferrer'
 							target='_blank'
 						>
 							Adil Iqbal
@@ -91,7 +91,7 @@ const Tutoring = () => {
 					<div>
 						<a
 							href='https://www.linkedin.com/in/aryanparajulee/'
-							rel='nofollow noopener'
+							rel='nofollow noopener noreferrer'
 							target='_blank'
 						>
 							Aryan P.
@@ -107,7 +107,7 @@ const Tutoring = () => {
 					<div>
 						<a
 							href='https://www.linkedin.com/in/loveleen-thomas/'
-							rel='nofollow noopener'
+							rel='nofollow noopener noreferrer'
 							target='_blank'
 						>
 							Loveleen T.
@@ -122,7 +122,7 @@ const Tutoring = () => {
 					<div>
 						<a
 							href='https://www.linkedin.com/in/nhat-thien-bui-480b9b14a/'
-							rel='nofollow noopener'
+							rel='nofollow noopener noreferrer'
 							target='_blank'
 						>
 							Nhat B.
@@ -131,7 +131,7 @@ const Tutoring = () => {
 					<div>
 						<a
 							href='https://www.linkedin.com/in/Nicdb99/'
-							rel='nofollow noopener'
+							rel='nofollow noopener noreferrer'
 							target='_blank'
 						>
 							Nicholas B.
@@ -143,7 +143,7 @@ const Tutoring = () => {
 					<div>
 						<a
 							href='https://www.linkedin.com/in/samir-shahid-05749a161/'
-							rel='nofollow noopener'
+							rel='nofollow noopener noreferrer'
 							target='_blank'
 						>
 							Samir S.
@@ -153,7 +153,7 @@ const Tutoring = () => {
 					<div>
 						<a
 							href='https://www.linkedin.com/in/shaheer-khan-1000061a4/'
-							rel='nofollow noopener'
+							rel='nofollow noopener noreferrer'
 							target='_blank'
 						>
 							Shaheer K.
@@ -162,7 +162,7 @@ const Tutoring = () => {
 					<div>
 						<a
 							href='https://www.linkedin.com/mwlite/in/shannon-lombardo-580190168/'
-							rel='nofollow noopener'
+							rel='nofollow noopener noreferrer'
 							target='_blank'
 						>
 							Shannon L.
