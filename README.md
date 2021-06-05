@@ -2,7 +2,7 @@
 
 CougarCS is the largest student-run Computer Science organization at the University of Houston. At CougarCS, our mission is to smoothly transition our inexperienced members into young professionals by the end of their degree and to provide support and assistance to members who struggle academically or who need career guidance.
 
-This is the official CougarCS Frontend. This project is built with React using create-react-app. Want to get invloved? Get in contact with the CougarCS Webmaster(webmaster@cougarcs.com) to get involved.
+This is the official CougarCS Frontend. This project is built with React using create-react-app. Want to get involved? Get in contact with the CougarCS Webmaster(webmaster@cougarcs.com) to get involved.
 
 <br/>
 <hr/>
@@ -17,6 +17,7 @@ This is the official CougarCS Frontend. This project is built with React using c
 - Payment : [Stripe](https://stripe.com/docs)
 - Request : [Axios](https://github.com/axios/axios)
 - Linting: [ESLint](https://eslint.org/)
+- Testing: [Cypress](https://www.cypress.io/)
 
 # Getting Started
 
@@ -37,9 +38,20 @@ This is the official CougarCS Frontend. This project is built with React using c
   ```
 - ## Linting
   - We use ESLint to fix styling and to enforce rules.
-  - Run `yarn run eslint-check` to check linting issuses in the code.
-  - Run `yarn run eslint-fix` to auto lint the code.
+  - Run `yarn run eslint-check` to check linting issues in the code.
+  - Run `yarn run eslint-fix` to auto-lint the code.
   - ESLint runs on Github Action. ESLint must pass before pushing or during a pull request.
+
+- ## Testing
+  - We use [Cypress](https://www.cypress.io/) to do E2E testing
+  - To run the tests locally:
+      - Start the application locally using ```yarn start```
+      - There are two ways you can run the test:
+          - Running the test in the command line ```yarn test```
+          - Running test using Cypress GUI ```yarn test:ui```
+  - The tests are part of the CI/CD pipeline, if the test fails the CI/CD fails
+  - Learn more about testing using [Cypress](https://docs.cypress.io/guides/overview/why-cypress)
+
 - ## Project Structure
   - Static data is in `src/data/`
   - Images and other assets are in `src/assets/`
