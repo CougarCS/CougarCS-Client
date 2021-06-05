@@ -8,6 +8,9 @@ import Christian from '../assets/officers/ChristianA.jpg';
 import Erick from '../assets/officers/ErickP.jpg';
 import Armando from '../assets/officers/ArmandoM.jpg';
 import Matthew from '../assets/officers/MatthewP.jpg';
+import Ramadharsh from '../assets/officers/RamadharshV.jpg';
+import Shubha from '../assets/officers/ShubhaJ.jpg';
+import Vanessa from '../assets/officers/VanessaS.jpg';
 
 const officers = [
 	{
@@ -52,31 +55,31 @@ const officers = [
 	},
 	{
 		id: 4,
-		name: 'Kevin Flores',
-		image: Kevin,
-		linkedin: 'https://www.linkedin.com/in/flores-kevin/',
-		email: 'webmaster@cougarcs.com',
-		title: 'Webmaster',
+		name: 'Vanessa Zambrano',
+		image: Vanessa,
+		linkedin: 'https://www.linkedin.com/in/vlzambr/',
+		email: 'secretary@cougarcs.com',
+		title: 'Secretary',
 		open: false,
 		show: true,
 	},
 	{
 		id: 5,
-		name: 'Ahmed Qureshi',
-		image: Ahmed,
-		linkedin: 'https://www.linkedin.com/in/aoquresh/',
-		email: 'communications@cougarcs.com',
-		title: 'Director of Communications',
+		name: 'Shubha Joshi',
+		image: Shubha,
+		linkedin: 'https://www.linkedin.com/in/shubha-joshi-03441a194/',
+		email: 'shubha@cougarcs.com',
+		title: 'Director of CodeRED',
 		open: false,
 		show: true,
 	},
 	{
 		id: 6,
-		name: 'Christian Ayala',
-		image: Christian,
-		linkedin: 'https://www.linkedin.com/in/christian-ayala--/',
-		email: 'historian@cougarcs.com',
-		title: 'Historian',
+		name: 'Kevin Flores',
+		image: Kevin,
+		linkedin: 'https://www.linkedin.com/in/flores-kevin/',
+		email: 'webmaster@cougarcs.com',
+		title: 'Webmaster',
 		open: false,
 		show: true,
 	},
@@ -107,6 +110,36 @@ const officers = [
 		linkedin: 'https://www.linkedin.com/in/matthew-philip/',
 		email: 'tutoring@cougarcs.com',
 		title: 'Director of Tutoring',
+		open: false,
+		show: true,
+	},
+	{
+		id: 10,
+		name: 'Ramadharsh Vanchinathan',
+		image: Ramadharsh,
+		linkedin: 'https://www.linkedin.com/in/adharsh-vanchinathan-b2139b1a9/',
+		email: 'operations@cougarcs.com',
+		title: 'Director of Operations',
+		open: false,
+		show: true,
+	},
+	{
+		id: 11,
+		name: 'Christian Ayala',
+		image: Christian,
+		linkedin: 'https://www.linkedin.com/in/christian-ayala--/',
+		email: 'historian@cougarcs.com',
+		title: 'Historian',
+		open: false,
+		show: true,
+	},
+	{
+		id: 12,
+		name: 'Ahmed Qureshi',
+		image: Ahmed,
+		linkedin: 'https://www.linkedin.com/in/aoquresh/',
+		email: 'communications@cougarcs.com',
+		title: 'Director of Communications',
 		open: false,
 		show: true,
 	},
