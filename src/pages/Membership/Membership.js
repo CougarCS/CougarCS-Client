@@ -47,14 +47,14 @@ class Membership extends Component {
 									</p>
 									<p>
 										Memberships are priced at{' '}
-										<strong>$18.00 for a full year </strong> or{' '}
-										<strong>$10.00 a semester</strong>. If you are interested in
+										<strong>$40.00 for a full year </strong> or{' '}
+										<strong>$25.00 a semester</strong>. If you are interested in
 										becoming a member, fill out the registration form below!
 									</p>
 									<p>
 										What's that? You want to get more involved with CougarCS?
 										Interested in joining our Webdev team? Please reach out to
-										Shubh Sheth at{' '}
+										Kevin Flores at{' '}
 										<a href='mailto:webmaster@cougarcs.com'>
 											webmaster@cougarcs.com
 										</a>
