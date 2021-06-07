@@ -19,7 +19,6 @@ const url = 'https://backend.cougarcs.com/api/tutors';
 
 const fetchTutors = async () => {
 	const res = await axios.get(url);
-	console.log('FETCH', res.data.tutors);
 	return res.data.tutors;
 };
 

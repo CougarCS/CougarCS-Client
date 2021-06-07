@@ -90,7 +90,6 @@ export const Payment = () => {
 						setSuccessModal(true);
 					});
 			} catch (e) {
-				console.log(e);
 				resetForm();
 				setErrorModal(true);
 				setButtonText('Submit');
