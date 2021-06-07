@@ -1,10 +1,12 @@
+import axios from 'axios';
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
-import './Tutoring.css';
-
 import headerImage from '../../assets/tutoring.svg';
 import discordIcon from '../../assets/icons/discord-icon.png';
 import { MetaData } from '../../components/Meta/MetaData';
+import { useQuery, useQueryClient } from 'react-query';
+import './Tutoring.css';
+import Loading from '../../components/Loading/Loading';
 
 const meta = {
 	title: 'Tutoring',
@@ -13,7 +15,43 @@ const meta = {
 	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
 };
 
+const url = 'https://backend.cougarcs.com/api/tutors';
+
+const fetchTutors = async () => {
+	const res = await axios.get(url);
+	console.log('FETCH', res.data.tutors);
+	return res.data.tutors;
+};
+
 const Tutoring = () => {
+	const queryClient = useQueryClient();
+	const { data, isFetching } = useQuery('tutors', fetchTutors, {
+		initialData: () => queryClient.getQueryData('tutors'),
+		staleTime: 300000,
+	});
+
+	const displayTutors = () => {
+		return isFetching ? (
+			<Loading />
+		) : (
+			data.map((val, i) =>
+				val?.linkedin ? (
+					<div key={i}>
+						<a
+							href={val.linkedin}
+							rel='nofollow noopener noreferrer'
+							target='_blank'
+						>
+							{val.name}
+						</a>
+					</div>
+				) : (
+					<div key={i}>{val.name}</div>
+				)
+			)
+		);
+	};
+
 	return (
 		<>
 			<MetaData {...meta} />
@@ -74,103 +112,8 @@ const Tutoring = () => {
 
 			<Container fluid className='contained sub-section'>
 				<h2 className='heading'>Tutoring Possible Because of</h2>
-				<div className='tutors-wrapper'>
-					<div>
-						<a
-							href='https://www.linkedin.com/in/aiqbal-cs/'
-							rel='nofollow noopener noreferrer'
-							target='_blank'
-						>
-							Adil Iqbal
-						</a>
-					</div>
-					<div>Abdullah S.</div>
-					<div>Ahmed Qureshi</div>
-					<div>Antonio U.</div>
-					<div>Arno Dunstatter</div>
-					<div>
-						<a
-							href='https://www.linkedin.com/in/aryanparajulee/'
-							rel='nofollow noopener noreferrer'
-							target='_blank'
-						>
-							Aryan P.
-						</a>
-					</div>
-					<div>Ash K.</div>
-					<div>Elena T.</div>
-					<div>Ibrahim K.</div>
-					<div>Jacob H.</div>
-					<div>Jose L.</div>
-					<div>Kevin Flores</div>
-					<div>Liam A.</div>
-					<div>
-						<a
-							href='https://www.linkedin.com/in/loveleen-thomas/'
-							rel='nofollow noopener noreferrer'
-							target='_blank'
-						>
-							Loveleen T.
-						</a>
-					</div>
-					<div>Mariana V.</div>
-					<div>Matt P.</div>
-					<div>Mayssam K.</div>
-					<div>Micaela S.</div>
-					<div>Minh P.</div>
-					<div>Muhammad U.</div>
-					<div>
-						<a
-							href='https://www.linkedin.com/in/nhat-thien-bui-480b9b14a/'
-							rel='nofollow noopener noreferrer'
-							target='_blank'
-						>
-							Nhat B.
-						</a>
-					</div>
-					<div>
-						<a
-							href='https://www.linkedin.com/in/Nicdb99/'
-							rel='nofollow noopener noreferrer'
-							target='_blank'
-						>
-							Nicholas B.
-						</a>
-					</div>
-					<div>Nickolaus H.</div>
-					<div>Ojas G.</div>
-					<div>Osinor I.</div>
-					<div>
-						<a
-							href='https://www.linkedin.com/in/samir-shahid-05749a161/'
-							rel='nofollow noopener noreferrer'
-							target='_blank'
-						>
-							Samir S.
-						</a>
-					</div>
-					<div>Seth L.</div>
-					<div>
-						<a
-							href='https://www.linkedin.com/in/shaheer-khan-1000061a4/'
-							rel='nofollow noopener noreferrer'
-							target='_blank'
-						>
-							Shaheer K.
-						</a>
-					</div>
-					<div>
-						<a
-							href='https://www.linkedin.com/mwlite/in/shannon-lombardo-580190168/'
-							rel='nofollow noopener noreferrer'
-							target='_blank'
-						>
-							Shannon L.
-						</a>
-					</div>
-					<div>Susan A.</div>
-					<div>Tri N.</div>
-					<div>Trixie N.</div>
+				<div className={isFetching ? 'fetching' : 'tutors-wrapper'}>
+					{displayTutors()}
 				</div>
 				<div className='tutor-cta text-center'>
 					<p>Are you interested in tutoring for CougarCS?</p>
