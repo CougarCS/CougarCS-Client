@@ -12,30 +12,24 @@ import { MetaData } from '../../components/Meta/MetaData';
 
 const localizer = momentLocalizer(moment);
 
-const url = 'https://backend.cougarcs.com/api/events';
+const url = `${process.env.REACT_APP_API_URL}/api/events`;
 
-const addEvents = (eventType, events) => {
-	return eventType.map((event) => {
-		return events.push({
-			start: event.start.date,
-			end: event.end.date,
-			title: event.summary,
-			desc: event?.description ? event.description : 'TBD',
-		});
-	});
-};
 const fetchEvents = async () => {
 	const res = await axios.get(url);
-	const events = [];
-	addEvents(res.data.futureEvents, events);
-	addEvents(res.data.pastEvents, events);
-
-	return events;
+	return res.data.events;
 };
 
 const momentDateFromat = (date) => {
 	return moment(date).format('dddd, MMMM Do YYYY, h:mm a');
 };
+
+const meta = {
+	title: 'Calendar',
+	desc: 'Checkout our events.',
+	url: 'https://cougarcs.com/calendar',
+	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+};
+
 const Events = () => {
 	const queryClient = useQueryClient();
 	const { data, isFetching } = useQuery('events', fetchEvents, {
@@ -53,19 +47,13 @@ const Events = () => {
 			description: '',
 		});
 	};
+
 	const [desc, setDesc] = useState({
 		title: '',
 		startDate: '',
 		endDate: '',
 		description: '',
 	});
-
-	const meta = {
-		title: 'Calendar',
-		desc: 'Checkout our events.',
-		url: 'https://cougarcs.com/calendar',
-		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
-	};
 
 	return (
 		<>
@@ -136,4 +124,5 @@ const Events = () => {
 		</>
 	);
 };
+
 export default Events;
