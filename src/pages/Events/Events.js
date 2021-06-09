@@ -1,7 +1,6 @@
 import axios from 'axios';
-import moment from 'moment';
 import React, { useState } from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
+import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import Loading from '../../components/Loading/Loading';
 import './Event.css';
 import { Modal, Button, Dropdown } from 'react-bootstrap';
@@ -9,8 +8,21 @@ import { sanitize } from 'dompurify';
 import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
 import { useQuery, useQueryClient } from 'react-query';
 import { MetaData } from '../../components/Meta/MetaData';
+import { parse, startOfWeek, getDay, parseISO } from 'date-fns';
+import { format, utcToZonedTime } from 'date-fns-tz';
+import local from 'date-fns/locale/en-US';
 
-const localizer = momentLocalizer(moment);
+const locales = {
+	'en-US': local,
+};
+
+const localizer = dateFnsLocalizer({
+	format,
+	parse,
+	startOfWeek,
+	getDay,
+	locales,
+});
 
 const url = `${process.env.REACT_APP_API_URL}/api/events`;
 
@@ -19,8 +31,12 @@ const fetchEvents = async () => {
 	return res.data.events;
 };
 
-const momentDateFromat = (date) => {
-	return moment(date).format('dddd, MMMM Do YYYY, h:mm a');
+const formatDates = (date) => {
+	return format(
+		utcToZonedTime(parseISO(date), 'America/Chicago'),
+		'EEEE, MMMM do yyyy, h:mm a zzz',
+		{ timeZone: 'America/Chicago' }
+	);
 };
 
 const meta = {
@@ -95,8 +111,8 @@ const Events = () => {
 					<Modal.Title>{desc.title}</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					Date: {momentDateFromat(desc.startDate)} -{' '}
-					{momentDateFromat(desc.endDate)}
+					From: {desc.startDate ? formatDates(desc.startDate) : ''} <br /> To:{' '}
+					{desc.endDate ? formatDates(desc.endDate) : ''}
 					<br />
 					<hr />
 					Description:{' '}
