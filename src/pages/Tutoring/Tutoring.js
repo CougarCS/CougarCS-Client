@@ -15,7 +15,7 @@ const meta = {
 	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
 };
 
-const url = 'https://backend.cougarcs.com/api/tutors';
+const url = `${process.env.REACT_APP_API_URL}/api/tutors`;
 
 const fetchTutors = async () => {
 	const res = await axios.get(url);
