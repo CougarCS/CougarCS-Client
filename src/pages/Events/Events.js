@@ -1,7 +1,6 @@
 import axios from 'axios';
-import moment from 'moment';
 import React, { useState } from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
+import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import Loading from '../../components/Loading/Loading';
 import './Event.css';
 import { Modal, Button, Dropdown } from 'react-bootstrap';
@@ -9,33 +8,44 @@ import { sanitize } from 'dompurify';
 import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
 import { useQuery, useQueryClient } from 'react-query';
 import { MetaData } from '../../components/Meta/MetaData';
+import { parse, startOfWeek, getDay, parseISO } from 'date-fns';
+import { format, utcToZonedTime } from 'date-fns-tz';
+import local from 'date-fns/locale/en-US';
 
-const localizer = momentLocalizer(moment);
-
-const url = 'https://backend.cougarcs.com/api/events';
-
-const addEvents = (eventType, events) => {
-	return eventType.map((event) => {
-		return events.push({
-			start: event.start.date,
-			end: event.end.date,
-			title: event.summary,
-			desc: event?.description ? event.description : 'TBD',
-		});
-	});
+const locales = {
+	'en-US': local,
 };
+
+const localizer = dateFnsLocalizer({
+	format,
+	parse,
+	startOfWeek,
+	getDay,
+	locales,
+});
+
+const url = `${process.env.REACT_APP_API_URL}/api/events`;
+
 const fetchEvents = async () => {
 	const res = await axios.get(url);
-	const events = [];
-	addEvents(res.data.futureEvents, events);
-	addEvents(res.data.pastEvents, events);
-
-	return events;
+	return res.data.events;
 };
 
-const momentDateFromat = (date) => {
-	return moment(date).format('dddd, MMMM Do YYYY, h:mm a');
+const formatDates = (date) => {
+	return format(
+		utcToZonedTime(parseISO(date), 'America/Chicago'),
+		'EEEE, MMMM do yyyy, h:mm a zzz',
+		{ timeZone: 'America/Chicago' }
+	);
 };
+
+const meta = {
+	title: 'Calendar',
+	desc: 'Checkout our events.',
+	url: 'https://cougarcs.com/calendar',
+	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+};
+
 const Events = () => {
 	const queryClient = useQueryClient();
 	const { data, isFetching } = useQuery('events', fetchEvents, {
@@ -53,19 +63,13 @@ const Events = () => {
 			description: '',
 		});
 	};
+
 	const [desc, setDesc] = useState({
 		title: '',
 		startDate: '',
 		endDate: '',
 		description: '',
 	});
-
-	const meta = {
-		title: 'Calendar',
-		desc: 'Checkout our events.',
-		url: 'https://cougarcs.com/calendar',
-		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
-	};
 
 	return (
 		<>
@@ -107,8 +111,8 @@ const Events = () => {
 					<Modal.Title>{desc.title}</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-					Date: {momentDateFromat(desc.startDate)} -{' '}
-					{momentDateFromat(desc.endDate)}
+					From: {desc.startDate ? formatDates(desc.startDate) : ''} <br /> To:{' '}
+					{desc.endDate ? formatDates(desc.endDate) : ''}
 					<br />
 					<hr />
 					Description:{' '}
@@ -136,4 +140,5 @@ const Events = () => {
 		</>
 	);
 };
+
 export default Events;
