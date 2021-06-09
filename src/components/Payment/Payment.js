@@ -79,7 +79,7 @@ export const Payment = () => {
 
 			try {
 				await axios
-					.post('https://backend.cougarcs.com/api/payment', {
+					.post(`${process.env.REACT_APP_API_URL}/api/payment`, {
 						token: id,
 						user,
 						recaptchaToken,
@@ -90,7 +90,6 @@ export const Payment = () => {
 						setSuccessModal(true);
 					});
 			} catch (e) {
-				console.log(e);
 				resetForm();
 				setErrorModal(true);
 				setButtonText('Submit');

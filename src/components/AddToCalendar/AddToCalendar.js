@@ -1,18 +1,17 @@
 import React from 'react';
 import { Dropdown } from 'react-bootstrap';
-import moment from 'moment';
 import { google, outlook, ics } from 'calendar-link';
 
 const AddToCalendar = ({ event }) => {
 	const { startDate, endDate } = event;
 
-	return (
+	return startDate !== '' && endDate !== '' ? (
 		<Dropdown.Menu>
 			<Dropdown.Item
 				href={google({
 					...event,
-					start: moment(startDate).toISOString(),
-					end: moment(endDate).toISOString(),
+					start: startDate.toISOString(),
+					end: endDate.toISOString(),
 				})}
 				target='_blank'
 				rel='noopener nofollow'
@@ -22,8 +21,8 @@ const AddToCalendar = ({ event }) => {
 			<Dropdown.Item
 				href={outlook({
 					...event,
-					start: moment(startDate).format(),
-					end: moment(endDate).format(),
+					start: startDate.toISOString(),
+					end: endDate.toISOString(),
 				}).replace('&rru=addevent', '')}
 				target='_blank'
 				rel='noopener nofollow'
@@ -33,14 +32,14 @@ const AddToCalendar = ({ event }) => {
 			<Dropdown.Item
 				href={ics({
 					...event,
-					start: moment(startDate).format(),
-					end: moment(endDate).format(),
+					start: startDate.toISOString(),
+					end: endDate.toISOString(),
 				})}
 			>
 				Others
 			</Dropdown.Item>
 		</Dropdown.Menu>
-	);
+	) : null;
 };
 
 export default AddToCalendar;

@@ -1,31 +1,56 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
-import './Tutoring.css';
-
 import headerImage from '../../assets/tutoring.svg';
 import discordIcon from '../../assets/icons/discord-icon.png';
 import { MetaData } from '../../components/Meta/MetaData';
+import { useQuery, useQueryClient } from 'react-query';
+import './Tutoring.css';
+import Loading from '../../components/Loading/Loading';
+
+const meta = {
+	title: 'Tutoring',
+	desc: 'Learn more about CougarCS Tutoring',
+	url: 'https://cougarcs.com/tutoring',
+	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+};
+
+const url = `${process.env.REACT_APP_API_URL}/api/tutors`;
+
+const fetchTutors = async () => {
+	const res = await axios.get(url);
+	return res.data.tutors;
+};
 
 const Tutoring = () => {
-	const meta = {
-		title: 'Tutoring',
-		desc: 'Learn more about CougarCS Tutoring',
-		url: 'https://cougarcs.com/tutoring',
-		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+	const queryClient = useQueryClient();
+	const { data, isFetching } = useQuery('tutors', fetchTutors, {
+		initialData: () => queryClient.getQueryData('tutors'),
+		staleTime: 300000,
+	});
+
+	const displayTutors = () => {
+		return isFetching ? (
+			<Loading />
+		) : (
+			data.map((val, i) =>
+				val?.linkedin ? (
+					<div key={i}>
+						<a
+							href={val.linkedin}
+							rel='nofollow noopener noreferrer'
+							target='_blank'
+						>
+							{val.name}
+						</a>
+					</div>
+				) : (
+					<div key={i}>{val.name}</div>
+				)
+			)
+		);
 	};
 
-	const url = 'https://backend.cougarcs.com/api/tutors';
-	const fetchTutors = async () => {
-		const res = await axios.get(url);
-		setTutors(res.data.tutors);
-	};
-
-	const [tutors, setTutors] = useState([]);
-
-	useEffect(() => {
-		fetchTutors();
-	}, []);
 	return (
 		<>
 			<MetaData {...meta} />
@@ -86,24 +111,8 @@ const Tutoring = () => {
 
 			<Container fluid className='contained sub-section'>
 				<h2 className='heading'>Tutoring Possible Because of</h2>
-				<div className='tutors-wrapper'>
-					{tutors.map((val, i) => {
-						if (val?.linkedin) {
-							return (
-								<div key={i}>
-									<a
-										href={val.linkedin}
-										rel='nofollow noopener noreferrer'
-										target='_blank'
-									>
-										{val.name}
-									</a>
-								</div>
-							);
-						} else {
-							return <div key={i}>{val.name}</div>;
-						}
-					})}
+				<div className={isFetching ? 'fetching' : 'tutors-wrapper'}>
+					{displayTutors()}
 				</div>
 				<div className='tutor-cta text-center'>
 					<p>Are you interested in tutoring for CougarCS?</p>
