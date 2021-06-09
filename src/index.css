@@ -4,8 +4,8 @@
 	--color-card-background: #f5f5f5;
 	--color-primary: #ce1313;
 	--color-on-primary: #fff;
-	--color-secondary: #03dac6;
-	--color-on-secondary: #000;
+	--color-secondary: #fee7e7;
+	--color-on-secondary: #484848;
 	--color-error: #b00020;
 	--color-on-error: #fff;
 	--color-on-hover: rgb(152, 112, 122);
@@ -18,8 +18,8 @@ body[data-theme='dark'] {
 	--color-on-background: #fff;
 	--color-primary: #bb86fc;
 	--color-on-primary: #000;
-	--color-secondary: #03dac6;
-	--color-on-secondary: #000;
+	--color-secondary: #fee7e7;
+	--color-on-secondary: #484848;
 	--color-error: #cf6679;
 	--color-on-error: #000;
 	--on-active-color: #7694ec;
@@ -76,6 +76,7 @@ input {
 	padding: 0.25rem;
 }
 
+/** Container **/
 .contactForm .container {
 	background: var(--color-background);
 }
@@ -101,6 +102,7 @@ input {
 	}
 }
 
+/** Hero **/
 .hero {
 	padding-top: 100px;
 	padding-bottom: 250px;
@@ -113,7 +115,8 @@ input {
 .hero h1 {
 	color: #000;
 	font-size: 50px;
-	font-weight: 600;
+	font-weight: 600;	
+	margin-bottom: 3rem;
 }
 
 .hero .lead-text {
@@ -121,8 +124,40 @@ input {
 	line-height: 1.8;
 }
 
+.hero .lead-text:not(:last-child) {
+	margin-bottom: 55px;
+}
+
+.hero .hero-ctas {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 30px;
+}	
+
 @media (max-width: 767px) {
 	.hero {
+		padding-top: 50px;
 		padding-bottom: 100px;
+	}
+
+	.hero .hero-ctas {
+		flex-direction: column-reverse;
+		gap: 30px;
+	}
+}
+
+/** Sub Section **/
+.sub-section {
+	margin-bottom: 150px;
+}
+
+.sub-section h2 {
+	margin-bottom: 4rem;
+}
+
+@media (max-width: 767px) {
+	.sub-section {
+		margin-bottom: 130px;
 	}
 }

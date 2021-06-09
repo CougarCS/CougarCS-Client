@@ -41,7 +41,7 @@ const ContactForm = () => {
 	};
 
 	const onSubmit = async (data) => {
-		await axios.post('https://backend.cougarcs.com/api/send', data);
+		await axios.post(`${process.env.REACT_APP_API_URL}/api/send`, data);
 		setSuccessModal(true);
 		formReset();
 	};
