@@ -46,13 +46,6 @@ const meta = {
 	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
 };
 
-const meta = {
-	title: 'Calendar',
-	desc: 'Checkout our events.',
-	url: 'https://cougarcs.com/calendar',
-	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
-};
-
 const Events = () => {
 	const queryClient = useQueryClient();
 	const { data, isFetching } = useQuery('events', fetchEvents, {
