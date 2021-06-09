@@ -14,7 +14,7 @@
     "dompurify": "^2.2.8",
     "react": "^17.0.2",
     "react-add-to-calendar": "^0.1.5",
-    "react-big-calendar": "^0.33.2",
+    "react-big-calendar": "^0.33.3",
     "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.0",
