@@ -28,12 +28,17 @@ const url = `${process.env.REACT_APP_API_URL}/api/events`;
 
 const fetchEvents = async () => {
 	const res = await axios.get(url);
-	return res.data.events;
+	const data = res.data.events;
+	return data.map((event) => ({
+		...event,
+		start: parseISO(event.start),
+		end: parseISO(event.end),
+	}));
 };
 
 const formatDates = (date) => {
 	return format(
-		utcToZonedTime(parseISO(date), 'America/Chicago'),
+		utcToZonedTime(date, 'America/Chicago'),
 		'EEEE, MMMM do yyyy, h:mm a zzz',
 		{ timeZone: 'America/Chicago' }
 	);
