@@ -51,7 +51,7 @@ const Membership = () => {
 									becoming a member there are a few ways you can let us know.
 									Request to become a member on the get involved page and our
 									Treasurer,{' '}
-									{<a href='mailto:treasurer@cougarcs.com'>Zuha Beyabani</a>},
+									{<a href='mailto:treasurer@cougarcs.com'>Syeda Zuha Beyabani</a>},
 									will be in contact with you shortly. You can also
 									{/* find an
 										Officer on the 5th floor of PGH (Philip Guthrie Hoffman Hall)
