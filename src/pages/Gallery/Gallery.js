@@ -1,10 +1,9 @@
 import React from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Container, Card } from 'react-bootstrap';
-
-import './Gallery.css';
 import events from '../../data/gallery';
 import { MetaData } from '../../components/Meta/MetaData';
+import './Gallery.css';
 
 const meta = {
 	title: 'Gallery',

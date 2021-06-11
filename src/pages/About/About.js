@@ -2,10 +2,10 @@ import React, { lazy, Suspense } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
 import officers from '../../data/officers';
-import chevronLogo from '../../assets/partner-logos/chevron.png';
-import uhspeLogo from '../../assets/partner-logos/uhspe.png';
+import chevronLogo from '../../assets/partner-logos/chevron.webp';
+import uhspeLogo from '../../assets/partner-logos/uhspe.webp';
 import ripplematchLogo from '../../assets/partner-logos/ripplematch.svg';
-import promazoLogo from '../../assets/partner-logos/promazo.jpg';
+import promazoLogo from '../../assets/partner-logos/promazo.webp';
 import { MetaData } from '../../components/Meta/MetaData';
 
 import './About.css';
