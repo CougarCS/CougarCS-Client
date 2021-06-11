@@ -24,7 +24,7 @@ const Gallery = () => {
 					{events.map((event) =>
 						event.show ? (
 							<Card className='gallery-card' key={event.id}>
-								<Card.Img src={event.image} />
+								<Card.Img src={event.image} alt={event.name} />
 								<Card.Body>
 									<Card.Title>{event.name}</Card.Title>
 									<LinkContainer
