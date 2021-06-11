@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import FourOFour from './components/404/FourOFour';
 import Loading from './components/Loading/Loading';
-import './App.css';
 
 const NavBar = lazy(() => import('./components/Navbar/Navbar'));
 const Footer = lazy(() => import('./components/Footer/Footer'));
@@ -36,7 +35,7 @@ const App = () => {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<Router>
-				<Suspense fallback={<Loading className='pageLoad' />}>
+				<Suspense fallback={<Loading />}>
 					<ScrollTop />
 					<NavBar />
 					<Switch>
