@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
-import Officer from '../../components/Officers/Officer';
 import officers from '../../data/officers';
-import './About.css';
-
 import chevronLogo from '../../assets/partner-logos/chevron.png';
 import uhspeLogo from '../../assets/partner-logos/uhspe.png';
 import ripplematchLogo from '../../assets/partner-logos/ripplematch.svg';
 import promazoLogo from '../../assets/partner-logos/promazo.jpg';
 import { MetaData } from '../../components/Meta/MetaData';
+
+import './About.css';
+import Loading from '../../components/Loading/Loading';
+const Officer = lazy(() => import('../../components/Officers/Officer'));
 
 const meta = {
 	title: 'About',
@@ -43,15 +44,18 @@ const About = () => {
 				</Row>
 			</Container>
 
-			<Container fluid className='contained sub-section'>
-				<h2 className='heading'>Meet the Officers</h2>
-				<div className='officers-grid'>
-					{officers.map((officer) =>
-						officer.show ? <Officer officer={officer} key={officer.id} /> : null
-					)}
-				</div>
-			</Container>
-
+			<Suspense fallback={<Loading />}>
+				<Container fluid className='contained sub-section'>
+					<h2 className='heading'>Meet the Officers</h2>
+					<div className='officers-grid'>
+						{officers.map((officer) =>
+							officer.show ? (
+								<Officer officer={officer} key={officer.id} />
+							) : null
+						)}
+					</div>
+				</Container>
+			</Suspense>
 			<Container fluid className='contained partners-wrapper sub-section'>
 				<Row>
 					<Col md='6'>

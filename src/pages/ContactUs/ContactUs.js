@@ -1,6 +1,10 @@
-import React from 'react';
-import ContactForm from '../../components/ContactForm/ContactForm';
+import React, { lazy, Suspense } from 'react';
+import Loading from '../../components/Loading/Loading';
 import { MetaData } from '../../components/Meta/MetaData';
+
+const ContactForm = lazy(() =>
+	import('../../components/ContactForm/ContactForm')
+);
 
 const meta = {
 	title: 'Contact Us',
@@ -13,7 +17,9 @@ const ContactUs = () => {
 	return (
 		<div>
 			<MetaData {...meta} />
-			<ContactForm></ContactForm>
+			<Suspense fallback={<Loading />}>
+				<ContactForm />
+			</Suspense>
 		</div>
 	);
 };
