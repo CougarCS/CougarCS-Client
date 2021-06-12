@@ -1,47 +1,60 @@
 .hackathonLogos .embed-responsive .card-img-top {
-    object-fit: cover;
+	object-fit: cover;
 }
 
-.hackathonLogos .btn-danger{
-    font-weight: 600;
-    border-radius: .45rem;
-    margin-bottom: 2.5rem;
+.hackathonLogos .btn-danger {
+	font-weight: 600;
+	border-radius: 0.45rem;
+	margin-bottom: 2.5rem;
 }
 
 .hackathonLogos .btn-danger:hover {
-    background-color: #BC2231;
-    transition: all 0.3s ease 0s;
-    border-color: #bc2231;
+	background-color: #bc2231;
+	transition: all 0.3s ease 0s;
+	border-color: #bc2231;
 }
 
 .hackathonLogos .card {
-    border: none;
-    border-radius: 8px;
-    overflow: hidden;
-    /* border-radius: .5rem; */
+	border: none;
+	border-radius: 8px;
+	overflow: hidden;
+	/* border-radius: .5rem; */
 }
 
-.hackathonLogos .card-body{
-    background-color: var(--color-card-background);
-    padding-bottom: 2.5rem;
+.hackathonLogos .card-body {
+	background-color: var(--color-card-background);
+	padding-bottom: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 .hackathonLogos .dates {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    font-size: .8em;
-    font-weight: 600;
-    position: absolute;
-    bottom: 1.25rem;
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.8em;
+	font-weight: 600;
+	position: absolute;
+	bottom: 1.25rem;
 }
 
 .hackathonLogos .card-text {
-    margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 .hackathonLogos .card-title {
-    font-size: 20px;
-    margin-bottom: 1rem;
-    font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 1rem;
+	font-weight: bold;
+}
+
+.hackathonLogos .applyBtn {
+	width: 100%;
+	padding-bottom: 0.5em;
+}
+
+.hackathonLogos .applyBtn a {
+	background-color: #bc2231 !important;
+	width: 100%;
 }

@@ -2,8 +2,8 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { LightgalleryProvider, LightgalleryItem } from 'react-lightgallery';
 import { Redirect, Link } from 'react-router-dom';
-import './GalleryEvent.css';
 import 'lightgallery.js/dist/css/lightgallery.css';
+import './GalleryEvent.css';
 
 import events from '../../data/gallery';
 import { MetaData } from '../../components/Meta/MetaData';

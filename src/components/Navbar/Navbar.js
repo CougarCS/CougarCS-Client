@@ -38,7 +38,7 @@ const NavBar = ({ themeToggler }) => (
 				<LinkContainer to='/contactus'>
 					<Nav.Link>Contact Us</Nav.Link>
 				</LinkContainer>
-				<Nav.Link href='https://uhcode.red/' target='_blank'>
+				<Nav.Link href='https://uhcode.red/' target='_blank' rel='noreferrer'>
 					CodeRED <i className='fas fa-external-link-alt'></i>
 				</Nav.Link>
 				<LinkContainer to='/register'>
