@@ -35,6 +35,7 @@ This is the official CougarCS Frontend. This project is built with React using c
   ```
   REACT_APP_STRIPE_KEY=<STRIPE_TEST_PUBLISHABLE_KEY>
   REACT_APP_RECAPTCHA_SITE_KEY=<KEY_ID>
+  REACT_APP_API_URL=<BACKEND_URL>
   ```
 - ## Linting
   - We use ESLint to fix styling and to enforce rules.
