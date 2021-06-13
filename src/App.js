@@ -40,20 +40,20 @@ const App = () => {
 					<NavBar />
 					<Switch>
 						<Route path='/' exact={true} component={Home} />
-						<Route path='/about/' component={About} />
-						<Route path='/membership/' component={Membership} />
-						<Route path='/calendar/' component={Events} />
-						<Route path='/contactus/' component={ContactUs} />
-						<Route path='/register/' component={UserRegister} />
-						<Route path='/hackathons/' component={Hackathon}></Route>
-						<Route path='/privacy-policy/' component={Privacy} />
-						<Route path='/gallery/' component={Gallery} exact={true} />
-						<Route path='/tutoring/' component={Tutoring} />
+						<Route path='/about' component={About} />
+						<Route path='/membership' component={Membership} />
+						<Route path='/calendar' component={Events} />
+						<Route path='/contactus' component={ContactUs} />
+						<Route path='/register' component={UserRegister} />
+						<Route path='/hackathons' component={Hackathon}></Route>
+						<Route path='/privacy-policy' component={Privacy} />
+						<Route path='/gallery' component={Gallery} exact={true} />
+						<Route path='/tutoring' component={Tutoring} />
 						<Route
 							path='/gallery/:event'
 							render={(props) => <GalleryEvent {...props} />}
 						/>
-						<Route path='/404/' component={NotFound} />
+						<Route path='/404' component={NotFound} />
 						<Route component={FourOFour} />
 					</Switch>
 					<Footer />
