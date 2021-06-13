@@ -2,11 +2,11 @@ import axios from 'axios';
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
 import headerImage from '../../assets/tutoring.svg';
-import discordIcon from '../../assets/icons/discord-icon.png';
+import discordIcon from '../../assets/icons/discord-icon.webp';
 import { MetaData } from '../../components/Meta/MetaData';
 import { useQuery, useQueryClient } from 'react-query';
-import './Tutoring.css';
 import Loading from '../../components/Loading/Loading';
+import './Tutoring.css';
 
 const meta = {
 	title: 'Tutoring',

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import './Hackathons.css';
 
-const HackathonsList = ({ hackathonlist }) => {
+const HackathonsList = ({ hackathonlist, isPast }) => {
 	return (
 		<Card className='d-flex'>
 			<div className='embed-responsive embed-responsive-16by9'>
@@ -10,6 +10,7 @@ const HackathonsList = ({ hackathonlist }) => {
 					variant='top'
 					className='embed-responsive-item'
 					src={hackathonlist.img}
+					alt={hackathonlist.title}
 				/>
 			</div>
 
@@ -18,9 +19,18 @@ const HackathonsList = ({ hackathonlist }) => {
 
 				<p className='card-text text-secondary'>{hackathonlist.description}</p>
 
-				<Button variant='danger' href={hackathonlist.link} target='_blank'>
-					Apply Here
-				</Button>
+				<div className='applyBtn'>
+					{isPast ? null : (
+						<Button
+							href={hackathonlist.link}
+							target='_blank'
+							size='sm'
+							rel='noreferrer'
+						>
+							Apply Here
+						</Button>
+					)}
+				</div>
 
 				<div className='dates'>
 					<div className='start-end'>

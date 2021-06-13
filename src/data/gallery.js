@@ -1,21 +1,21 @@
-import AIG0 from '../assets/gallery/AIG0.jpg';
-import AIG1 from '../assets/gallery/AIG1.jpg';
-import CareerFairspring from '../assets/gallery/CareerFair Spring.JPG';
-import CareerFairSpring from '../assets/gallery/CareerFairSpring.JPG';
-import Gartner from '../assets/gallery/Gartner.png';
-import HCSS0 from '../assets/gallery/HCSS0.JPG';
-import HCSS2 from '../assets/gallery/HCSS2.JPG';
-import InterviewWS0 from '../assets/gallery/InterviewWS0.jpg';
-import InterviewWS1 from '../assets/gallery/InterviewWS1.jpg';
-import LocalHackDay0 from '../assets/gallery/LocalHackDay0.JPEG';
-import LocalHackDay1 from '../assets/gallery/LocalHackDay1.JPEG';
-import LocalHackDay2 from '../assets/gallery/LocalHackDay2.JPG';
-import LocalHackDay3 from '../assets/gallery/LocalHackDay3.JPG';
-import LocalHackDay4 from '../assets/gallery/LocalHackDay4.jpg';
-import OrientationMeeting1 from '../assets/gallery/OrientationMeeting1.JPG';
-import OrientationMeeting2 from '../assets/gallery/OrientationMeeting2.jpg';
-import OrientationMeeting3 from '../assets/gallery/OrientationMeeting3.jpg';
-import Schlumberger1 from '../assets/gallery/Schlumberger1.jpg';
+import AIG0 from '../assets/gallery/AIG0.webp';
+import AIG1 from '../assets/gallery/AIG1.webp';
+import CareerFairspring from '../assets/gallery/CareerFair Spring.webp';
+import CareerFairSpring from '../assets/gallery/CareerFairSpring.webp';
+import Gartner from '../assets/gallery/Gartner.webp';
+import HCSS0 from '../assets/gallery/HCSS0.webp';
+import HCSS2 from '../assets/gallery/HCSS2.webp';
+import InterviewWS0 from '../assets/gallery/InterviewWS0.webp';
+import InterviewWS1 from '../assets/gallery/InterviewWS1.webp';
+import LocalHackDay0 from '../assets/gallery/LocalHackDay0.webp';
+import LocalHackDay1 from '../assets/gallery/LocalHackDay1.webp';
+import LocalHackDay2 from '../assets/gallery/LocalHackDay2.webp';
+import LocalHackDay3 from '../assets/gallery/LocalHackDay3.webp';
+import LocalHackDay4 from '../assets/gallery/LocalHackDay4.webp';
+import OrientationMeeting1 from '../assets/gallery/OrientationMeeting1.webp';
+import OrientationMeeting2 from '../assets/gallery/OrientationMeeting2.webp';
+import OrientationMeeting3 from '../assets/gallery/OrientationMeeting3.webp';
+import Schlumberger1 from '../assets/gallery/Schlumberger1.webp';
 
 const gallery = [
 	{

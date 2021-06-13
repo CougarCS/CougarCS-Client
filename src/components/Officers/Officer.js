@@ -7,7 +7,7 @@ const Officer = ({ officer }) => {
 	return (
 		<div className='officers'>
 			<div className='picture'>
-				<Image src={officer.image} roundedCircle />
+				<Image src={officer.image} roundedCircle alt={officer.name} />
 			</div>
 			<div className='team-content'>
 				<h5 className='name'>

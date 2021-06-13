@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Typed from 'typed.js';
-import './Home.css';
 import { MetaData } from '../../components/Meta/MetaData';
+import './Home.css';
 
 const animateText = () =>
 	new Typed('#typed', {

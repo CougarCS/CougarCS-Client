@@ -78,7 +78,12 @@ const Events = () => {
 
 	return (
 		<>
-			<MetaData {...meta} />
+			<MetaData {...meta}>
+				<link
+					href='https://cdn.jsdelivr.net/npm/react-big-calendar@0.23.0/lib/css/react-big-calendar.css'
+					rel='stylesheet'
+				/>
+			</MetaData>
 			{isFetching ? (
 				<div className='load'>
 					<Loading className='loader' />

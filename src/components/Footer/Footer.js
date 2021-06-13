@@ -4,11 +4,11 @@ import { Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../../assets/logo.png';
 
-import fb from '../../assets/icons/facebook-f.png';
-import ig from '../../assets/icons/instagram.png';
-import ds from '../../assets/icons/discord.png';
-import li from '../../assets/icons/linkedin.png';
-import yt from '../../assets/icons/youtube.png';
+import fb from '../../assets/icons/facebook-f.webp';
+import ig from '../../assets/icons/instagram.webp';
+import ds from '../../assets/icons/discord.webp';
+import li from '../../assets/icons/linkedin.webp';
+import yt from '../../assets/icons/youtube.webp';
 
 const Footer = () => {
 	return (
