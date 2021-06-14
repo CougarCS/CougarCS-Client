@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Card } from 'react-bootstrap';
-
-import './Gallery.css';
 import events from '../../data/gallery';
 import { MetaData } from '../../components/Meta/MetaData';
+import './Gallery.css';
 
 const meta = {
 	title: 'Gallery',
@@ -17,7 +16,6 @@ const Gallery = () => {
 	return (
 		<>
 			<MetaData {...meta} />
-			{/* <Link /> */}
 			<Container fluid className='contained hero hero-gallery hero-small'>
 				<h1>Events Gallery</h1>
 			</Container>
