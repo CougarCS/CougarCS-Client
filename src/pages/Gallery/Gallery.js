@@ -1,9 +1,10 @@
 import React from 'react';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 import { Container, Card } from 'react-bootstrap';
+
+import './Gallery.css';
 import events from '../../data/gallery';
 import { MetaData } from '../../components/Meta/MetaData';
-import './Gallery.css';
 
 const meta = {
 	title: 'Gallery',
@@ -16,6 +17,7 @@ const Gallery = () => {
 	return (
 		<>
 			<MetaData {...meta} />
+			{/* <Link /> */}
 			<Container fluid className='contained hero hero-gallery hero-small'>
 				<h1>Events Gallery</h1>
 			</Container>
@@ -24,15 +26,12 @@ const Gallery = () => {
 					{events.map((event) =>
 						event.show ? (
 							<Card className='gallery-card' key={event.id}>
-								<Card.Img src={event.image} alt={event.name} />
+								<Card.Img src={event.image} />
 								<Card.Body>
 									<Card.Title>{event.name}</Card.Title>
-									<LinkContainer
-										to={`/gallery/${event.link}`}
-										className='event-link'
-									>
+									<Link to={`/gallery/${event.link}`} className='event-link'>
 										<p id='view-event'>View Event</p>
-									</LinkContainer>
+									</Link>
 								</Card.Body>
 							</Card>
 						) : null
