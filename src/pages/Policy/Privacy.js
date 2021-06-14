@@ -6,7 +6,7 @@ const Privacy = () => {
 	const meta = {
 		title: 'Privacy Policy',
 		desc: 'CougarCS privacy policy.',
-		url: 'https://cougarcs.com/privacy-policy/',
+		url: 'https://cougarcs.com/privacy-policy',
 		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
 	};
 
