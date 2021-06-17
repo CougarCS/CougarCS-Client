@@ -67,7 +67,7 @@ const Footer = () => {
 					</Nav.Item>
 				</Nav>
 				<Nav className='policy-links'>
-					<LinkContainer to='/privacy-policy/'>
+					<LinkContainer to='/privacy-policy'>
 						<Nav.Link>Privacy Policy</Nav.Link>
 					</LinkContainer>
 					<span>|</span>

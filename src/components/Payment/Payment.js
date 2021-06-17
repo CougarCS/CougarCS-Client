@@ -195,7 +195,7 @@ export const Payment = () => {
 			</Form.Row>
 
 			<Form.Row>
-				<Form.Group as={Col} controlId='formGridClassification'>
+				<Form.Group as={Col} controlId='formGridPaymetFor'>
 					<Form.Label>Payment For</Form.Label>
 					<Form.Control
 						as='select'

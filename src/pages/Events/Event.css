@@ -36,8 +36,13 @@
 	background: var(--on-active-color) !important;
 }
 
+.modal-title {
+	width: 100%;
+}
+
 .modal-content {
 	background: var(--color-background);
+	text-align: center;
 }
 
 .close {
