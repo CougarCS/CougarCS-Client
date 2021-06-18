@@ -48,10 +48,9 @@ const About = () => {
 				<Container fluid className='contained sub-section'>
 					<h2 className='heading'>Meet the Officers</h2>
 					<div className='officers-grid'>
-						{officers.map((officer) =>
-							officer.show ? (
-								<Officer officer={officer} key={officer.id} />
-							) : null
+						{officers.map(
+							(officer) =>
+								officer.show && <Officer officer={officer} key={officer.id} />
 						)}
 					</div>
 				</Container>
