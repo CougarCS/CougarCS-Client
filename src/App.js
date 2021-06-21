@@ -26,8 +26,11 @@ const GalleryEvent = lazy(() => import('./pages/Gallery/GalleryEvent'));
 const queryClient = new QueryClient();
 
 function initializeReactGA() {
-	ReactGA.initialize('UA-155177558-1');
-	ReactGA.pageview(window.location.pathname + window.location.search);
+	const snap = navigator.userAgent !== 'ReactSnap';
+	if (snap) {
+		ReactGA.initialize('UA-155177558-1');
+		ReactGA.pageview(window.location.pathname + window.location.search);
+	}
 }
 
 const App = () => {
