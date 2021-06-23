@@ -65,6 +65,7 @@ jobs:
       if: ${{!contains(toJSON(github.event), 'pull_request')}}
       run: CI=false && yarn build
       env:
+        REACT_APP_NODE_ENV: ${{secrets.REACT_APP_NODE_ENV}}
         REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}}
         REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}}
         REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}

@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from 'react';
-import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import FourOFour from './components/404/FourOFour';
 import Loading from './components/Loading/Loading';
+import { initialize } from './utils/reactGA';
 
 const NavBar = lazy(() => import('./components/Navbar/Navbar'));
 const Footer = lazy(() => import('./components/Footer/Footer'));
@@ -25,16 +25,8 @@ const GalleryEvent = lazy(() => import('./pages/Gallery/GalleryEvent'));
 
 const queryClient = new QueryClient();
 
-function initializeReactGA() {
-	const snap = navigator.userAgent !== 'ReactSnap';
-	if (snap) {
-		ReactGA.initialize('UA-155177558-1');
-		ReactGA.pageview(window.location.pathname + window.location.search);
-	}
-}
-
 const App = () => {
-	initializeReactGA();
+	initialize();
 	return (
 		<QueryClientProvider client={queryClient}>
 			<Router>
