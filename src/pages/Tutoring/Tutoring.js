@@ -104,7 +104,6 @@ const Tutoring = () => {
 					<div className='class-number'>COSC 1430</div>
 					<div className='class-number'>COSC 2430</div>
 					<div className='class-number'>COSC 3320</div>
-					<div className='class-number'>COSC 3360</div>
 					<div className='class-number'>COSC 3380</div>
 				</div>
 			</Container>
