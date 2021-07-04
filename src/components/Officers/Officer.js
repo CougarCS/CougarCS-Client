@@ -25,7 +25,7 @@ const Officer = ({ officer }) => {
 				</h5>
 				<h6 className='title'>{officer.title}</h6>
 			</div>
-			{!officer.open ? (
+			{!officer.open && (
 				<ul className='social'>
 					{officer.email.length > 0 && (
 						<li>
@@ -50,7 +50,7 @@ const Officer = ({ officer }) => {
 						</li>
 					)}
 				</ul>
-			) : null}
+			)}
 		</div>
 	);
 };

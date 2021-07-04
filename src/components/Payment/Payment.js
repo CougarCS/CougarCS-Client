@@ -7,6 +7,7 @@ import axios from 'axios';
 import check from '../../assets/check.png';
 import warn from '../../assets/warn.png';
 import { useForm } from 'react-hook-form';
+import { eventListenersGA } from '../../utils/reactGA';
 
 export const Payment = () => {
 	const stripe = useStripe();
@@ -99,6 +100,7 @@ export const Payment = () => {
 			setErrorModal(true);
 			setButtonText('Submit');
 		}
+		eventListenersGA('Sign Up', 'User pressed the big blue sign up button');
 	};
 
 	return (
