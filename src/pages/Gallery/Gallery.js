@@ -21,19 +21,18 @@ const Gallery = () => {
 			</Container>
 			<Container fluid className='contained'>
 				<div className='events'>
-					{events.map(
-						(event) =>
-							event.show && (
-								<Card className='gallery-card' key={event.id}>
-									<Card.Img src={event.image} />
-									<Card.Body>
-										<Card.Title>{event.name}</Card.Title>
-										<Link to={`/gallery/${event.link}`} className='event-link'>
-											<p id='view-event'>View Event</p>
-										</Link>
-									</Card.Body>
-								</Card>
-							)
+					{events.map((event) =>
+						event.show ? (
+							<Card className='gallery-card' key={event.id}>
+								<Card.Img src={event.image} />
+								<Card.Body>
+									<Card.Title>{event.name}</Card.Title>
+									<Link to={`/gallery/${event.link}`} className='event-link'>
+										<p id='view-event'>View Event</p>
+									</Link>
+								</Card.Body>
+							</Card>
+						) : null
 					)}
 				</div>
 			</Container>
