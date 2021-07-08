@@ -71,7 +71,7 @@ jobs:
         REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
 
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2.2.3
+      uses: actions/upload-artifact@v2.2.4
       if: ${{!contains(toJSON(github.event), 'pull_request')}}
       with:
         name: build-artifact
@@ -86,14 +86,14 @@ jobs:
         wait-on: http://localhost:3000
 
     - name: Upload Cypress Screenshots
-      uses: actions/upload-artifact@v2.2.3
+      uses: actions/upload-artifact@v2.2.4
       if: failure()
       with:
         name: cypress-screenshots
         path: cypress/screenshots
 
     - name: Upload Cypress Videos
-      uses: actions/upload-artifact@v2.2.3
+      uses: actions/upload-artifact@v2.2.4
       if: failure()
       with:
         name: cypress-videos
