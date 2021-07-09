@@ -15,6 +15,7 @@ import check from '../../assets/check.png';
 import warn from '../../assets/warn.png';
 import './ContactForm.css';
 import { Socials } from '../Socials/Socials';
+import { eventListenersGA } from '../../utils/reactGA';
 
 const ContactForm = () => {
 	const [successModal, setSuccessModal] = useState(false);
@@ -44,6 +45,7 @@ const ContactForm = () => {
 		await axios.post(`${process.env.REACT_APP_API_URL}/api/send`, data);
 		setSuccessModal(true);
 		formReset();
+		eventListenersGA('Contact Form Button', 'Contact form button clicked');
 	};
 
 	const socialLinks = [

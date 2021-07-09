@@ -20,7 +20,7 @@ const HackathonsList = ({ hackathonlist, isPast }) => {
 				<p className='card-text text-secondary'>{hackathonlist.description}</p>
 
 				<div className='applyBtn'>
-					{isPast ? null : (
+					{!isPast && (
 						<Button
 							href={hackathonlist.link}
 							target='_blank'
