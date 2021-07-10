@@ -19,7 +19,7 @@
     "react-ga": "3.3.0",
     "react-google-invisible-recaptcha": "0.2.11",
     "react-google-recaptcha": "2.1.0",
-    "react-google-recaptcha-v3": "1.9.4",
+    "react-google-recaptcha-v3": "1.9.5",
     "react-helmet": "6.1.0",
     "react-helmet-async": "1.0.9",
     "react-hook-form": "7.10.1",
