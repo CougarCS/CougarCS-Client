@@ -1,12 +1,12 @@
 ## What type of PR is this? (check all applicable)
 
-- [ ] ♻️ Refactor
-- [ ] ✨ Feature
-- [ ] 🐛 Bug Fix
-- [ ] 👷 Optimization
-- [ ] 📝 Documentation Update
-- [ ] 🔖 Release
-- [ ] 🚩 Other
+- [] ♻️ Refactor
+- [] ✨ Feature
+- [] 🐛 Bug Fix
+- [] 👷 Optimization
+- [] 📝 Documentation Update
+- [] 🔖 Release
+- [] 🚩 Other
 
 ## Description
 
@@ -27,16 +27,16 @@ https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-git
 
 ## Added tests?
 
-- [ ] 👍 yes
-- [ ] 🙅 no, because they aren't needed
-- [ ] 🙋 no, because I need help
+- [] 👍 yes
+- [] 🙅 no, because they aren't needed
+- [] 🙋 no, because I need help
 
 ## Added to documentation?
 
-- [ ] 📜 readme
-- [ ] 📜 contributing.md
-- [ ] 📓 docs
-- [ ] 📕 storybook
-- [ ] 🙅 no documentation needed
+- [] 📜 readme
+- [] 📜 contributing.md
+- [] 📓 docs
+- [] 📕 storybook
+- [] 🙅 no documentation needed
 
 ## [optional] Are there any post-deployment tasks we need to perform?
