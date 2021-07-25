@@ -75,6 +75,7 @@ jobs:
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
+      
       if: ${{github.event_name != 'pull_request'}}
       with:
         name: build-artifact
