@@ -42,7 +42,7 @@ jobs:
       name: Get Yarn cache path
       run: echo "::set-output name=dir::$(yarn cache dir)"
     
-    - name: echo event
+    - name: Event Name
       run: echo ${{github.event_name}}
 
     - name: Checkout Repo
@@ -75,7 +75,7 @@ jobs:
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
-      if: ${{!contains(toJSON(github.event), 'pull_request')}}
+      if: ${{github.event_name != 'pull_request'}}
       with:
         name: build-artifact
         path: build/
@@ -103,7 +103,7 @@ jobs:
         path: cypress/videos
       
     - name: Deploy
-      if: ${{ github.repository_owner == 'CougarCS' && !contains(toJSON(github.event), 'pull_request') && (github.ref == 'refs/heads/prod')}}
+      if: ${{ github.repository_owner == 'CougarCS' && github.event_name != 'pull_request') && (github.ref == 'refs/heads/prod')}}
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
         server: ${{secrets.FTP_URL}}
