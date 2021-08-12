@@ -48,7 +48,7 @@ export const Payment = () => {
 			firstName: '',
 			lastName: '',
 			uhID: '',
-			classification: '',
+			shirtSize: '',
 			paidUntil: '',
 			phone: '',
 		});
@@ -170,19 +170,17 @@ export const Payment = () => {
 			</Form.Row>
 
 			<Form.Row>
-				<Form.Group as={Col} controlId='formGridClassification'>
-					<Form.Label>Classification</Form.Label>
+				<Form.Group as={Col} controlId='formGridShirtSize'>
+					<Form.Label>Shirt Size</Form.Label>
 					<Form.Control
 						as='select'
-						{...register('classification', { required: true })}
+						{...register('shirtSize', { required: true })}
 					>
 						<option value=''>Choose...</option>
-						<option value='Freshman'>Freshman</option>
-						<option value='Sophomore'>Sophomore</option>
-						<option value='Junior'>Junior</option>
-						<option value='Senior'>Senior</option>
-						<option value='Post-Bacc'>Post-Bacc</option>
-						<option value='Graduate PhD'>Graduate PhD</option>
+						<option value='Small'>Small</option>
+						<option value='Medium'>Medium</option>
+						<option value='Large'>Large</option>
+						<option value='X-Large'>X-Large</option>
 					</Form.Control>
 				</Form.Group>
 
