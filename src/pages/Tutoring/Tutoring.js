@@ -55,7 +55,7 @@ const Tutoring = () => {
 		<>
 			<MetaData {...meta} />
 			<Container fluid className='contained hero hero-tutoring'>
-				<Row>
+				<Row className='pb-5'>
 					<Col md='6' className='order-md-2'>
 						<img src={headerImage} alt='undraw svg' className='img-fluid'></img>
 					</Col>
@@ -63,18 +63,19 @@ const Tutoring = () => {
 						<div className='about-us'>
 							<h1>Tutoring at CougarCS</h1>
 							<p className='lead-text'>
-								CougarCS offers weekly tutoring time slots for many of our
-								degree’s toughest classes. If you need help in your coursework,
-								please do not hesitate to reach out to our tutoring team! Email
-								tutoring@cougarcs.com with your course code (COSC XXXX) in the
-								subject line and our tutors will contact you withing 24-48
-								hours.
+								Our mission is to provide free peer-to-peer tutoring for UH
+								undergrad CS students. We offer tutoring for a wide range of
+								courses in the CS undergrad course catalogue, from 1000 level to
+								3000! Visit our scheduled tutoring hours, email{' '}
+								<a href='mailto:tutoring@cougarcs.com'>tutoring@cougarcs.com</a>
+								, or just shoot your question in our Discord chats to get help
+								any time of day all from the convenience of your computer!
 							</p>
 							<div className='hero-ctas'>
 								<div className='discord-button-wrapper'>
 									<Button
 										className='discord-button'
-										href='https://discord.gg/rEuFP8ZgN9'
+										href='https://discord.gg/cWbkGKXfE2'
 										target='_blank'
 										rel='nofollow noopener'
 									>
@@ -85,12 +86,6 @@ const Tutoring = () => {
 										<small>Tutoring is provided via Discord</small>
 									</p>
 								</div>
-								<Button
-									className='ghost-button'
-									href='mailto:tutoring@cougarcs.com?subject=CougarCS Tutor Application'
-								>
-									Become a Tutor
-								</Button>
 							</div>
 						</div>
 					</Col>
@@ -98,8 +93,9 @@ const Tutoring = () => {
 			</Container>
 
 			<Container fluid className='contained sub-section'>
-				<h2 className='heading'>Tutoring Available For</h2>
+				<h2 className='heading'>Tutoring Available</h2>
 				<div className='classes-wrapper'>
+					<div className='class-number'>General</div>
 					<div className='class-number'>COSC 1306</div>
 					<div className='class-number'>COSC 1430</div>
 					<div className='class-number'>COSC 2430</div>
@@ -110,12 +106,14 @@ const Tutoring = () => {
 			</Container>
 
 			<Container fluid className='contained sub-section'>
-				<h2 className='heading'>Tutoring Possible Because of</h2>
-				<div className={isFetching ? 'fetching' : 'tutors-wrapper'}>
-					{displayTutors()}
-				</div>
-				<div className='tutor-cta text-center'>
-					<p>Are you interested in tutoring for CougarCS?</p>
+				<h2 className='heading'>Interested in Becoming a Tutor?</h2>
+				<div className='tutor-cta text-center col-md-8 mx-auto'>
+					<p>
+						If you&apos;d like to develop your soft and technical skills, polish
+						your resume, set yourself up for TA/Mentor positions, gain free
+						CougarCS membership, and give back to the student community, apply
+						to become a tutor today!
+					</p>
 					<Button
 						className='ghost-button'
 						href='mailto:tutoring@cougarcs.com?subject=CougarCS Tutor Application'
@@ -125,8 +123,25 @@ const Tutoring = () => {
 				</div>
 			</Container>
 
-			<Container fluid className='contained partners-wrapper'>
-				<Row></Row>
+			<Container fluid className='contained sub-section'>
+				<h2 className='heading'>Special Thanks to Our Tutors</h2>
+				<div className={isFetching ? 'fetching' : 'tutors-wrapper'}>
+					{displayTutors()}
+				</div>
+				<div className='tutor-cta text-center col-md-8 mx-auto'>
+					<p>Are you interested in tutoring for CougarCS?</p>
+					<p>
+						Develop Soft &amp; Technical Skills - Polish Resume - Pathway to UH
+						Peer Mentor Program - Earn Accredited Volunteer Hours - Free
+						CougarCS Membership - Earn CougarCS Member Points
+					</p>
+					<Button
+						className='ghost-button'
+						href='mailto:tutoring@cougarcs.com?subject=CougarCS Tutor Application'
+					>
+						Become a Tutor
+					</Button>
+				</div>
 			</Container>
 		</>
 	);
