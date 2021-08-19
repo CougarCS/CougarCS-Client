@@ -1,16 +1,19 @@
+import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 import axios from 'axios';
-import React, { useState } from 'react';
-import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
-import Loading from '../../components/Loading/Loading';
-import './Event.css';
-import { Modal, Button, Dropdown } from 'react-bootstrap';
-import { sanitize } from 'dompurify';
-import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
-import { useQuery, useQueryClient } from 'react-query';
-import { MetaData } from '../../components/Meta/MetaData';
-import { parse, startOfWeek, getDay, parseISO } from 'date-fns';
+import { getDay, parse, parseISO, startOfWeek } from 'date-fns';
 import { format, utcToZonedTime } from 'date-fns-tz';
 import local from 'date-fns/locale/en-US';
+import { sanitize } from 'dompurify';
+import React, { useState } from 'react';
+import { dateFnsLocalizer } from 'react-big-calendar';
+import { Button, Dropdown, Modal } from 'react-bootstrap';
+import { useQuery, useQueryClient } from 'react-query';
+import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
+import Loading from '../../components/Loading/Loading';
+import { MetaData } from '../../components/Meta/MetaData';
+import Panel from './Panel.js';
+import './Event.css';
 
 const locales = {
 	'en-US': local,
@@ -76,6 +79,11 @@ const Events = () => {
 		description: '',
 	});
 
+	const [value, setValue] = useState(0);
+	function onChange(value) {
+		setValue(value);
+	}
+
 	return (
 		<>
 			<MetaData {...meta}>
@@ -90,6 +98,22 @@ const Events = () => {
 				</div>
 			) : (
 				<div className='event-container'>
+					<Carousel
+						value={value}
+						onChange={onChange}
+						arrows
+						infinite
+						slidesPerPage={4}
+					>
+						<Panel />
+						<Panel />
+						<Panel />
+						<Panel />
+						<Panel />
+						<Panel />
+					</Carousel>
+					<Dots value={value} onChange={onChange} number={6} />
+					{/* 
 					<Calendar
 						localizer={localizer}
 						events={data}
@@ -113,6 +137,7 @@ const Events = () => {
 							setShow(true);
 						}}
 					/>
+					 */}
 				</div>
 			)}
 
