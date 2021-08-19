@@ -29,7 +29,6 @@
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
     "recaptcha-v3": "1.10.0",
-    "tabletop": "1.6.3",
     "typed.js": "2.0.12"
   },
   "scripts": {
