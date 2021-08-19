@@ -1,4 +1,8 @@
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import Carousel, {
+	Dots,
+	slidesToShowPlugin,
+	autoplayPlugin,
+} from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import axios from 'axios';
 import { getDay, parse, parseISO, startOfWeek } from 'date-fns';
@@ -7,13 +11,14 @@ import local from 'date-fns/locale/en-US';
 import { sanitize } from 'dompurify';
 import React, { useState } from 'react';
 import { dateFnsLocalizer } from 'react-big-calendar';
-import { Button, Dropdown, Modal } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import { useQuery, useQueryClient } from 'react-query';
 import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
 import Loading from '../../components/Loading/Loading';
 import { MetaData } from '../../components/Meta/MetaData';
-import Panel from './Panel.js';
+
 import './Event.css';
+import Panel from '../../components/Carousel/Panel';
 
 const locales = {
 	'en-US': local,
@@ -46,7 +51,7 @@ const formatDates = (date) => {
 		{ timeZone: 'America/Chicago' }
 	);
 };
-
+// this will change to carousel
 const meta = {
 	title: 'Calendar',
 	desc: 'Checkout our events.',
@@ -60,6 +65,7 @@ const Events = () => {
 		initialData: () => queryClient.getQueryData('events'),
 		staleTime: 300000,
 	});
+	testelement(data);
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => {
@@ -83,6 +89,9 @@ const Events = () => {
 	function onChange(value) {
 		setValue(value);
 	}
+	function testelement(data) {
+		return <h1>events: {data}</h1>;
+	}
 
 	return (
 		<>
@@ -99,34 +108,35 @@ const Events = () => {
 			) : (
 				<div className='event-container'>
 					<Carousel
-						value={value}
-						onChange={onChange}
-						arrows
-						infinite
-						slidesPerPage={4}
-					>
-						<Panel />
-						<Panel />
-						<Panel />
-						<Panel />
-						<Panel />
-						<Panel />
-					</Carousel>
-					<Dots value={value} onChange={onChange} number={6} />
-					{/* 
-					<Calendar
+						//stuff from calendar that works? some how???
 						localizer={localizer}
 						events={data}
 						startAccessor='start'
 						endAccessor='end'
-						style={{ height: '100%' }}
-						views={{
-							month: true,
-							agenda: true,
-						}}
 						popup={true}
-						drilldownView='agenda'
-						popupOffset={{ x: 30, y: 20 }}
+						//Carousel native options
+						value={value}
+						onChange={onChange}
+						plugins={[
+							'infinite',
+							'arrows',
+							{
+								resolve: slidesToShowPlugin,
+								options: {
+									numberOfSlides: 4,
+								},
+							},
+							{
+								resolve: autoplayPlugin,
+								options: {
+									interval: 8000,
+									stopAutoPlayOnHover: true,
+								},
+							},
+						]}
+						animationSpeed={1000}
+						itemWidth={404}
+						offset={50}
 						onSelectEvent={(e) => {
 							setDesc({
 								title: e.title,
@@ -136,11 +146,46 @@ const Events = () => {
 							});
 							setShow(true);
 						}}
+					>
+						{/*will use the array implementation to display the panels as a
+						rolling implementation is not easy to make*/}
+						{/* <Panel />
+						 <Panel />
+						<Panel />
+						<Panel />
+						<Panel />
+						<Panel />
+						<Panel />
+						<Panel />
+						<Panel /> */}
+						<Panel desc />
+						<Panel desc />
+						<Panel desc />
+						<Panel desc />
+						<Panel desc />
+						<Panel desc />
+						<Panel desc />
+						<Panel desc />
+						<Panel desc />
+					</Carousel>
+					<Dots value={value} onChange={onChange} number={6} />
+					{/* 
+					<Calendar
+						
+						
+						style={{ height: '100%' }}
+						views={{
+							month: true,
+							agenda: true,
+						}}
+						
+						drilldownView='agenda'
+						popupOffset={{ x: 30, y: 20 }}
+						
 					/>
 					 */}
 				</div>
 			)}
-
 			<Modal show={show} size='lg' onHide={handleClose} keyboard={false}>
 				<Modal.Header closeButton>
 					<Modal.Title>{desc.title}</Modal.Title>
@@ -158,14 +203,12 @@ const Events = () => {
 						/>
 					}
 				</Modal.Body>
+				{/* the button to add to google calendar */}
 				<Modal.Footer>
-					<Dropdown>
-						<Dropdown.Toggle variant='success' id='dropdown-basic'>
-							Add To Calendar
-						</Dropdown.Toggle>
-
+					<Button type='button' className='btn btn-success'>
+						Add To Calendar
 						<AddToCalendar event={desc} />
-					</Dropdown>
+					</Button>
 
 					<Button variant='danger' onClick={handleClose}>
 						Close

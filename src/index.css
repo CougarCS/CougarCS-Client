@@ -161,9 +161,9 @@ input {
 		margin-bottom: 130px;
 	}
 }
-
-/* carousel style */
-/* button.BrainhubCarousel__arrows {
+/* 
+carousel style
+@carousel button.BrainhubCarousel__arrows {
 	background-color: initial;
 	&:hover{
 		background-color: initial;
@@ -175,5 +175,5 @@ input {
 		border-color: var(--color-primary);
 	}
 }
- */
 
+ */

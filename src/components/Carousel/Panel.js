@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import AddToCalendar from '../AddToCalendar/AddToCalendar';
 
-const Panel = () => {
+const Panel = (desc) => {
 	return (
 		<Card style={{ width: '18rem' }}>
 			<Card.Img
@@ -14,7 +15,9 @@ const Panel = () => {
 					Some quick example text to build on the card title and make up the
 					bulk of the card&apos;s content.
 				</Card.Text>
-				<Button variant='info'>Go somewhere</Button>
+				<Button variant='btn btn-success'>
+					Add To Calendar <AddToCalendar event={desc} />{' '}
+				</Button>
 			</Card.Body>
 		</Card>
 	);
