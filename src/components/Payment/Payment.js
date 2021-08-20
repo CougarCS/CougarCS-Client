@@ -177,10 +177,10 @@ export const Payment = () => {
 						{...register('shirtSize', { required: true })}
 					>
 						<option value=''>Choose...</option>
-						<option value='Small'>Small</option>
-						<option value='Medium'>Medium</option>
-						<option value='Large'>Large</option>
-						<option value='X-Large'>X-Large</option>
+						<option value='S'>Small</option>
+						<option value='M'>Medium</option>
+						<option value='L'>Large</option>
+						<option value='XL'>X-Large</option>
 					</Form.Control>
 				</Form.Group>
 
