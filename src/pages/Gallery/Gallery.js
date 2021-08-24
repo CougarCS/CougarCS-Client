@@ -20,7 +20,7 @@ const Gallery = () => {
 				<h1>Events Gallery</h1>
 			</Container>
 			<Container fluid className='contained'>
-				<div className='events'>
+				<div className='events test'>
 					{events.map((event) =>
 						event.show ? (
 							<Card className='gallery-card' key={event.id}>
