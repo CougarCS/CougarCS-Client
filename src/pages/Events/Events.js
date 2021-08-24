@@ -68,6 +68,28 @@ const Events = () => {
 	testelement(data);
 	const [show, setShow] = useState(false);
 
+	const displayEvents = () => {
+		return isFetching ? (
+			<Loading />
+		) : (
+			data.map((val, i) =>
+				val?.linkedin ? (
+					<div key={i}>
+						<a
+							href={val.linkedin}
+							rel='nofollow noopener noreferrer'
+							target='_blank'
+						>
+							{val.name}
+						</a>
+					</div>
+				) : (
+					<div key={i}>{val.name}</div>
+				)
+			)
+		);
+	};
+
 	const handleClose = () => {
 		setShow(false);
 		setDesc({
@@ -147,26 +169,9 @@ const Events = () => {
 							setShow(true);
 						}}
 					>
-						{/*will use the array implementation to display the panels as a
-						rolling implementation is not easy to make*/}
-						{/* <Panel />
-						 <Panel />
-						<Panel />
-						<Panel />
-						<Panel />
-						<Panel />
-						<Panel />
-						<Panel />
-						<Panel /> */}
-						<Panel desc />
-						<Panel desc />
-						<Panel desc />
-						<Panel desc />
-						<Panel desc />
-						<Panel desc />
-						<Panel desc />
-						<Panel desc />
-						<Panel desc />
+						{data.map((d, i) => (
+							<Panel key={i} desc={d} />
+						))}
 					</Carousel>
 					<Dots value={value} onChange={onChange} number={6} />
 					{/* 
