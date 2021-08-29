@@ -65,30 +65,8 @@ const Events = () => {
 		initialData: () => queryClient.getQueryData('events'),
 		staleTime: 300000,
 	});
-	testelement(data);
-	const [show, setShow] = useState(false);
 
-	const displayEvents = () => {
-		return isFetching ? (
-			<Loading />
-		) : (
-			data.map((val, i) =>
-				val?.linkedin ? (
-					<div key={i}>
-						<a
-							href={val.linkedin}
-							rel='nofollow noopener noreferrer'
-							target='_blank'
-						>
-							{val.name}
-						</a>
-					</div>
-				) : (
-					<div key={i}>{val.name}</div>
-				)
-			)
-		);
-	};
+	const [show, setShow] = useState(false);
 
 	const handleClose = () => {
 		setShow(false);
@@ -110,9 +88,6 @@ const Events = () => {
 	const [value, setValue] = useState(0);
 	function onChange(value) {
 		setValue(value);
-	}
-	function testelement(data) {
-		return <h1>events: {data}</h1>;
 	}
 
 	return (
@@ -141,22 +116,13 @@ const Events = () => {
 						onChange={onChange}
 						plugins={[
 							'infinite',
-							'arrows',
 							{
 								resolve: slidesToShowPlugin,
 								options: {
 									numberOfSlides: 4,
 								},
 							},
-							{
-								resolve: autoplayPlugin,
-								options: {
-									interval: 8000,
-									stopAutoPlayOnHover: true,
-								},
-							},
 						]}
-						animationSpeed={1000}
 						itemWidth={404}
 						offset={50}
 						onSelectEvent={(e) => {
@@ -170,10 +136,9 @@ const Events = () => {
 						}}
 					>
 						{data.map((d, i) => (
-							<Panel key={i} desc={d} />
+							<Panel key={d} desc={i} />
 						))}
 					</Carousel>
-					<Dots value={value} onChange={onChange} number={6} />
 					{/* 
 					<Calendar
 						

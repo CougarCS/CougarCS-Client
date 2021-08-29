@@ -13,8 +13,8 @@ const AddToCalendar = ({ event }) => {
 				className='btn btn-success'
 				href={google({
 					...event,
-					// start: startDate.toISOString(),
-					// end: endDate.toISOString(),
+					start: startDate.toISOString(),
+					end: endDate.toISOString(),
 				})}
 				target='_blank'
 				rel='noopener nofollow'

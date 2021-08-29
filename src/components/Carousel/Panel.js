@@ -8,10 +8,7 @@ const Panel = ({ desc }) => {
 		<Card style={{ width: '18rem' }}>
 			<Card.Body>
 				<Card.Title>{desc.title}</Card.Title>
-				<Card.Text>
-					Some quick example text to build on the card title and make up the
-					bulk of the card&apos;s content.
-				</Card.Text>
+				<Card.Text>{desc.description}</Card.Text>
 				<Button variant='btn btn-success'>
 					Add To Calendar <AddToCalendar event={desc} />{' '}
 				</Button>
