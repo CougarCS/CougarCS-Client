@@ -6,7 +6,7 @@
     "@stripe/react-stripe-js": "1.4.1",
     "@stripe/stripe-js": "1.17.1",
     "@types/dompurify": "2.2.3",
-    "axios": "0.21.1",
+    "axios": "0.21.3",
     "calendar-link": "2.1.1",
     "date-fns": "2.23.0",
     "date-fns-tz": "1.1.6",
