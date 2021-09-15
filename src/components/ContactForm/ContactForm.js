@@ -66,7 +66,7 @@ const ContactForm = () => {
 			html: <i className='fab fa-linkedin'></i>,
 		},
 		{
-			href: 'https://discordapp.com/invite/aKUzPFY',
+			href: 'https://discord.gg/wEagwaXS7F',
 			html: <i className='fab fa-discord'></i>,
 		},
 	];
