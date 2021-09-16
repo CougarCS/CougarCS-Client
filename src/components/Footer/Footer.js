@@ -49,7 +49,7 @@ const Footer = () => {
 					</Nav.Item>
 					<Nav.Item>
 						<Nav.Link
-							href='https://discord.gg/bdvM23hKHJ'
+							href='https://discord.gg/cWbkGKXfE2'
 							target='_blank'
 							rel='nofollow noopener'
 						>
