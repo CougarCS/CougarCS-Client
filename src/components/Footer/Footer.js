@@ -9,6 +9,7 @@ import ig from '../../assets/icons/instagram.webp';
 import ds from '../../assets/icons/discord.webp';
 import li from '../../assets/icons/linkedin.webp';
 import yt from '../../assets/icons/youtube.webp';
+import gh from '../../assets/icons/github.webp';
 
 const Footer = () => {
 	return (
@@ -63,6 +64,15 @@ const Footer = () => {
 							rel='nofollow noopener'
 						>
 							<img src={yt} alt='Youtube Icon' />
+						</Nav.Link>
+					</Nav.Item>
+					<Nav.Item>
+						<Nav.Link
+							href='https://github.com/CougarCS'
+							target='_blank'
+							rel='nofollow noopener'
+						>
+							<img src={gh} alt='GitHub Icon' />
 						</Nav.Link>
 					</Nav.Item>
 				</Nav>
