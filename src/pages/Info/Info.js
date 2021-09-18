@@ -1,6 +1,7 @@
 import React from 'react';
 import { MetaData } from '../../components/Meta/MetaData';
 import infoPDF from '../../assets/info.pdf';
+import './Info.css';
 
 const meta = {
 	title: 'Info',
@@ -11,9 +12,9 @@ const meta = {
 
 const Info = () => {
 	return (
-		<div>
+		<div className='hold'>
 			<MetaData {...meta} />
-			<iframe src={infoPDF} title='csPDF' width='100%' height='700px' />
+			<iframe src={infoPDF} title='title' className='csPDF' />
 		</div>
 	);
 };
