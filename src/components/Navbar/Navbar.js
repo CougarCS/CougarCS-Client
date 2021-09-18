@@ -20,9 +20,6 @@ const NavBar = ({ themeToggler }) => (
 				<LinkContainer to='/about'>
 					<Nav.Link>About</Nav.Link>
 				</LinkContainer>
-				<LinkContainer to='/info'>
-					<Nav.Link>Info</Nav.Link>
-				</LinkContainer>
 				<LinkContainer to='/calendar'>
 					<Nav.Link>Events</Nav.Link>
 				</LinkContainer>
