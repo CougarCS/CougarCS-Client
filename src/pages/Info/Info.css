@@ -1,8 +1,11 @@
 .hold{
-    position:absolute;
+    height: 100%;
 }
 
 .csPDF, .hold{
-    height: 100%;
     width: 100%;
+}
+
+.csPDF{
+    height: 700px;
 }
