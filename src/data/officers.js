@@ -11,6 +11,7 @@ import Matthew from '../assets/officers/MatthewP.webp';
 import Ramadharsh from '../assets/officers/RamadharshV.webp';
 import Shubha from '../assets/officers/ShubhaJ.webp';
 import Vanessa from '../assets/officers/VanessaS.webp';
+import Janice from '../assets/officers/JaniceL.webp';
 
 const officers = [
 	{
@@ -140,6 +141,16 @@ const officers = [
 		linkedin: 'https://www.linkedin.com/in/aoquresh/',
 		email: 'communications@cougarcs.com',
 		title: 'Director of Communications',
+		open: false,
+		show: true,
+	},
+	{
+		id: 13,
+		name: 'Janice Liang',
+		image: Janice,
+		linkedin: 'https://www.linkedin.com/in/janice-liang-5b9130205/',
+		email: 'designer@cougarcs.com',
+		title: 'Designer',
 		open: false,
 		show: true,
 	},
