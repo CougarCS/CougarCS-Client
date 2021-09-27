@@ -80,7 +80,7 @@
     "eslint-plugin-react": "7.25.1",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-testing-library": "4.12.4",
-    "prettier": "2.3.2",
+    "prettier": "2.4.1",
     "react-snap": "1.23.0"
   }
 }
