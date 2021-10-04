@@ -14,7 +14,11 @@ const Info = () => {
 	return (
 		<div className='hold'>
 			<MetaData {...meta} />
-			<iframe src={infoPDF} title='title' className='csPDF' />
+			<object data={infoPDF} type='application/pdf' className='csPDF'>
+				<a href={infoPDF} target='_blank' rel='noreferrer'>
+					Download CougarCS Info Packet
+				</a>
+			</object>
 		</div>
 	);
 };
