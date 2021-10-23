@@ -15,11 +15,13 @@ const Footer = () => {
 	return (
 		<footer>
 			<div className='wrapper'>
-				<img
-					src={logo}
-					className='footer-logo'
-					alt='CougarCS - Computer Science Organization in University of Houston'
-				/>
+				<LinkContainer to='/'>
+					<img
+						src={logo}
+						className='footer-logo'
+						alt='CougarCS - Computer Science Organization in University of Houston'
+					/>
+				</LinkContainer>
 				<Nav className='social-icons'>
 					<Nav.Item>
 						<Nav.Link
