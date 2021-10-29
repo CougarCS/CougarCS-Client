@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
 import fb from '../../assets/icons/facebook-f.webp';
@@ -15,13 +16,13 @@ const Footer = () => {
 	return (
 		<footer>
 			<div className='wrapper'>
-				<LinkContainer to='/'>
+				<Link to='/'>
 					<img
 						src={logo}
 						className='footer-logo'
 						alt='CougarCS - Computer Science Organization in University of Houston'
 					/>
-				</LinkContainer>
+				</Link>
 				<Nav className='social-icons'>
 					<Nav.Item>
 						<Nav.Link
