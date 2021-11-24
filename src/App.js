@@ -22,6 +22,7 @@ const Hackathon = lazy(() => import('./pages/Hackathon/Hackathon'));
 const Privacy = lazy(() => import('./pages/Policy/Privacy'));
 const Gallery = lazy(() => import('./pages/Gallery/Gallery'));
 const GalleryEvent = lazy(() => import('./pages/Gallery/GalleryEvent'));
+const Info = lazy(() => import('./pages/Info/Info'));
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => {
 					<Switch>
 						<Route path='/' exact={true} component={Home} />
 						<Route path='/about' component={About} />
+						<Route path='/info' component={Info} />
 						<Route path='/membership' component={Membership} />
 						<Route path='/calendar' component={Events} />
 						<Route path='/contactus' component={ContactUs} />
