@@ -8,7 +8,7 @@
     "@types/dompurify": "2.3.1",
     "axios": "0.24.0",
     "calendar-link": "2.1.1",
-    "date-fns": "2.25.0",
+    "date-fns": "2.27.0",
     "date-fns-tz": "1.1.6",
     "dompurify": "2.3.3",
     "react": "17.0.2",
