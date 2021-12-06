@@ -5974,8 +5974,6 @@ find-up@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-3.0.0.tgz#49169f1d7993430646da61ecc5ae355c21c97b73"
   integrity sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==
-  dependencies:
-    locate-path "^3.0.0"
 
 flat-cache@^3.0.4:
   version "3.0.4"
@@ -10493,10 +10491,10 @@ react-async-script@^1.1.1:
     hoist-non-react-statics "^3.3.0"
     prop-types "^15.5.0"
 
-react-big-calendar@0.38.0:
-  version "0.38.0"
-  resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-0.38.0.tgz#53fd1f69046fdff72d1c2311ace4655797936fb1"
-  integrity sha512-eoVkt9gTo+f1HBL09+o7dYLxp6QxHv52fcn50P5PfaWp3S98uGLQqoqsvghT85koMKvGfDVa5V0+J7yHcaF07Q==
+react-big-calendar@0.38.1:
+  version "0.38.1"
+  resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-0.38.1.tgz#cd95bacf45c3064d2609fd261f321bf7757ef584"
+  integrity sha512-9xwBekBxsfwQJb8/4KpPgsS2mWnzOcXibuVtJ8MqI04W8mvAoIgnSAO0WtJBJfI0QMaeX+Ak12XwIZ88zZ/fGw==
   dependencies:
     "@babel/runtime" "^7.1.5"
     clsx "^1.0.4"
