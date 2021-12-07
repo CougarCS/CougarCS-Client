@@ -79,7 +79,7 @@
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.26.1",
-    "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-react-hooks": "4.3.0",
     "prettier": "2.5.1",
     "eslint-plugin-testing-library": "5.0.1",
     "react-snap": "1.23.0"
