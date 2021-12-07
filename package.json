@@ -65,7 +65,7 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "6.4.0",
+    "@craco/craco": "6.4.2",
     "babel-eslint": "10.1.0",
     "craco-swc": "0.2.0",
     "cypress": "8.7.0",
