@@ -10688,10 +10688,10 @@ react-refresh@^0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-router-bootstrap@0.26.0-beta.2:
-  version "0.26.0-beta.2"
-  resolved "https://registry.yarnpkg.com/react-router-bootstrap/-/react-router-bootstrap-0.26.0-beta.2.tgz#11cda79d02e862ce0ec8f353a46bf8d0904c1de3"
-  integrity sha512-fbw/zdWqKfrFNq/foIAQxTIwDfRJSG1z3HoBIyDnOheFg53JA1ahdUxvfDrlhRAXKsfeAmG0kVzWh8rAmYJxnw==
+react-router-bootstrap@^0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/react-router-bootstrap/-/react-router-bootstrap-0.26.0.tgz#822e2659d221e4feed700ad959aee2cc809b338a"
+  integrity sha512-auVpsCOYgI+3CrmtpVjme8ucz76iiMvJhv2BrnWof2HtimrF9NtAHtFzdZrsku5hwp166EPbz7IuSyHJA8kkdA==
   dependencies:
     prop-types "^15.7.2"
 
