@@ -5,7 +5,7 @@
   "dependencies": {
     "@stripe/react-stripe-js": "1.6.0",
     "@stripe/stripe-js": "1.21.2",
-    "@types/dompurify": "2.3.1",
+    "@types/dompurify": "2.3.2",
     "axios": "0.24.0",
     "calendar-link": "2.1.1",
     "date-fns": "2.27.0",
