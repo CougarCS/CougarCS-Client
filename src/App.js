@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import FourOFour from './components/404/FourOFour';
 import Loading from './components/Loading/Loading';
@@ -33,24 +33,21 @@ const App = () => {
 				<Suspense fallback={<Loading />}>
 					<ScrollTop />
 					<NavBar />
-					<Switch>
-						<Route path='/' exact={true} component={Home} />
-						<Route path='/about' component={About} />
-						<Route path='/membership' component={Membership} />
-						<Route path='/calendar' component={Events} />
-						<Route path='/contactus' component={ContactUs} />
-						<Route path='/register' component={UserRegister} />
-						<Route path='/hackathons' component={Hackathon}></Route>
-						<Route path='/privacy-policy' component={Privacy} />
-						<Route path='/gallery' component={Gallery} exact={true} />
-						<Route path='/tutoring' component={Tutoring} />
-						<Route
-							path='/gallery/:event'
-							render={(props) => <GalleryEvent {...props} />}
-						/>
-						<Route path='/404' component={NotFound} />
-						<Route component={FourOFour} />
-					</Switch>
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/about' element={<About />} />
+						<Route path='/membership' element={<Membership />} />
+						<Route path='/calendar' element={<Events />} />
+						<Route path='/contactus' element={<ContactUs />} />
+						<Route path='/register' element={<UserRegister />} />
+						<Route path='/hackathons' element={<Hackathon />} />
+						<Route path='/privacy-policy' element={<Privacy />} />
+						<Route path='/gallery' element={<Gallery />} />
+						<Route path='/tutoring' element={<Tutoring />} />
+						<Route path='/gallery/:event' element={<GalleryEvent />} />
+						<Route path='/404' element={<NotFound />} />
+						<Route path='*' element={<FourOFour />} />
+					</Routes>
 					<Footer />
 				</Suspense>
 			</Router>
