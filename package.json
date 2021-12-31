@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@stripe/react-stripe-js": "1.6.0",
-    "@stripe/stripe-js": "1.21.2",
+    "@stripe/stripe-js": "1.22.0",
     "@types/dompurify": "2.3.2",
     "axios": "0.24.0",
     "calendar-link": "2.1.1",
