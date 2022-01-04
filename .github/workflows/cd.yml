@@ -15,10 +15,10 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v2
 
-    - name: Use Node.js 12.x
+    - name: Use Node.js 14.x
       uses: actions/setup-node@master
       with:
-        node-version: 12.x
+        node-version: 14.x
 
     - name: Load cache
       uses: actions/cache@v2
@@ -48,10 +48,10 @@ jobs:
     - name: Checkout Repo
       uses: actions/checkout@v2
 
-    - name: Use Node.js 12.x
+    - name: Use Node.js 14.x
       uses: actions/setup-node@master
       with:
-        node-version: 12.x
+        node-version: 14.x
 
     - name: Load cache
       uses: actions/cache@v2
@@ -74,7 +74,7 @@ jobs:
         REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
 
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2.2.4
+      uses: actions/upload-artifact@v2.3.1
       
       if: ${{github.event_name != 'pull_request'}}
       with:
@@ -90,14 +90,14 @@ jobs:
         wait-on: http://localhost:3000
 
     - name: Upload Cypress Screenshots
-      uses: actions/upload-artifact@v2.2.4
+      uses: actions/upload-artifact@v2.3.1
       if: failure()
       with:
         name: cypress-screenshots
         path: cypress/screenshots
 
     - name: Upload Cypress Videos
-      uses: actions/upload-artifact@v2.2.4
+      uses: actions/upload-artifact@v2.3.1
       if: failure()
       with:
         name: cypress-videos
@@ -105,7 +105,7 @@ jobs:
       
     - name: Deploy
       if: ${{ github.repository_owner == 'CougarCS' && github.event_name != 'pull_request' && (github.ref == 'refs/heads/prod')}}
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server: ${{secrets.FTP_URL}}
         username: ${{secrets.FTP_USERNAME}}
