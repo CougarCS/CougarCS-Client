@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { Nav } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
 import fb from '../../assets/icons/facebook-f.webp';
@@ -9,16 +10,19 @@ import ig from '../../assets/icons/instagram.webp';
 import ds from '../../assets/icons/discord.webp';
 import li from '../../assets/icons/linkedin.webp';
 import yt from '../../assets/icons/youtube.webp';
+import gh from '../../assets/icons/github.webp';
 
 const Footer = () => {
 	return (
 		<footer>
 			<div className='wrapper'>
-				<img
-					src={logo}
-					className='footer-logo'
-					alt='CougarCS - Computer Science Organization in University of Houston'
-				/>
+				<Link to='/'>
+					<img
+						src={logo}
+						className='footer-logo'
+						alt='CougarCS - Computer Science Organization in University of Houston'
+					/>
+				</Link>
 				<Nav className='social-icons'>
 					<Nav.Item>
 						<Nav.Link
@@ -40,7 +44,7 @@ const Footer = () => {
 					</Nav.Item>
 					<Nav.Item>
 						<Nav.Link
-							href='https://www.instagram.com/uhcougarcs/'
+							href='https://www.instagram.com/uh_cougarcs/'
 							target='_blank'
 							rel='nofollow noopener'
 						>
@@ -49,7 +53,7 @@ const Footer = () => {
 					</Nav.Item>
 					<Nav.Item>
 						<Nav.Link
-							href='https://discord.gg/bdvM23hKHJ'
+							href='https://discord.gg/wEagwaXS7F'
 							target='_blank'
 							rel='nofollow noopener'
 						>
@@ -63,6 +67,15 @@ const Footer = () => {
 							rel='nofollow noopener'
 						>
 							<img src={yt} alt='Youtube Icon' />
+						</Nav.Link>
+					</Nav.Item>
+					<Nav.Item>
+						<Nav.Link
+							href='https://github.com/CougarCS'
+							target='_blank'
+							rel='nofollow noopener'
+						>
+							<img src={gh} alt='GitHub Icon' />
 						</Nav.Link>
 					</Nav.Item>
 				</Nav>
