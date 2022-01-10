@@ -1,79 +1,94 @@
-body {
-  font-family: 'Raleway', 'Roboto Mono', monospace;
-}
 
-.officerImages {
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-  grid-column-gap: 1em;
-  row-gap: 2em;
-}
 .container {
-  background: #ffffff !important;
-}
-.test {
-  max-height: 90vh;
-}
-.about-us {
-  padding: 2em;
+	background: #ffffff !important;
 }
 
-.cnt {
-  display: flex;
-  justify-content: center;
-}
-.rowHeight {
-  min-height: 100vh;
-  display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .col > img {
-  height: 40rem;
-  width: auto;
-  z-index: -99;
+	height: 40rem;
+	width: auto;
+	z-index: -99;
 }
 
-#officerName {
-  text-align: center;
+.hero-about h1 {
+	text-align: left;
+
 }
 
-.officerCard {
-  padding: 0 3rem 0;
+.hero-about .row {
+	align-items: center;
 }
 
-@media only screen and (max-width: 1296px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+.officers-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
 }
 
-@media only screen and (max-width: 1109px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+.partners-wrapper div[class^='col-md'] {
+	margin-bottom: 70px;
 }
 
-@media only screen and (max-width: 830px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+.partner-logos {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 50px;
+	justify-content: center;
+	justify-items: center;
 }
 
-@media only screen and (max-width: 555px) {
-  .officerImages {
-    display: grid;
-    grid-template-columns: auto;
-    grid-column-gap: 5em;
-    row-gap: 2em;
-  }
+.partner-logo {
+	max-width: 180px;
+	max-height: 120px;
+	height: auto;
+	object-fit: contain;
+	object-position: center;
+	filter: grayscale(1) opacity(0.9);
+	text-align: center;
+}
+
+
+@media (max-width: 1296px) {
+	.officers-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 1109px) {
+	.officers-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 767px) {
+	.hero-about {
+		text-align: center;
+		padding-bottom: 100px;
+	}
+	
+	.hero-about h1 {
+		text-align: center;
+	}
+
+	.hero-about .col-md-6:nth-child(1) {
+		margin-bottom: 75px;
+	}
+
+	.hero-about img {
+		max-width: 500px;
+		width: 100%;
+	}
+
+	.officers-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.partners-wrapper .col-md-6 {
+		margin-bottom: 50px;
+	}
+}
+
+@media (max-width: 575px) {
+	.officers-grid {
+		gap: 1em;
+	}
 }

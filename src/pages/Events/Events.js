@@ -1,80 +1,154 @@
 import axios from 'axios';
-import moment from 'moment';
-import React, { useEffect, useState } from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
+import React, { useState } from 'react';
+import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import Loading from '../../components/Loading/Loading';
 import './Event.css';
-const localizer = momentLocalizer(moment);
+import { Modal, Button, Dropdown } from 'react-bootstrap';
+import { sanitize } from 'dompurify';
+import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
+import { useQuery, useQueryClient } from 'react-query';
+import { MetaData } from '../../components/Meta/MetaData';
+import { parse, startOfWeek, getDay, parseISO } from 'date-fns';
+import { format, utcToZonedTime } from 'date-fns-tz';
+import local from 'date-fns/locale/en-US';
 
-const url = 'https://cougarcs-backend.herokuapp.com/api/events';
+const locales = {
+	'en-US': local,
+};
 
-const Events = () => {
-	const [events, setEvents] = useState([]);
-	const [loading, setLoading] = useState(true);
+const localizer = dateFnsLocalizer({
+	format,
+	parse,
+	startOfWeek,
+	getDay,
+	locales,
+});
 
-	useEffect(() => {
-		axios
-			.get(url)
-			.then((resp) => {
-				const events = [];
-				resp.data.futureEvents.map((event) => {
-					return events.push({
-						start: event.start.date,
-						end: event.end.date,
-						title: event.summary,
-						desc: event.description ? event.description : 'TBD',
-					});
-				});
+const url = `${process.env.REACT_APP_API_URL}/api/events`;
 
-				resp.data.pastEvents.map((event) => {
-					return events.push({
-						start: event.start.date,
-						end: event.end.date,
-						title: event.summary,
-						desc: event.description ? event.description : 'TBD',
-					});
-				});
-				setEvents(events);
-				setLoading(false);
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	}, []);
-	return loading ? (
-		<div className='load'>
-			{' '}
-			<Loading className='loader' />{' '}
-		</div>
-	) : (
-		<div className='event-container'>
-			<Calendar
-				localizer={localizer}
-				events={events}
-				startAccessor='start'
-				endAccessor='end'
-				style={{ height: '100%' }}
-				views={{
-					month: true,
-					agenda: true,
-				}}
-				popup={true}
-				drilldownView='agenda'
-				popupOffset={{ x: 30, y: 20 }}
-				// onSelectEvent={(event) => alert(event.desc)}
-			/>
+const fetchEvents = async () => {
+	const res = await axios.get(url);
+	const data = res.data.events;
+	return data.map((event) => ({
+		...event,
+		start: parseISO(event.start),
+		end: parseISO(event.end),
+	}));
+};
 
-			{/* <iframe
-        title='CougarCS Calendar'
-        src={'https://www.google.com/calendar/embed?showTitle=0&showCalendars=0&mode=MONTH&wkst=1&bgcolor=%23FFFFFF&src=aeu0ag4i5a7aag0hkvco4goung%40group.calendar.google.com&color=%23711616&ctz=America%2FChicago'}
-        style={{
-          border: 0,
-          width: '100%',
-          height: '100%',
-          frameBorder: 0
-        }}
-      ></iframe> */}
-		</div>
+const formatDates = (date) => {
+	return format(
+		utcToZonedTime(date, 'America/Chicago'),
+		'EEEE, MMMM do yyyy, h:mm a zzz',
+		{ timeZone: 'America/Chicago' }
 	);
 };
+
+const meta = {
+	title: 'Calendar',
+	desc: 'Checkout our events.',
+	url: 'https://cougarcs.com/calendar',
+	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+};
+
+const Events = () => {
+	const queryClient = useQueryClient();
+	const { data, isFetching } = useQuery('events', fetchEvents, {
+		initialData: () => queryClient.getQueryData('events'),
+		staleTime: 300000,
+	});
+	const [show, setShow] = useState(false);
+
+	const handleClose = () => {
+		setShow(false);
+		setDesc({
+			title: '',
+			startDate: '',
+			endDate: '',
+			description: '',
+		});
+	};
+
+	const [desc, setDesc] = useState({
+		title: '',
+		startDate: '',
+		endDate: '',
+		description: '',
+	});
+
+	return (
+		<>
+			<MetaData {...meta}>
+				<link
+					href='https://cdn.jsdelivr.net/npm/react-big-calendar@0.23.0/lib/css/react-big-calendar.css'
+					rel='stylesheet'
+				/>
+			</MetaData>
+			{isFetching ? (
+				<div className='load'>
+					<Loading className='loader' />
+				</div>
+			) : (
+				<div className='event-container'>
+					<Calendar
+						localizer={localizer}
+						events={data}
+						startAccessor='start'
+						endAccessor='end'
+						style={{ height: '100%' }}
+						views={{
+							month: true,
+							agenda: true,
+						}}
+						popup={true}
+						drilldownView='agenda'
+						popupOffset={{ x: 30, y: 20 }}
+						onSelectEvent={(e) => {
+							setDesc({
+								title: e.title,
+								startDate: e.start,
+								endDate: e.end,
+								description: e.desc,
+							});
+							setShow(true);
+						}}
+					/>
+				</div>
+			)}
+
+			<Modal show={show} size='lg' onHide={handleClose} keyboard={false}>
+				<Modal.Header closeButton>
+					<Modal.Title>{desc.title}</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>
+					From: {desc.startDate ? formatDates(desc.startDate) : ''} <br /> To:{' '}
+					{desc.endDate ? formatDates(desc.endDate) : ''}
+					<br />
+					<hr />
+					Description:{' '}
+					{
+						<div
+							className='eventModalDesc'
+							dangerouslySetInnerHTML={{ __html: sanitize(desc.description) }}
+						/>
+					}
+				</Modal.Body>
+				<Modal.Footer>
+					<Dropdown>
+						<Dropdown.Toggle variant='success' id='dropdown-basic'>
+							Add To Calendar
+						</Dropdown.Toggle>
+
+						<AddToCalendar event={desc} />
+					</Dropdown>
+
+					<Button variant='danger' onClick={handleClose}>
+						Close
+					</Button>
+				</Modal.Footer>
+			</Modal>
+		</>
+	);
+};
+
 export default Events;

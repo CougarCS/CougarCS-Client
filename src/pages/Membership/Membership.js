@@ -1,32 +1,33 @@
-import React, { Component } from 'react';
-import {
-	Card,
-	Col,
-	Container,
-	Row,
-	// ButtonToolbar,
-	// Button,
-} from 'react-bootstrap';
+import React from 'react';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import analyticsSVG from '../../assets/analytics.svg';
 import collectingSVG from '../../assets/collecting.svg';
 import gif from '../../assets/member.svg';
 import memorySVG from '../../assets/memory.svg';
 import teachingSVG from '../../assets/teaching.svg';
+import { MetaData } from '../../components/Meta/MetaData';
 import './Membership.css';
-// import { LinkContainer } from 'react-router-bootstrap';
 
-class Membership extends Component {
-	render() {
-		return (
-			<div>
-				<Container fluid style={{ padding: '2em' }}>
-					<Row>
-						<Col md='6' className='order-md-2'>
-							<img src={gif} alt='undraw svg' style={{ width: '100%' }}></img>
-						</Col>
-						<Col md='6' className='order-md-0'>
-							<div className='membership'>
-								<h1>Membership</h1>
+const Membership = () => {
+	const meta = {
+		title: 'Membership',
+		desc: 'Learn more about our membership.',
+		url: 'https://cougarcs.com/membership',
+		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+	};
+
+	return (
+		<div>
+			<MetaData {...meta} />
+			<Container fluid className='contained hero hero-membership'>
+				<Row>
+					<Col md='6' className='order-md-2'>
+						<img src={gif} alt='undraw svg' style={{ width: '100%' }}></img>
+					</Col>
+					<Col md='6' className='order-md-0'>
+						<div className='membership'>
+							<h1>Membership</h1>
+							<div className='lead-text'>
 								<p>
 									CougarCS offers students exclusive access to a variety of
 									events and resources aimed at career preparedness. Throughout
@@ -45,21 +46,27 @@ class Membership extends Component {
 								</p>
 								<p>
 									Memberships are priced at{' '}
-									<strong>$18.00 for a full year </strong> or{' '}
-									<strong>$10.00 a semester</strong>. If you are interested in
+									<strong>$40.00 for a full year </strong> or{' '}
+									<strong>$25.00 a semester</strong>. If you are interested in
 									becoming a member there are a few ways you can let us know.
 									Request to become a member on the get involved page and our
 									Treasurer,{' '}
-									{<a href='mailto:treasurer@cougarcs.com'>Chantha Mak</a>},
-									will be incontact with you shortly. You can also find an
-									Officer on the 5th floor of PGH (Philip Guthrie Hoffman Hall)
-									or email{' '}
+									{
+										<a href='mailto:treasurer@cougarcs.com'>
+											Syeda Zuha Beyabani
+										</a>
+									}
+									, will be in contact with you shortly. You can also
+									{/* find an
+										Officer on the 5th floor of PGH (Philip Guthrie Hoffman Hall)
+										or */}{' '}
+									email us at{' '}
 									<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
 								</p>
 								<p>
 									Whats that? You want to get more envolved with CougarCS?
-									Interested in joining our webdev team? Please reach out to
-									Shubh Sheth at{' '}
+									Interested in joining our Webdev team? Please reach out to
+									Kevin Flores at{' '}
 									<a href='mailto:webmaster@cougarcs.com'>
 										webmaster@cougarcs.com
 									</a>
@@ -69,105 +76,104 @@ class Membership extends Component {
 									</a>
 									.
 								</p>
-								<div>
-									{/* <LinkContainer to='/register'>
+							</div>
+							<div>
+								{/* <LinkContainer to='/register'>
 										<ButtonToolbar>
 											<Button className='learnMoreBtn' variant='primary'>
 												Become a member
 											</Button>
 										</ButtonToolbar>
 									</LinkContainer> */}
-								</div>
 							</div>
-						</Col>
-					</Row>
-				</Container>
-				<Container fluid style={{ textAlign: 'center' }}>
-					<h3>What Are The Benefits</h3>
-					<Row className='benefits' md={12} xs={12}>
-						<div>
-							<Row>
-								<Col>
-									<Card style={{ textAlign: 'center', border: 'none' }}>
-										<Card.Body>
-											<div>
-												<img
-													src={analyticsSVG}
-													style={{ height: '10em', width: '9em', color: 'red' }}
-													alt='undraw'
-												/>
-											</div>
-											<Card.Title style={{ textAlign: 'center' }}>
-												Technical workshops
-											</Card.Title>
-											<p style={{ textAlign: 'center' }}>
-												Learn industry standards and refine your skills in teams{' '}
-											</p>
-										</Card.Body>
-									</Card>
-								</Col>
-								<Col>
-									<Card style={{ textAlign: 'center', border: 'none' }}>
-										<Card.Body>
-											<div>
-												<img
-													src={collectingSVG}
-													alt='undraw'
-													style={{ height: '10em', width: '9em', color: 'red' }}
-												/>
-											</div>
-											<Card.Title>Information Sessions</Card.Title>
-											<p>
-												Connect with companies from all over the world hiring at
-												UH
-											</p>
-										</Card.Body>
-									</Card>
-								</Col>
-							</Row>
-							<Row>
-								<Col>
-									<Card style={{ textAlign: 'center', border: 'none' }}>
-										<Card.Body>
-											<div>
-												<img
-													src={memorySVG}
-													alt='undraw'
-													style={{ height: '10em', width: '9em', color: 'red' }}
-												/>
-											</div>
-											<Card.Title>Career Fair Preparation</Card.Title>
-											<p>Practice with mock interviews and resume building</p>
-										</Card.Body>
-									</Card>
-								</Col>
-								<Col>
-									<Card style={{ textAlign: 'center', border: 'none' }}>
-										<Card.Body>
-											<div>
-												<img
-													src={teachingSVG}
-													alt='undraw'
-													style={{ height: '10em', width: '9em', color: 'red' }}
-												/>
-											</div>
-											<Card.Title style={{ textAlign: 'center' }}>
-												Tutoring and Academic Support
-											</Card.Title>
-											<p style={{ textAlign: 'center' }}>
-												Work through problems with intelligent and approachable
-												tutors who are focused on member success lmk what you
-												think
-											</p>
-										</Card.Body>
-									</Card>
-								</Col>
-							</Row>
 						</div>
-					</Row>
-				</Container>
-			</div>
-		);
-	}
-}
+					</Col>
+				</Row>
+			</Container>
+			<Container fluid style={{ textAlign: 'center' }}>
+				<h2>What Are The Benefits</h2>
+				<Row className='benefits' md={12} xs={12}>
+					<div>
+						<Row>
+							<Col>
+								<Card style={{ textAlign: 'center', border: 'none' }}>
+									<Card.Body>
+										<div>
+											<img
+												src={analyticsSVG}
+												style={{ height: '10em', width: '9em', color: 'red' }}
+												alt='undraw'
+											/>
+										</div>
+										<Card.Title style={{ textAlign: 'center' }}>
+											Technical workshops
+										</Card.Title>
+										<p style={{ textAlign: 'center' }}>
+											Learn industry standards and refine your skills in teams{' '}
+										</p>
+									</Card.Body>
+								</Card>
+							</Col>
+							<Col>
+								<Card style={{ textAlign: 'center', border: 'none' }}>
+									<Card.Body>
+										<div>
+											<img
+												src={collectingSVG}
+												alt='undraw'
+												style={{ height: '10em', width: '9em', color: 'red' }}
+											/>
+										</div>
+										<Card.Title>Information Sessions</Card.Title>
+										<p>
+											Connect with companies from all over the world hiring at
+											UH
+										</p>
+									</Card.Body>
+								</Card>
+							</Col>
+						</Row>
+						<Row>
+							<Col>
+								<Card style={{ textAlign: 'center', border: 'none' }}>
+									<Card.Body>
+										<div>
+											<img
+												src={memorySVG}
+												alt='undraw'
+												style={{ height: '10em', width: '9em', color: 'red' }}
+											/>
+										</div>
+										<Card.Title>Career Fair Preparation</Card.Title>
+										<p>Practice with mock interviews and resume building</p>
+									</Card.Body>
+								</Card>
+							</Col>
+							<Col>
+								<Card style={{ textAlign: 'center', border: 'none' }}>
+									<Card.Body>
+										<div>
+											<img
+												src={teachingSVG}
+												alt='undraw'
+												style={{ height: '10em', width: '9em', color: 'red' }}
+											/>
+										</div>
+										<Card.Title style={{ textAlign: 'center' }}>
+											Tutoring and Academic Support
+										</Card.Title>
+										<p style={{ textAlign: 'center' }}>
+											Work through problems with intelligent and approachable
+											tutors who are focused on member success
+										</p>
+									</Card.Body>
+								</Card>
+							</Col>
+						</Row>
+					</div>
+				</Row>
+			</Container>
+		</div>
+	);
+};
 export default Membership;

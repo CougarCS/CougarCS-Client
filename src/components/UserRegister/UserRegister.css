@@ -15,6 +15,11 @@
 	width: 100%;
 }
 
-.formContainer iframe {
+.formContainer .stripe-container {
+	margin: 0 5px;
+	background: #fff;
+	border: 1px solid #ced4da;
 	border-radius: 5px;
+	color: #495057;
+	padding: 6px;
 }

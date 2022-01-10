@@ -1,48 +1,109 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
-import Officer from '../../components/Officers/Officer';
-import officers from '../../officers';
-import './About.css';
-class About extends React.Component {
-	render() {
-		return (
-			<div className='test'>
-				<Container fluid>
-					<Row className='rowHeight'>
-						<Col md='6' className='order-md-2'>
-							<img src={gif} alt='undraw svg' className='img-fluid'></img>
-						</Col>
-						<Col md='6' className='order-md-0'>
-							<div className='about-us'>
-								<h1>About Us</h1>
-								<p>
-									CougarCS is the largest student run Computer Science
-									organization at the University of Houston. At CougarCS, our
-									mission is to smoothly transition our inexperienced members
-									into young professionals by the end of their degree, and to
-									provide support and assistance to members who struggle
-									academically or who need career guidance.
-								</p>
-							</div>
-						</Col>
-					</Row>
-				</Container>
+import officers from '../../data/officers';
+import chevronLogo from '../../assets/partner-logos/chevron.webp';
+import cougarettesLogo from '../../assets/partner-logos/cougarettes.webp';
+import uhspeLogo from '../../assets/partner-logos/uhspe.webp';
+import ripplematchLogo from '../../assets/partner-logos/ripplematch.svg';
+import promazoLogo from '../../assets/partner-logos/promazo.webp';
+import { MetaData } from '../../components/Meta/MetaData';
 
-				<Container className='officerCard' fluid>
-					<h1 style={{ marginTop: '1.8em' }}>Meet the Officers</h1>
-					<Row className='cnt'>
-						<div className='officerImages'>
-							{officers.map((officer) =>
-								officer.show ? (
-									<Officer officer={officer} key={officer.id} />
-								) : null
-							)}
+import './About.css';
+import Loading from '../../components/Loading/Loading';
+const Officer = lazy(() => import('../../components/Officers/Officer'));
+
+const meta = {
+	title: 'About',
+	desc: 'Learn more about CougarCS',
+	url: 'https://cougarcs.com/about',
+	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+};
+
+const About = () => {
+	return (
+		<>
+			<MetaData {...meta} />
+			<Container fluid className='contained hero hero-about'>
+				<Row>
+					<Col md='6' className='order-md-2'>
+						<img src={gif} alt='undraw svg' className='img-fluid'></img>
+					</Col>
+					<Col md='6' className='order-md-0'>
+						<div className='about-us'>
+							<h1>About Us</h1>
+							<p className='lead-text'>
+								CougarCS is the largest student run Computer Science
+								organization at the University of Houston. At CougarCS, our
+								mission is to smoothly transition our inexperienced members into
+								young professionals by the end of their degree, and to provide
+								support and assistance to members who struggle academically or
+								who need career guidance.
+							</p>
 						</div>
-					</Row>
+					</Col>
+				</Row>
+			</Container>
+
+			<Suspense fallback={<Loading />}>
+				<Container fluid className='contained sub-section'>
+					<h2 className='heading'>Meet the Officers</h2>
+					<div className='officers-grid'>
+						{officers.map(
+							(officer) =>
+								officer.show && <Officer officer={officer} key={officer.id} />
+						)}
+					</div>
 				</Container>
-			</div>
-		);
-	}
-}
+			</Suspense>
+			<Container fluid className='contained partners-wrapper sub-section'>
+				<Row>
+					<Col md='6'>
+						<h2 className='heading'>Official Sponsors</h2>
+						<div className='partner-logos'>
+							<img
+								src={chevronLogo}
+								className='partner-logo'
+								alt='Chevron Logo'
+							/>
+						</div>
+					</Col>
+					<Col md='6'>
+						<h2 className='heading'>Partner Clubs</h2>
+						<div className='partner-logos'>
+							<a
+								href='https://uhcougarettes.com/'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<img
+									src={cougarettesLogo}
+									className='partner-logo'
+									alt='Cougarettes Logo'
+								/>
+							</a>
+							<img src={uhspeLogo} className='partner-logo' alt='UHSPE Logo' />
+						</div>
+					</Col>
+					<Col md='12'>
+						<h2 className='heading'>Partner Companies</h2>
+						<div className='partner-logos'>
+							<img
+								src={ripplematchLogo}
+								className='partner-logo'
+								alt='Ripple Match Logo'
+							/>
+							<img
+								src={promazoLogo}
+								className='partner-logo'
+								alt='Promazo Logo'
+							/>
+						</div>
+					</Col>
+				</Row>
+			</Container>
+		</>
+	);
+};
+
 export default About;

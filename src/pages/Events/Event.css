@@ -1,28 +1,50 @@
-/* @import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css'; */
-
- /* @import 'react-big-calendar/lib/sass/styles'; */
- 
-.event-container{
-    margin: 0;
-    padding: 0 2em 2em;
-    height: calc(100vh - 107.75px)
+.event-container {
+	margin: 0;
+	padding: 0 2em 2em;
+	height: calc(100vh - 107.75px);
 }
 
 .load {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 107.75px)
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 107.75px);
 }
+
+.eventModalDesc {
+	overflow-x: hidden;
+}
+
 .loader {
-    text-align: center;
+	text-align: center;
 }
-@media only screen and (max-width: 414px) {
-    .event-container{
-        margin: 0;
-        padding: 0 2em; 
-        width: 100vw;
-        height: calc(100vh - 107.75px);
-    }
-  }
+@media (max-width: 414px) {
+	.event-container {
+		margin: 0;
+		padding: 0 2em;
+		width: 100vw;
+		height: calc(100vh - 107.75px);
+	}
+}
+
+.rbc-toolbar button {
+	color: var(--color-on-background) !important;
+}
+
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
+	background: var(--on-active-color) !important;
+}
+
+.modal-title {
+	width: 100%;
+}
+
+.modal-content {
+	background: var(--color-background);
+	text-align: center;
+}
+
+.close {
+	color: var(--color-on-background);
+}

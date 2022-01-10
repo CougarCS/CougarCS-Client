@@ -1,0 +1,113 @@
+name: Test, Install, Build, Deploy
+
+on: [push, pull_request]
+
+jobs:
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - id: yarn-cache
+      name: Get Yarn cache path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@master
+      with:
+        node-version: 14.x
+
+    - name: Load cache
+      uses: actions/cache@v2
+      with:
+        path: ${{ steps.yarn-cache.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
+    - name: Install
+      run: yarn install --frozen-lockfile
+
+    - name: Lint
+      run: yarn run eslint-check
+
+  cd:
+    runs-on: ubuntu-latest
+
+    steps:
+    - id: yarn-cache
+      name: Get Yarn cache path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+    
+    - name: Event Name
+      run: echo ${{github.event_name}}
+
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@master
+      with:
+        node-version: 14.x
+
+    - name: Load cache
+      uses: actions/cache@v2
+      with:
+        path: ${{ steps.yarn-cache.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
+    - name: Install
+      run: yarn install --frozen-lockfile
+    
+    - name: Build
+      if: ${{github.event_name != 'pull_request'}}
+      run: CI=false && yarn build
+      env:
+        REACT_APP_NODE_ENV: ${{secrets.REACT_APP_NODE_ENV}}
+        REACT_APP_STRIPE_KEY: ${{secrets.REACT_APP_STRIPE_KEY}}
+        REACT_APP_RECAPTCHA_SITE_KEY: ${{secrets.REACT_APP_RECAPTCHA_SITE_KEY}}
+        REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.3.1
+      
+      if: ${{github.event_name != 'pull_request'}}
+      with:
+        name: build-artifact
+        path: build/
+        retention-days: 1    
+
+    - name: Test
+      uses: cypress-io/github-action@v2
+      with:
+        install: false
+        start: yarn start
+        wait-on: http://localhost:3000
+
+    - name: Upload Cypress Screenshots
+      uses: actions/upload-artifact@v2.3.1
+      if: failure()
+      with:
+        name: cypress-screenshots
+        path: cypress/screenshots
+
+    - name: Upload Cypress Videos
+      uses: actions/upload-artifact@v2.3.1
+      if: failure()
+      with:
+        name: cypress-videos
+        path: cypress/videos
+      
+    - name: Deploy
+      if: ${{ github.repository_owner == 'CougarCS' && github.event_name != 'pull_request' && (github.ref == 'refs/heads/prod')}}
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: ${{secrets.FTP_URL}}
+        username: ${{secrets.FTP_USERNAME}}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./build/

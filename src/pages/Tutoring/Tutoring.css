@@ -1,0 +1,118 @@
+.hero.hero-tutoring {
+	padding-bottom: 200px;
+}
+
+.hero-tutoring .row {
+	align-items: center;
+}
+
+.discord-button {
+	background-color: #7289da;
+	padding: 13px 25px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	border: 0;
+	border-radius: 7px;
+	font-weight: 600;
+	outline: 0px;
+	box-shadow: none !important;
+}
+
+.discord-button:hover,
+.discord-button:active,
+.discord-button:focus {
+	background-color: #627ee2 !important;
+}
+
+.discord-button-wrapper small {
+	color: #777;
+	font-size: 11px;
+}
+
+.ghost-button {
+	background-color: transparent;
+	border: 2px solid;
+	color: var(--color-on-labelAndHeaders);
+	padding: 13px 25px;
+	border-radius: 7px;
+	font-weight: 600;
+	outline: none;
+	box-shadow: none !important;
+}
+
+.ghost-button:hover,
+.ghost-button:active,
+.ghost-button:focus {
+	background-color: var(--color-on-labelAndHeaders) !important;
+	border-color: var(--color-on-labelAndHeaders) !important;
+	color: #fff !important;
+}
+
+.classes-wrapper {
+	max-width: 840px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+	justify-content: center;
+	gap: 30px;
+}
+
+.classes-wrapper .class-number {
+	text-align: center;
+	border: 0px;
+	border-radius: 7px;
+	background: var(--color-secondary);
+	color: var(--color-on-secondary);
+	padding: 20px 30px;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.tutors-wrapper {
+	max-width: 750px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	justify-content: center;
+	column-gap: 60px;
+	row-gap: 15px;
+}
+
+.tutors-wrapper a,
+.tutors-wrapper a:hover {
+	color: var(--color-on-background);
+}
+
+.tutor-cta {
+	margin-top: 60px;
+}
+
+.tutor-cta p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.fetching {
+	display: grid;
+	justify-content: center;
+}
+@media (max-width: 767px) {
+	.hero.hero-tutoring {
+		padding-bottom: 100px;
+	}
+
+	.hero-tutoring .col-md-6:nth-child(1) {
+		margin-bottom: 75px;
+	}
+
+	.hero-tutoring .col-md-6:nth-child(1) img {
+		max-height: 300px;
+		display: block;
+		margin: auto;
+	}
+
+	.tutors-wrapper {
+		text-align: center;
+	}
+}
