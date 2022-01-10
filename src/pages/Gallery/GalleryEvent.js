@@ -12,7 +12,7 @@ const GalleryEvent = () => {
 	let match = useParams();
 	let currentEvent = {};
 
-	events.forEach((e, i) => {
+	events.forEach((e, _i) => {
 		if (e.link === match.event) {
 			currentEvent = e;
 		}
