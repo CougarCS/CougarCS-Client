@@ -1,16 +1,20 @@
+import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 import axios from 'axios';
-import React, { useState } from 'react';
-import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
-import Loading from '../../components/Loading/Loading';
-import './Event.css';
-import { Modal, Button, Dropdown } from 'react-bootstrap';
-import { sanitize } from 'dompurify';
-import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
-import { useQuery, useQueryClient } from 'react-query';
-import { MetaData } from '../../components/Meta/MetaData';
-import { parse, startOfWeek, getDay, parseISO } from 'date-fns';
+import { getDay, parse, parseISO, startOfWeek } from 'date-fns';
 import { format, utcToZonedTime } from 'date-fns-tz';
 import local from 'date-fns/locale/en-US';
+import { sanitize } from 'dompurify';
+import React, { useState } from 'react';
+import { dateFnsLocalizer } from 'react-big-calendar';
+import { Button, Modal } from 'react-bootstrap';
+import { useQuery, useQueryClient } from 'react-query';
+import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
+import Loading from '../../components/Loading/Loading';
+import { MetaData } from '../../components/Meta/MetaData';
+
+import './Event.css';
+import Panel from '../../components/Carousel/Panel';
 
 const locales = {
 	'en-US': local,
@@ -43,7 +47,7 @@ const formatDates = (date) => {
 		{ timeZone: 'America/Chicago' }
 	);
 };
-
+// this will change to carousel
 const meta = {
 	title: 'Calendar',
 	desc: 'Checkout our events.',
@@ -57,6 +61,7 @@ const Events = () => {
 		initialData: () => queryClient.getQueryData('events'),
 		staleTime: 300000,
 	});
+
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => {
@@ -76,6 +81,11 @@ const Events = () => {
 		description: '',
 	});
 
+	const [value, setValue] = useState(0);
+	function onChange(value) {
+		setValue(value);
+	}
+
 	return (
 		<>
 			<MetaData {...meta}>
@@ -90,19 +100,27 @@ const Events = () => {
 				</div>
 			) : (
 				<div className='event-container'>
-					<Calendar
+					<Carousel
+						//stuff from calendar that works? some how???
 						localizer={localizer}
 						events={data}
 						startAccessor='start'
 						endAccessor='end'
-						style={{ height: '100%' }}
-						views={{
-							month: true,
-							agenda: true,
-						}}
 						popup={true}
-						drilldownView='agenda'
-						popupOffset={{ x: 30, y: 20 }}
+						//Carousel native options
+						value={value}
+						onChange={onChange}
+						plugins={[
+							'infinite',
+							{
+								resolve: slidesToShowPlugin,
+								options: {
+									numberOfSlides: 4,
+								},
+							},
+						]}
+						itemWidth={404}
+						offset={50}
 						onSelectEvent={(e) => {
 							setDesc({
 								title: e.title,
@@ -112,10 +130,28 @@ const Events = () => {
 							});
 							setShow(true);
 						}}
+					>
+						{data.map((d, i) => (
+							<Panel key={d} desc={i} />
+						))}
+					</Carousel>
+					{/* 
+					<Calendar
+						
+						
+						style={{ height: '100%' }}
+						views={{
+							month: true,
+							agenda: true,
+						}}
+						
+						drilldownView='agenda'
+						popupOffset={{ x: 30, y: 20 }}
+						
 					/>
+					 */}
 				</div>
 			)}
-
 			<Modal show={show} size='lg' onHide={handleClose} keyboard={false}>
 				<Modal.Header closeButton>
 					<Modal.Title>{desc.title}</Modal.Title>
@@ -133,14 +169,12 @@ const Events = () => {
 						/>
 					}
 				</Modal.Body>
+				{/* the button to add to google calendar */}
 				<Modal.Footer>
-					<Dropdown>
-						<Dropdown.Toggle variant='success' id='dropdown-basic'>
-							Add To Calendar
-						</Dropdown.Toggle>
-
+					<Button type='button' className='btn btn-success'>
+						Add To Calendar
 						<AddToCalendar event={desc} />
-					</Dropdown>
+					</Button>
 
 					<Button variant='danger' onClick={handleClose}>
 						Close

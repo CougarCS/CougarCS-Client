@@ -161,3 +161,19 @@ input {
 		margin-bottom: 130px;
 	}
 }
+/* 
+carousel style
+@carousel button.BrainhubCarousel__arrows {
+	background-color: initial;
+	&:hover{
+		background-color: initial;
+		span{
+			border-color: var(--color-primary);
+		}
+	}
+	span{
+		border-color: var(--color-primary);
+	}
+}
+
+ */
