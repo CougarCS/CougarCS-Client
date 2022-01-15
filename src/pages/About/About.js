@@ -58,7 +58,7 @@ const About = () => {
 			</Suspense>
 			<Container fluid className='contained partners-wrapper sub-section'>
 				<Row>
-					<Col md='12'>
+					<Col md='6'>
 						<h2 className='heading'>Official Sponsors</h2>
 						<div className='partner-logos'>
 							<img
@@ -68,7 +68,7 @@ const About = () => {
 							/>
 						</div>
 					</Col>
-					{/* <Col md='6'>
+					<Col md='6'>
 						<h2 className='heading'>Partner Clubs</h2>
 						<div className='partner-logos'>
 							<a
@@ -84,8 +84,8 @@ const About = () => {
 							</a>
 							<img src={uhspeLogo} className='partner-logo' alt='UHSPE Logo' />
 						</div>
-					</Col> */}
-					{/* <Col md='12'>
+					</Col>
+					<Col md='12'>
 						<h2 className='heading'>Partner Companies</h2>
 						<div className='partner-logos'>
 							<img
@@ -99,7 +99,7 @@ const About = () => {
 								alt='Promazo Logo'
 							/>
 						</div>
-					</Col> */}
+					</Col>
 				</Row>
 			</Container>
 		</>
