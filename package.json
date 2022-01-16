@@ -69,7 +69,7 @@
     "babel-eslint": "10.1.0",
     "craco-swc": "0.2.0",
     "cypress": "9.1.1",
-    "eslint": "7.32.0",
+    "eslint": "8.7.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-config-prettier-check": "1.0.0",
     "eslint-config-react-app": "6.0.0",
