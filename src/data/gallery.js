@@ -37,7 +37,7 @@ const gallery = [
 		image: Fall21Officers,
 		location: 'Houston, TX',
 		date: '08/07/2021',
-		picture: [Fall21Officers],
+		pictures: [Fall21Officers],
 	},
 	{
 		id: 1,
