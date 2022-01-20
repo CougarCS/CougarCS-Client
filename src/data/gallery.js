@@ -19,7 +19,7 @@ import Schlumberger1 from '../assets/gallery/Schlumberger1.webp';
 import Paycom1 from '../assets/gallery/paycom1.webp';
 import Paycom2 from '../assets/gallery/paycom2.webp';
 import Linuxw1 from '../assets/gallery/linuxw1.webp';
-import Fall21Officers from '../assets/gallery/Group Pic 1.webp';
+import Fall21Officers from '../assets/gallery/GroupPic1.webp';
 import FirstGeneralMeeting21_1 from '../assets/gallery/fgm1.webp';
 import FirstGeneralMeeting21_2 from '../assets/gallery/fgm2.webp';
 import CatsBack21_1 from '../assets/gallery/catsback1.webp';
