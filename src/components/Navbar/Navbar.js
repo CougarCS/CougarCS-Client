@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../../assets/logo.png';
 import './Navbar.css';
 
-const NavBar = ({ themeToggler }) => (
+const NavBar = () => (
 	<Navbar className='main-nav' fluid='true' collapseOnSelect expand='lg'>
 		<LinkContainer to='/'>
 			<Navbar.Brand>
