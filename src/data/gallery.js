@@ -57,7 +57,7 @@ const gallery = [
 		image: FirstGeneralMeeting21_1,
 		location: 'Houston, TX',
 		date: '09/02/2021',
-		pictures: [FirstGeneralMeeting21_1, FirstGeneralMeeting21_2],
+		pictures: [FirstGeneralMeeting21_1],
 	},
 	{
 		id: 3,
@@ -137,7 +137,7 @@ const gallery = [
 		image: InterviewWS0,
 		location: 'Houston, TX',
 		date: '11/21/2020',
-		pictures: [InterviewWS0, InterviewWS1, InterviewWS1],
+		pictures: [InterviewWS0, InterviewWS1],
 	},
 	{
 		id: 11,
