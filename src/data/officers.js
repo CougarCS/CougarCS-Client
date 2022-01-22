@@ -1,17 +1,21 @@
 import Dr_Yun from '../assets/officers/Dr_Yun.webp';
-import Nykolas from '../assets/officers/NykolasF.webp';
-import Shubh from '../assets/officers/ShubhS.webp';
+import Nykolas from '../assets/officers/Nykolas.webp';
 import Zuha from '../assets/officers/Zuha.webp';
 import Kevin from '../assets/officers/KevinF.webp';
 import Ahmed from '../assets/officers/AhmedQ.webp';
-import Christian from '../assets/officers/ChristianA.webp';
-import Erick from '../assets/officers/ErickP.webp';
-import Armando from '../assets/officers/ArmandoM.webp';
-import Matthew from '../assets/officers/MatthewP.webp';
-import Ramadharsh from '../assets/officers/RamadharshV.webp';
-import Shubha from '../assets/officers/ShubhaJ.webp';
-import Vanessa from '../assets/officers/VanessaS.webp';
-import Janice from '../assets/officers/JaniceL.webp';
+import Christian from '../assets/officers/Christian.webp';
+import Erick from '../assets/officers/Erick.webp';
+import Matthew from '../assets/officers/MattP.webp';
+import Ali from '../assets/officers/Ali2.webp';
+import Chetoo from '../assets/officers/Chetna2.webP';
+import Keenan from '../assets/officers/Keenan.webp';
+import Isaiah from '../assets/officers/Isaiah.webp';
+import Manzana from '../assets/officers/manasa2.webp';
+import David from '../assets/officers/David.webp';
+import Anil from '../assets/officers/Anil.webp';
+import Nadiia from '../assets/officers/Nadiia.webp';
+import Mihir from '../assets/officers/Mihir.webp';
+import MatthewT from '../assets/officers/MattT.webp';
 
 const officers = [
 	{
@@ -36,46 +40,36 @@ const officers = [
 	},
 	{
 		id: 2,
-		name: 'Shubh Sheth',
-		image: Shubh,
-		linkedin: 'https://www.linkedin.com/in/sheth-shubh/',
-		email: 'vicepresident@cougarcs.com',
-		title: 'Vice President',
+		name: 'Syeda Zuha Beyabani',
+		image: Zuha,
+		linkedin: 'https://www.linkedin.com/in/syedazuhabeyabani/',
+		email: 'vp.internal@cougarcs.com',
+		title: 'Vice President Internal Affairs',
 		open: false,
 		show: true,
 	},
 	{
 		id: 3,
-		name: 'Syeda Zuha Beyabani',
-		image: Zuha,
-		linkedin: 'https://www.linkedin.com/in/syedazuhabeyabani/',
-		email: 'treasurer@cougarcs.com',
-		title: 'Treasurer',
+		name: 'Keenan Salonga',
+		image: Keenan,
+		linkedin: 'https://www.linkedin.com/in/keenansalonga',
+		email: 'vp.activities@cougarcs.com',
+		title: 'Vice President Activities',
 		open: false,
 		show: true,
 	},
 	{
 		id: 4,
-		name: 'Vanessa Zambrano',
-		image: Vanessa,
-		linkedin: 'https://www.linkedin.com/in/vlzambr/',
-		email: 'secretary@cougarcs.com',
-		title: 'Secretary',
-		open: false,
-		show: true,
-	},
-	{
-		id: 5,
-		name: 'Shubha Joshi',
-		image: Shubha,
-		linkedin: 'https://www.linkedin.com/in/shubha-joshi-03441a194/',
-		email: 'shubha@cougarcs.com',
+		name: 'Ali Zain Charolia',
+		image: Ali,
+		linkedin: 'https://www.linkedin.com/in/alizaincharolia',
+		email: 'alizain@cougarcs.com',
 		title: 'Director of CodeRED',
 		open: false,
 		show: true,
 	},
 	{
-		id: 6,
+		id: 5,
 		name: 'Kevin Flores',
 		image: Kevin,
 		linkedin: 'https://www.linkedin.com/in/flores-kevin/',
@@ -85,57 +79,17 @@ const officers = [
 		show: true,
 	},
 	{
-		id: 7,
-		name: 'Erick-Khai Pham',
-		image: Erick,
-		linkedin: 'https://www.linkedin.com/in/erickkhaipham/',
-		email: 'activities@cougarcs.com',
-		title: 'Co-Director of Activities',
-		open: false,
-		show: true,
-	},
-	{
-		id: 8,
-		name: 'Armando Morales',
-		image: Armando,
-		linkedin: 'https://www.linkedin.com/in/armando-morales-454431167/',
-		email: 'activities@cougarcs.com',
-		title: 'Co-Director of Activities',
-		open: false,
-		show: true,
-	},
-	{
-		id: 9,
-		name: 'Matthew Philip',
-		image: Matthew,
-		linkedin: 'https://www.linkedin.com/in/matthew-philip/',
-		email: 'tutoring@cougarcs.com',
-		title: 'Director of Tutoring',
-		open: false,
-		show: true,
-	},
-	{
-		id: 10,
-		name: 'Ramadharsh Vanchinathan',
-		image: Ramadharsh,
-		linkedin: 'https://www.linkedin.com/in/adharsh-vanchinathan-b2139b1a9/',
-		email: 'operations@cougarcs.com',
-		title: 'Director of Operations',
-		open: false,
-		show: true,
-	},
-	{
-		id: 11,
+		id: 6,
 		name: 'Christian Ayala',
 		image: Christian,
 		linkedin: 'https://www.linkedin.com/in/christian-ayala--/',
-		email: 'historian@cougarcs.com',
-		title: 'Historian',
+		email: 'merchandise@cougarcs.com',
+		title: 'Merchandise',
 		open: false,
 		show: true,
 	},
 	{
-		id: 12,
+		id: 7,
 		name: 'Ahmed Qureshi',
 		image: Ahmed,
 		linkedin: 'https://www.linkedin.com/in/aoquresh/',
@@ -145,12 +99,102 @@ const officers = [
 		show: true,
 	},
 	{
-		id: 13,
-		name: 'Janice Liang',
-		image: Janice,
-		linkedin: 'https://www.linkedin.com/in/janice-liang-5b9130205/',
-		email: 'designer@cougarcs.com',
+		id: 8,
+		name: 'Isaiah Johnson',
+		image: Isaiah,
+		linkedin: 'https://www.linkedin.com/in/armando-morales-454431167/',
+		email: 'activities@cougarcs.com',
 		title: 'Designer',
+		open: false,
+		show: true,
+	},
+	{
+		id: 9,
+		name: 'Manasa Dendukuri',
+		image: Manzana,
+		linkedin: 'https://www.linkedin.com/in/manasadendukuri/',
+		email: 'historian@cougarcs.com',
+		title: 'Historian',
+		open: false,
+		show: true,
+	},
+	{
+		id: 10,
+		name: 'David Wu',
+		image: David,
+		linkedin: 'https://www.linkedin.com/in/adharsh-vanchinathan-b2139b1a9/',
+		email: 'operations@cougarcs.com',
+		title: 'Director of Marketing',
+		open: false,
+		show: true,
+	},
+	{
+		id: 11,
+		name: 'Erick-Khai Pham',
+		image: Erick,
+		linkedin: 'hhttps://www.linkedin.com/in/erickkhaipham/',
+		email: 'erick@cougarcs.com',
+		title: 'Director of Company Relations',
+		open: false,
+		show: true,
+	},
+	{
+		id: 12,
+		name: 'Anil Shanker',
+		image: Anil,
+		linkedin: 'https://www.linkedin.com/in/anil-shanker/',
+		email: 'workshops@cougarcs.com',
+		title: 'Director of Workshops',
+		open: false,
+		show: true,
+	},
+	{
+		id: 13,
+		name: 'Chetana Pitani',
+		image: Chetoo,
+		linkedin: 'https://www.linkedin.com/in/chetana-pitani-5979921b8/',
+		email: 'socials@cougarcs.com',
+		title: 'Director of Socials',
+		open: false,
+		show: true,
+	},
+	{
+		id: 14,
+		name: 'Nadiia Hutcherson',
+		image: Nadiia,
+		linkedin: 'https://www.linkedin.com/in/nadiiahutcherson',
+		email: 'operations@cougarcs.com',
+		title: 'Director of Operations',
+		open: false,
+		show: true,
+	},
+	{
+		id: 15,
+		name: 'Matthew Philip',
+		image: Matthew,
+		linkedin: 'https://www.linkedin.com/in/matt-teal/',
+		email: 'tutoring@cougarcs.com',
+		title: 'Director of Tutoring',
+		open: false,
+		show: true,
+	},
+	{
+		id: 16,
+		name: 'Matthew Teal',
+		image: MatthewT,
+		linkedin: 'https://www.linkedin.com/in/janice-liang-5b9130205/',
+		email: 'mentoring@cougarcs.com',
+		title: 'Director of Tutoring',
+		open: false,
+		show: true,
+	},
+	{
+		id: 17,
+		name: 'Mihir Sahu',
+		image: Mihir,
+		linkedin: 'www.linkedin.com/in/the-mihir-sahu',
+		email: 'infosec@cougarcs.com',
+		title: 'Director of Information Security',
 		open: false,
 		show: true,
 	},
