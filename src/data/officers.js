@@ -1,17 +1,17 @@
 import Dr_Yun from '../assets/officers/Dr_Yun.webp';
-import Nykolas from '../assets/officers/Nykolas.webp';
+import Nykolas from '../assets/officers/nyk.webp';
 import Zuha from '../assets/officers/Zuha.webp';
 import Kevin from '../assets/officers/KevinF.webp';
 import Ahmed from '../assets/officers/AhmedQ.webp';
-import Christian from '../assets/officers/Christian.webp';
-import Erick from '../assets/officers/Erick.webp';
+import Christian from '../assets/officers/Christian2.webp';
+import Erick from '../assets/officers/Erick5.webp';
 import Matthew from '../assets/officers/MattP.webp';
-import Ali from '../assets/officers/Ali2.webp';
-import Chetoo from '../assets/officers/Chetna2.webP';
+import Ali from '../assets/officers/Ali1.webp';
+import Chetoo from '../assets/officers/Chetooo.webp';
 import Keenan from '../assets/officers/Keenan.webp';
-import Isaiah from '../assets/officers/Isaiah.webp';
-import Manzana from '../assets/officers/manasa2.webp';
-import David from '../assets/officers/David.webp';
+import Isaiah from '../assets/officers/Isaiah2.webp';
+import Manzana from '../assets/officers/manzana3.webp';
+import David from '../assets/officers/David2.webp';
 import Anil from '../assets/officers/Anil.webp';
 import Nadiia from '../assets/officers/Nadiia.webp';
 import Mihir from '../assets/officers/Mihir.webp';
@@ -102,8 +102,8 @@ const officers = [
 		id: 8,
 		name: 'Isaiah Johnson',
 		image: Isaiah,
-		linkedin: 'https://www.linkedin.com/in/armando-morales-454431167/',
-		email: 'activities@cougarcs.com',
+		linkedin: 'https://linkedin.com/in/the-isaiah-johnson',
+		email: 'designer@cougarcs.com',
 		title: 'Designer',
 		open: false,
 		show: true,
@@ -122,7 +122,7 @@ const officers = [
 		id: 10,
 		name: 'David Wu',
 		image: David,
-		linkedin: 'https://www.linkedin.com/in/adharsh-vanchinathan-b2139b1a9/',
+		linkedin: 'www.linkedin.com/in/david-wu1',
 		email: 'operations@cougarcs.com',
 		title: 'Director of Marketing',
 		open: false,
@@ -172,7 +172,7 @@ const officers = [
 		id: 15,
 		name: 'Matthew Philip',
 		image: Matthew,
-		linkedin: 'https://www.linkedin.com/in/matt-teal/',
+		linkedin: 'https://www.linkedin.com/in/matthew-philip/',
 		email: 'tutoring@cougarcs.com',
 		title: 'Director of Tutoring',
 		open: false,
@@ -182,9 +182,9 @@ const officers = [
 		id: 16,
 		name: 'Matthew Teal',
 		image: MatthewT,
-		linkedin: 'https://www.linkedin.com/in/janice-liang-5b9130205/',
+		linkedin: 'https://www.linkedin.com/in/matt-teal/',
 		email: 'mentoring@cougarcs.com',
-		title: 'Director of Tutoring',
+		title: 'Director of Mentoring',
 		open: false,
 		show: true,
 	},
