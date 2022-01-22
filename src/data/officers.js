@@ -64,7 +64,7 @@ const officers = [
 		image: Ali,
 		linkedin: 'https://www.linkedin.com/in/alizaincharolia',
 		email: 'alizain@cougarcs.com',
-		title: 'Director of CodeRED',
+		title: 'Vice President of CodeRED',
 		open: false,
 		show: true,
 	},
