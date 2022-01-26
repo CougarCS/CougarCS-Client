@@ -4,7 +4,7 @@ import gif from '../../assets/about.svg';
 import officers from '../../data/officers';
 import chevronLogo from '../../assets/partner-logos/chevron.webp';
 import cougarettesLogo from '../../assets/partner-logos/cougarettes.webp';
-import uhspeLogo from '../../assets/partner-logos/uhspe.webp';
+import csgirlsLogo from '../../assets/partner-logos/csgirls.webp';
 import ripplematchLogo from '../../assets/partner-logos/ripplematch.svg';
 import promazoLogo from '../../assets/partner-logos/promazo.webp';
 import { MetaData } from '../../components/Meta/MetaData';
@@ -82,7 +82,17 @@ const About = () => {
 									alt='Cougarettes Logo'
 								/>
 							</a>
-							<img src={uhspeLogo} className='partner-logo' alt='UHSPE Logo' />
+                            <a
+                                href='https://csgirls.org/'
+                                target='_blank'
+                                rel='noreferrer'
+                            >
+                                <img
+                                    src={csgirlsLogo}
+                                    className='partner-logo'
+                                    alt='CSGirls Logo'
+                                />
+                            </a>
 						</div>
 					</Col>
 					<Col md='12'>
