@@ -1,5 +1,5 @@
 import Dr_Yun from '../assets/officers/Dr_Yun.webp';
-import Nykolas from '../assets/officers/Nykk.webp';
+import Nykolas from '../assets/officers/Nykolas.webp';
 import Zuha from '../assets/officers/Zuha.webp';
 import Kevin from '../assets/officers/KevinF.webp';
 import Ahmed from '../assets/officers/AhmedQ.webp';
