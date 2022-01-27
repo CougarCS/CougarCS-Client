@@ -82,17 +82,13 @@ const About = () => {
 									alt='Cougarettes Logo'
 								/>
 							</a>
-                            <a
-                                href='https://csgirls.org/'
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <img
-                                    src={csgirlsLogo}
-                                    className='partnet-logo'
-                                    alt='CSGirls Logo'
-                                />
-                            </a>
+							<a href='https://csgirls.org/' target='_blank' rel='noreferrer'>
+								<img
+									src={csgirlsLogo}
+									className='partner-logo'
+									alt='CSGirls Logo'
+								/>
+							</a>
 						</div>
 					</Col>
 					<Col md='12'>
