@@ -21,7 +21,6 @@ import Paycom2 from '../assets/gallery/paycom2.webp';
 import Linuxw1 from '../assets/gallery/linuxw1.webp';
 import Fall21Officers from '../assets/gallery/GroupPic1.webp';
 import FirstGeneralMeeting21_1 from '../assets/gallery/fgm1.webp';
-import FirstGeneralMeeting21_2 from '../assets/gallery/fgm2.webp';
 import CatsBack21_1 from '../assets/gallery/catsback1.webp';
 import CatsBack21_2 from '../assets/gallery/catsback2.webp';
 import BYOK1 from '../assets/gallery/byok1.webp';
@@ -53,11 +52,11 @@ const gallery = [
 		id: 2,
 		show: true,
 		name: 'First General Meeting',
-		link: 'first general meeting',
+		link: 'first-general-meeting',
 		image: FirstGeneralMeeting21_1,
 		location: 'Houston, TX',
 		date: '09/02/2021',
-		pictures: [FirstGeneralMeeting21_1, FirstGeneralMeeting21_2],
+		pictures: [FirstGeneralMeeting21_1],
 	},
 	{
 		id: 3,
@@ -137,7 +136,7 @@ const gallery = [
 		image: InterviewWS0,
 		location: 'Houston, TX',
 		date: '11/21/2020',
-		pictures: [InterviewWS0, InterviewWS1, InterviewWS1],
+		pictures: [InterviewWS0, InterviewWS1],
 	},
 	{
 		id: 11,
