@@ -5,7 +5,7 @@ import Kevin from '../assets/officers/KevinF.webp';
 import Ahmed from '../assets/officers/AhmedQ.webp';
 import Christian from '../assets/officers/Christian.webp';
 import Erick from '../assets/officers/ErickP.webp';
-import Matthew from '../assets/officers/mattP.webp';
+import Matthew from '../assets/officers/MattP.webp';
 import Ali from '../assets/officers/sai2.webp';
 import Chetoo from '../assets/officers/ChetOO.webp';
 import Keenan from '../assets/officers/Keenan2.webp';
