@@ -5,7 +5,6 @@ import officers from '../../data/officers';
 import chevronLogo from '../../assets/partner-logos/chevron.webp';
 import cougarettesLogo from '../../assets/partner-logos/cougarettes.webp';
 import csgirlsLogo from '../../assets/partner-logos/csgirls.webp';
-import uhspeLogo from '../../assets/partner-logos/uhspe.webp';
 import ripplematchLogo from '../../assets/partner-logos/ripplematch.svg';
 import promazoLogo from '../../assets/partner-logos/promazo.webp';
 import { MetaData } from '../../components/Meta/MetaData';
