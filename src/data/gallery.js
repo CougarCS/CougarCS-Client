@@ -53,7 +53,7 @@ const gallery = [
 		id: 2,
 		show: true,
 		name: 'First General Meeting',
-		link: 'first-general-meeting',
+		link: 'first general meeting',
 		image: FirstGeneralMeeting21_1,
 		location: 'Houston, TX',
 		date: '09/02/2021',
