@@ -13,9 +13,9 @@ import Isaiah from '../assets/officers/Isiah.webp';
 import Manzana from '../assets/officers/Manasa.webp';
 import David from '../assets/officers/David.webp';
 import Anil from '../assets/officers/AnilS.webp';
-import Nadiia from '../assets/officers/Nadia.webp';
+import Nadiia from '../assets/officers/Nadiia.webp';
 import Mihir from '../assets/officers/Mihir.webp';
-import MatthewT from '../assets/officers/MattT.webp';
+import MatthewT from '../assets/officers/MatthewT.webp';
 
 const officers = [
 	{
