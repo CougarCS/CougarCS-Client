@@ -63,19 +63,6 @@ const Membership = () => {
 									email us at{' '}
 									<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
 								</p>
-								<p>
-									Whats that? You want to get more envolved with CougarCS?
-									Interested in joining our Webdev team? Please reach out to
-									Kevin Flores at{' '}
-									<a href='mailto:webmaster@cougarcs.com'>
-										webmaster@cougarcs.com
-									</a>
-									. What about becoming a tutor? For that you can contact{' '}
-									<a href='mailto:tutoring@cougarcs.com'>
-										tutoring@cougarcs.com
-									</a>
-									.
-								</p>
 							</div>
 							<div>
 								{/* <LinkContainer to='/register'>
