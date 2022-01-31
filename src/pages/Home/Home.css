@@ -32,11 +32,6 @@
 	background-position: center 0;
 }
 
-.learnMoreBtn {
-	font-size: 1.3rem;
-	text-align: center;
-}
-
 .main-text {
 	position: absolute;
 	margin: auto;
@@ -75,6 +70,24 @@
 		position: relative;
 		padding: 20px 0 40px;
 		top: 5%;
+	}
+}
+
+@media (min-width: 850px) and (max-width: 2250px) {
+	.buttonsWidth {
+		width: 30% !important;
+	}
+}
+
+@media (min-width: 281px) and (max-width: 849px) {
+	.buttonsWidth {
+		width: 75% !important;
+	}
+}
+
+@media (min-width: 50px) and (max-width: 280px) {
+	.buttonsWidth {
+		width: 100% !important;
 	}
 }
 

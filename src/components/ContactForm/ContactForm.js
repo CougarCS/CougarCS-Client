@@ -90,31 +90,34 @@ const ContactForm = () => {
 			<Row>
 				<Col xs={12} md={6} lg={6}>
 					<Form onSubmit={handleSubmit(onSubmit, onError)}>
-						<Form.Group>
+						<Col>
 							<Form.Label>First Name*</Form.Label>
 							<Form.Control
 								type='text'
 								placeholder='First Name'
 								{...register('firstName', { required: true, maxLength: 20 })}
 							/>
-						</Form.Group>
-						<Form.Group>
+						</Col>
+						<br />
+						<Col>
 							<Form.Label>Last Name*</Form.Label>
 							<Form.Control
 								type='text'
 								placeholder='Last Name'
 								{...register('lastName', { required: true, maxLength: 20 })}
 							/>
-						</Form.Group>
-						<Form.Group>
+						</Col>
+						<br />
+						<Col>
 							<Form.Label>Email Address*</Form.Label>
 							<Form.Control
 								type='email'
 								placeholder='Email'
 								{...register('email', { required: true })}
 							/>
-						</Form.Group>
-						<Form.Group>
+						</Col>
+						<br />
+						<Col>
 							<Form.Label>Enter your Message:*</Form.Label>
 							<Form.Control
 								name='body'
@@ -123,7 +126,8 @@ const ContactForm = () => {
 								{...register('body', { required: true })}
 								rows='4'
 							/>
-						</Form.Group>
+						</Col>
+						<br />
 						<Button
 							className='contactButton'
 							variant='primary'
