@@ -50,9 +50,9 @@ const Membership = () => {
 									<strong>$25.00 a semester</strong>. If you are interested in
 									becoming a member there are a few ways you can let us know.
 									Request to become a member on the get involved page and our
-									Treasurer,{' '}
+									Vice President of Internal Affairs,{' '}
 									{
-										<a href='mailto:treasurer@cougarcs.com'>
+										<a href='mailto:vp.internal@cougarcs.com'>
 											Syeda Zuha Beyabani
 										</a>
 									}
