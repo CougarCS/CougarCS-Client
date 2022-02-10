@@ -20,7 +20,7 @@ const UserRegister = () => {
 		<>
 			<MetaData {...meta} />
 			<div className='container formContainer mt-4'>
-				<h1 className='formHeader'>Register</h1>
+				<h1 className='formHeader mt-4'>Register</h1>
 				<Elements stripe={stripePromise}>
 					<Payment />
 				</Elements>

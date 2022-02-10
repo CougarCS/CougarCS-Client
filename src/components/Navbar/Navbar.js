@@ -15,8 +15,8 @@ const NavBar = () => (
 			{' '}
 			<i className='fas fa-bars fa-lg'></i>
 		</Navbar.Toggle>
-		<Navbar.Collapse id='responsive-navbar-nav'>
-			<Nav className='ml-auto'>
+		<Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
+			<Nav>
 				<LinkContainer to='/about'>
 					<Nav.Link>About</Nav.Link>
 				</LinkContainer>

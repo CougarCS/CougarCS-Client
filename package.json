@@ -13,15 +13,15 @@
     "dompurify": "2.3.5",
     "react": "17.0.2",
     "react-add-to-calendar": "0.1.5",
-    "react-big-calendar": "0.38.6",
-    "react-bootstrap": "1.6.4",
+    "react-big-calendar": "0.38.7",
+    "react-bootstrap": "2.1.2",
     "react-dom": "17.0.2",
     "react-ga": "3.3.0",
     "react-google-invisible-recaptcha": "0.2.12",
     "react-google-recaptcha": "2.1.0",
     "react-google-recaptcha-v3": "1.9.7",
     "react-helmet": "6.1.0",
-    "react-hook-form": "7.25.1",
+    "react-hook-form": "7.25.3",
     "react-helmet-async": "1.2.2",
     "react-lightgallery": "0.9.0",
     "react-query": "3.34.12",
@@ -63,12 +63,12 @@
   "devDependencies": {
     "@craco/craco": "6.4.3",
     "craco-swc": "0.2.0",
-    "cypress": "9.3.1",
+    "cypress": "9.4.1",
     "eslint-config-prettier": "8.3.0",
     "eslint-config-prettier-check": "1.0.0",
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "2.5.1",
-    "eslint-plugin-testing-library": "5.0.4",
+    "eslint-plugin-testing-library": "5.0.5",
     "react-snap": "1.23.0"
   }
 }
