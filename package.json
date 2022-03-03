@@ -68,7 +68,7 @@
     "eslint-config-prettier-check": "1.0.0",
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "2.5.1",
-    "eslint-plugin-testing-library": "5.0.5",
+    "eslint-plugin-testing-library": "5.0.6",
     "react-snap": "1.23.0"
   }
 }
