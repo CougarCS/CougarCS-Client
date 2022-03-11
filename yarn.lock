@@ -8272,10 +8272,10 @@ react-async-script@^1.1.1:
     hoist-non-react-statics "^3.3.0"
     prop-types "^15.5.0"
 
-react-big-calendar@0.38.9:
-  version "0.38.9"
-  resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-0.38.9.tgz#71a4fb578ddaaea2f65c664dbdeca0063be7b1f2"
-  integrity sha512-Z0yviu6ah5njVfRZxOwM2qnPRJCVuywk68jtjLr6GcCJj5bzhgc9+rkP/FSgbH6aBIWsvcTWw6kGTg5CClX6Ww==
+react-big-calendar@0.39.3:
+  version "0.39.3"
+  resolved "https://registry.yarnpkg.com/react-big-calendar/-/react-big-calendar-0.39.3.tgz#82d2c582a7815081bc91b009eac6c8e9a2cc6fd6"
+  integrity sha512-RLymspfoBeYNBMvKnpMSpHtUAsJhv1Cbp1sE6aE7huQ92xT0mgnFDxUSoWc//C5J8WbYWLtlld521eisNJSjNw==
   dependencies:
     "@babel/runtime" "^7.1.5"
     clsx "^1.0.4"
