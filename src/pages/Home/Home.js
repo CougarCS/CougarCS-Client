@@ -72,6 +72,12 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
+			{/* <div className='signupdiv'>
+				<p className='signuptext'>Do you want to receive our newsletters?</p>
+				<Button className='signup' variant='danger'>
+					Sign Up
+				</Button>
+			</div> */}
 		</>
 	);
 };
