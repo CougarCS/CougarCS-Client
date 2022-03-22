@@ -5,21 +5,41 @@ import './SignupForNews.css';
 import CustomModal from '../Modals/CustomModal';
 import check from '../../assets/check.png';
 import warn from '../../assets/warn.png';
+import axios from 'axios';
+import { eventListenersGA } from '../../utils/reactGA';
 
 const SignupForNews = () => {
 	const [buttonText, setButtonText] = useState('Sign Up');
-	const { register, handleSubmit } = useForm();
+	const { register, handleSubmit, reset } = useForm();
 
 	const [successModal, setSuccessModal] = useState(false);
 	const [errorModal, setErrorModal] = useState(false);
 
+	const formReset = () => {
+		reset({
+			firstName: '',
+			lastName: '',
+			email: '',
+		});
+	};
+
+	const onError = () => {
+		setErrorModal(true);
+		formReset();
+	};
+
 	const onSubmit = async (data) => {
 		setButtonText('Loading...');
-		console.log(data);
+		// console.log(data);
+		// await axios.post(`${process.env.REACK_APP_API_URL}/api/newsLetterEmails`, data);
+		setSuccessModal(true);
+		formReset();
+		eventListenersGA('Sign Up Button', 'Sign Up button clicked');
+		setButtonText('Sign Up');
 	};
 
 	return (
-		<Form className='form' onSubmit={handleSubmit(onSubmit)}>
+		<Form className='form' onSubmit={handleSubmit(onSubmit, onError)}>
 			<CustomModal
 				show={successModal}
 				handleClose={() => setSuccessModal(false)}
@@ -68,7 +88,6 @@ const SignupForNews = () => {
 			</Form.Row>
 			<Button
 				// disabled={isSubmitting}
-				variant='primary'
 				type='submit'
 				className='signup'
 				variant='danger'
