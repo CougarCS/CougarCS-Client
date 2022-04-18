@@ -26,14 +26,12 @@ import CatsBack21_2 from '../assets/gallery/catsback2.webp';
 import BYOK1 from '../assets/gallery/byok1.webp';
 import BYOK2 from '../assets/gallery/byok2.webp';
 import BYOK3 from '../assets/gallery/byok3.webp';
-import WBS1 from '../assets/gallery/WBS1.jpeg';
-import WBS2 from '../assets/gallery/WBS2.jpeg';
-import WBS3 from '../assets/gallery/WBS3.jpeg';
-import WBS4 from '../assets/gallery/WBS4.jpeg';
-import WBS5 from '../assets/gallery/WBS5.jpeg';
-import WBS6 from '../assets/gallery/WBS6.jpeg';
-import WBS7 from '../assets/gallery/WBS7.HEIC';
-import WBS8 from '../assets/gallery/WBS8.HEIC';
+import WBS1 from '../assets/gallery/WBS1.webp';
+import WBS2 from '../assets/gallery/WBS2.webp';
+import WBS3 from '../assets/gallery/WBS3.webp';
+import WBS4 from '../assets/gallery/WBS4.webp';
+import WBS5 from '../assets/gallery/WBS5.webp';
+import WBS6 from '../assets/gallery/WBS6.webp';
 
 
 const gallery = [
@@ -45,7 +43,7 @@ const gallery = [
 		image: WelcomeBackSocial, 
 		location: 'Houston, TX',
 		date: '01/27/2021',
-		pictures: [WBS1, WBS2, WBS3, WBS4, WBS5, WBS6, WBS7, WBS8]
+		pictures: [WBS1, WBS2, WBS3, WBS4, WBS5, WBS6]
 	},
 	{
 		id: 1,
