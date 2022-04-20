@@ -31,7 +31,7 @@ const SignupForNews = () => {
 	const onSubmit = async (data) => {
 		setButtonText('Loading...');
 		console.log(data);
-		await axios.post(`${process.env.REACT_APP_API_URL}/api/newsLetterEmails`, {
+		await axios.post(`${process.env.REACT_APP_API_URL}/api/newsletter`, {
 			firstName: data.firstName,
 			lastName: data.lastName,
 			email: data.email,
