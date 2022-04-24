@@ -52,21 +52,27 @@ const Home = () => {
 							<p className='firstP'>
 								WE <span id='typed' />
 							</p>
-							<div style={{ display: 'flex', justifyContent: 'space-between' }}>
-								<LinkContainer to='/about' style={{ marginRight: '2em' }}>
-									<ButtonToolbar>
-										<Button className='learnMoreBtn' variant='success'>
-											Learn More
-										</Button>
-									</ButtonToolbar>
-								</LinkContainer>
-								<LinkContainer to='/register'>
-									<ButtonToolbar>
-										<Button className='learnMoreBtn' variant='primary'>
-											Become a member
-										</Button>
-									</ButtonToolbar>
-								</LinkContainer>
+							<div className='buttonsWidth'>
+								<div className='d-flex justify-content-evenly'>
+									<div>
+										<LinkContainer to='/about'>
+											<ButtonToolbar>
+												<Button size='lg' variant='success'>
+													Learn More
+												</Button>
+											</ButtonToolbar>
+										</LinkContainer>
+									</div>
+									<div>
+										<LinkContainer to='/register'>
+											<ButtonToolbar>
+												<Button size='lg' variant='primary'>
+													Register
+												</Button>
+											</ButtonToolbar>
+										</LinkContainer>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

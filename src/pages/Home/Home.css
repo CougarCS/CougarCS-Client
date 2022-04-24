@@ -78,6 +78,24 @@
   }
 }
 
+@media (min-width: 850px) and (max-width: 2250px) {
+	.buttonsWidth {
+		width: 30% !important;
+	}
+}
+
+@media (min-width: 281px) and (max-width: 849px) {
+	.buttonsWidth {
+		width: 75% !important;
+	}
+}
+
+@media (min-width: 50px) and (max-width: 280px) {
+	.buttonsWidth {
+		width: 100% !important;
+	}
+}
+
 .alert {
   margin-bottom: 0;
 }
