@@ -7,6 +7,9 @@ import { initialize } from './utils/reactGA';
 
 const NavBar = lazy(() => import('./components/Navbar/Navbar'));
 const Footer = lazy(() => import('./components/Footer/Footer'));
+const SignupForNews = lazy(() =>
+	import('./components/SignupForNews/SignupForNews')
+);
 const ScrollTop = lazy(() => import('./components/ScrollTop/ScrollTop'));
 const About = lazy(() => import('./pages/About/About'));
 const Tutoring = lazy(() => import('./pages/Tutoring/Tutoring'));
@@ -48,6 +51,7 @@ const App = () => {
 						<Route path='/404' element={<NotFound />} />
 						<Route path='*' element={<FourOFour />} />
 					</Routes>
+					<SignupForNews />
 					<Footer />
 				</Suspense>
 			</Router>
