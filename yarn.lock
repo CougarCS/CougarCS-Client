@@ -8503,10 +8503,10 @@ react-overlays@^4.1.1:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
-react-query@3.35.0:
-  version "3.35.0"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.35.0.tgz#f807ba8497f8d6218a73e81a977e44ea786a7267"
-  integrity sha512-mRBJdpELLV+snzyXDsXM5ZEXM+HYt05L7st6ihSXr3nHX+4ULFr30mDjsziZvx0oF5dhlSDB8aMdvG6Ah4Bukg==
+react-query@3.39.0:
+  version "3.39.0"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.39.0.tgz#0caca7b0da98e65008bbcd4df0d25618c2100050"
+  integrity sha512-Od0IkSuS79WJOhzWBx/ys0x13+7wFqgnn64vBqqAAnZ9whocVhl/y1padD5uuZ6EIkXbFbInax0qvY7zGM0thA==
   dependencies:
     "@babel/runtime" "^7.5.5"
     broadcast-channel "^3.4.1"
