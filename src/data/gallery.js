@@ -26,10 +26,26 @@ import CatsBack21_2 from '../assets/gallery/catsback2.webp';
 import BYOK1 from '../assets/gallery/byok1.webp';
 import BYOK2 from '../assets/gallery/byok2.webp';
 import BYOK3 from '../assets/gallery/byok3.webp';
+import WBS1 from '../assets/gallery/WBS1.webp';
+import WBS2 from '../assets/gallery/WBS2.webp';
+import WBS3 from '../assets/gallery/WBS3.webp';
+import WBS4 from '../assets/gallery/WBS4.webp';
+import WBS5 from '../assets/gallery/WBS5.webp';
+import WBS6 from '../assets/gallery/WBS6.webp';
 
 const gallery = [
 	{
 		id: 0,
+		show: true,
+		name: 'Welcome Back Social Spring 2022',
+		link: 'welcome-back-social-spring-2022',
+		image: WBS1,
+		location: 'Houston, TX',
+		date: '01/27/2021',
+		pictures: [WBS1, WBS2, WBS3, WBS4, WBS5, WBS6],
+	},
+	{
+		id: 1,
 		show: true,
 		name: 'Fall 2021 Officers ',
 		link: 'fall-2021-officers',
@@ -39,7 +55,7 @@ const gallery = [
 		pictures: [Fall21Officers],
 	},
 	{
-		id: 1,
+		id: 2,
 		show: true,
 		name: 'Cats Back Event',
 		link: 'cats-back-event',
@@ -49,7 +65,7 @@ const gallery = [
 		pictures: [CatsBack21_2, CatsBack21_1],
 	},
 	{
-		id: 2,
+		id: 3,
 		show: true,
 		name: 'First General Meeting',
 		link: 'first-general-meeting',
@@ -59,7 +75,7 @@ const gallery = [
 		pictures: [FirstGeneralMeeting21_1],
 	},
 	{
-		id: 3,
+		id: 4,
 		show: true,
 		name: 'Paycom A Day in the Life',
 		link: 'paycom-a-day-in-the-life',
@@ -69,7 +85,7 @@ const gallery = [
 		pictures: [Paycom1, Paycom2],
 	},
 	{
-		id: 4,
+		id: 5,
 		show: true,
 		name: 'Build Your Own Keyboard',
 		link: 'buil-your-own-keyboard',
@@ -79,7 +95,7 @@ const gallery = [
 		pictures: [BYOK1, BYOK2, BYOK3],
 	},
 	{
-		id: 5,
+		id: 6,
 		show: true,
 		name: 'Linux Workshop',
 		link: 'linux-workshop',
@@ -89,7 +105,7 @@ const gallery = [
 		pictures: [Linuxw1],
 	},
 	{
-		id: 6,
+		id: 7,
 		show: true,
 		name: 'AIG Info Session',
 		link: 'aig-info-sessiong',
@@ -99,7 +115,7 @@ const gallery = [
 		pictures: [AIG0, AIG1],
 	},
 	{
-		id: 7,
+		id: 8,
 		show: true,
 		name: 'Spring Career Fair',
 		link: 'spring-career-fair',
@@ -109,7 +125,7 @@ const gallery = [
 		pictures: [CareerFairspring, CareerFairSpring],
 	},
 	{
-		id: 8,
+		id: 9,
 		show: true,
 		name: 'Gartner Info Session',
 		link: 'gartner-info-session',
@@ -119,7 +135,7 @@ const gallery = [
 		pictures: [Gartner],
 	},
 	{
-		id: 9,
+		id: 10,
 		show: true,
 		name: 'HCSS Info Session',
 		link: 'hcss-info-session',
@@ -129,7 +145,7 @@ const gallery = [
 		pictures: [HCSS0, HCSS2],
 	},
 	{
-		id: 10,
+		id: 11,
 		show: true,
 		name: 'Interview Workshop',
 		link: 'interview-workshop',
@@ -139,7 +155,7 @@ const gallery = [
 		pictures: [InterviewWS0, InterviewWS1],
 	},
 	{
-		id: 11,
+		id: 12,
 		show: true,
 		name: 'Local Hack Day',
 		link: 'local-hack-day',
@@ -155,7 +171,7 @@ const gallery = [
 		],
 	},
 	{
-		id: 12,
+		id: 13,
 		show: true,
 		name: 'Orientation Meeting',
 		link: 'orientation-meeting',
@@ -165,7 +181,7 @@ const gallery = [
 		pictures: [OrientationMeeting1, OrientationMeeting2, OrientationMeeting3],
 	},
 	{
-		id: 13,
+		id: 14,
 		show: true,
 		name: 'Schlumberger Info Session',
 		link: 'schlumberger-info-session',
