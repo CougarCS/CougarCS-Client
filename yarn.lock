@@ -8413,10 +8413,10 @@ react-google-invisible-recaptcha@0.2.12:
     prop-types "^15.6.2"
     uuid "^3.3.2"
 
-react-google-recaptcha-v3@1.9.7:
-  version "1.9.7"
-  resolved "https://registry.yarnpkg.com/react-google-recaptcha-v3/-/react-google-recaptcha-v3-1.9.7.tgz#a6f677276fbc12ab059e34446e5c5136e07c9311"
-  integrity sha512-LgHTuPUE86jGOtmMYMUWEYux8n7M2ZNj5GHct//DlXWZGyLIgFfLbvxA3UlgrG+tSu2pgw2mqXtYdPxaldqhWQ==
+react-google-recaptcha-v3@1.9.8:
+  version "1.9.8"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha-v3/-/react-google-recaptcha-v3-1.9.8.tgz#934ad21edcbfeb51fb66a218cf74addfbff48816"
+  integrity sha512-1AuwvNjcGxMQTBMgsu4XI+Tzh/9En8xdVE/OS48l2Z8VsaCtb8eLh2RcMv/bxgt+UbHzPfQ2JynPBxB1+hYkJA==
   dependencies:
     hoist-non-react-statics "^3.3.2"
 
