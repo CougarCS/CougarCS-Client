@@ -1,5 +1,4 @@
 import Dr_Yun from '../assets/officers/Dr_Yun.webp';
-import Placeholder from '../assets/officers/Placeholder.webp';
 
 import Vanessa from '../assets/officers/fall2022/Vanessa.webp';
 import Frank from '../assets/officers/fall2022/Frank.webp';
