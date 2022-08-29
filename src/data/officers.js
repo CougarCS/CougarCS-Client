@@ -12,6 +12,7 @@ import Sana from '../assets/officers/fall2022/Sana.webp';
 import Thejal from '../assets/officers/fall2022/Thejal.webp';
 import Aman from '../assets/officers/fall2022/Aman.webp';
 import Bryant from '../assets/officers/fall2022/Bryant.webp';
+import Ali2 from '../assets/officers/fall2022/Ali.webp';
 
 import Nykolas from '../assets/officers/spring2022/Nykolas.webp';
 import Zuha from '../assets/officers/spring2022/Zuha.webp';
@@ -85,7 +86,7 @@ export const officersFall2022 = [
 	{
 		id: 5,
 		name: 'Ali Zain Charolia',
-		image: Ali,
+		image: Ali2,
 		linkedin: 'https://www.linkedin.com/in/alizaincharolia/',
 		email: 'alizain@cougarcs.com',
 		title: 'Vice President CodeRED',
@@ -146,7 +147,7 @@ export const officersFall2022 = [
 		id: 11,
 		name: 'Thejal Harrichand',
 		image: Thejal,
-		linkedin: 'https://www.linkedin.com/',
+		linkedin: '',
 		email: 'socials@cougarcs.com',
 		title: 'Director of Socials',
 		open: false,
