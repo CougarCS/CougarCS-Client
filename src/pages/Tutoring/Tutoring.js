@@ -33,7 +33,7 @@ const Tutoring = () => {
 		return isFetching ? (
 			<Loading />
 		) : (
-			data.map((val, i) =>
+			data?.map((val, i) =>
 				val?.linkedin ? (
 					<div key={i}>
 						<a
