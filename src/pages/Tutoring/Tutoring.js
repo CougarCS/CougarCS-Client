@@ -17,7 +17,6 @@ const meta = {
 const url = `${process.env.REACT_APP_API_URL}/api/tutors`;
 
 const Tutoring = () => {
-	const queryClient = useQueryClient();
 	/*const { data, isFetching } = useQuery('tutors', fetchTutors, {
 		initialData: () => queryClient.getQueryData('tutors'),
 		staleTime: 300000,

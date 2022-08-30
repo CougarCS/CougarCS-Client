@@ -41,7 +41,6 @@ const meta = {
 };
 
 const Events = () => {
-	const queryClient = useQueryClient();
 	/*const { data, isFetching } = useQuery('events', fetchEvents, {
 		initialData: () => queryClient.getQueryData('events'),
 		staleTime: 300000,
