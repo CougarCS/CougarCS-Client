@@ -4,7 +4,6 @@ import { Col, Container, Row, Button } from 'react-bootstrap';
 import headerImage from '../../assets/tutoring.svg';
 import discordIcon from '../../assets/icons/discord-icon.webp';
 import { MetaData } from '../../components/Meta/MetaData';
-import { useQuery, useQueryClient } from 'react-query';
 import Loading from '../../components/Loading/Loading';
 import './Tutoring.css';
 
@@ -16,11 +15,6 @@ const meta = {
 };
 
 const url = `${process.env.REACT_APP_API_URL}/api/tutors`;
-
-const fetchTutors = async () => {
-	const res = await axios.get(url);
-	return res.data.tutors;
-};
 
 const Tutoring = () => {
 	const queryClient = useQueryClient();

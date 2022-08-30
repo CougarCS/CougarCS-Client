@@ -6,7 +6,6 @@ import './Event.css';
 import { Modal, Button, Dropdown } from 'react-bootstrap';
 import { sanitize } from 'dompurify';
 import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
-import { useQuery, useQueryClient } from 'react-query';
 import { MetaData } from '../../components/Meta/MetaData';
 import { parse, startOfWeek, getDay, parseISO } from 'date-fns';
 import { format, utcToZonedTime } from 'date-fns-tz';
@@ -25,16 +24,6 @@ const localizer = dateFnsLocalizer({
 });
 
 const url = `${process.env.REACT_APP_API_URL}/api/events`;
-
-const fetchEvents = async () => {
-	const res = await axios.get(url);
-	const data = res.data.events;
-	return data.map((event) => ({
-		...event,
-		start: parseISO(event.start),
-		end: parseISO(event.end),
-	}));
-};
 
 const formatDates = (date) => {
 	return format(
