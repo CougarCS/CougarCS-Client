@@ -58,7 +58,7 @@ const Home = () => {
 										<LinkContainer to='/about'>
 											<ButtonToolbar>
 												<Button size='lg' variant='success'>
-													Learn More
+													Learn More Test
 												</Button>
 											</ButtonToolbar>
 										</LinkContainer>
