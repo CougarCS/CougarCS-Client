@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState } from 'react';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import Loading from '../../components/Loading/Loading';
@@ -7,7 +6,7 @@ import { Modal, Button, Dropdown } from 'react-bootstrap';
 import { sanitize } from 'dompurify';
 import AddToCalendar from '../../components/AddToCalendar/AddToCalendar';
 import { MetaData } from '../../components/Meta/MetaData';
-import { parse, startOfWeek, getDay, parseISO } from 'date-fns';
+import { parse, startOfWeek, getDay } from 'date-fns';
 import { format, utcToZonedTime } from 'date-fns-tz';
 import local from 'date-fns/locale/en-US';
 
@@ -22,8 +21,6 @@ const localizer = dateFnsLocalizer({
 	getDay,
 	locales,
 });
-
-const url = `${process.env.REACT_APP_API_URL}/api/events`;
 
 const formatDates = (date) => {
 	return format(

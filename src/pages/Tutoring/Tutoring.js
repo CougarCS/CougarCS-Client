@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
 import headerImage from '../../assets/tutoring.svg';
@@ -13,8 +12,6 @@ const meta = {
 	url: 'https://cougarcs.com/tutoring',
 	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
 };
-
-const url = `${process.env.REACT_APP_API_URL}/api/tutors`;
 
 const Tutoring = () => {
 	/*const { data, isFetching } = useQuery('tutors', fetchTutors, {
