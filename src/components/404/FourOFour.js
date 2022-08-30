@@ -1,10 +1,10 @@
 import React from 'react';
-import { Redirect } from 'react-router';
+import { Navigate } from 'react-router';
 
 const FourOFour = () => {
 	return (
 		<div>
-			<Redirect to='/404' />
+			<Navigate to='/404' />
 		</div>
 	);
 };

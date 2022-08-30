@@ -50,9 +50,9 @@ const Membership = () => {
 									<strong>$25.00 a semester</strong>. If you are interested in
 									becoming a member there are a few ways you can let us know.
 									Request to become a member on the get involved page and our
-									Treasurer,{' '}
+									Vice President of Internal Affairs,{' '}
 									{
-										<a href='mailto:treasurer@cougarcs.com'>
+										<a href='mailto:vp.internal@cougarcs.com'>
 											Syeda Zuha Beyabani
 										</a>
 									}
@@ -62,19 +62,6 @@ const Membership = () => {
 										or */}{' '}
 									email us at{' '}
 									<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
-								</p>
-								<p>
-									Whats that? You want to get more envolved with CougarCS?
-									Interested in joining our Webdev team? Please reach out to
-									Kevin Flores at{' '}
-									<a href='mailto:webmaster@cougarcs.com'>
-										webmaster@cougarcs.com
-									</a>
-									. What about becoming a tutor? For that you can contact{' '}
-									<a href='mailto:tutoring@cougarcs.com'>
-										tutoring@cougarcs.com
-									</a>
-									.
 								</p>
 							</div>
 							<div>

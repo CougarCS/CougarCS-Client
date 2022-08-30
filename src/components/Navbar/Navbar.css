@@ -1,4 +1,5 @@
 .App-logo {
+	margin-left: 1em;
 	width: 175px;
 }
 
@@ -50,7 +51,7 @@ button.navbar-toggler:focus {
 }
 
 .main-nav .button {
-	background-color: var(--color-on-labelAndHeaders);	
+	background-color: var(--color-on-labelAndHeaders);
 	border: none;
 	border-radius: 7px;
 	padding: 13px 33px;

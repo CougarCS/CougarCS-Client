@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-import { Form, Col, Button, Image, Modal } from 'react-bootstrap';
+import { Form, Col, Button, Image, Modal, Row } from 'react-bootstrap';
 import { load } from 'recaptcha-v3';
 import CustomModal from '../Modals/CustomModal';
 import axios from 'axios';
@@ -124,37 +124,38 @@ export const Payment = () => {
 					pay with an alternative method.
 				</p>
 			</CustomModal>
-			<Form.Row>
-				<Form.Group as={Col} controlId='formGridFirstName'>
+
+			<Row>
+				<Col>
 					<Form.Label>First Name</Form.Label>
 					<Form.Control
 						type='text'
 						placeholder='First Name'
 						{...register('firstName', { required: true, maxLength: 20 })}
 					/>
-				</Form.Group>
+				</Col>
 
-				<Form.Group as={Col} controlId='formGridLastName'>
+				<Col>
 					<Form.Label>Last Name</Form.Label>
 					<Form.Control
 						type='text'
 						placeholder='Last Name'
 						{...register('lastName', { required: true, maxLength: 20 })}
 					/>
-				</Form.Group>
-			</Form.Row>
-
-			<Form.Row>
-				<Form.Group as={Col} controlId='formGridEmail'>
+				</Col>
+			</Row>
+			<br />
+			<Row>
+				<Col>
 					<Form.Label>Email</Form.Label>
 					<Form.Control
 						type='email'
 						placeholder='Email'
 						{...register('email', { required: true })}
 					/>
-				</Form.Group>
+				</Col>
 
-				<Form.Group as={Col} controlId='formGridPhoneNumber'>
+				<Col>
 					<Form.Label>Phone Number</Form.Label>
 					<Form.Control
 						type='tel'
@@ -166,36 +167,39 @@ export const Payment = () => {
 							maxLength: 12,
 						})}
 					/>
-				</Form.Group>
-			</Form.Row>
-
-			<Form.Row>
-				<Form.Group as={Col} controlId='formGridShirtSize'>
+				</Col>
+			</Row>
+			<br />
+			<Row>
+				<Col>
 					<Form.Label>Shirt Size</Form.Label>
 					<Form.Control
 						as='select'
 						{...register('shirtSize', { required: true })}
 					>
 						<option value=''>Choose...</option>
+						<option value='XS'>X-Small</option>
 						<option value='S'>Small</option>
 						<option value='M'>Medium</option>
 						<option value='L'>Large</option>
 						<option value='XL'>X-Large</option>
+						<option value='XXL'>XX-Large</option>
 					</Form.Control>
-				</Form.Group>
+				</Col>
 
-				<Form.Group as={Col} controlId='formGridUhID'>
+				<Col>
 					<Form.Label>UHID</Form.Label>
 					<Form.Control
 						type='text'
+						placeholder='UHID'
 						pattern='^[0-9]{7,7}$'
 						{...register('uhID', { required: true })}
 					/>
-				</Form.Group>
-			</Form.Row>
-
-			<Form.Row>
-				<Form.Group as={Col} controlId='formGridPaymetFor'>
+				</Col>
+			</Row>
+			<br />
+			<Row>
+				<Col>
 					<Form.Label>Payment For</Form.Label>
 					<Form.Control
 						as='select'
@@ -205,29 +209,27 @@ export const Payment = () => {
 						<option value='semester'>Semester ($25)</option>
 						<option value='year'>Year ($40)</option>
 					</Form.Control>
-				</Form.Group>
-			</Form.Row>
-
-			<Form.Row>
-				<Form.Group
-					as={Col}
-					className='stripe-container'
-					controlId='stripPayment'
-				>
+				</Col>
+			</Row>
+			<br />
+			<Row>
+				<Col className='stripe-container'>
 					<CardElement options={cardOptions} />
-				</Form.Group>
-			</Form.Row>
-
-			<Button
-				disabled={isSubmitting}
-				variant='primary'
-				type='submit'
-				size='lg'
-				block
-				className='mt-4 mb-4'
-			>
-				{buttonText}
-			</Button>
+				</Col>
+			</Row>
+			<Row>
+				<div className='d-grid w-100'>
+					<Button
+						disabled={isSubmitting}
+						variant='primary'
+						type='submit'
+						size='lg'
+						className='mt-4 mb-4 w-100'
+					>
+						{buttonText}
+					</Button>
+				</div>
+			</Row>
 		</Form>
 	);
 };

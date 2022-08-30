@@ -3,7 +3,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
 import officers from '../../data/officers';
 import chevronLogo from '../../assets/partner-logos/chevron.webp';
-import uhspeLogo from '../../assets/partner-logos/uhspe.webp';
+import cougarettesLogo from '../../assets/partner-logos/cougarettes.webp';
+import csgirlsLogo from '../../assets/partner-logos/csgirls.webp';
 import ripplematchLogo from '../../assets/partner-logos/ripplematch.svg';
 import promazoLogo from '../../assets/partner-logos/promazo.webp';
 import { MetaData } from '../../components/Meta/MetaData';
@@ -70,7 +71,24 @@ const About = () => {
 					<Col md='6'>
 						<h2 className='heading'>Partner Clubs</h2>
 						<div className='partner-logos'>
-							<img src={uhspeLogo} className='partner-logo' alt='UHSPE Logo' />
+							<a
+								href='https://uhcougarettes.com/'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<img
+									src={cougarettesLogo}
+									className='partner-logo'
+									alt='Cougarettes Logo'
+								/>
+							</a>
+							<a href='https://csgirls.org/' target='_blank' rel='noreferrer'>
+								<img
+									src={csgirlsLogo}
+									className='partner-logo'
+									alt='CSGirls Logo'
+								/>
+							</a>
 						</div>
 					</Col>
 					<Col md='12'>

@@ -1,0 +1,11 @@
+.hold{
+    height: 100%;
+}
+
+.csPDF, .hold{
+    width: 100%;
+}
+
+.csPDF{
+    height: 700px;
+}
