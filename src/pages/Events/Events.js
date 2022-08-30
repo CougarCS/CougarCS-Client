@@ -57,8 +57,8 @@ const Events = () => {
 		initialData: () => queryClient.getQueryData('events'),
 		staleTime: 300000,
 	});*/
-	
-	const data = []
+
+	const data = [];
 	const isFetching = true;
 	const [show, setShow] = useState(false);
 

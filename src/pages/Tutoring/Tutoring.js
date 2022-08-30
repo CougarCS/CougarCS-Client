@@ -29,7 +29,7 @@ const Tutoring = () => {
 		staleTime: 300000,
 	});*/
 
-	const data = []
+	const data = [];
 	const isFetching = true;
 
 	const displayTutors = () => {
