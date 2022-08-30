@@ -196,8 +196,7 @@ export const Payment = () => {
 			</Row>
 			<br />
 			<Row>
-				<Col className='stripe-container'>
-				</Col>
+				<Col className='stripe-container'></Col>
 			</Row>
 			<Row>
 				<div className='d-grid w-100'>
