@@ -53,10 +53,13 @@ const meta = {
 
 const Events = () => {
 	const queryClient = useQueryClient();
-	const { data, isFetching } = useQuery('events', fetchEvents, {
+	/*const { data, isFetching } = useQuery('events', fetchEvents, {
 		initialData: () => queryClient.getQueryData('events'),
 		staleTime: 300000,
-	});
+	});*/
+	
+	const data = []
+	const isFetching = true;
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => {

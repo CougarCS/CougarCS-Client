@@ -24,10 +24,13 @@ const fetchTutors = async () => {
 
 const Tutoring = () => {
 	const queryClient = useQueryClient();
-	const { data, isFetching } = useQuery('tutors', fetchTutors, {
+	/*const { data, isFetching } = useQuery('tutors', fetchTutors, {
 		initialData: () => queryClient.getQueryData('tutors'),
 		staleTime: 300000,
-	});
+	});*/
+
+	const data = []
+	const isFetching = true;
 
 	const displayTutors = () => {
 		return isFetching ? (
