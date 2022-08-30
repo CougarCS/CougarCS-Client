@@ -25,23 +25,6 @@ export const Payment = () => {
 	const [successModal, setSuccessModal] = useState(false);
 	const [errorModal, setErrorModal] = useState(false);
 
-	const cardOptions = {
-		style: {
-			base: {
-				backgroundColor: '#fff',
-				fontSize: '16px',
-				color: '#495057',
-				lineHeight: '36px',
-				'::placeholder': {
-					color: '#aab7c4',
-				},
-			},
-			invalid: {
-				color: '#495057',
-			},
-		},
-	};
-
 	const resetForm = () => {
 		reset({
 			email: '',
@@ -214,7 +197,6 @@ export const Payment = () => {
 			<br />
 			<Row>
 				<Col className='stripe-container'>
-					<CardElement options={cardOptions} />
 				</Col>
 			</Row>
 			<Row>
