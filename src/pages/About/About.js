@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
-import officers from '../../data/officers';
+import { officersFall2022 } from '../../data/officers';
 import chevronLogo from '../../assets/partner-logos/chevron.webp';
 import cougarettesLogo from '../../assets/partner-logos/cougarettes.webp';
 import csgirlsLogo from '../../assets/partner-logos/csgirls.webp';
@@ -21,6 +21,8 @@ const meta = {
 };
 
 const About = () => {
+	const officers = officersFall2022;
+
 	return (
 		<>
 			<MetaData {...meta} />
