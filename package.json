@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@stripe/react-stripe-js": "1.7.2",
     "@stripe/stripe-js": "^1.35.0",
     "@swc/helpers": "^0.4.11",
+    "@stripe/react-stripe-js": "1.10.0",
     "@types/dompurify": "2.3.3",
     "axios": "0.27.2",
     "calendar-link": "2.1.1",
