@@ -6,7 +6,7 @@ import { MetaData } from '../Meta/MetaData';
 import './UserRegister.css';
 
 const PUBLIC_KEY = process.env.REACT_APP_STRIPE_KEY;
-const stripePromise = loadStripe(PUBLIC_KEY);
+const stripePromise = loadStripe(`${PUBLIC_KEY}`);
 
 const meta = {
 	title: 'Register',
