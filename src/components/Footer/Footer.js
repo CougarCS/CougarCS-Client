@@ -11,6 +11,7 @@ import ds from '../../assets/icons/discord.webp';
 import li from '../../assets/icons/linkedin.webp';
 import yt from '../../assets/icons/youtube.webp';
 import gh from '../../assets/icons/github.webp';
+import tw from '../../assets/icons/twitter.webp';
 
 const Footer = () => {
 	return (
@@ -76,6 +77,15 @@ const Footer = () => {
 							rel='nofollow noopener'
 						>
 							<img src={gh} alt='GitHub Icon' />
+						</Nav.Link>
+					</Nav.Item>
+					<Nav.Item>
+						<Nav.Link
+							href='https://twitter.com/uhcougarcs'
+							target='_blank'
+							rel='nofollow noopener'
+						>
+							<img src={tw} alt='GitHub Icon' />
 						</Nav.Link>
 					</Nav.Item>
 				</Nav>
