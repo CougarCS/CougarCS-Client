@@ -85,7 +85,7 @@ const Footer = () => {
 							target='_blank'
 							rel='nofollow noopener'
 						>
-							<img src={tw} alt='GitHub Icon' />
+							<img src={tw} alt='Twitter Icon' />
 						</Nav.Link>
 					</Nav.Item>
 				</Nav>
