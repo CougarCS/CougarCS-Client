@@ -6,11 +6,11 @@ import './Navbar.css';
 
 const NavBar = () => (
 	<Navbar className='main-nav' fluid='true' collapseOnSelect expand='lg'>
-		<LinkContainer to='/'>
-			<Navbar.Brand>
+		<Navbar.Brand>
+			<Nav.Link href={`${window.location.protocol}//${window.location.host}`}>
 				<img src={logo} className='App-logo' alt='logo' />
-			</Navbar.Brand>
-		</LinkContainer>
+			</Nav.Link>
+		</Navbar.Brand>
 		<Navbar.Toggle aria-controls='responsive-navbar-nav'>
 			{' '}
 			<i className='fas fa-bars fa-lg'></i>
