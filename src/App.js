@@ -18,7 +18,7 @@ const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 const UserRegister = lazy(() =>
 	import('./components/UserRegister/UserRegister')
 );
-const Hackathon = lazy(() => import('./pages/Hackathon/Hackathon'));
+// const Hackathon = lazy(() => import('./pages/Hackathon/Hackathon'));
 const Privacy = lazy(() => import('./pages/Policy/Privacy'));
 const Gallery = lazy(() => import('./pages/Gallery/Gallery'));
 const GalleryEvent = lazy(() => import('./pages/Gallery/GalleryEvent'));
@@ -40,7 +40,7 @@ const App = () => {
 						<Route path='/calendar' element={<Events />} />
 						<Route path='/contactus' element={<ContactUs />} />
 						<Route path='/register' element={<UserRegister />} />
-						<Route path='/hackathons' element={<Hackathon />} />
+						{/* <Route path='/hackathons' element={<Hackathon />} /> */}
 						<Route path='/privacy-policy' element={<Privacy />} />
 						<Route path='/gallery' element={<Gallery />} />
 						<Route path='/tutoring' element={<Tutoring />} />

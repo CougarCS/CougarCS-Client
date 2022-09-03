@@ -32,9 +32,9 @@ const NavBar = () => (
 				<LinkContainer to='/membership'>
 					<Nav.Link>Membership</Nav.Link>
 				</LinkContainer>
-				<LinkContainer to='/hackathons'>
+				{/* <LinkContainer to='/hackathons'>
 					<Nav.Link>Hackathons</Nav.Link>
-				</LinkContainer>
+				</LinkContainer> */}
 				<LinkContainer to='/contactus'>
 					<Nav.Link>Contact Us</Nav.Link>
 				</LinkContainer>
