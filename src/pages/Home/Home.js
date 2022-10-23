@@ -25,7 +25,7 @@ const Home = () => {
 		title: 'Home',
 		desc: 'CougarCS is the largest student run Computer Science organization at the University of Houston.',
 		url: 'https://cougarcs.com/',
-		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
+		img: 'https://i.ibb.co/SBY2dq9/Cougar-CS-Banner.png',
 	};
 
 	return (
