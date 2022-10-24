@@ -96,12 +96,10 @@ const Tutoring = () => {
 				<h2 className='heading'>Tutoring Available</h2>
 				<div className='classes-wrapper'>
 					<div className='class-number'>General Help</div>
-					<div className='class-number'>COSC 1306</div>
-					<div className='class-number'>COSC 1430</div>
-					<div className='class-number'>COSC 2430</div>
-					<div className='class-number'>COSC 2440</div>
-					<div className='class-number'>COSC 3320</div>
-					<div className='class-number'>COSC 3380</div>
+					<div className='class-number'>COSC 1336</div>
+					<div className='class-number'>COSC 1437</div>
+					<div className='class-number'>COSC 2436</div>
+					<div className='class-number'>COSC 2425</div>
 				</div>
 			</Container>
 

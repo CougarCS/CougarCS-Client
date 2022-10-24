@@ -53,7 +53,7 @@ const Membership = () => {
 									Vice President of Internal Affairs,{' '}
 									{
 										<a href='mailto:vp.internal@cougarcs.com'>
-											Syeda Zuha Beyabani
+											Christian Ayala
 										</a>
 									}
 									, will be in contact with you shortly. You can also

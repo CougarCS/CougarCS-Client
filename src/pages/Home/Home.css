@@ -18,10 +18,10 @@
 }
 
 .ani {
-	background: url('../../assets/cougarcs_background11.jpg');
+	background: url('../../assets/CougarCS_Banner.png');
 	margin: 0;
 	width: 100vw;
-	height: calc(100vh - 107.75px);
+	height: calc(100vh + 150px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
