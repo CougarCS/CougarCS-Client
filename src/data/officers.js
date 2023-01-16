@@ -1,6 +1,17 @@
 import Dr_Yun from '../assets/officers/Dr_Yun.webp';
 import Placeholder from '../assets/officers/Placeholder.webp';
 
+import Ben from '../assets/officers/spring2023/Ben.webp';
+import Christian2 from '../assets/officers/spring2023/Christian.webp';
+import Frank2 from '../assets/officers/spring2023/Frank.webp';
+import Hitarth from '../assets/officers/spring2023/Hitarth.webp';
+import Jorell from '../assets/officers/spring2023/Jorell.webp';
+import Max from '../assets/officers/spring2023/Max.webp';
+import Mihir3 from '../assets/officers/spring2023/Mihir.webp';
+import Raunak from '../assets/officers/spring2023/Raunak.webp';
+import Sean from '../assets/officers/spring2023/Sean.webp';
+import Wahab from '../assets/officers/spring2023/Wahab.webp';
+
 import Vanessa from '../assets/officers/fall2022/Vanessa.webp';
 import Frank from '../assets/officers/fall2022/Frank.webp';
 import David2 from '../assets/officers/fall2022/David.webp';
@@ -47,7 +58,7 @@ export const officersSpring2023 = [
 	{
 		id: 1,
 		name: 'Mihir Sahu',
-		image: Mihir2,
+		image: Mihir3,
 		linkedin: 'https://www.linkedin.com/in/the-mihir-sahu/',
 		email: 'president@cougarcs.com',
 		title: 'President',
@@ -57,7 +68,7 @@ export const officersSpring2023 = [
 	{
 		id: 2,
 		name: 'Christian Ayala',
-		image: Christian,
+		image: Christian2,
 		linkedin: 'https://www.linkedin.com/in/christian-ayala--/',
 		email: 'vp.internal@cougarcs.com',
 		title: 'Vice President Internal Affairs',
@@ -87,9 +98,9 @@ export const officersSpring2023 = [
 	{
 		id: 5,
 		name: 'Benjamin Key',
-		image: Placeholder,
+		image: Ben,
 		linkedin: 'https://www.linkedin.com/in/-ben-key-/',
-		email: 'alizain@cougarcs.com',
+		email: 'bkey3125@gmail.com',
 		title: 'Vice President CodeRED',
 		open: false,
 		show: true,
@@ -107,7 +118,7 @@ export const officersSpring2023 = [
 	{
 		id: 7,
 		name: 'Sean Paolo Banza',
-		image: Placeholder,
+		image: Sean,
 		linkedin: 'https://www.linkedin.com/in/sean-paolo-banza/',
 		email: 'marketing@cougarcs.com',
 		title: 'Director of Marketing',
@@ -137,7 +148,7 @@ export const officersSpring2023 = [
 	{
 		id: 10,
 		name: 'Jorell Padilla',
-		image: Placeholder,
+		image: Jorell,
 		linkedin: 'https://www.linkedin.com/in/jorell-padilla/',
 		email: 'designer@cougarcs.com',
 		title: 'Designer Team',
@@ -147,7 +158,7 @@ export const officersSpring2023 = [
 	{
 		id: 11,
 		name: 'Hitarth Thanki',
-		image: Placeholder,
+		image: Hitarth,
 		linkedin: 'https://www.linkedin.com/in/hitarth-thanki/',
 		email: 'historian@cougarcs.com',
 		title: 'Historian Team',
@@ -167,7 +178,7 @@ export const officersSpring2023 = [
 	{
 		id: 13,
 		name: 'Raunak Bose',
-		image: Placeholder,
+		image: Raunak,
 		linkedin: 'https://www.linkedin.com/in/raunak-bose-56b0401a0/',
 		email: 'workshops@cougarcs.com',
 		title: 'Director of Workshops',
@@ -177,7 +188,7 @@ export const officersSpring2023 = [
 	{
 		id: 14,
 		name: 'Maximillian Chalitsios',
-		image: Placeholder,
+		image: Max,
 		linkedin: 'https://www.linkedin.com/in/maximillianchalitsios/',
 		email: 'corporate.relations@cougarcs.com',
 		title: 'Director of Corporate Relations',
@@ -197,7 +208,7 @@ export const officersSpring2023 = [
 	{
 		id: 16,
 		name: 'Wahab Javed',
-		image: Placeholder,
+		image: Wahab,
 		linkedin: 'https://www.linkedin.com/in/wahab-javed/',
 		email: 'operations@cougarcs.com',
 		title: 'Director of Operations',
@@ -207,7 +218,7 @@ export const officersSpring2023 = [
 	{
 		id: 17,
 		name: 'Frank Bui',
-		image: Frank,
+		image: Frank2,
 		linkedin: 'https://www.linkedin.com/in/frank-bui/',
 		email: 'tutoring@cougarcs.com',
 		title: 'Director of Tutoring',
