@@ -5,10 +5,14 @@ import Ben from '../assets/officers/spring2023/Ben.webp';
 import Christian2 from '../assets/officers/spring2023/Christian.webp';
 import Frank2 from '../assets/officers/spring2023/Frank.webp';
 import Hitarth from '../assets/officers/spring2023/Hitarth.webp';
+import John from '../assets/officers/spring2023/John.webp';
+import Johnny from '../assets/officers/spring2023/Johnny.webp';
 import Jorell from '../assets/officers/spring2023/Jorell.webp';
 import Max from '../assets/officers/spring2023/Max.webp';
 import Mihir3 from '../assets/officers/spring2023/Mihir.webp';
+import NathanHunt from '../assets/officers/spring2023/Nathan-Hunt.webp';
 import Raunak from '../assets/officers/spring2023/Raunak.webp';
+import Saalihah from '../assets/officers/spring2023/Saalihah.webp';
 import Sean from '../assets/officers/spring2023/Sean.webp';
 import Wahab from '../assets/officers/spring2023/Wahab.webp';
 
@@ -88,7 +92,7 @@ export const officersSpring2023 = [
 	{
 		id: 4,
 		name: 'Johnny Le',
-		image: Placeholder,
+		image: Johnny,
 		linkedin: 'https://www.linkedin.com/in/le-johnny/',
 		email: 'activities@cougarcs.com',
 		title: 'Vice President Activities',
@@ -138,7 +142,7 @@ export const officersSpring2023 = [
 	{
 		id: 9,
 		name: 'Saalihah Latiff',
-		image: Placeholder,
+		image: Saalihah,
 		linkedin: 'https://www.linkedin.com/in/saalihah-latiff/',
 		email: 'designer@cougarcs.com',
 		title: 'Designer Team',
@@ -198,7 +202,7 @@ export const officersSpring2023 = [
 	{
 		id: 15,
 		name: 'John Cox',
-		image: Placeholder,
+		image: John,
 		linkedin: 'https://www.linkedin.com/in/johncox-dev/',
 		email: 'socials@cougarcs.com',
 		title: 'Director of Socials',
@@ -238,7 +242,7 @@ export const officersSpring2023 = [
 	{
 		id: 19,
 		name: 'Nathan Hunt',
-		image: Placeholder,
+		image: NathanHunt,
 		linkedin: 'https://www.linkedin.com/in/nathan-hunt-bt08/',
 		email: 'infosec@cougarcs.com',
 		title: 'Director of Information Security',
