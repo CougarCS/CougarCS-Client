@@ -45,7 +45,7 @@ const Footer = () => {
 					</Nav.Item>
 					<Nav.Item>
 						<Nav.Link
-							href='https://www.instagram.com/uh_cougarcs/'
+							href='https://www.instagram.com/cougarcs_uh/'
 							target='_blank'
 							rel='nofollow noopener'
 						>
