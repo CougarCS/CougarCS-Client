@@ -4,51 +4,51 @@ import { LinkContainer } from 'react-router-bootstrap';
 import logo from '../../assets/logo.png';
 import './Navbar.css';
 
-const NavBar = () => (
-	<Navbar className='main-nav' fluid='true' collapseOnSelect expand='lg'>
-		<LinkContainer to='/'>
-			<Navbar.Brand>
-				<img src={logo} className='App-logo' alt='logo' />
-			</Navbar.Brand>
+function ActiveListItem(props) {
+	// active={false} prevents a link from staying active when on the main page
+	return (
+		<LinkContainer to={props.url}>
+			<Nav.Link active={false}>{props.name}</Nav.Link>
 		</LinkContainer>
-		<Navbar.Toggle aria-controls='responsive-navbar-nav'>
-			{' '}
-			<i className='fas fa-bars fa-lg'></i>
-		</Navbar.Toggle>
-		<Navbar.Collapse className='justify-content-end' id='responsive-navbar-nav'>
-			<Nav>
-				<LinkContainer to='/about'>
-					<Nav.Link>About</Nav.Link>
-				</LinkContainer>
-				<LinkContainer to='/calendar'>
-					<Nav.Link>Events</Nav.Link>
-				</LinkContainer>
-				<LinkContainer to='/gallery'>
-					<Nav.Link>Gallery</Nav.Link>
-				</LinkContainer>
-				<LinkContainer to='/tutoring'>
-					<Nav.Link>Tutoring</Nav.Link>
-				</LinkContainer>
-				<LinkContainer to='/membership'>
-					<Nav.Link>Membership</Nav.Link>
-				</LinkContainer>
-				<LinkContainer to='/hackathons'>
-					<Nav.Link>Hackathons</Nav.Link>
-				</LinkContainer>
-				<LinkContainer to='/contactus'>
-					<Nav.Link>Contact Us</Nav.Link>
-				</LinkContainer>
-				<Nav.Link href='https://uhcode.red/' target='_blank' rel='noreferrer'>
-					CodeRED <i className='fas fa-external-link-alt'></i>
-				</Nav.Link>
-				<LinkContainer to='/register'>
-					<Nav.Link>
-						<button className='button'>Register</button>
+	);
+}
+
+const NavBar = () => {
+	return (
+		<Navbar className='main-nav' fluid='true' collapseOnSelect expand='lg'>
+			<LinkContainer to='/'>
+				<Navbar.Brand>
+					<img src={logo} className='App-logo' alt='logo' />
+				</Navbar.Brand>
+			</LinkContainer>
+			<Navbar.Toggle aria-controls='responsive-navbar-nav'>
+				{' '}
+				<i className='fas fa-bars fa-lg'></i>
+			</Navbar.Toggle>
+			<Navbar.Collapse
+				className='justify-content-end'
+				id='responsive-navbar-nav'
+			>
+				<Nav>
+					<ActiveListItem url='/about' name='About' />
+					<ActiveListItem url='/calendar' name='Events' />
+					<ActiveListItem url='/gallery' name='Gallery' />
+					<ActiveListItem url='/tutoring' name='Tutoring' />
+					<ActiveListItem url='/membership' name='Membership' />
+					<ActiveListItem url='/hackathons' name='Hackathons' />
+					<ActiveListItem url='/contactus' name='Contact Us' />
+					<Nav.Link href='https://uhcode.red/' target='_blank' rel='noreferrer'>
+						CodeRED <i className='fas fa-external-link-alt'></i>
 					</Nav.Link>
-				</LinkContainer>
-			</Nav>
-		</Navbar.Collapse>
-	</Navbar>
-);
+					<LinkContainer to='/register'>
+						<Nav.Link>
+							<button className='button'>Register</button>
+						</Nav.Link>
+					</LinkContainer>
+				</Nav>
+			</Navbar.Collapse>
+		</Navbar>
+	);
+};
 
 export default NavBar;
