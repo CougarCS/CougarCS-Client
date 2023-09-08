@@ -1,7 +1,6 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import { useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './Navbar.css';
 
