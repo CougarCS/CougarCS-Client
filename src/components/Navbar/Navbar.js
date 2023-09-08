@@ -15,8 +15,6 @@ function ActiveListItem(props) {
 }
 
 const NavBar = () => {
-	const { pathName } = useLocation();
-	console.log(pathName);
 	return (
 		<Navbar className='main-nav' fluid='true' collapseOnSelect expand='lg'>
 			<LinkContainer to='/'>
