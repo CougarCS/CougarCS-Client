@@ -64,10 +64,10 @@ const Home = () => {
 										</LinkContainer>
 									</div>
 									<div>
-										<LinkContainer to='/register'>
+										<LinkContainer to='/join'>
 											<ButtonToolbar>
 												<Button size='lg' variant='primary'>
-													Register
+													Join Us
 												</Button>
 											</ButtonToolbar>
 										</LinkContainer>

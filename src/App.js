@@ -13,11 +13,8 @@ const Tutoring = lazy(() => import('./pages/Tutoring/Tutoring'));
 const ContactUs = lazy(() => import('./pages/ContactUs/ContactUs'));
 const Events = lazy(() => import('./pages/Events/Events'));
 const Home = lazy(() => import('./pages/Home/Home'));
-const Membership = lazy(() => import('./pages/Membership/Membership'));
+const Join = lazy(() => import('./pages/Join/Join'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
-const UserRegister = lazy(() =>
-	import('./components/UserRegister/UserRegister')
-);
 const Hackathon = lazy(() => import('./pages/Hackathon/Hackathon'));
 const Privacy = lazy(() => import('./pages/Policy/Privacy'));
 const Gallery = lazy(() => import('./pages/Gallery/Gallery'));
@@ -36,10 +33,9 @@ const App = () => {
 					<Routes>
 						<Route path='/' element={<Home />} />
 						<Route path='/about' element={<About />} />
-						<Route path='/membership' element={<Membership />} />
+						<Route path='/join' element={<Join />} />
 						<Route path='/calendar' element={<Events />} />
 						<Route path='/contactus' element={<ContactUs />} />
-						<Route path='/register' element={<UserRegister />} />
 						<Route path='/hackathons' element={<Hackathon />} />
 						<Route path='/privacy-policy' element={<Privacy />} />
 						<Route path='/gallery' element={<Gallery />} />

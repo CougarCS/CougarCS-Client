@@ -2,11 +2,10 @@ import React, { lazy, Suspense } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import gif from '../../assets/about.svg';
 import { officersFall2023 } from '../../data/officers';
-import chevronLogo from '../../assets/partner-logos/chevron.webp';
 import cougarettesLogo from '../../assets/partner-logos/cougarettes.webp';
 import csgirlsLogo from '../../assets/partner-logos/csgirls.webp';
-import ripplematchLogo from '../../assets/partner-logos/ripplematch.svg';
-import promazoLogo from '../../assets/partner-logos/promazo.webp';
+import codeCoogsLogo from '../../assets/partner-logos/codeCoogs.webp';
+import CoogEsportsLogo from '../../assets/partner-logos/coogEsportsLogo.webp';
 import { MetaData } from '../../components/Meta/MetaData';
 
 import './About.css';
@@ -60,19 +59,20 @@ const About = () => {
 			</Suspense>
 			<Container fluid className='contained partners-wrapper sub-section'>
 				<Row>
-					<Col md='6'>
-						<h2 className='heading'>Official Sponsors</h2>
-						<div className='partner-logos'>
-							<img
-								src={chevronLogo}
-								className='partner-logo'
-								alt='Chevron Logo'
-							/>
-						</div>
-					</Col>
-					<Col md='6'>
+					<Col md='12'>
 						<h2 className='heading'>Partner Clubs</h2>
 						<div className='partner-logos'>
+							<a
+								href='https://uh.campuslabs.com/engage/organization/coogesports'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<img
+									src={CoogEsportsLogo}
+									className='partner-logo'
+									alt='Coog Esports'
+								/>
+							</a>
 							<a
 								href='https://uhcougarettes.com/'
 								target='_blank'
@@ -91,21 +91,17 @@ const About = () => {
 									alt='CSGirls Logo'
 								/>
 							</a>
-						</div>
-					</Col>
-					<Col md='12'>
-						<h2 className='heading'>Partner Companies</h2>
-						<div className='partner-logos'>
-							<img
-								src={ripplematchLogo}
-								className='partner-logo'
-								alt='Ripple Match Logo'
-							/>
-							<img
-								src={promazoLogo}
-								className='partner-logo'
-								alt='Promazo Logo'
-							/>
+							<a
+								href='https://www.codecoogs.com/'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<img
+									src={codeCoogsLogo}
+									className='partner-logo'
+									alt='Code Coogs Logo'
+								/>
+							</a>
 						</div>
 					</Col>
 				</Row>
