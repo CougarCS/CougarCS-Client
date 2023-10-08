@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import analyticsSVG from '../../assets/analytics.svg';
 import collectingSVG from '../../assets/collecting.svg';
@@ -6,13 +6,16 @@ import gif from '../../assets/member.svg';
 import memorySVG from '../../assets/memory.svg';
 import teachingSVG from '../../assets/teaching.svg';
 import { MetaData } from '../../components/Meta/MetaData';
-import './Membership.css';
-
+import './Join.css';
+import Loading from '../../components/Loading/Loading';
+const UserRegister = lazy(() =>
+	import('../../components/UserRegister/UserRegister')
+);
 const Membership = () => {
 	const meta = {
 		title: 'Membership',
 		desc: 'Learn more about our membership.',
-		url: 'https://cougarcs.com/membership',
+		url: 'https://cougarcs.com/join',
 		img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
 	};
 
@@ -47,37 +50,15 @@ const Membership = () => {
 								<p>
 									Memberships are priced at{' '}
 									<strong>$40.00 for a full year </strong> or{' '}
-									<strong>$25.00 a semester</strong>. If you are interested in
-									becoming a member there are a few ways you can let us know.
-									Request to become a member on the get involved page and our
-									Vice President of Internal Affairs,{' '}
-									{
-										<a href='mailto:vp.internal@cougarcs.com'>
-											Christian Ayala
-										</a>
-									}
-									, will be in contact with you shortly. You can also
-									{/* find an
-										Officer on the 5th floor of PGH (Philip Guthrie Hoffman Hall)
-										or */}{' '}
-									email us at{' '}
-									<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>.
+									<strong>$25.00 a semester</strong>. You can join by completing
+									the form below.
 								</p>
-							</div>
-							<div>
-								{/* <LinkContainer to='/register'>
-										<ButtonToolbar>
-											<Button className='learnMoreBtn' variant='primary'>
-												Become a member
-											</Button>
-										</ButtonToolbar>
-									</LinkContainer> */}
 							</div>
 						</div>
 					</Col>
 				</Row>
 			</Container>
-			<Container fluid style={{ textAlign: 'center' }}>
+			<Container fluid style={{ textAlign: 'center', marginBottom: '10rem' }}>
 				<h2>What Are The Benefits</h2>
 				<Row className='benefits' md={12} xs={12}>
 					<div>
@@ -160,6 +141,9 @@ const Membership = () => {
 					</div>
 				</Row>
 			</Container>
+			<Suspense fallback={<Loading />}>
+				<UserRegister />
+			</Suspense>
 		</div>
 	);
 };
