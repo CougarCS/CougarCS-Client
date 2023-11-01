@@ -19,6 +19,7 @@ const Hackathon = lazy(() => import('./pages/Hackathon/Hackathon'));
 const Privacy = lazy(() => import('./pages/Policy/Privacy'));
 const Gallery = lazy(() => import('./pages/Gallery/Gallery'));
 const GalleryEvent = lazy(() => import('./pages/Gallery/GalleryEvent'));
+const InfoSec = lazy(() => import('./pages/InfoSec/InfoSec'));
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => {
 						<Route path='/gallery/:event' element={<GalleryEvent />} />
 						<Route path='/404' element={<NotFound />} />
 						<Route path='*' element={<FourOFour />} />
+						<Route path='/InfoSec' element={<InfoSec />} />
 					</Routes>
 					<Footer />
 				</Suspense>
