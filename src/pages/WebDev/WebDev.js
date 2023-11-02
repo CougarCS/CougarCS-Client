@@ -62,15 +62,17 @@ const WebDev = () => {
 						<div className='about-us'>
 							<h1>Web Development Committee at CougarCS</h1>
 							<p className='lead-text'>
-  								Our dedicated team is responsible for maintaining the CougarCS {' '}
-								website and Discord bot. If you're passionate about web development 
-								and eager to gain hands-on experience while building new connections, 
-								this is the perfect opportunity for you. We value a foundational 
-								understanding of HTML, CSS, and JavaScript, making this a welcoming 
-								space for learners. If you're interested in joining our team or have 
-								any website suggestions, feel free to reach out 
-								to us via email at{' '} <a href='mailto:tutoring@cougarcs.com'>webdev@cougarcs.com</a>, 
-								or simply contact any member with the web development tag on Discord!
+								Our dedicated team is responsible for maintaining the CougarCS{' '}
+								website and Discord bot. If you&apos;re passionate about web
+								development and eager to gain hands-on experience while building
+								new connections, this is the perfect opportunity for you. We
+								value a foundational understanding of HTML, CSS, and JavaScript,
+								making this a welcoming space for learners. If you&apos;re
+								interested in joining our team or have any website suggestions,
+								feel free to reach out to us via email at{' '}
+								<a href='mailto:tutoring@cougarcs.com'>webdev@cougarcs.com</a>,
+								or simply contact any member with the web development tag on
+								Discord!
 							</p>
 						</div>
 					</Col>
