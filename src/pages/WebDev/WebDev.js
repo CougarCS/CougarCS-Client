@@ -1,10 +1,10 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
 import headerImage from '../../assets/webdev.svg';
 import { MetaData } from '../../components/Meta/MetaData';
-import { useQuery, useQueryClient } from 'react-query';
-import Loading from '../../components/Loading/Loading';
+// import { useQuery, useQueryClient } from 'react-query';
+// import Loading from '../../components/Loading/Loading';
 import './WebDev.css';
 
 const meta = {
@@ -22,7 +22,7 @@ const meta = {
 };*/
 
 const WebDev = () => {
-	const queryClient = useQueryClient();
+	// const queryClient = useQueryClient();
 	/*const { data, isFetching } = useQuery('tutors', fetchTutors, {
 		initialData: () => queryClient.getQueryData('tutors'),
 		staleTime: 300000,
