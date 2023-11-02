@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Row, Button } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import webgif from '../../assets/CougarCS_Banner.png';
 import { MetaData } from '../../components/Meta/MetaData';
 import './InfoSec.css';
