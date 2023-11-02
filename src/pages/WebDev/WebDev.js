@@ -1,10 +1,9 @@
-import axios from 'axios';
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Col, Container, Row, Button } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import headerImage from '../../assets/webdev.svg';
-import { MetaData } from '../../components/Meta/MetaData';
-import { useQuery, useQueryClient } from 'react-query';
 import Loading from '../../components/Loading/Loading';
+import { MetaData } from '../../components/Meta/MetaData';
 import './WebDev.css';
 
 const meta = {
@@ -22,8 +21,8 @@ const meta = {
 };*/
 
 const WebDev = () => {
-	const queryClient = useQueryClient();
-	/*const { data, isFetching } = useQuery('tutors', fetchTutors, {
+	/*const queryClient = useQueryClient();
+	const { data, isFetching } = useQuery('tutors', fetchTutors, {
 		initialData: () => queryClient.getQueryData('tutors'),
 		staleTime: 300000,
 	});*/
@@ -62,15 +61,16 @@ const WebDev = () => {
 						<div className='about-us'>
 							<h1>Web Development Committee at CougarCS</h1>
 							<p className='lead-text'>
-  								Our dedicated team is responsible for maintaining the CougarCS {' '}
-								website and Discord bot. If you're passionate about web development 
-								and eager to gain hands-on experience while building new connections, 
-								this is the perfect opportunity for you. We value a foundational 
-								understanding of HTML, CSS, and JavaScript, making this a welcoming 
-								space for learners. If you're interested in joining our team or have 
-								any website suggestions, feel free to reach out 
-								to us via email at{' '} <a href='mailto:tutoring@cougarcs.com'>webdev@cougarcs.com</a>, 
-								or simply contact any member with the web development tag on Discord!
+								Our dedicated team is responsible for maintaining the CougarCS{' '}
+								website and Discord bot. If you're passionate about web
+								development and eager to gain hands-on experience while building
+								new connections, this is the perfect opportunity for you. We
+								value a foundational understanding of HTML, CSS, and JavaScript,
+								making this a welcoming space for learners. If you're interested
+								in joining our team or have any website suggestions, feel free
+								to reach out to us via email at{' '}
+								<a href='mailto:info@cougarcs.com'>info@cougarcs.com</a>, or
+								simply contact our tech leads or web master on Discord!
 							</p>
 						</div>
 					</Col>
@@ -79,18 +79,21 @@ const WebDev = () => {
 
 			<Container fluid className='contained sub-section'>
 				<h2 className='heading'>Special Thanks to Our Web Developers</h2>
+				<Loading />
 				{/* <div className={isFetching ? 'fetching' : 'tutors-wrapper'}>
 					{displayTutors()}
 				</div> */}
 			</Container>
 
 			<Container fluid className='contained sub-section'>
-				<div className='tutor-cta text-center col-md-8 mx-auto'>
-					<Button
-						className='ghost-button'
-						href='mailto:WebDev@cougarcs.com?subject=CougarCS WebDev Application'
-					>
-						Become a Web Developer
+				<h2 className='heading'>Interested in tutoring for CougarCS?</h2>
+				<div className='webdev-cta text-center col-md-8 mx-auto'>
+					<p>
+						Develop Real-World Technical Skills - Work With a Team - Resume
+						Building - Gain Mentorship - Earn CougarCS Member Points
+					</p>
+					<Button className='ghost-button' href='https://github.com/CougarCS'>
+						Contribute Today
 					</Button>
 				</div>
 			</Container>
