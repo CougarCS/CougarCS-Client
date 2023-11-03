@@ -31,3 +31,21 @@
 	font-size: 18px;
 	margin-bottom: 30px;
 }
+.ghost-button {
+	background-color: transparent;
+	border: 2px solid;
+	color: var(--color-on-labelAndHeaders);
+	padding: 13px 25px;
+	border-radius: 7px;
+	font-weight: 600;
+	outline: none;
+	box-shadow: none !important;
+}
+
+.ghost-button:hover,
+.ghost-button:active,
+.ghost-button:focus {
+	background-color: var(--color-on-labelAndHeaders) !important;
+	border-color: var(--color-on-labelAndHeaders) !important;
+	color: #fff !important;
+}

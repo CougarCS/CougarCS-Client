@@ -59,9 +59,9 @@ const InfoSec = () => {
 				<h2 className='heading'>Interested in InfoSec at CougarCS?</h2>
 				<div className='info-cta text-center col-md-8 mx-auto'>
 					<p>
-						Develop Soft &amp; Technical Skills - Polish Resume - Pathway to UH
-						Peer Mentor Program - Earn Accredited Volunteer Hours - Free
-						CougarCS Membership - Earn CougarCS Member Points
+						Develop Soft &amp; Technical Skills - Learn Linux - Protect yourself
+						on the Internet - Partticapte in Security Challenenges - Earn
+						CougarCS Member Points
 					</p>
 					<Button
 						className='ghost-button'
