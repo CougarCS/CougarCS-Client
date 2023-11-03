@@ -1,0 +1,33 @@
+.discord-button {
+	background-color: #7289da;
+	padding: 13px 25px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	border: 0;
+	border-radius: 7px;
+	font-weight: 600;
+	outline: 0px;
+	box-shadow: none !important;
+}
+
+.discord-button:hover,
+.discord-button:active,
+.discord-button:focus {
+	background-color: #627ee2 !important;
+}
+
+.discord-button-wrapper small {
+	color: #777;
+	font-size: 11px;
+}
+
+
+.info-cta {
+	margin-top: 60px;
+}
+
+.info-cta p {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
