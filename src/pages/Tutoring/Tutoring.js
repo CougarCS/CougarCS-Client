@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
-import headerImage from '../../assets/tutoring.svg';
+import headerImage from '../../assets//gallery/linuxw1.webp';
 import discordIcon from '../../assets/icons/discord-icon.webp';
 import { MetaData } from '../../components/Meta/MetaData';
 import { useQuery, useQueryClient } from 'react-query';
@@ -57,7 +57,12 @@ const Tutoring = () => {
 			<Container fluid className='contained hero hero-tutoring'>
 				<Row className='pb-5'>
 					<Col md='6' className='order-md-2'>
-						<img src={headerImage} alt='undraw svg' className='img-fluid'></img>
+						<img
+							src={headerImage}
+							alt='Cougar Cs member tutoring'
+							className='img-fluid'
+							style={{ borderRadius: '10px' }}
+						></img>
 					</Col>
 					<Col md='6' className='order-md-0'>
 						<div className='about-us'>
