@@ -10,6 +10,7 @@ const Footer = lazy(() => import('./components/Footer/Footer'));
 const ScrollTop = lazy(() => import('./components/ScrollTop/ScrollTop'));
 const About = lazy(() => import('./pages/About/About'));
 const Tutoring = lazy(() => import('./pages/Tutoring/Tutoring'));
+const WebDev = lazy(() => import('./pages/WebDev/WebDev'));
 const ContactUs = lazy(() => import('./pages/ContactUs/ContactUs'));
 const Events = lazy(() => import('./pages/Events/Events'));
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -19,6 +20,7 @@ const Hackathon = lazy(() => import('./pages/Hackathon/Hackathon'));
 const Privacy = lazy(() => import('./pages/Policy/Privacy'));
 const Gallery = lazy(() => import('./pages/Gallery/Gallery'));
 const GalleryEvent = lazy(() => import('./pages/Gallery/GalleryEvent'));
+const InfoSec = lazy(() => import('./pages/InfoSec/InfoSec'));
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,8 @@ const App = () => {
 						<Route path='/privacy-policy' element={<Privacy />} />
 						<Route path='/gallery' element={<Gallery />} />
 						<Route path='/tutoring' element={<Tutoring />} />
+						<Route path='/infoSec' element={<InfoSec />} />
+						<Route path='/webdev' element={<WebDev />} />
 						<Route path='/gallery/:event' element={<GalleryEvent />} />
 						<Route path='/404' element={<NotFound />} />
 						<Route path='*' element={<FourOFour />} />

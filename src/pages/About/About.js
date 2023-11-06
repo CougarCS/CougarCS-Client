@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import gif from '../../assets/about.svg';
+import aboutpic from '../../assets/gallery/aboutuspic.svg';
 import { officersFall2023 } from '../../data/officers';
 import cougarettesLogo from '../../assets/partner-logos/cougarettes.webp';
 import csgirlsLogo from '../../assets/partner-logos/csgirls.webp';
@@ -28,7 +28,7 @@ const About = () => {
 			<Container fluid className='contained hero hero-about'>
 				<Row>
 					<Col md='6' className='order-md-2'>
-						<img src={gif} alt='undraw svg' className='img-fluid'></img>
+						<img src={aboutpic} alt='undraw svg' className='img-fluid'></img>
 					</Col>
 					<Col md='6' className='order-md-0'>
 						<div className='about-us'>
