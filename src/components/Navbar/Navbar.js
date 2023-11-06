@@ -34,6 +34,7 @@ const NavBar = () => {
 					<ActiveListItem url='/events' name='Events' />
 					<ActiveListItem url='/gallery' name='Gallery' />
 					<ActiveListItem url='/tutoring' name='Tutoring' />
+					<ActiveListItem url='/webdev' name='WebDev' />
 					{/* when hackathon will return to active it again no need to delete */}
 					{/* <ActiveListItem url='/hackathons' name='Hackathons' /> */}
 					<ActiveListItem url='/infosec' name='InfoSec' />
