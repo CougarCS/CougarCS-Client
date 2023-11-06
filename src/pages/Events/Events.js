@@ -45,9 +45,9 @@ const formatDates = (date) => {
 };
 
 const meta = {
-	title: 'Calendar',
+	title: 'Events',
 	desc: 'Checkout our events.',
-	url: 'https://cougarcs.com/calendar',
+	url: 'https://cougarcs.com/events',
 	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
 };
 

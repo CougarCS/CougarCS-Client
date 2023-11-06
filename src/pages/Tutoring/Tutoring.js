@@ -1,7 +1,6 @@
-import axios from 'axios';
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
-import headerImage from '../../assets/tutoring.svg';
+import headerImage from '../../assets//gallery/linuxw1.webp';
 import discordIcon from '../../assets/icons/discord-icon.webp';
 import { MetaData } from '../../components/Meta/MetaData';
 import { useQuery, useQueryClient } from 'react-query';
@@ -15,11 +14,15 @@ const meta = {
 	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
 };
 
-const url = `${process.env.REACT_APP_API_URL}/api/tutors`;
+const url =
+	process.env.NODE_ENV === 'development'
+		? 'http://localhost:3000'
+		: 'https://api.cougarcs.com';
 
 const fetchTutors = async () => {
-	const res = await axios.get(url);
-	return res.data.tutors;
+	const res = await fetch(url + '/v1/tutors/names');
+	const { data } = await res.json();
+	return data;
 };
 
 const Tutoring = () => {
@@ -28,7 +31,6 @@ const Tutoring = () => {
 		initialData: () => queryClient.getQueryData('tutors'),
 		staleTime: 300000,
 	});
-
 	const displayTutors = () => {
 		return isFetching ? (
 			<Loading />
@@ -45,7 +47,7 @@ const Tutoring = () => {
 						</a>
 					</div>
 				) : (
-					<div key={i}>{val.name}</div>
+					<div key={i}>{val.first_name + ' ' + val.last_name}</div>
 				)
 			)
 		);
@@ -57,7 +59,12 @@ const Tutoring = () => {
 			<Container fluid className='contained hero hero-tutoring'>
 				<Row className='pb-5'>
 					<Col md='6' className='order-md-2'>
-						<img src={headerImage} alt='undraw svg' className='img-fluid'></img>
+						<img
+							src={headerImage}
+							alt='Cougar Cs member tutoring'
+							className='img-fluid'
+							style={{ borderRadius: '10px' }}
+						></img>
 					</Col>
 					<Col md='6' className='order-md-0'>
 						<div className='about-us'>

@@ -31,12 +31,15 @@ const NavBar = () => {
 			>
 				<Nav>
 					<ActiveListItem url='/about' name='About' />
-					<ActiveListItem url='/calendar' name='Events' />
+					<ActiveListItem url='/events' name='Events' />
 					<ActiveListItem url='/gallery' name='Gallery' />
 					<ActiveListItem url='/tutoring' name='Tutoring' />
+					<ActiveListItem url='/webdev' name='WebDev' />
 					{/* when hackathon will return to active it again no need to delete */}
 					{/* <ActiveListItem url='/hackathons' name='Hackathons' /> */}
+					<ActiveListItem url='/infosec' name='InfoSec' />
 					<ActiveListItem url='/contactus' name='Contact Us' />
+
 					<Nav.Link href='https://uhcode.red/' target='_blank' rel='noreferrer'>
 						CodeRED <i className='fas fa-external-link-alt'></i>
 					</Nav.Link>
