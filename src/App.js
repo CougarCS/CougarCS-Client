@@ -41,10 +41,10 @@ const App = () => {
 						<Route path='/privacy-policy' element={<Privacy />} />
 						<Route path='/gallery' element={<Gallery />} />
 						<Route path='/tutoring' element={<Tutoring />} />
-						<Route path='/InfoSec' element={<InfoSec />} />
+						<Route path='/infoSec' element={<InfoSec />} />
 						<Route path='/gallery/:event' element={<GalleryEvent />} />
 						<Route path='/404' element={<NotFound />} />
-						<Route path='*' element={<FourOFour />} />=
+						<Route path='*' element={<FourOFour />} />
 					</Routes>
 					<Footer />
 				</Suspense>
