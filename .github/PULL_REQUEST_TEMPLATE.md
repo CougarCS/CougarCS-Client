@@ -1,6 +1,6 @@
 ## What type of PR is this? (check all applicable)
 
-- [ ] ♻️ Refactor
+- [X] ♻️ Refactor
 - [ ] ✨ Feature
 - [ ] 🐛 Bug Fix
 - [ ] 👷 Optimization
