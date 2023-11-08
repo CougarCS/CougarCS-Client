@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React from 'react';
 import { Col, Container, Row, Button } from 'react-bootstrap';
 import headerImage from '../../assets//gallery/linuxw1.webp';
@@ -15,11 +14,15 @@ const meta = {
 	img: 'https://i.ibb.co/NTLFrdj/cougarcs-background11.jpg',
 };
 
-const url = `${process.env.REACT_APP_API_URL}/api/tutors`;
+const url =
+	process.env.NODE_ENV === 'development'
+		? 'http://localhost:3000'
+		: 'https://api.cougarcs.com';
 
 const fetchTutors = async () => {
-	const res = await axios.get(url);
-	return res.data.tutors;
+	const res = await fetch(url + '/v1/tutors/names');
+	const { data } = await res.json();
+	return data;
 };
 
 const Tutoring = () => {
@@ -28,7 +31,6 @@ const Tutoring = () => {
 		initialData: () => queryClient.getQueryData('tutors'),
 		staleTime: 300000,
 	});
-
 	const displayTutors = () => {
 		return isFetching ? (
 			<Loading />
@@ -45,7 +47,7 @@ const Tutoring = () => {
 						</a>
 					</div>
 				) : (
-					<div key={i}>{val.name}</div>
+					<div key={i}>{val.first_name + ' ' + val.last_name}</div>
 				)
 			)
 		);
