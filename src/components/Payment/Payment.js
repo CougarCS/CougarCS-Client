@@ -207,7 +207,9 @@ export const Payment = () => {
 					>
 						<option value=''>Choose...</option>
 						<option value='semester'>Semester ($25)</option>
-						<option value='year'>Year ($40)</option>
+						<option value='year' disabled>
+							Year ($40) (Only available before Fall Semester)
+						</option>
 					</Form.Control>
 				</Col>
 			</Row>

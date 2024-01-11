@@ -60,12 +60,12 @@ const InfoSec = () => {
 				<div className='info-cta text-center col-md-8 mx-auto'>
 					<p>
 						Develop Soft &amp; Technical Skills - Learn Linux - Protect yourself
-						on the Internet - Partticapte in Security Challenenges - Earn
-						CougarCS Member Points
+						on the Internet - Participate in Security Challenges - Earn CougarCS
+						Member Points
 					</p>
 					<Button
 						className='ghost-button'
-						href='mailto:tutoring@cougarcs.com?subject=CougarCS Tutor Application'
+						href='mailto:infosec@cougarcs.com?subject=CougarCS Hacker Application'
 					>
 						Become a Hacker
 					</Button>
