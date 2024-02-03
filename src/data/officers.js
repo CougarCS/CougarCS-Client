@@ -68,6 +68,7 @@ import Grace from '../assets/officers/fall2023/grace-rabano.webp';
 import Jorell2 from '../assets/officers/fall2023/jorell-padilla.webp';
 
 import BrodySpring2024 from '../assets/officers/spring2024/brody-pen.JPG';
+import AltonSpring2024 from '../assets/officers/spring2024/alton-phan.JPG';
 
 export const officersSpring2024 = [
 	{
@@ -212,8 +213,8 @@ export const officersSpring2024 = [
 	},
 	{
 		id: 14,
-		name: 'Vaishnavi Rao',
-		image: Vaishnavi,
+		name: 'Alton Phan',
+		image: AltonSpring2024,
 		linkedin: 'https://www.linkedin.com/in/vaishnavi-rao-r23/',
 		email: 'operations@cougarcs.com',
 		title: 'Operations Director',
