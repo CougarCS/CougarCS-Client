@@ -67,6 +67,242 @@ import Wahab2 from '../assets/officers/fall2023/wahab-javed.webp';
 import Grace from '../assets/officers/fall2023/grace-rabano.webp';
 import Jorell2 from '../assets/officers/fall2023/jorell-padilla.webp';
 
+import AdrainArmentaSpring2024 from '../assets/officers/spring2024/Adrian-Armenta.png';
+import AltonPhanSpring2024 from '../assets/officers/spring2024/Alton-Phan.png';
+import AlvaroUrtazaSpring2024 from '../assets/officers/spring2024/Alvaro-Urtaza.png';
+import BrodyPenSpring2024 from '../assets/officers/spring2024/Brody-Pen.png';
+import DianteJacksonSpring2024 from '../assets/officers/spring2024/Diante-Jackson.png';
+import FelipeFloresSpring2024 from '../assets/officers/spring2024/Felipe-Flores.png';
+import HersonCruzSpring2024 from '../assets/officers/spring2024/Hersh-Cruz.jpg';
+import HitarthThankiSpring2024 from '../assets/officers/spring2024/Hitarth-Thanki.png';
+import IsaiasGonzalesSpring2024 from '../assets/officers/spring2024/Isaias-Gonzalez.png';
+
+import JenniferCejaSpring2024 from '../assets/officers/spring2024/Jennifer-Ceja.png';
+// import JenniferFigueroaSpring2024 from '../assets/officers/spring2024/Jennifer-Figueroa.png'; // ! MISSING PICTURE
+import JenniferFigueroaSpring2024 from '../assets/officers/fall2023/jennifer-figueroa.webp';
+import JesterSantosSpring2024 from '../assets/officers/spring2024/Jester-Santos.png';
+import JohnCoxSpring2024 from '../assets/officers/spring2024/John-Cox.png';
+import LenaPhamSpring2024 from '../assets/officers/spring2024/Lena-Pham.png';
+import MaximillianChalitsiosSpring2024 from '../assets/officers/spring2024/Maximillian-Chalitsios.png';
+import MichelleNguyenSpring2024 from '../assets/officers/spring2024/Michelle-Nguyen.png';
+import SnehaJacobSpring2024 from '../assets/officers/spring2024/Sneha-Jacob.png';
+import TariqZyadSpring2024 from '../assets/officers/spring2024/Tariq-Zyad.png';
+import VaishnaviRaoSpring2024 from '../assets/officers/spring2024/Vaishnavi-Rao.png';
+import ZahraBukhariSpring2024 from '../assets/officers/spring2024/Zahra-Bukhari.png';
+
+export const officersSpring2024 = [
+	{
+		id: 0,
+		name: 'Dr.Chang Yun',
+		image: Dr_Yun,
+		linkedin: 'https://www.linkedin.com/in/chang-yun-94340a14/',
+		email: 'phys94@cougarcs.com',
+		title: 'Faculty Advisor',
+		open: false,
+		show: false,
+	},
+	{
+		id: 1,
+		name: 'John Cox',
+		image: JohnCoxSpring2024,
+		linkedin: 'https://www.linkedin.com/in/johncoxdev/',
+		email: 'president@cougarcs.com',
+		title: 'President',
+		open: false,
+		show: true,
+	},
+	{
+		id: 2,
+		name: 'Maximillian Chalitsios',
+		image: MaximillianChalitsiosSpring2024,
+		linkedin: 'https://www.linkedin.com/in/maximillianchalitsios/',
+		email: 'vice.president@cougarcs.com',
+		title: 'Vice President',
+		open: false,
+		show: true,
+	},
+	{
+		id: 3,
+		name: 'Felipe Flores',
+		image: FelipeFloresSpring2024,
+		linkedin: 'https://www.linkedin.com/in/faflore5/',
+		email: 'treasurer@cougarcs.com',
+		title: 'Vice President - Finances',
+		open: false,
+		show: true,
+	},
+	{
+		id: 4,
+		name: 'Michelle Nguyen',
+		image: MichelleNguyenSpring2024,
+		linkedin: 'https://www.linkedin.com/in/mnguyener2003/',
+		email: 'administration@cougarcs.com',
+		title: 'Vice President - Adminitration',
+		open: false,
+		show: true,
+	},
+	{
+		id: 5,
+		name: 'Hitarth Thanki',
+		image: HitarthThankiSpring2024,
+		linkedin: 'https://www.linkedin.com/in/hitarth-thanki/',
+		email: 'hitarth@cougarcs.com',
+		title: 'Director of CodeRED',
+		open: false,
+		show: true,
+	},
+	{
+		id: 6,
+		name: 'Adrian Armenta',
+		image: AdrainArmentaSpring2024,
+		linkedin: 'https://www.linkedin.com/in/adrian-armenta-92029b28b/',
+		email: 'marketing@cougarcs.com',
+		title: 'Vice President - Marketing',
+		open: false,
+		show: true,
+	},
+	{
+		id: 7,
+		name: 'Vaishnavi Rao',
+		image: VaishnaviRaoSpring2024,
+		linkedin: 'https://www.linkedin.com/in/vaishnavi-rao-r23/',
+		email: 'designer@cougarcs.com',
+		title: 'Designer',
+		open: false,
+		show: true,
+	},
+	{
+		id: 8,
+		name: 'Jennifer Ceja',
+		image: JenniferCejaSpring2024,
+		linkedin: 'https://www.linkedin.com/in/jennifer-ceja-1508212b2/',
+		email: 'designer@cougarcs.com',
+		title: 'Designer',
+		open: false,
+		show: true,
+	},
+	{
+		id: 9,
+		name: 'Isaias Gonzales',
+		image: IsaiasGonzalesSpring2024,
+		linkedin: 'https://www.linkedin.com/in/is4as/',
+		email: 'designer@cougarcs.com',
+		title: 'Designer',
+		open: false,
+		show: true,
+	},
+	{
+		id: 10,
+		name: 'Lena Pham',
+		image: LenaPhamSpring2024,
+		linkedin: 'https://www.linkedin.com/in/lena-pham47/',
+		email: 'historian@cougarcs.com',
+		title: 'Historian',
+		open: false,
+		show: true,
+	},
+	{
+		id: 11,
+		name: 'Sneha Jacob',
+		image: SnehaJacobSpring2024,
+		linkedin: 'https://www.linkedin.com/in/snehajac/',
+		email: 'historian@cougarcs.com',
+		title: 'Historian',
+		open: false,
+		show: true,
+	},
+	{
+		id: 12,
+		name: 'Zahra Bukhari',
+		image: ZahraBukhariSpring2024,
+		linkedin: 'https://www.linkedin.com/in/zahra-bukhari/',
+		email: 'corporate.relations@cougarcs.com',
+		title: 'Corporate Relations',
+		open: false,
+		show: true,
+	},
+	{
+		id: 13,
+		name: 'Jester Sebastian Santos',
+		image: JesterSantosSpring2024,
+		linkedin: 'https://www.linkedin.com/in/jsantos738/',
+		email: 'socials@cougarcs.com',
+		title: 'Events Chair',
+		open: false,
+		show: true,
+	},
+	{
+		id: 14,
+		name: 'Alvaro Urtaza',
+		image: AlvaroUrtazaSpring2024,
+		linkedin: 'https://www.linkedin.com/in/alvaro-urtaza/',
+		email: 'socials@cougarcs.com',
+		title: 'Events Chair',
+		open: false,
+		show: true,
+	},
+	{
+		id: 15,
+		name: 'Alton Phan',
+		image: AltonPhanSpring2024,
+		linkedin: 'https://www.linkedin.com/in/altonphan/',
+		email: 'operations@cougarcs.com',
+		title: 'Operations Director',
+		open: false,
+		show: true,
+	},
+	{
+		id: 16,
+		name: 'Jennifer Figueroa',
+		image: JenniferFigueroaSpring2024,
+		linkedin: 'https://www.linkedin.com/in/jennifer-figueroa-maria/',
+		email: 'operations@cougarcs.com',
+		title: 'Operations Team Member',
+		open: false,
+		show: true,
+	},
+	{
+		id: 17,
+		name: 'Herson Mercado Cruz',
+		image: HersonCruzSpring2024,
+		linkedin: 'https://www.linkedin.com/in/hamercadocruz/',
+		email: 'operations@cougarcs.com',
+		title: 'Operations Team Member',
+		open: false,
+		show: true,
+	},
+	{
+		id: 18,
+		name: 'Tariq Achor Zyad',
+		image: TariqZyadSpring2024,
+		linkedin: 'https://www.linkedin.com/in/tachorzy',
+		email: 'tutoring@cougarcs.com',
+		title: 'Tutoring Director',
+		open: false,
+		show: true,
+	},
+	{
+		id: 19,
+		name: 'Brody Pen',
+		image: BrodyPenSpring2024,
+		linkedin: 'https://www.linkedin.com/in/brodypen',
+		email: 'webmaster@cougarcs.com',
+		title: 'Web Master',
+		open: false,
+		show: true,
+	},
+	{
+		id: 20,
+		name: 'Diante Jackson',
+		image: DianteJacksonSpring2024,
+		linkedin: 'https://www.linkedin.com/in/diantej/',
+		email: 'infosec@cougarcs.com',
+		title: 'Information Security Director',
+		open: false,
+		show: true,
+	},
+];
+
 export const officersFall2023 = [
 	{
 		id: 0,
