@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import aboutpic from '../../assets/gallery/aboutuspic.svg';
-import { officersFall2023 } from '../../data/officers';
+import { officersSpring2024 } from '../../data/officers';
 import cougarettesLogo from '../../assets/partner-logos/cougarettes.webp';
 import csgirlsLogo from '../../assets/partner-logos/csgirls.webp';
 import codeCoogsLogo from '../../assets/partner-logos/codeCoogs.webp';
@@ -20,7 +20,8 @@ const meta = {
 };
 
 const About = () => {
-	const officers = officersFall2023;
+	const officers = officersSpring2024;
+	console.log(officers);
 
 	return (
 		<>
