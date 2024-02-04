@@ -67,8 +67,28 @@ import Wahab2 from '../assets/officers/fall2023/wahab-javed.webp';
 import Grace from '../assets/officers/fall2023/grace-rabano.webp';
 import Jorell2 from '../assets/officers/fall2023/jorell-padilla.webp';
 
-import BrodySpring2024 from '../assets/officers/spring2024/brody-pen.JPG';
-import AltonSpring2024 from '../assets/officers/spring2024/alton-phan.JPG';
+import AdrainArmentaSpring2024 from '../assets/officers/spring2024/Adrian-Armenta.png';
+import AltonPhanSpring2024 from '../assets/officers/spring2024/Alton-Phan.png';
+import AlvaroUrtazaSpring2024 from '../assets/officers/spring2024/Alvaro-Urtaza.png';
+import BrodyPenSpring2024 from '../assets/officers/spring2024/Brody-Pen.png';
+import DianteJacksonSpring2024 from '../assets/officers/spring2024/Diante-Jackson.png';
+import FelipeFloresSpring2024 from '../assets/officers/spring2024/Felipe-Flores.png';
+import HersonCruzSpring2024 from '../assets/officers/spring2024/Hersh-Cruz.jpg';
+import HitarthThankiSpring2024 from '../assets/officers/spring2024/Hitarth-Thanki.png';
+import IsaiasGonzalesSpring2024 from '../assets/officers/spring2024/Isaias-Gonzalez.png';
+
+import JenniferCejaSpring2024 from '../assets/officers/spring2024/Jennifer-Ceja.png';
+// import JenniferFigueroaSpring2024 from '../assets/officers/spring2024/Jennifer-Figueroa.png'; // ! MISSING PICTURE
+import JenniferFigueroaSpring2024 from '../assets/officers/fall2023/jennifer-figueroa.webp';
+import JesterSantosSpring2024 from '../assets/officers/spring2024/Jester-Santos.png';
+import JohnCoxSpring2024 from '../assets/officers/spring2024/John-Cox.png';
+import LenaPhamSpring2024 from '../assets/officers/spring2024/Lena-Pham.png';
+import MaximillianChalitsiosSpring2024 from '../assets/officers/spring2024/Maximillian-Chalitsios.png';
+import MichelleNguyenSpring2024 from '../assets/officers/spring2024/Michelle-Nguyen.png';
+import SnehaJacobSpring2024 from '../assets/officers/spring2024/Sneha-Jacob.png';
+import TariqZyadSpring2024 from '../assets/officers/spring2024/Tariq-Zyad.png';
+import VaishnaviRaoSpring2024 from '../assets/officers/spring2024/Vaishnavi-Rao.png';
+import ZahraBukhariSpring2024 from '../assets/officers/spring2024/Zahra-Bukhari.png';
 
 export const officersSpring2024 = [
 	{
@@ -166,7 +186,7 @@ export const officersSpring2024 = [
 		name: 'Isaias Gonzales',
 		image: IsaiasGonzalesSpring2024,
 		linkedin: 'https://www.linkedin.com/in/is4as/',
-		ememail: 'designer@cougarcs.com',
+		email: 'designer@cougarcs.com',
 		title: 'Designer',
 		open: false,
 		show: true,

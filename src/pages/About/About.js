@@ -21,6 +21,7 @@ const meta = {
 
 const About = () => {
 	const officers = officersSpring2024;
+	console.log(officers);
 
 	return (
 		<>
