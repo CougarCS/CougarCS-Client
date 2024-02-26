@@ -137,7 +137,7 @@ export const officersSpring2024 = [
 		image: MichelleNguyenSpring2024,
 		linkedin: 'https://www.linkedin.com/in/mnguyener2003/',
 		email: 'administration@cougarcs.com',
-		title: 'Vice President - Adminitration',
+		title: 'Vice President - Administration',
 		open: false,
 		show: true,
 	},
