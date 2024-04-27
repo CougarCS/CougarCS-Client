@@ -222,7 +222,7 @@ export const officersSpring2024 = [
 		open: false,
 		show: true,
 	},
-		{
+	{
 		id: 21,
 		name: 'Sterling Gore',
 		image: SterlingGoreSpring2024,
