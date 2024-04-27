@@ -61,7 +61,7 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "6.4.3",
+    "@craco/craco": "6.4.5",
     "craco-swc": "0.5.1",
     "cypress": "9.5.4",
     "eslint-config-prettier": "8.5.0",
