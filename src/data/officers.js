@@ -89,6 +89,7 @@ import SyrusTolentinoSpring2024 from '../assets/officers/spring2024/Syrus-Tolent
 import TariqZyadSpring2024 from '../assets/officers/spring2024/Tariq-Zyad.png';
 import VaishnaviRaoSpring2024 from '../assets/officers/spring2024/Vaishnavi-Rao.png';
 import ZahraBukhariSpring2024 from '../assets/officers/spring2024/Zahra-Bukhari.png';
+import SterlingGoreSpring2024 from '../assets/officers/spring2024/Sterling-Gore.jpg';
 
 export const officersSpring2024 = [
 	{
@@ -216,6 +217,16 @@ export const officersSpring2024 = [
 		name: 'Zahra Bukhari',
 		image: ZahraBukhariSpring2024,
 		linkedin: 'https://www.linkedin.com/in/zahra-bukhari/',
+		email: 'corporate.relations@cougarcs.com',
+		title: 'Corporate Relations',
+		open: false,
+		show: true,
+	},
+	{
+		id: 21,
+		name: 'Sterling Gore',
+		image: SterlingGoreSpring2024,
+		linkedin: 'https://www.linkedin.com/in/sterlinggore',
 		email: 'corporate.relations@cougarcs.com',
 		title: 'Corporate Relations',
 		open: false,
