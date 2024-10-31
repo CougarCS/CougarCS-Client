@@ -101,6 +101,14 @@ import MurtazaTayabaliFall2024 from '../assets/officers/fall2024/Murtaza.png';
 import JenniferCejaFall2024 from '../assets/officers/fall2024/Jennifer.png';
 import IsaiasGonzalesFall2024 from '../assets/officers/fall2024/Isaias.png';
 import DarrelSeFall2024 from '../assets/officers/fall2024/Darrel.png';
+import ZahraBukhariFall2024 from '../assets/officers/fall2024/Z.png';
+import SterlingGoreFall2024 from '../assets/officers/fall2024/Sterling.png';
+import JesterSantosFall2024 from '../assets/officers/fall2024/Jester.png';
+import AlvaroUrtazaFall2024 from '../assets/officers/fall2024/Alvaro.png';
+import ThomasTruongFall2024 from '../assets/officers/fall2024/Thomas.png';
+import JasonYenFall2024 from '../assets/officers/fall2024/Jason.png';
+import BrodyPenFall2024 from '../assets/officers/fall2024/Brody.png';
+import SyrusTolentinoFall2024 from '../assets/officers/fall2024/Syrus.png';
 
 export const officersFall2024 = [
 	{
@@ -216,7 +224,7 @@ export const officersFall2024 = [
 	{
 		id: 12,
 		name: 'Zahra Bukhari',
-		image: ZahraBukhariSpring2024,
+		image: ZahraBukhariFall2024,
 		linkedin: 'https://www.linkedin.com/in/zahra-bukhari/',
 		email: 'corporate.relations@cougarcs.com',
 		title: 'Corporate Relations',
@@ -226,7 +234,7 @@ export const officersFall2024 = [
 	{
 		id: 21,
 		name: 'Sterling Gore',
-		image: SterlingGoreSpring2024,
+		image: SterlingGoreFall2024,
 		linkedin: 'https://www.linkedin.com/in/sterlinggore',
 		email: 'corporate.relations@cougarcs.com',
 		title: 'Corporate Relations',
@@ -236,7 +244,7 @@ export const officersFall2024 = [
 	{
 		id: 13,
 		name: 'Jester Sebastian Santos',
-		image: JesterSantosSpring2024,
+		image: JesterSantosFall2024,
 		linkedin: 'https://www.linkedin.com/in/jsantos738/',
 		email: 'socials@cougarcs.com',
 		title: 'Events Chair',
@@ -246,7 +254,7 @@ export const officersFall2024 = [
 	{
 		id: 14,
 		name: 'Alvaro Urtaza',
-		image: AlvaroUrtazaSpring2024,
+		image: AlvaroUrtazaFall2024,
 		linkedin: 'https://www.linkedin.com/in/alvaro-urtaza/',
 		email: 'socials@cougarcs.com',
 		title: 'Events Chair',
@@ -255,39 +263,39 @@ export const officersFall2024 = [
 	},
 	{
 		id: 15,
-		name: 'Alton Phan',
-		image: AltonPhanSpring2024,
-		linkedin: 'https://www.linkedin.com/in/altonphan/',
+		name: 'Thomas Truong',
+		image: ThomasTruongFall2024,
+		linkedin: 'https://www.linkedin.com/in/ttruong03/',
 		email: 'operations@cougarcs.com',
 		title: 'Operations Director',
 		open: false,
 		show: true,
 	},
-	{
-		id: 16,
-		name: 'Jennifer Figueroa',
-		image: JenniferFigueroaSpring2024,
-		linkedin: 'https://www.linkedin.com/in/jennifer-figueroa-maria/',
-		email: 'operations@cougarcs.com',
-		title: 'Operations Team Member',
-		open: false,
-		show: true,
-	},
-	{
-		id: 17,
-		name: 'Herson Mercado Cruz',
-		image: HersonCruzSpring2024,
-		linkedin: 'https://www.linkedin.com/in/hamercadocruz/',
-		email: 'operations@cougarcs.com',
-		title: 'Operations Team Member',
-		open: false,
-		show: true,
-	},
+	// {
+	// 	id: 16,
+	// 	name: 'Jennifer Figueroa',
+	// 	image: JenniferFigueroaSpring2024,
+	// 	linkedin: 'https://www.linkedin.com/in/jennifer-figueroa-maria/',
+	// 	email: 'operations@cougarcs.com',
+	// 	title: 'Operations Team Member',
+	// 	open: false,
+	// 	show: true,
+	// },
+	// {
+	// 	id: 17,
+	// 	name: 'Herson Mercado Cruz',
+	// 	image: HersonCruzSpring2024,
+	// 	linkedin: 'https://www.linkedin.com/in/hamercadocruz/',
+	// 	email: 'operations@cougarcs.com',
+	// 	title: 'Operations Team Member',
+	// 	open: false,
+	// 	show: true,
+	// },
 	{
 		id: 18,
-		name: 'Tariq Achor Zyad',
-		image: TariqZyadSpring2024,
-		linkedin: 'https://www.linkedin.com/in/tachorzy',
+		name: 'Jason Yen',
+		image: JasonYenFall2024,
+		linkedin: 'https://www.linkedin.com/in/chung-hwa-yen/',
 		email: 'tutoring@cougarcs.com',
 		title: 'Tutoring Director',
 		open: false,
@@ -296,7 +304,7 @@ export const officersFall2024 = [
 	{
 		id: 19,
 		name: 'Brody Pen',
-		image: BrodyPenSpring2024,
+		image: BrodyPenFall2024,
 		linkedin: 'https://www.linkedin.com/in/brodypen',
 		email: 'webmaster@cougarcs.com',
 		title: 'Web Master',
@@ -306,7 +314,7 @@ export const officersFall2024 = [
 	{
 		id: 20,
 		name: 'Syrus Tolentino',
-		image: SyrusTolentinoSpring2024,
+		image: SyrusTolentinoFall2024,
 		linkedin: 'https://www.linkedin.com/in/syrus-tolentino',
 		email: 'infosec@cougarcs.com',
 		title: 'Information Security Director',
