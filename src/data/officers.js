@@ -91,6 +91,12 @@ import VaishnaviRaoSpring2024 from '../assets/officers/spring2024/Vaishnavi-Rao.
 import ZahraBukhariSpring2024 from '../assets/officers/spring2024/Zahra-Bukhari.png';
 import SterlingGoreSpring2024 from '../assets/officers/spring2024/Sterling-Gore.jpg';
 
+import JohnCoxFall2024 from '../assets/officers/fall2024/John.png';
+import AshishJobFall2024 from '../assets/officers/fall2024/Ashish.png';
+import FelipeFloresFall2024 from '../assets/officers/fall2024/Felipe.png';
+import SnehaJacobFall2024 from '../assets/officers/fall2024/Sneha.png';
+import HitarthThankiFall2024 from '../assets/officers/fall2024/Hitarth.png';
+
 export const officersFall2024 = [
 	{
 		id: 0,
@@ -105,7 +111,7 @@ export const officersFall2024 = [
 	{
 		id: 1,
 		name: 'John Cox',
-		image: JohnCoxSpring2024,
+		image: JohnCoxFall2024,
 		linkedin: 'https://www.linkedin.com/in/johncoxdev/',
 		email: 'president@cougarcs.com',
 		title: 'President',
@@ -114,9 +120,9 @@ export const officersFall2024 = [
 	},
 	{
 		id: 2,
-		name: 'Maximillian Chalitsios',
-		image: MaximillianChalitsiosSpring2024,
-		linkedin: 'https://www.linkedin.com/in/maximillianchalitsios/',
+		name: 'Ashish Job',
+		image: AshishJobFall2024,
+		linkedin: 'https://www.linkedin.com/in/ashish-job/',
 		email: 'vice.president@cougarcs.com',
 		title: 'Vice President',
 		open: false,
@@ -125,7 +131,7 @@ export const officersFall2024 = [
 	{
 		id: 3,
 		name: 'Felipe Flores',
-		image: FelipeFloresSpring2024,
+		image: FelipeFloresFall2024,
 		linkedin: 'https://www.linkedin.com/in/faflore5/',
 		email: 'treasurer@cougarcs.com',
 		title: 'Vice President - Finances',
@@ -134,18 +140,18 @@ export const officersFall2024 = [
 	},
 	{
 		id: 4,
-		name: 'Michelle Nguyen',
-		image: MichelleNguyenSpring2024,
-		linkedin: 'https://www.linkedin.com/in/mnguyener2003/',
+		name: 'Sneha Jacob',
+		image: SnehaJacobFall2024,
+		linkedin: 'https://www.linkedin.com/in/snehajac/',
 		email: 'administration@cougarcs.com',
-		title: 'Vice President - administration',
+		title: 'Vice President - Administration',
 		open: false,
 		show: true,
 	},
 	{
 		id: 5,
 		name: 'Hitarth Thanki',
-		image: HitarthThankiSpring2024,
+		image: HitarthThankiFall2024,
 		linkedin: 'https://www.linkedin.com/in/hitarth-thanki/',
 		email: 'hitarth@cougarcs.com',
 		title: 'Director of CodeRED',
