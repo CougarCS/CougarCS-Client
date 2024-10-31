@@ -96,6 +96,11 @@ import AshishJobFall2024 from '../assets/officers/fall2024/Ashish.png';
 import FelipeFloresFall2024 from '../assets/officers/fall2024/Felipe.png';
 import SnehaJacobFall2024 from '../assets/officers/fall2024/Sneha.png';
 import HitarthThankiFall2024 from '../assets/officers/fall2024/Hitarth.png';
+import AdrainArmentaFall2024 from '../assets/officers/fall2024/Adrian.png';
+import MurtazaTayabaliFall2024 from '../assets/officers/fall2024/Murtaza.png';
+import JenniferCejaFall2024 from '../assets/officers/fall2024/Jennifer.png';
+import IsaiasGonzalesFall2024 from '../assets/officers/fall2024/Isaias.png';
+import DarrelSeFall2024 from '../assets/officers/fall2024/Darrel.png';
 
 export const officersFall2024 = [
 	{
@@ -161,7 +166,7 @@ export const officersFall2024 = [
 	{
 		id: 6,
 		name: 'Adrian Armenta',
-		image: AdrainArmentaSpring2024,
+		image: AdrainArmentaFall2024,
 		linkedin: 'https://www.linkedin.com/in/adrian-armenta-92029b28b/',
 		email: 'marketing@cougarcs.com',
 		title: 'Vice President - Marketing',
@@ -170,9 +175,9 @@ export const officersFall2024 = [
 	},
 	{
 		id: 7,
-		name: 'Vaishnavi Rao',
-		image: VaishnaviRaoSpring2024,
-		linkedin: 'https://www.linkedin.com/in/vaishnavi-rao-r23/',
+		name: 'Murtaza Tayabali',
+		image: MurtazaTayabaliFall2024,
+		linkedin: 'https://www.linkedin.com/in/murtaza-tayabali-bali/',
 		email: 'designer@cougarcs.com',
 		title: 'Designer',
 		open: false,
@@ -181,8 +186,8 @@ export const officersFall2024 = [
 	{
 		id: 8,
 		name: 'Jennifer Ceja',
-		image: JenniferCejaSpring2024,
-		linkedin: 'https://www.linkedin.com/in/jennifer-ceja-1508212b2/',
+		image: JenniferCejaFall2024,
+		linkedin: 'https://www.linkedin.com/in/jenniferceja/',
 		email: 'designer@cougarcs.com',
 		title: 'Designer',
 		open: false,
@@ -191,8 +196,8 @@ export const officersFall2024 = [
 	{
 		id: 9,
 		name: 'Isaias Gonzales',
-		image: IsaiasGonzalesSpring2024,
-		linkedin: 'https://www.linkedin.com/in/is4as/',
+		image: IsaiasGonzalesFall2024,
+		linkedin: 'https://www.linkedin.com/in/isaiasegonzalez/',
 		email: 'designer@cougarcs.com',
 		title: 'Designer',
 		open: false,
@@ -200,19 +205,9 @@ export const officersFall2024 = [
 	},
 	{
 		id: 10,
-		name: 'Lena Pham',
-		image: LenaPhamSpring2024,
-		linkedin: 'https://www.linkedin.com/in/lena-pham47/',
-		email: 'historian@cougarcs.com',
-		title: 'Historian',
-		open: false,
-		show: true,
-	},
-	{
-		id: 11,
-		name: 'Sneha Jacob',
-		image: SnehaJacobSpring2024,
-		linkedin: 'https://www.linkedin.com/in/snehajac/',
+		name: 'Darrel Se',
+		image: DarrelSeFall2024,
+		linkedin: 'https://www.linkedin.com/in/darrell-se/',
 		email: 'historian@cougarcs.com',
 		title: 'Historian',
 		open: false,
